@@ -25,7 +25,7 @@ import com.occulue.api.*;
 // --------------------------------------------
 @Entity
 data class ACDCConverter(
-    @Id var aCDCConverterId: UUID? = null,
+    @Id val aCDCConverterId: UUID? = null,
     val baseS: String? = null,
     val idleLoss: String? = null,
     val maxUdc: String? = null,
@@ -39,19 +39,19 @@ data class ACDCConverter(
 
 @Entity
 data class ACDCConverterDCTerminal(
-    @Id var aCDCConverterDCTerminalId: UUID? = null,
+    @Id val aCDCConverterDCTerminalId: UUID? = null,
     val polarity: String? = null
 )
 
 @Entity
 data class ACDCTerminal(
-    @Id var aCDCTerminalId: UUID? = null,
+    @Id val aCDCTerminalId: UUID? = null,
     val sequenceNumber: String? = null
 )
 
 @Entity
 data class ACLineSegment(
-    @Id var aCLineSegmentId: UUID? = null,
+    @Id val aCLineSegmentId: UUID? = null,
     val b0ch: String? = null,
     val bch: String? = null,
     val g0ch: String? = null,
@@ -70,7 +70,7 @@ data class Accumulator(
 
 @Entity
 data class AccumulatorLimit(
-    @Id var accumulatorLimitId: UUID? = null,
+    @Id val accumulatorLimitId: UUID? = null,
     val value: String? = null
 )
 
@@ -86,13 +86,13 @@ data class AccumulatorReset(
 
 @Entity
 data class AccumulatorValue(
-    @Id var accumulatorValueId: UUID? = null,
+    @Id val accumulatorValueId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class ActivePower(
-    @Id var activePowerId: UUID? = null,
+    @Id val activePowerId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -100,13 +100,13 @@ data class ActivePower(
 
 @Entity
 data class ActivePowerLimit(
-    @Id var activePowerLimitId: UUID? = null,
+    @Id val activePowerLimitId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class ActivePowerPerCurrentFlow(
-    @Id var activePowerPerCurrentFlowId: UUID? = null,
+    @Id val activePowerPerCurrentFlowId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -116,7 +116,7 @@ data class ActivePowerPerCurrentFlow(
 
 @Entity
 data class ActivePowerPerFrequency(
-    @Id var activePowerPerFrequencyId: UUID? = null,
+    @Id val activePowerPerFrequencyId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -126,20 +126,20 @@ data class ActivePowerPerFrequency(
 
 @Entity
 data class Analog(
-    @Id var analogId: UUID? = null,
+    @Id val analogId: UUID? = null,
     val positiveFlowIn: String? = null
 )
 
 @Entity
 data class AnalogControl(
-    @Id var analogControlId: UUID? = null,
+    @Id val analogControlId: UUID? = null,
     val maxValue: String? = null,
     val minValue: String? = null
 )
 
 @Entity
 data class AnalogLimit(
-    @Id var analogLimitId: UUID? = null,
+    @Id val analogLimitId: UUID? = null,
     val value: String? = null
 )
 
@@ -150,13 +150,13 @@ data class AnalogLimitSet(
 
 @Entity
 data class AnalogValue(
-    @Id var analogValueId: UUID? = null,
+    @Id val analogValueId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class AngleDegrees(
-    @Id var angleDegreesId: UUID? = null,
+    @Id val angleDegreesId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -164,7 +164,7 @@ data class AngleDegrees(
 
 @Entity
 data class AngleRadians(
-    @Id var angleRadiansId: UUID? = null,
+    @Id val angleRadiansId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -172,7 +172,7 @@ data class AngleRadians(
 
 @Entity
 data class ApparentPower(
-    @Id var apparentPowerId: UUID? = null,
+    @Id val apparentPowerId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -180,13 +180,13 @@ data class ApparentPower(
 
 @Entity
 data class ApparentPowerLimit(
-    @Id var apparentPowerLimitId: UUID? = null,
+    @Id val apparentPowerLimitId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class Area(
-    @Id var areaId: UUID? = null,
+    @Id val areaId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -194,7 +194,7 @@ data class Area(
 
 @Entity
 data class AsynchronousMachine(
-    @Id var asynchronousMachineId: UUID? = null,
+    @Id val asynchronousMachineId: UUID? = null,
     val converterFedDrive: String? = null,
     val efficiency: String? = null,
     val iaIrRatio: String? = null,
@@ -213,7 +213,7 @@ data class AsynchronousMachineDynamics(
 
 @Entity
 data class AsynchronousMachineEquivalentCircuit(
-    @Id var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id val asynchronousMachineEquivalentCircuitId: UUID? = null,
     val rr1: String? = null,
     val rr2: String? = null,
     val xlr1: String? = null,
@@ -223,7 +223,7 @@ data class AsynchronousMachineEquivalentCircuit(
 
 @Entity
 data class AsynchronousMachineTimeConstantReactance(
-    @Id var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id val asynchronousMachineTimeConstantReactanceId: UUID? = null,
     val tpo: String? = null,
     val tppo: String? = null,
     val xp: String? = null,
@@ -233,19 +233,19 @@ data class AsynchronousMachineTimeConstantReactance(
 
 @Entity
 data class AsynchronousMachineUserDefined(
-    @Id var asynchronousMachineUserDefinedId: UUID? = null,
+    @Id val asynchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class BaseVoltage(
-    @Id var baseVoltageId: UUID? = null,
+    @Id val baseVoltageId: UUID? = null,
     val nominalVoltage: String? = null
 )
 
 @Entity
 data class BasicIntervalSchedule(
-    @Id var basicIntervalScheduleId: UUID? = null,
+    @Id val basicIntervalScheduleId: UUID? = null,
     val startTime: String? = null,
     val value1Unit: String? = null,
     val value2Unit: String? = null
@@ -263,7 +263,7 @@ data class BooleanProxy(
 
 @Entity
 data class BoundaryExtensions(
-    @Id var boundaryExtensionsId: UUID? = null,
+    @Id val boundaryExtensionsId: UUID? = null,
     val boundaryPoint: String? = null,
     val fromEndIsoCode: String? = null,
     val fromEndName: String? = null,
@@ -280,19 +280,19 @@ data class Breaker(
 
 @Entity
 data class BusNameMarker(
-    @Id var busNameMarkerId: UUID? = null,
+    @Id val busNameMarkerId: UUID? = null,
     val priority: String? = null
 )
 
 @Entity
 data class BusbarSection(
-    @Id var busbarSectionId: UUID? = null,
+    @Id val busbarSectionId: UUID? = null,
     val ipMax: String? = null
 )
 
 @Entity
 data class Capacitance(
-    @Id var capacitanceId: UUID? = null,
+    @Id val capacitanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -300,7 +300,7 @@ data class Capacitance(
 
 @Entity
 data class CapacitancePerLength(
-    @Id var capacitancePerLengthId: UUID? = null,
+    @Id val capacitancePerLengthId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -310,14 +310,14 @@ data class CapacitancePerLength(
 
 @Entity
 data class Command(
-    @Id var commandId: UUID? = null,
+    @Id val commandId: UUID? = null,
     val normalValue: String? = null,
     val value: String? = null
 )
 
 @Entity
 data class Conductance(
-    @Id var conductanceId: UUID? = null,
+    @Id val conductanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -330,7 +330,7 @@ data class ConductingEquipment(
 
 @Entity
 data class Conductor(
-    @Id var conductorId: UUID? = null,
+    @Id val conductorId: UUID? = null,
     val length: String? = null
 )
 
@@ -351,7 +351,7 @@ data class ConformLoadSchedule(
 
 @Entity
 data class ConnectivityNode(
-    @Id var connectivityNodeId: UUID? = null,
+    @Id val connectivityNodeId: UUID? = null,
     val boundaryPoint: String? = null,
     val fromEndIsoCode: String? = null,
     val fromEndName: String? = null,
@@ -373,7 +373,7 @@ data class Connector(
 
 @Entity
 data class Control(
-    @Id var controlId: UUID? = null,
+    @Id val controlId: UUID? = null,
     val controlType: String? = null,
     val operationInProgress: String? = null,
     val timeStamp: String? = null,
@@ -383,7 +383,7 @@ data class Control(
 
 @Entity
 data class ControlArea(
-    @Id var controlAreaId: UUID? = null,
+    @Id val controlAreaId: UUID? = null,
     val type: String? = null
 )
 
@@ -394,13 +394,13 @@ data class ControlAreaGeneratingUnit(
 
 @Entity
 data class CoordinateSystem(
-    @Id var coordinateSystemId: UUID? = null,
+    @Id val coordinateSystemId: UUID? = null,
     val crsUrn: String? = null
 )
 
 @Entity
 data class CsConverter(
-    @Id var csConverterId: UUID? = null,
+    @Id val csConverterId: UUID? = null,
     val maxAlpha: String? = null,
     val maxGamma: String? = null,
     val maxIdc: String? = null,
@@ -412,7 +412,7 @@ data class CsConverter(
 
 @Entity
 data class CurrentFlow(
-    @Id var currentFlowId: UUID? = null,
+    @Id val currentFlowId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -420,13 +420,13 @@ data class CurrentFlow(
 
 @Entity
 data class CurrentLimit(
-    @Id var currentLimitId: UUID? = null,
+    @Id val currentLimitId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class Curve(
-    @Id var curveId: UUID? = null,
+    @Id val curveId: UUID? = null,
     val curveStyle: String? = null,
     val xUnit: String? = null,
     val y1Unit: String? = null,
@@ -435,7 +435,7 @@ data class Curve(
 
 @Entity
 data class CurveData(
-    @Id var curveDataId: UUID? = null,
+    @Id val curveDataId: UUID? = null,
     val xvalue: String? = null,
     val y1value: String? = null,
     val y2value: String? = null
@@ -468,7 +468,7 @@ data class DCConductingEquipment(
 
 @Entity
 data class DCConverterUnit(
-    @Id var dCConverterUnitId: UUID? = null,
+    @Id val dCConverterUnitId: UUID? = null,
     val operationMode: String? = null
 )
 
@@ -484,7 +484,7 @@ data class DCEquipmentContainer(
 
 @Entity
 data class DCGround(
-    @Id var dCGroundId: UUID? = null,
+    @Id val dCGroundId: UUID? = null,
     val inductance: String? = null,
     val r: String? = null
 )
@@ -496,7 +496,7 @@ data class DCLine(
 
 @Entity
 data class DCLineSegment(
-    @Id var dCLineSegmentId: UUID? = null,
+    @Id val dCLineSegmentId: UUID? = null,
     val capacitance: String? = null,
     val inductance: String? = null,
     val length: String? = null,
@@ -510,7 +510,7 @@ data class DCNode(
 
 @Entity
 data class DCSeriesDevice(
-    @Id var dCSeriesDeviceId: UUID? = null,
+    @Id val dCSeriesDeviceId: UUID? = null,
     val inductance: String? = null,
     val ratedUdc: String? = null,
     val resistance: String? = null
@@ -518,7 +518,7 @@ data class DCSeriesDevice(
 
 @Entity
 data class DCShunt(
-    @Id var dCShuntId: UUID? = null,
+    @Id val dCShuntId: UUID? = null,
     val capacitance: String? = null,
     val ratedUdc: String? = null,
     val resistance: String? = null
@@ -566,7 +566,7 @@ data class DecimalProxy(
 
 @Entity
 data class Diagram(
-    @Id var diagramId: UUID? = null,
+    @Id val diagramId: UUID? = null,
     val orientation: String? = null,
     val x1InitialView: String? = null,
     val x2InitialView: String? = null,
@@ -576,7 +576,7 @@ data class Diagram(
 
 @Entity
 data class DiagramLayoutVersion(
-    @Id var diagramLayoutVersionId: UUID? = null,
+    @Id val diagramLayoutVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -591,7 +591,7 @@ data class DiagramLayoutVersion(
 
 @Entity
 data class DiagramObject(
-    @Id var diagramObjectId: UUID? = null,
+    @Id val diagramObjectId: UUID? = null,
     val drawingOrder: String? = null,
     val isPolygon: String? = null,
     val offsetX: String? = null,
@@ -606,7 +606,7 @@ data class DiagramObjectGluePoint(
 
 @Entity
 data class DiagramObjectPoint(
-    @Id var diagramObjectPointId: UUID? = null,
+    @Id val diagramObjectPointId: UUID? = null,
     val sequenceNumber: String? = null,
     val xPosition: String? = null,
     val yPosition: String? = null,
@@ -625,7 +625,7 @@ data class DiagramStyle(
 
 @Entity
 data class DiscExcContIEEEDEC1A(
-    @Id var discExcContIEEEDEC1AId: UUID? = null,
+    @Id val discExcContIEEEDEC1AId: UUID? = null,
     val esc: String? = null,
     val kan: String? = null,
     val ketl: String? = null,
@@ -648,7 +648,7 @@ data class DiscExcContIEEEDEC1A(
 
 @Entity
 data class DiscExcContIEEEDEC2A(
-    @Id var discExcContIEEEDEC2AId: UUID? = null,
+    @Id val discExcContIEEEDEC2AId: UUID? = null,
     val td1: String? = null,
     val td2: String? = null,
     val vdmax: String? = null,
@@ -658,7 +658,7 @@ data class DiscExcContIEEEDEC2A(
 
 @Entity
 data class DiscExcContIEEEDEC3A(
-    @Id var discExcContIEEEDEC3AId: UUID? = null,
+    @Id val discExcContIEEEDEC3AId: UUID? = null,
     val tdr: String? = null,
     val vtmin: String? = null
 )
@@ -675,7 +675,7 @@ data class DiscontinuousExcitationControlDynamics(
 
 @Entity
 data class DiscontinuousExcitationControlUserDefined(
-    @Id var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    @Id val discontinuousExcitationControlUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -686,13 +686,13 @@ data class Discrete(
 
 @Entity
 data class DiscreteValue(
-    @Id var discreteValueId: UUID? = null,
+    @Id val discreteValueId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class DomainVersion(
-    @Id var domainVersionId: UUID? = null,
+    @Id val domainVersionId: UUID? = null,
     val baseUML: String? = null,
     val date: String? = null,
     val entsoeUML: String? = null,
@@ -701,13 +701,13 @@ data class DomainVersion(
 
 @Entity
 data class DynamicsFunctionBlock(
-    @Id var dynamicsFunctionBlockId: UUID? = null,
+    @Id val dynamicsFunctionBlockId: UUID? = null,
     val enabled: String? = null
 )
 
 @Entity
 data class DynamicsVersion(
-    @Id var dynamicsVersionId: UUID? = null,
+    @Id val dynamicsVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -732,7 +732,7 @@ data class ENTSOEConnectivityNode(
 
 @Entity
 data class ENTSOEIdentifiedObject(
-    @Id var eNTSOEIdentifiedObjectId: UUID? = null,
+    @Id val eNTSOEIdentifiedObjectId: UUID? = null,
     val energyIdentCodeEic: String? = null,
     val shortName: String? = null
 )
@@ -744,7 +744,7 @@ data class ENTSOEJunction(
 
 @Entity
 data class ENTSOEOperationalLimitType(
-    @Id var eNTSOEOperationalLimitTypeId: UUID? = null,
+    @Id val eNTSOEOperationalLimitTypeId: UUID? = null,
     val limitType: String? = null
 )
 
@@ -755,7 +755,7 @@ data class ENTSOETopologicalNode(
 
 @Entity
 data class EarthFaultCompensator(
-    @Id var earthFaultCompensatorId: UUID? = null,
+    @Id val earthFaultCompensatorId: UUID? = null,
     val r: String? = null
 )
 
@@ -766,7 +766,7 @@ data class EnergyArea(
 
 @Entity
 data class EnergyConsumer(
-    @Id var energyConsumerId: UUID? = null,
+    @Id val energyConsumerId: UUID? = null,
     val pfixed: String? = null,
     val pfixedPct: String? = null,
     val qfixed: String? = null,
@@ -790,7 +790,7 @@ data class Equipment(
 
 @Entity
 data class EquipmentBoundaryVersion(
-    @Id var equipmentBoundaryVersionId: UUID? = null,
+    @Id val equipmentBoundaryVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -811,7 +811,7 @@ data class EquipmentContainer(
 
 @Entity
 data class EquipmentVersion(
-    @Id var equipmentVersionId: UUID? = null,
+    @Id val equipmentVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURIcore: String? = null,
     val baseURIoperation: String? = null,
@@ -830,7 +830,7 @@ data class EquipmentVersion(
 
 @Entity
 data class EquivalentBranch(
-    @Id var equivalentBranchId: UUID? = null,
+    @Id val equivalentBranchId: UUID? = null,
     val negativeR12: String? = null,
     val negativeR21: String? = null,
     val negativeX12: String? = null,
@@ -856,7 +856,7 @@ data class EquivalentEquipment(
 
 @Entity
 data class EquivalentInjection(
-    @Id var equivalentInjectionId: UUID? = null,
+    @Id val equivalentInjectionId: UUID? = null,
     val maxP: String? = null,
     val maxQ: String? = null,
     val minP: String? = null,
@@ -877,14 +877,14 @@ data class EquivalentNetwork(
 
 @Entity
 data class EquivalentShunt(
-    @Id var equivalentShuntId: UUID? = null,
+    @Id val equivalentShuntId: UUID? = null,
     val b: String? = null,
     val g: String? = null
 )
 
 @Entity
 data class ExcAC1A(
-    @Id var excAC1AId: UUID? = null,
+    @Id val excAC1AId: UUID? = null,
     val hvlvgates: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -911,7 +911,7 @@ data class ExcAC1A(
 
 @Entity
 data class ExcAC2A(
-    @Id var excAC2AId: UUID? = null,
+    @Id val excAC2AId: UUID? = null,
     val hvgate: String? = null,
     val ka: String? = null,
     val kb: String? = null,
@@ -944,7 +944,7 @@ data class ExcAC2A(
 
 @Entity
 data class ExcAC3A(
-    @Id var excAC3AId: UUID? = null,
+    @Id val excAC3AId: UUID? = null,
     val efdn: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -975,7 +975,7 @@ data class ExcAC3A(
 
 @Entity
 data class ExcAC4A(
-    @Id var excAC4AId: UUID? = null,
+    @Id val excAC4AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val ta: String? = null,
@@ -989,7 +989,7 @@ data class ExcAC4A(
 
 @Entity
 data class ExcAC5A(
-    @Id var excAC5AId: UUID? = null,
+    @Id val excAC5AId: UUID? = null,
     val a: String? = null,
     val efd1: String? = null,
     val efd2: String? = null,
@@ -1012,7 +1012,7 @@ data class ExcAC5A(
 
 @Entity
 data class ExcAC6A(
-    @Id var excAC6AId: UUID? = null,
+    @Id val excAC6AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val kd: String? = null,
@@ -1040,7 +1040,7 @@ data class ExcAC6A(
 
 @Entity
 data class ExcAC8B(
-    @Id var excAC8BId: UUID? = null,
+    @Id val excAC8BId: UUID? = null,
     val inlim: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -1072,7 +1072,7 @@ data class ExcAC8B(
 
 @Entity
 data class ExcANS(
-    @Id var excANSId: UUID? = null,
+    @Id val excANSId: UUID? = null,
     val blint: String? = null,
     val ifmn: String? = null,
     val ifmx: String? = null,
@@ -1091,7 +1091,7 @@ data class ExcANS(
 
 @Entity
 data class ExcAVR1(
-    @Id var excAVR1Id: UUID? = null,
+    @Id val excAVR1Id: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val ka: String? = null,
@@ -1108,7 +1108,7 @@ data class ExcAVR1(
 
 @Entity
 data class ExcAVR2(
-    @Id var excAVR2Id: UUID? = null,
+    @Id val excAVR2Id: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val ka: String? = null,
@@ -1126,7 +1126,7 @@ data class ExcAVR2(
 
 @Entity
 data class ExcAVR3(
-    @Id var excAVR3Id: UUID? = null,
+    @Id val excAVR3Id: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val ka: String? = null,
@@ -1143,7 +1143,7 @@ data class ExcAVR3(
 
 @Entity
 data class ExcAVR4(
-    @Id var excAVR4Id: UUID? = null,
+    @Id val excAVR4Id: UUID? = null,
     val imul: String? = null,
     val ka: String? = null,
     val ke: String? = null,
@@ -1162,7 +1162,7 @@ data class ExcAVR4(
 
 @Entity
 data class ExcAVR5(
-    @Id var excAVR5Id: UUID? = null,
+    @Id val excAVR5Id: UUID? = null,
     val ka: String? = null,
     val rex: String? = null,
     val ta: String? = null
@@ -1170,7 +1170,7 @@ data class ExcAVR5(
 
 @Entity
 data class ExcAVR7(
-    @Id var excAVR7Id: UUID? = null,
+    @Id val excAVR7Id: UUID? = null,
     val a1: String? = null,
     val a2: String? = null,
     val a3: String? = null,
@@ -1196,7 +1196,7 @@ data class ExcAVR7(
 
 @Entity
 data class ExcBBC(
-    @Id var excBBCId: UUID? = null,
+    @Id val excBBCId: UUID? = null,
     val efdmax: String? = null,
     val efdmin: String? = null,
     val k: String? = null,
@@ -1212,7 +1212,7 @@ data class ExcBBC(
 
 @Entity
 data class ExcCZ(
-    @Id var excCZId: UUID? = null,
+    @Id val excCZId: UUID? = null,
     val efdmax: String? = null,
     val efdmin: String? = null,
     val ka: String? = null,
@@ -1227,7 +1227,7 @@ data class ExcCZ(
 
 @Entity
 data class ExcDC1A(
-    @Id var excDC1AId: UUID? = null,
+    @Id val excDC1AId: UUID? = null,
     val edfmax: String? = null,
     val efd1: String? = null,
     val efd2: String? = null,
@@ -1250,7 +1250,7 @@ data class ExcDC1A(
 
 @Entity
 data class ExcDC2A(
-    @Id var excDC2AId: UUID? = null,
+    @Id val excDC2AId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val exclim: String? = null,
@@ -1273,7 +1273,7 @@ data class ExcDC2A(
 
 @Entity
 data class ExcDC3A(
-    @Id var excDC3AId: UUID? = null,
+    @Id val excDC3AId: UUID? = null,
     val edfmax: String? = null,
     val efd1: String? = null,
     val efd2: String? = null,
@@ -1294,7 +1294,7 @@ data class ExcDC3A(
 
 @Entity
 data class ExcDC3A1(
-    @Id var excDC3A1Id: UUID? = null,
+    @Id val excDC3A1Id: UUID? = null,
     val exclim: String? = null,
     val ka: String? = null,
     val ke: String? = null,
@@ -1313,7 +1313,7 @@ data class ExcDC3A1(
 
 @Entity
 data class ExcELIN1(
-    @Id var excELIN1Id: UUID? = null,
+    @Id val excELIN1Id: UUID? = null,
     val dpnf: String? = null,
     val efmax: String? = null,
     val efmin: String? = null,
@@ -1333,7 +1333,7 @@ data class ExcELIN1(
 
 @Entity
 data class ExcELIN2(
-    @Id var excELIN2Id: UUID? = null,
+    @Id val excELIN2Id: UUID? = null,
     val efdbas: String? = null,
     val iefmax: String? = null,
     val iefmax2: String? = null,
@@ -1365,7 +1365,7 @@ data class ExcELIN2(
 
 @Entity
 data class ExcHU(
-    @Id var excHUId: UUID? = null,
+    @Id val excHUId: UUID? = null,
     val ae: String? = null,
     val ai: String? = null,
     val atr: String? = null,
@@ -1382,7 +1382,7 @@ data class ExcHU(
 
 @Entity
 data class ExcIEEEAC1A(
-    @Id var excIEEEAC1AId: UUID? = null,
+    @Id val excIEEEAC1AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val kd: String? = null,
@@ -1405,7 +1405,7 @@ data class ExcIEEEAC1A(
 
 @Entity
 data class ExcIEEEAC2A(
-    @Id var excIEEEAC2AId: UUID? = null,
+    @Id val excIEEEAC2AId: UUID? = null,
     val ka: String? = null,
     val kb: String? = null,
     val kc: String? = null,
@@ -1431,7 +1431,7 @@ data class ExcIEEEAC2A(
 
 @Entity
 data class ExcIEEEAC3A(
-    @Id var excIEEEAC3AId: UUID? = null,
+    @Id val excIEEEAC3AId: UUID? = null,
     val efdn: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -1457,7 +1457,7 @@ data class ExcIEEEAC3A(
 
 @Entity
 data class ExcIEEEAC4A(
-    @Id var excIEEEAC4AId: UUID? = null,
+    @Id val excIEEEAC4AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val ta: String? = null,
@@ -1471,7 +1471,7 @@ data class ExcIEEEAC4A(
 
 @Entity
 data class ExcIEEEAC5A(
-    @Id var excIEEEAC5AId: UUID? = null,
+    @Id val excIEEEAC5AId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val ka: String? = null,
@@ -1490,7 +1490,7 @@ data class ExcIEEEAC5A(
 
 @Entity
 data class ExcIEEEAC6A(
-    @Id var excIEEEAC6AId: UUID? = null,
+    @Id val excIEEEAC6AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val kd: String? = null,
@@ -1517,7 +1517,7 @@ data class ExcIEEEAC6A(
 
 @Entity
 data class ExcIEEEAC7B(
-    @Id var excIEEEAC7BId: UUID? = null,
+    @Id val excIEEEAC7BId: UUID? = null,
     val kc: String? = null,
     val kd: String? = null,
     val kdr: String? = null,
@@ -1548,7 +1548,7 @@ data class ExcIEEEAC7B(
 
 @Entity
 data class ExcIEEEAC8B(
-    @Id var excIEEEAC8BId: UUID? = null,
+    @Id val excIEEEAC8BId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val kd: String? = null,
@@ -1571,7 +1571,7 @@ data class ExcIEEEAC8B(
 
 @Entity
 data class ExcIEEEDC1A(
-    @Id var excIEEEDC1AId: UUID? = null,
+    @Id val excIEEEDC1AId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val exclim: String? = null,
@@ -1592,7 +1592,7 @@ data class ExcIEEEDC1A(
 
 @Entity
 data class ExcIEEEDC2A(
-    @Id var excIEEEDC2AId: UUID? = null,
+    @Id val excIEEEDC2AId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val exclim: String? = null,
@@ -1613,7 +1613,7 @@ data class ExcIEEEDC2A(
 
 @Entity
 data class ExcIEEEDC3A(
-    @Id var excIEEEDC3AId: UUID? = null,
+    @Id val excIEEEDC3AId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val exclim: String? = null,
@@ -1629,7 +1629,7 @@ data class ExcIEEEDC3A(
 
 @Entity
 data class ExcIEEEDC4B(
-    @Id var excIEEEDC4BId: UUID? = null,
+    @Id val excIEEEDC4BId: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val ka: String? = null,
@@ -1653,7 +1653,7 @@ data class ExcIEEEDC4B(
 
 @Entity
 data class ExcIEEEST1A(
-    @Id var excIEEEST1AId: UUID? = null,
+    @Id val excIEEEST1AId: UUID? = null,
     val ilr: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -1677,7 +1677,7 @@ data class ExcIEEEST1A(
 
 @Entity
 data class ExcIEEEST2A(
-    @Id var excIEEEST2AId: UUID? = null,
+    @Id val excIEEEST2AId: UUID? = null,
     val efdmax: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -1695,7 +1695,7 @@ data class ExcIEEEST2A(
 
 @Entity
 data class ExcIEEEST3A(
-    @Id var excIEEEST3AId: UUID? = null,
+    @Id val excIEEEST3AId: UUID? = null,
     val ka: String? = null,
     val kc: String? = null,
     val kg: String? = null,
@@ -1720,7 +1720,7 @@ data class ExcIEEEST3A(
 
 @Entity
 data class ExcIEEEST4B(
-    @Id var excIEEEST4BId: UUID? = null,
+    @Id val excIEEEST4BId: UUID? = null,
     val kc: String? = null,
     val kg: String? = null,
     val ki: String? = null,
@@ -1741,7 +1741,7 @@ data class ExcIEEEST4B(
 
 @Entity
 data class ExcIEEEST5B(
-    @Id var excIEEEST5BId: UUID? = null,
+    @Id val excIEEEST5BId: UUID? = null,
     val kc: String? = null,
     val kr: String? = null,
     val t1: String? = null,
@@ -1763,7 +1763,7 @@ data class ExcIEEEST5B(
 
 @Entity
 data class ExcIEEEST6B(
-    @Id var excIEEEST6BId: UUID? = null,
+    @Id val excIEEEST6BId: UUID? = null,
     val ilr: String? = null,
     val kci: String? = null,
     val kff: String? = null,
@@ -1782,7 +1782,7 @@ data class ExcIEEEST6B(
 
 @Entity
 data class ExcIEEEST7B(
-    @Id var excIEEEST7BId: UUID? = null,
+    @Id val excIEEEST7BId: UUID? = null,
     val kh: String? = null,
     val kia: String? = null,
     val kl: String? = null,
@@ -1802,7 +1802,7 @@ data class ExcIEEEST7B(
 
 @Entity
 data class ExcOEX3T(
-    @Id var excOEX3TId: UUID? = null,
+    @Id val excOEX3TId: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val ka: String? = null,
@@ -1826,7 +1826,7 @@ data class ExcOEX3T(
 
 @Entity
 data class ExcPIC(
-    @Id var excPICId: UUID? = null,
+    @Id val excPICId: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val efdmax: String? = null,
@@ -1854,7 +1854,7 @@ data class ExcPIC(
 
 @Entity
 data class ExcREXS(
-    @Id var excREXSId: UUID? = null,
+    @Id val excREXSId: UUID? = null,
     val e1: String? = null,
     val e2: String? = null,
     val fbf: String? = null,
@@ -1895,7 +1895,7 @@ data class ExcREXS(
 
 @Entity
 data class ExcSCRX(
-    @Id var excSCRXId: UUID? = null,
+    @Id val excSCRXId: UUID? = null,
     val cswitch: String? = null,
     val emax: String? = null,
     val emin: String? = null,
@@ -1908,7 +1908,7 @@ data class ExcSCRX(
 
 @Entity
 data class ExcSEXS(
-    @Id var excSEXSId: UUID? = null,
+    @Id val excSEXSId: UUID? = null,
     val efdmax: String? = null,
     val efdmin: String? = null,
     val emax: String? = null,
@@ -1923,7 +1923,7 @@ data class ExcSEXS(
 
 @Entity
 data class ExcSK(
-    @Id var excSKId: UUID? = null,
+    @Id val excSKId: UUID? = null,
     val efdmax: String? = null,
     val efdmin: String? = null,
     val emax: String? = null,
@@ -1960,7 +1960,7 @@ data class ExcSK(
 
 @Entity
 data class ExcST1A(
-    @Id var excST1AId: UUID? = null,
+    @Id val excST1AId: UUID? = null,
     val ilr: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -1983,7 +1983,7 @@ data class ExcST1A(
 
 @Entity
 data class ExcST2A(
-    @Id var excST2AId: UUID? = null,
+    @Id val excST2AId: UUID? = null,
     val efdmax: String? = null,
     val ka: String? = null,
     val kc: String? = null,
@@ -2003,7 +2003,7 @@ data class ExcST2A(
 
 @Entity
 data class ExcST3A(
-    @Id var excST3AId: UUID? = null,
+    @Id val excST3AId: UUID? = null,
     val efdmax: String? = null,
     val kc: String? = null,
     val kg: String? = null,
@@ -2028,7 +2028,7 @@ data class ExcST3A(
 
 @Entity
 data class ExcST4B(
-    @Id var excST4BId: UUID? = null,
+    @Id val excST4BId: UUID? = null,
     val kc: String? = null,
     val kg: String? = null,
     val ki: String? = null,
@@ -2052,7 +2052,7 @@ data class ExcST4B(
 
 @Entity
 data class ExcST6B(
-    @Id var excST6BId: UUID? = null,
+    @Id val excST6BId: UUID? = null,
     val ilr: String? = null,
     val k1: String? = null,
     val kcl: String? = null,
@@ -2080,7 +2080,7 @@ data class ExcST6B(
 
 @Entity
 data class ExcST7B(
-    @Id var excST7BId: UUID? = null,
+    @Id val excST7BId: UUID? = null,
     val kh: String? = null,
     val kia: String? = null,
     val kl: String? = null,
@@ -2106,20 +2106,20 @@ data class ExcitationSystemDynamics(
 
 @Entity
 data class ExcitationSystemUserDefined(
-    @Id var excitationSystemUserDefinedId: UUID? = null,
+    @Id val excitationSystemUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class ExtensionVersion(
-    @Id var extensionVersionId: UUID? = null,
+    @Id val extensionVersionId: UUID? = null,
     val date: String? = null,
     val namespaceURI: String? = null
 )
 
 @Entity
 data class ExternalNetworkInjection(
-    @Id var externalNetworkInjectionId: UUID? = null,
+    @Id val externalNetworkInjectionId: UUID? = null,
     val governorSCD: String? = null,
     val ikSecond: String? = null,
     val maxInitialSymShCCurrent: String? = null,
@@ -2144,13 +2144,13 @@ data class FloatProxy(
 
 @Entity
 data class FossilFuel(
-    @Id var fossilFuelId: UUID? = null,
+    @Id val fossilFuelId: UUID? = null,
     val fossilFuelType: String? = null
 )
 
 @Entity
 data class Frequency(
-    @Id var frequencyId: UUID? = null,
+    @Id val frequencyId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -2158,14 +2158,14 @@ data class Frequency(
 
 @Entity
 data class GenICompensationForGenJ(
-    @Id var genICompensationForGenJId: UUID? = null,
+    @Id val genICompensationForGenJId: UUID? = null,
     val rcij: String? = null,
     val xcij: String? = null
 )
 
 @Entity
 data class GeneratingUnit(
-    @Id var generatingUnitId: UUID? = null,
+    @Id val generatingUnitId: UUID? = null,
     val genControlSource: String? = null,
     val governorSCD: String? = null,
     val initialP: String? = null,
@@ -2185,7 +2185,7 @@ data class GeneratingUnit(
 
 @Entity
 data class GeographicalLocationVersion(
-    @Id var geographicalLocationVersionId: UUID? = null,
+    @Id val geographicalLocationVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -2205,7 +2205,7 @@ data class GeographicalRegion(
 
 @Entity
 data class GovCT1(
-    @Id var govCT1Id: UUID? = null,
+    @Id val govCT1Id: UUID? = null,
     val aset: String? = null,
     val db: String? = null,
     val dm: String? = null,
@@ -2245,7 +2245,7 @@ data class GovCT1(
 
 @Entity
 data class GovCT2(
-    @Id var govCT2Id: UUID? = null,
+    @Id val govCT2Id: UUID? = null,
     val aset: String? = null,
     val db: String? = null,
     val dm: String? = null,
@@ -2306,7 +2306,7 @@ data class GovCT2(
 
 @Entity
 data class GovGAST(
-    @Id var govGASTId: UUID? = null,
+    @Id val govGASTId: UUID? = null,
     val at: String? = null,
     val dturb: String? = null,
     val kt: String? = null,
@@ -2321,7 +2321,7 @@ data class GovGAST(
 
 @Entity
 data class GovGAST1(
-    @Id var govGAST1Id: UUID? = null,
+    @Id val govGAST1Id: UUID? = null,
     val a: String? = null,
     val b: String? = null,
     val db1: String? = null,
@@ -2360,7 +2360,7 @@ data class GovGAST1(
 
 @Entity
 data class GovGAST2(
-    @Id var govGAST2Id: UUID? = null,
+    @Id val govGAST2Id: UUID? = null,
     val a: String? = null,
     val af1: String? = null,
     val af2: String? = null,
@@ -2397,7 +2397,7 @@ data class GovGAST2(
 
 @Entity
 data class GovGAST3(
-    @Id var govGAST3Id: UUID? = null,
+    @Id val govGAST3Id: UUID? = null,
     val bca: String? = null,
     val bp: String? = null,
     val dtc: String? = null,
@@ -2423,7 +2423,7 @@ data class GovGAST3(
 
 @Entity
 data class GovGAST4(
-    @Id var govGAST4Id: UUID? = null,
+    @Id val govGAST4Id: UUID? = null,
     val bp: String? = null,
     val ktm: String? = null,
     val mnef: String? = null,
@@ -2439,7 +2439,7 @@ data class GovGAST4(
 
 @Entity
 data class GovGASTWD(
-    @Id var govGASTWDId: UUID? = null,
+    @Id val govGASTWDId: UUID? = null,
     val a: String? = null,
     val af1: String? = null,
     val af2: String? = null,
@@ -2477,7 +2477,7 @@ data class GovGASTWD(
 
 @Entity
 data class GovHydro1(
-    @Id var govHydro1Id: UUID? = null,
+    @Id val govHydro1Id: UUID? = null,
     val at: String? = null,
     val dturb: String? = null,
     val gmax: String? = null,
@@ -2496,7 +2496,7 @@ data class GovHydro1(
 
 @Entity
 data class GovHydro2(
-    @Id var govHydro2Id: UUID? = null,
+    @Id val govHydro2Id: UUID? = null,
     val aturb: String? = null,
     val bturb: String? = null,
     val db1: String? = null,
@@ -2530,7 +2530,7 @@ data class GovHydro2(
 
 @Entity
 data class GovHydro3(
-    @Id var govHydro3Id: UUID? = null,
+    @Id val govHydro3Id: UUID? = null,
     val at: String? = null,
     val db1: String? = null,
     val db2: String? = null,
@@ -2571,7 +2571,7 @@ data class GovHydro3(
 
 @Entity
 data class GovHydro4(
-    @Id var govHydro4Id: UUID? = null,
+    @Id val govHydro4Id: UUID? = null,
     val at: String? = null,
     val bgv0: String? = null,
     val bgv1: String? = null,
@@ -2614,7 +2614,7 @@ data class GovHydro4(
 
 @Entity
 data class GovHydroDD(
-    @Id var govHydroDDId: UUID? = null,
+    @Id val govHydroDDId: UUID? = null,
     val aturb: String? = null,
     val bturb: String? = null,
     val db1: String? = null,
@@ -2654,7 +2654,7 @@ data class GovHydroDD(
 
 @Entity
 data class GovHydroFrancis(
-    @Id var govHydroFrancisId: UUID? = null,
+    @Id val govHydroFrancisId: UUID? = null,
     val am: String? = null,
     val av0: String? = null,
     val av1: String? = null,
@@ -2686,7 +2686,7 @@ data class GovHydroFrancis(
 
 @Entity
 data class GovHydroIEEE0(
-    @Id var govHydroIEEE0Id: UUID? = null,
+    @Id val govHydroIEEE0Id: UUID? = null,
     val k: String? = null,
     val mwbase: String? = null,
     val pmax: String? = null,
@@ -2699,7 +2699,7 @@ data class GovHydroIEEE0(
 
 @Entity
 data class GovHydroIEEE2(
-    @Id var govHydroIEEE2Id: UUID? = null,
+    @Id val govHydroIEEE2Id: UUID? = null,
     val aturb: String? = null,
     val bturb: String? = null,
     val gv1: String? = null,
@@ -2730,7 +2730,7 @@ data class GovHydroIEEE2(
 
 @Entity
 data class GovHydroPID(
-    @Id var govHydroPIDId: UUID? = null,
+    @Id val govHydroPIDId: UUID? = null,
     val aturb: String? = null,
     val bturb: String? = null,
     val db1: String? = null,
@@ -2768,7 +2768,7 @@ data class GovHydroPID(
 
 @Entity
 data class GovHydroPID2(
-    @Id var govHydroPID2Id: UUID? = null,
+    @Id val govHydroPID2Id: UUID? = null,
     val atw: String? = null,
     val d: String? = null,
     val feedbackSignal: String? = null,
@@ -2795,7 +2795,7 @@ data class GovHydroPID2(
 
 @Entity
 data class GovHydroPelton(
-    @Id var govHydroPeltonId: UUID? = null,
+    @Id val govHydroPeltonId: UUID? = null,
     val av0: String? = null,
     val av1: String? = null,
     val bp: String? = null,
@@ -2828,7 +2828,7 @@ data class GovHydroPelton(
 
 @Entity
 data class GovHydroR(
-    @Id var govHydroRId: UUID? = null,
+    @Id val govHydroRId: UUID? = null,
     val at: String? = null,
     val db1: String? = null,
     val db2: String? = null,
@@ -2875,7 +2875,7 @@ data class GovHydroR(
 
 @Entity
 data class GovHydroWEH(
-    @Id var govHydroWEHId: UUID? = null,
+    @Id val govHydroWEHId: UUID? = null,
     val db: String? = null,
     val dicn: String? = null,
     val dpv: String? = null,
@@ -2931,7 +2931,7 @@ data class GovHydroWEH(
 
 @Entity
 data class GovHydroWPID(
-    @Id var govHydroWPIDId: UUID? = null,
+    @Id val govHydroWPIDId: UUID? = null,
     val d: String? = null,
     val gatmax: String? = null,
     val gatmin: String? = null,
@@ -2958,7 +2958,7 @@ data class GovHydroWPID(
 
 @Entity
 data class GovSteam0(
-    @Id var govSteam0Id: UUID? = null,
+    @Id val govSteam0Id: UUID? = null,
     val dt: String? = null,
     val mwbase: String? = null,
     val r: String? = null,
@@ -2971,7 +2971,7 @@ data class GovSteam0(
 
 @Entity
 data class GovSteam1(
-    @Id var govSteam1Id: UUID? = null,
+    @Id val govSteam1Id: UUID? = null,
     val db1: String? = null,
     val db2: String? = null,
     val eps: String? = null,
@@ -3015,7 +3015,7 @@ data class GovSteam1(
 
 @Entity
 data class GovSteam2(
-    @Id var govSteam2Id: UUID? = null,
+    @Id val govSteam2Id: UUID? = null,
     val dbf: String? = null,
     val k: String? = null,
     val mnef: String? = null,
@@ -3028,7 +3028,7 @@ data class GovSteam2(
 
 @Entity
 data class GovSteamCC(
-    @Id var govSteamCCId: UUID? = null,
+    @Id val govSteamCCId: UUID? = null,
     val dhp: String? = null,
     val dlp: String? = null,
     val fhp: String? = null,
@@ -3050,7 +3050,7 @@ data class GovSteamCC(
 
 @Entity
 data class GovSteamEU(
-    @Id var govSteamEUId: UUID? = null,
+    @Id val govSteamEUId: UUID? = null,
     val chc: String? = null,
     val cho: String? = null,
     val cic: String? = null,
@@ -3090,7 +3090,7 @@ data class GovSteamEU(
 
 @Entity
 data class GovSteamFV2(
-    @Id var govSteamFV2Id: UUID? = null,
+    @Id val govSteamFV2Id: UUID? = null,
     val dt: String? = null,
     val k: String? = null,
     val mwbase: String? = null,
@@ -3108,7 +3108,7 @@ data class GovSteamFV2(
 
 @Entity
 data class GovSteamFV3(
-    @Id var govSteamFV3Id: UUID? = null,
+    @Id val govSteamFV3Id: UUID? = null,
     val k: String? = null,
     val k1: String? = null,
     val k2: String? = null,
@@ -3132,7 +3132,7 @@ data class GovSteamFV3(
 
 @Entity
 data class GovSteamFV4(
-    @Id var govSteamFV4Id: UUID? = null,
+    @Id val govSteamFV4Id: UUID? = null,
     val cpsmn: String? = null,
     val cpsmx: String? = null,
     val crmn: String? = null,
@@ -3188,7 +3188,7 @@ data class GovSteamFV4(
 
 @Entity
 data class GovSteamIEEE1(
-    @Id var govSteamIEEE1Id: UUID? = null,
+    @Id val govSteamIEEE1Id: UUID? = null,
     val k: String? = null,
     val k1: String? = null,
     val k2: String? = null,
@@ -3214,7 +3214,7 @@ data class GovSteamIEEE1(
 
 @Entity
 data class GovSteamSGO(
-    @Id var govSteamSGOId: UUID? = null,
+    @Id val govSteamSGOId: UUID? = null,
     val k1: String? = null,
     val k2: String? = null,
     val k3: String? = null,
@@ -3246,19 +3246,19 @@ data class GroundDisconnector(
 
 @Entity
 data class GroundingImpedance(
-    @Id var groundingImpedanceId: UUID? = null,
+    @Id val groundingImpedanceId: UUID? = null,
     val x: String? = null
 )
 
 @Entity
 data class HydroGeneratingUnit(
-    @Id var hydroGeneratingUnitId: UUID? = null,
+    @Id val hydroGeneratingUnitId: UUID? = null,
     val energyConversionCapability: String? = null
 )
 
 @Entity
 data class HydroPowerPlant(
-    @Id var hydroPowerPlantId: UUID? = null,
+    @Id val hydroPowerPlantId: UUID? = null,
     val hydroPlantStorageType: String? = null
 )
 
@@ -3269,7 +3269,7 @@ data class HydroPump(
 
 @Entity
 data class IdentifiedObject(
-    @Id var identifiedObjectId: UUID? = null,
+    @Id val identifiedObjectId: UUID? = null,
     val description: String? = null,
     val energyIdentCodeEic: String? = null,
     val mRID: String? = null,
@@ -3279,7 +3279,7 @@ data class IdentifiedObject(
 
 @Entity
 data class Inductance(
-    @Id var inductanceId: UUID? = null,
+    @Id val inductanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -3287,7 +3287,7 @@ data class Inductance(
 
 @Entity
 data class InductancePerLength(
-    @Id var inductancePerLengthId: UUID? = null,
+    @Id val inductancePerLengthId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -3307,7 +3307,7 @@ data class Junction(
 
 @Entity
 data class Length(
-    @Id var lengthId: UUID? = null,
+    @Id val lengthId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -3320,7 +3320,7 @@ data class Limit(
 
 @Entity
 data class LimitSet(
-    @Id var limitSetId: UUID? = null,
+    @Id val limitSetId: UUID? = null,
     val isPercentageLimits: String? = null
 )
 
@@ -3331,7 +3331,7 @@ data class Line(
 
 @Entity
 data class LinearShuntCompensator(
-    @Id var linearShuntCompensatorId: UUID? = null,
+    @Id val linearShuntCompensatorId: UUID? = null,
     val b0PerSection: String? = null,
     val bPerSection: String? = null,
     val g0PerSection: String? = null,
@@ -3355,7 +3355,7 @@ data class LoadBreakSwitch(
 
 @Entity
 data class LoadComposite(
-    @Id var loadCompositeId: UUID? = null,
+    @Id val loadCompositeId: UUID? = null,
     val epfd: String? = null,
     val epfs: String? = null,
     val epvd: String? = null,
@@ -3376,7 +3376,7 @@ data class LoadDynamics(
 
 @Entity
 data class LoadGenericNonLinear(
-    @Id var loadGenericNonLinearId: UUID? = null,
+    @Id val loadGenericNonLinearId: UUID? = null,
     val bs: String? = null,
     val bt: String? = null,
     val genericNonLinearLoadModelType: String? = null,
@@ -3395,7 +3395,7 @@ data class LoadGroup(
 
 @Entity
 data class LoadMotor(
-    @Id var loadMotorId: UUID? = null,
+    @Id val loadMotorId: UUID? = null,
     val d: String? = null,
     val h: String? = null,
     val lfac: String? = null,
@@ -3413,7 +3413,7 @@ data class LoadMotor(
 
 @Entity
 data class LoadResponseCharacteristic(
-    @Id var loadResponseCharacteristicId: UUID? = null,
+    @Id val loadResponseCharacteristicId: UUID? = null,
     val exponentModel: String? = null,
     val pConstantCurrent: String? = null,
     val pConstantImpedance: String? = null,
@@ -3429,7 +3429,7 @@ data class LoadResponseCharacteristic(
 
 @Entity
 data class LoadStatic(
-    @Id var loadStaticId: UUID? = null,
+    @Id val loadStaticId: UUID? = null,
     val ep1: String? = null,
     val ep2: String? = null,
     val ep3: String? = null,
@@ -3451,7 +3451,7 @@ data class LoadStatic(
 
 @Entity
 data class LoadUserDefined(
-    @Id var loadUserDefinedId: UUID? = null,
+    @Id val loadUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -3462,7 +3462,7 @@ data class Location(
 
 @Entity
 data class Measurement(
-    @Id var measurementId: UUID? = null,
+    @Id val measurementId: UUID? = null,
     val measurementType: String? = null,
     val phases: String? = null,
     val unitMultiplier: String? = null,
@@ -3471,7 +3471,7 @@ data class Measurement(
 
 @Entity
 data class MeasurementValue(
-    @Id var measurementValueId: UUID? = null,
+    @Id val measurementValueId: UUID? = null,
     val sensorAccuracy: String? = null,
     val timeStamp: String? = null
 )
@@ -3488,7 +3488,7 @@ data class MeasurementValueSource(
 
 @Entity
 data class MechLoad1(
-    @Id var mechLoad1Id: UUID? = null,
+    @Id val mechLoad1Id: UUID? = null,
     val a: String? = null,
     val b: String? = null,
     val d: String? = null,
@@ -3502,13 +3502,13 @@ data class MechanicalLoadDynamics(
 
 @Entity
 data class MechanicalLoadUserDefined(
-    @Id var mechanicalLoadUserDefinedId: UUID? = null,
+    @Id val mechanicalLoadUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class Money(
-    @Id var moneyId: UUID? = null,
+    @Id val moneyId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -3521,14 +3521,14 @@ data class MonthDay(
 
 @Entity
 data class MonthDayInterval(
-    @Id var monthDayIntervalId: UUID? = null,
+    @Id val monthDayIntervalId: UUID? = null,
     val end: String? = null,
     val start: String? = null
 )
 
 @Entity
 data class MutualCoupling(
-    @Id var mutualCouplingId: UUID? = null,
+    @Id val mutualCouplingId: UUID? = null,
     val b0ch: String? = null,
     val distance11: String? = null,
     val distance12: String? = null,
@@ -3561,7 +3561,7 @@ data class NonlinearShuntCompensator(
 
 @Entity
 data class NonlinearShuntCompensatorPoint(
-    @Id var nonlinearShuntCompensatorPointId: UUID? = null,
+    @Id val nonlinearShuntCompensatorPointId: UUID? = null,
     val b: String? = null,
     val b0: String? = null,
     val g: String? = null,
@@ -3586,7 +3586,7 @@ data class OperationalLimitSet(
 
 @Entity
 data class OperationalLimitType(
-    @Id var operationalLimitTypeId: UUID? = null,
+    @Id val operationalLimitTypeId: UUID? = null,
     val acceptableDuration: String? = null,
     val direction: String? = null,
     val limitType: String? = null
@@ -3594,7 +3594,7 @@ data class OperationalLimitType(
 
 @Entity
 data class OverexcLim2(
-    @Id var overexcLim2Id: UUID? = null,
+    @Id val overexcLim2Id: UUID? = null,
     val ifdlim: String? = null,
     val koi: String? = null,
     val voimax: String? = null,
@@ -3603,7 +3603,7 @@ data class OverexcLim2(
 
 @Entity
 data class OverexcLimIEEE(
-    @Id var overexcLimIEEEId: UUID? = null,
+    @Id val overexcLimIEEEId: UUID? = null,
     val hyst: String? = null,
     val ifdlim: String? = null,
     val ifdmax: String? = null,
@@ -3614,7 +3614,7 @@ data class OverexcLimIEEE(
 
 @Entity
 data class OverexcLimX1(
-    @Id var overexcLimX1Id: UUID? = null,
+    @Id val overexcLimX1Id: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val efd3: String? = null,
@@ -3629,7 +3629,7 @@ data class OverexcLimX1(
 
 @Entity
 data class OverexcLimX2(
-    @Id var overexcLimX2Id: UUID? = null,
+    @Id val overexcLimX2Id: UUID? = null,
     val efd1: String? = null,
     val efd2: String? = null,
     val efd3: String? = null,
@@ -3650,7 +3650,7 @@ data class OverexcitationLimiterDynamics(
 
 @Entity
 data class OverexcitationLimiterUserDefined(
-    @Id var overexcitationLimiterUserDefinedId: UUID? = null,
+    @Id val overexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -3661,7 +3661,7 @@ data class PFVArControllerType1Dynamics(
 
 @Entity
 data class PFVArControllerType1UserDefined(
-    @Id var pFVArControllerType1UserDefinedId: UUID? = null,
+    @Id val pFVArControllerType1UserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -3672,13 +3672,13 @@ data class PFVArControllerType2Dynamics(
 
 @Entity
 data class PFVArControllerType2UserDefined(
-    @Id var pFVArControllerType2UserDefinedId: UUID? = null,
+    @Id val pFVArControllerType2UserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class PFVArType1IEEEPFController(
-    @Id var pFVArType1IEEEPFControllerId: UUID? = null,
+    @Id val pFVArType1IEEEPFControllerId: UUID? = null,
     val ovex: String? = null,
     val tpfc: String? = null,
     val vitmin: String? = null,
@@ -3691,7 +3691,7 @@ data class PFVArType1IEEEPFController(
 
 @Entity
 data class PFVArType1IEEEVArController(
-    @Id var pFVArType1IEEEVArControllerId: UUID? = null,
+    @Id val pFVArType1IEEEVArControllerId: UUID? = null,
     val tvarc: String? = null,
     val vvar: String? = null,
     val vvarcbw: String? = null,
@@ -3702,7 +3702,7 @@ data class PFVArType1IEEEVArController(
 
 @Entity
 data class PFVArType2Common1(
-    @Id var pFVArType2Common1Id: UUID? = null,
+    @Id val pFVArType2Common1Id: UUID? = null,
     val j: String? = null,
     val ki: String? = null,
     val kp: String? = null,
@@ -3712,7 +3712,7 @@ data class PFVArType2Common1(
 
 @Entity
 data class PFVArType2IEEEPFController(
-    @Id var pFVArType2IEEEPFControllerId: UUID? = null,
+    @Id val pFVArType2IEEEPFControllerId: UUID? = null,
     val exlon: String? = null,
     val ki: String? = null,
     val kp: String? = null,
@@ -3724,7 +3724,7 @@ data class PFVArType2IEEEPFController(
 
 @Entity
 data class PFVArType2IEEEVArController(
-    @Id var pFVArType2IEEEVArControllerId: UUID? = null,
+    @Id val pFVArType2IEEEVArControllerId: UUID? = null,
     val exlon: String? = null,
     val ki: String? = null,
     val kp: String? = null,
@@ -3736,7 +3736,7 @@ data class PFVArType2IEEEVArController(
 
 @Entity
 data class PU(
-    @Id var pUId: UUID? = null,
+    @Id val pUId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -3744,7 +3744,7 @@ data class PU(
 
 @Entity
 data class PerCent(
-    @Id var perCentId: UUID? = null,
+    @Id val perCentId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -3752,7 +3752,7 @@ data class PerCent(
 
 @Entity
 data class PerLengthDCLineParameter(
-    @Id var perLengthDCLineParameterId: UUID? = null,
+    @Id val perLengthDCLineParameterId: UUID? = null,
     val capacitance: String? = null,
     val inductance: String? = null,
     val resistance: String? = null
@@ -3760,7 +3760,7 @@ data class PerLengthDCLineParameter(
 
 @Entity
 data class PetersenCoil(
-    @Id var petersenCoilId: UUID? = null,
+    @Id val petersenCoilId: UUID? = null,
     val mode: String? = null,
     val nominalU: String? = null,
     val offsetCurrent: String? = null,
@@ -3777,13 +3777,13 @@ data class PhaseTapChanger(
 
 @Entity
 data class PhaseTapChangerAsymmetrical(
-    @Id var phaseTapChangerAsymmetricalId: UUID? = null,
+    @Id val phaseTapChangerAsymmetricalId: UUID? = null,
     val windingConnectionAngle: String? = null
 )
 
 @Entity
 data class PhaseTapChangerLinear(
-    @Id var phaseTapChangerLinearId: UUID? = null,
+    @Id val phaseTapChangerLinearId: UUID? = null,
     val stepPhaseShiftIncrement: String? = null,
     val xMax: String? = null,
     val xMin: String? = null
@@ -3791,7 +3791,7 @@ data class PhaseTapChangerLinear(
 
 @Entity
 data class PhaseTapChangerNonLinear(
-    @Id var phaseTapChangerNonLinearId: UUID? = null,
+    @Id val phaseTapChangerNonLinearId: UUID? = null,
     val voltageStepIncrement: String? = null,
     val xMax: String? = null,
     val xMin: String? = null
@@ -3809,7 +3809,7 @@ data class PhaseTapChangerTable(
 
 @Entity
 data class PhaseTapChangerTablePoint(
-    @Id var phaseTapChangerTablePointId: UUID? = null,
+    @Id val phaseTapChangerTablePointId: UUID? = null,
     val angle: String? = null
 )
 
@@ -3820,7 +3820,7 @@ data class PhaseTapChangerTabular(
 
 @Entity
 data class PositionPoint(
-    @Id var positionPointId: UUID? = null,
+    @Id val positionPointId: UUID? = null,
     val sequenceNumber: String? = null,
     val xPosition: String? = null,
     val yPosition: String? = null,
@@ -3839,13 +3839,13 @@ data class PowerSystemStabilizerDynamics(
 
 @Entity
 data class PowerSystemStabilizerUserDefined(
-    @Id var powerSystemStabilizerUserDefinedId: UUID? = null,
+    @Id val powerSystemStabilizerUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class PowerTransformer(
-    @Id var powerTransformerId: UUID? = null,
+    @Id val powerTransformerId: UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String? = null,
     val beforeShCircuitHighestOperatingVoltage: String? = null,
     val beforeShortCircuitAnglePf: String? = null,
@@ -3856,7 +3856,7 @@ data class PowerTransformer(
 
 @Entity
 data class PowerTransformerEnd(
-    @Id var powerTransformerEndId: UUID? = null,
+    @Id val powerTransformerEndId: UUID? = null,
     val b: String? = null,
     val b0: String? = null,
     val connectionKind: String? = null,
@@ -3873,7 +3873,7 @@ data class PowerTransformerEnd(
 
 @Entity
 data class ProprietaryParameterDynamics(
-    @Id var proprietaryParameterDynamicsId: UUID? = null,
+    @Id val proprietaryParameterDynamicsId: UUID? = null,
     val booleanParameterValue: String? = null,
     val floatParameterValue: String? = null,
     val integerParameterValue: String? = null,
@@ -3887,7 +3887,7 @@ data class ProtectedSwitch(
 
 @Entity
 data class Pss1(
-    @Id var pss1Id: UUID? = null,
+    @Id val pss1Id: UUID? = null,
     val kf: String? = null,
     val kpe: String? = null,
     val ks: String? = null,
@@ -3907,7 +3907,7 @@ data class Pss1(
 
 @Entity
 data class Pss1A(
-    @Id var pss1AId: UUID? = null,
+    @Id val pss1AId: UUID? = null,
     val a1: String? = null,
     val a2: String? = null,
     val a3: String? = null,
@@ -3934,7 +3934,7 @@ data class Pss1A(
 
 @Entity
 data class Pss2B(
-    @Id var pss2BId: UUID? = null,
+    @Id val pss2BId: UUID? = null,
     val a: String? = null,
     val inputSignal1Type: String? = null,
     val inputSignal2Type: String? = null,
@@ -3970,7 +3970,7 @@ data class Pss2B(
 
 @Entity
 data class Pss2ST(
-    @Id var pss2STId: UUID? = null,
+    @Id val pss2STId: UUID? = null,
     val inputSignal1Type: String? = null,
     val inputSignal2Type: String? = null,
     val k1: String? = null,
@@ -3993,7 +3993,7 @@ data class Pss2ST(
 
 @Entity
 data class Pss5(
-    @Id var pss5Id: UUID? = null,
+    @Id val pss5Id: UUID? = null,
     val ctw2: String? = null,
     val deadband: String? = null,
     val isfreq: String? = null,
@@ -4015,7 +4015,7 @@ data class Pss5(
 
 @Entity
 data class PssELIN2(
-    @Id var pssELIN2Id: UUID? = null,
+    @Id val pssELIN2Id: UUID? = null,
     val apss: String? = null,
     val ks1: String? = null,
     val ks2: String? = null,
@@ -4031,7 +4031,7 @@ data class PssELIN2(
 
 @Entity
 data class PssIEEE1A(
-    @Id var pssIEEE1AId: UUID? = null,
+    @Id val pssIEEE1AId: UUID? = null,
     val a1: String? = null,
     val a2: String? = null,
     val inputSignalType: String? = null,
@@ -4048,7 +4048,7 @@ data class PssIEEE1A(
 
 @Entity
 data class PssIEEE2B(
-    @Id var pssIEEE2BId: UUID? = null,
+    @Id val pssIEEE2BId: UUID? = null,
     val inputSignal1Type: String? = null,
     val inputSignal2Type: String? = null,
     val ks1: String? = null,
@@ -4080,7 +4080,7 @@ data class PssIEEE2B(
 
 @Entity
 data class PssIEEE3B(
-    @Id var pssIEEE3BId: UUID? = null,
+    @Id val pssIEEE3BId: UUID? = null,
     val a1: String? = null,
     val a2: String? = null,
     val a3: String? = null,
@@ -4104,7 +4104,7 @@ data class PssIEEE3B(
 
 @Entity
 data class PssIEEE4B(
-    @Id var pssIEEE4BId: UUID? = null,
+    @Id val pssIEEE4BId: UUID? = null,
     val bwh1: String? = null,
     val bwh2: String? = null,
     val bwl1: String? = null,
@@ -4176,7 +4176,7 @@ data class PssIEEE4B(
 
 @Entity
 data class PssPTIST1(
-    @Id var pssPTIST1Id: UUID? = null,
+    @Id val pssPTIST1Id: UUID? = null,
     val dtc: String? = null,
     val dtf: String? = null,
     val dtp: String? = null,
@@ -4192,7 +4192,7 @@ data class PssPTIST1(
 
 @Entity
 data class PssPTIST3(
-    @Id var pssPTIST3Id: UUID? = null,
+    @Id val pssPTIST3Id: UUID? = null,
     val a0: String? = null,
     val a1: String? = null,
     val a2: String? = null,
@@ -4231,7 +4231,7 @@ data class PssPTIST3(
 
 @Entity
 data class PssSB4(
-    @Id var pssSB4Id: UUID? = null,
+    @Id val pssSB4Id: UUID? = null,
     val kx: String? = null,
     val ta: String? = null,
     val tb: String? = null,
@@ -4247,7 +4247,7 @@ data class PssSB4(
 
 @Entity
 data class PssSH(
-    @Id var pssSHId: UUID? = null,
+    @Id val pssSHId: UUID? = null,
     val k: String? = null,
     val k0: String? = null,
     val k1: String? = null,
@@ -4265,7 +4265,7 @@ data class PssSH(
 
 @Entity
 data class PssSK(
-    @Id var pssSKId: UUID? = null,
+    @Id val pssSKId: UUID? = null,
     val k1: String? = null,
     val k2: String? = null,
     val k3: String? = null,
@@ -4281,7 +4281,7 @@ data class PssSK(
 
 @Entity
 data class PssWECC(
-    @Id var pssWECCId: UUID? = null,
+    @Id val pssWECCId: UUID? = null,
     val inputSignal1Type: String? = null,
     val inputSignal2Type: String? = null,
     val k1: String? = null,
@@ -4304,7 +4304,7 @@ data class PssWECC(
 
 @Entity
 data class Quality61850(
-    @Id var quality61850Id: UUID? = null,
+    @Id val quality61850Id: UUID? = null,
     val badReference: String? = null,
     val estimatorReplaced: String? = null,
     val failure: String? = null,
@@ -4326,7 +4326,7 @@ data class RaiseLowerCommand(
 
 @Entity
 data class RatioTapChanger(
-    @Id var ratioTapChangerId: UUID? = null,
+    @Id val ratioTapChangerId: UUID? = null,
     val stepVoltageIncrement: String? = null,
     val tculControlMode: String? = null
 )
@@ -4343,7 +4343,7 @@ data class RatioTapChangerTablePoint(
 
 @Entity
 data class Reactance(
-    @Id var reactanceId: UUID? = null,
+    @Id val reactanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4356,7 +4356,7 @@ data class ReactiveCapabilityCurve(
 
 @Entity
 data class ReactivePower(
-    @Id var reactivePowerId: UUID? = null,
+    @Id val reactivePowerId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4364,14 +4364,14 @@ data class ReactivePower(
 
 @Entity
 data class RegularIntervalSchedule(
-    @Id var regularIntervalScheduleId: UUID? = null,
+    @Id val regularIntervalScheduleId: UUID? = null,
     val endTime: String? = null,
     val timeStep: String? = null
 )
 
 @Entity
 data class RegularTimePoint(
-    @Id var regularTimePointId: UUID? = null,
+    @Id val regularTimePointId: UUID? = null,
     val sequenceNumber: String? = null,
     val value1: String? = null,
     val value2: String? = null
@@ -4384,7 +4384,7 @@ data class RegulatingCondEq(
 
 @Entity
 data class RegulatingControl(
-    @Id var regulatingControlId: UUID? = null,
+    @Id val regulatingControlId: UUID? = null,
     val mode: String? = null
 )
 
@@ -4395,7 +4395,7 @@ data class RegulationSchedule(
 
 @Entity
 data class RemoteInputSignal(
-    @Id var remoteInputSignalId: UUID? = null,
+    @Id val remoteInputSignalId: UUID? = null,
     val remoteSignalType: String? = null
 )
 
@@ -4406,7 +4406,7 @@ data class ReportingGroup(
 
 @Entity
 data class Resistance(
-    @Id var resistanceId: UUID? = null,
+    @Id val resistanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4414,7 +4414,7 @@ data class Resistance(
 
 @Entity
 data class ResistancePerLength(
-    @Id var resistancePerLengthId: UUID? = null,
+    @Id val resistancePerLengthId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -4424,7 +4424,7 @@ data class ResistancePerLength(
 
 @Entity
 data class RotatingMachine(
-    @Id var rotatingMachineId: UUID? = null,
+    @Id val rotatingMachineId: UUID? = null,
     val ratedPowerFactor: String? = null,
     val ratedS: String? = null,
     val ratedU: String? = null
@@ -4432,7 +4432,7 @@ data class RotatingMachine(
 
 @Entity
 data class RotatingMachineDynamics(
-    @Id var rotatingMachineDynamicsId: UUID? = null,
+    @Id val rotatingMachineDynamicsId: UUID? = null,
     val damping: String? = null,
     val inertia: String? = null,
     val saturationFactor: String? = null,
@@ -4443,7 +4443,7 @@ data class RotatingMachineDynamics(
 
 @Entity
 data class RotationSpeed(
-    @Id var rotationSpeedId: UUID? = null,
+    @Id val rotationSpeedId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -4453,7 +4453,7 @@ data class RotationSpeed(
 
 @Entity
 data class Season(
-    @Id var seasonId: UUID? = null,
+    @Id val seasonId: UUID? = null,
     val endDate: String? = null,
     val startDate: String? = null
 )
@@ -4465,7 +4465,7 @@ data class SeasonDayTypeSchedule(
 
 @Entity
 data class Seconds(
-    @Id var secondsId: UUID? = null,
+    @Id val secondsId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4473,7 +4473,7 @@ data class Seconds(
 
 @Entity
 data class SeriesCompensator(
-    @Id var seriesCompensatorId: UUID? = null,
+    @Id val seriesCompensatorId: UUID? = null,
     val r: String? = null,
     val r0: String? = null,
     val varistorPresent: String? = null,
@@ -4485,14 +4485,14 @@ data class SeriesCompensator(
 
 @Entity
 data class SetPoint(
-    @Id var setPointId: UUID? = null,
+    @Id val setPointId: UUID? = null,
     val normalValue: String? = null,
     val value: String? = null
 )
 
 @Entity
 data class ShuntCompensator(
-    @Id var shuntCompensatorId: UUID? = null,
+    @Id val shuntCompensatorId: UUID? = null,
     val aVRDelay: String? = null,
     val grounded: String? = null,
     val maximumSections: String? = null,
@@ -4505,7 +4505,7 @@ data class ShuntCompensator(
 
 @Entity
 data class Simple_Float(
-    @Id var simple_FloatId: UUID? = null,
+    @Id val simple_FloatId: UUID? = null,
     val value: String? = null
 )
 
@@ -4516,7 +4516,7 @@ data class SolarGeneratingUnit(
 
 @Entity
 data class StateVariablesVersion(
-    @Id var stateVariablesVersionId: UUID? = null,
+    @Id val stateVariablesVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -4531,7 +4531,7 @@ data class StateVariablesVersion(
 
 @Entity
 data class StaticVarCompensator(
-    @Id var staticVarCompensatorId: UUID? = null,
+    @Id val staticVarCompensatorId: UUID? = null,
     val capacitiveRating: String? = null,
     val inductiveRating: String? = null,
     val slope: String? = null,
@@ -4551,7 +4551,7 @@ data class StationSupply(
 
 @Entity
 data class SteadyStateHypothesisVersion(
-    @Id var steadyStateHypothesisVersionId: UUID? = null,
+    @Id val steadyStateHypothesisVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -4571,7 +4571,7 @@ data class StringMeasurement(
 
 @Entity
 data class StringMeasurementValue(
-    @Id var stringMeasurementValueId: UUID? = null,
+    @Id val stringMeasurementValueId: UUID? = null,
     val value: String? = null
 )
 
@@ -4597,7 +4597,7 @@ data class Substation(
 
 @Entity
 data class Susceptance(
-    @Id var susceptanceId: UUID? = null,
+    @Id val susceptanceId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4605,52 +4605,52 @@ data class Susceptance(
 
 @Entity
 data class SvInjection(
-    @Id var svInjectionId: UUID? = null,
+    @Id val svInjectionId: UUID? = null,
     val pInjection: String? = null,
     val qInjection: String? = null
 )
 
 @Entity
 data class SvPowerFlow(
-    @Id var svPowerFlowId: UUID? = null,
+    @Id val svPowerFlowId: UUID? = null,
     val p: String? = null,
     val q: String? = null
 )
 
 @Entity
 data class SvShuntCompensatorSections(
-    @Id var svShuntCompensatorSectionsId: UUID? = null,
+    @Id val svShuntCompensatorSectionsId: UUID? = null,
     val sections: String? = null
 )
 
 @Entity
 data class SvStatus(
-    @Id var svStatusId: UUID? = null,
+    @Id val svStatusId: UUID? = null,
     val inService: String? = null
 )
 
 @Entity
 data class SvTapStep(
-    @Id var svTapStepId: UUID? = null,
+    @Id val svTapStepId: UUID? = null,
     val position: String? = null
 )
 
 @Entity
 data class SvVoltage(
-    @Id var svVoltageId: UUID? = null,
+    @Id val svVoltageId: UUID? = null,
     val angle: String? = null,
     val v: String? = null
 )
 
 @Entity
 data class SwitchIt(
-    @Id var switchItId: UUID? = null,
+    @Id val switchItId: UUID? = null,
     val open: String? = null
 )
 
 @Entity
 data class SwitchProxy(
-    @Id var switchProxyId: UUID? = null,
+    @Id val switchProxyId: UUID? = null,
     val normalOpen: String? = null,
     val ratedCurrent: String? = null,
     val retained: String? = null
@@ -4663,7 +4663,7 @@ data class SwitchSchedule(
 
 @Entity
 data class SynchronousMachine(
-    @Id var synchronousMachineId: UUID? = null,
+    @Id val synchronousMachineId: UUID? = null,
     val earthing: String? = null,
     val earthingStarPointR: String? = null,
     val earthingStarPointX: String? = null,
@@ -4687,7 +4687,7 @@ data class SynchronousMachine(
 
 @Entity
 data class SynchronousMachineDetailed(
-    @Id var synchronousMachineDetailedId: UUID? = null,
+    @Id val synchronousMachineDetailedId: UUID? = null,
     val efdBaseRatio: String? = null,
     val ifdBaseType: String? = null,
     val ifdBaseValue: String? = null,
@@ -4702,7 +4702,7 @@ data class SynchronousMachineDynamics(
 
 @Entity
 data class SynchronousMachineEquivalentCircuit(
-    @Id var synchronousMachineEquivalentCircuitId: UUID? = null,
+    @Id val synchronousMachineEquivalentCircuitId: UUID? = null,
     val r1d: String? = null,
     val r1q: String? = null,
     val r2q: String? = null,
@@ -4723,7 +4723,7 @@ data class SynchronousMachineSimplified(
 
 @Entity
 data class SynchronousMachineTimeConstantReactance(
-    @Id var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    @Id val synchronousMachineTimeConstantReactanceId: UUID? = null,
     val ks: String? = null,
     val modelType: String? = null,
     val rotorType: String? = null,
@@ -4742,13 +4742,13 @@ data class SynchronousMachineTimeConstantReactance(
 
 @Entity
 data class SynchronousMachineUserDefined(
-    @Id var synchronousMachineUserDefinedId: UUID? = null,
+    @Id val synchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class TapChanger(
-    @Id var tapChangerId: UUID? = null,
+    @Id val tapChangerId: UUID? = null,
     val highStep: String? = null,
     val lowStep: String? = null,
     val ltcFlag: String? = null,
@@ -4764,7 +4764,7 @@ data class TapChangerControl(
 
 @Entity
 data class TapChangerTablePoint(
-    @Id var tapChangerTablePointId: UUID? = null,
+    @Id val tapChangerTablePointId: UUID? = null,
     val b: String? = null,
     val g: String? = null,
     val r: String? = null,
@@ -4780,7 +4780,7 @@ data class TapSchedule(
 
 @Entity
 data class Temperature(
-    @Id var temperatureId: UUID? = null,
+    @Id val temperatureId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -4793,7 +4793,7 @@ data class Terminal(
 
 @Entity
 data class TextDiagramObject(
-    @Id var textDiagramObjectId: UUID? = null,
+    @Id val textDiagramObjectId: UUID? = null,
     val text: String? = null
 )
 
@@ -4804,7 +4804,7 @@ data class ThermalGeneratingUnit(
 
 @Entity
 data class TieFlow(
-    @Id var tieFlowId: UUID? = null,
+    @Id val tieFlowId: UUID? = null,
     val positiveFlowIn: String? = null
 )
 
@@ -4815,7 +4815,7 @@ data class TopologicalIsland(
 
 @Entity
 data class TopologicalNode(
-    @Id var topologicalNodeId: UUID? = null,
+    @Id val topologicalNodeId: UUID? = null,
     val boundaryPoint: String? = null,
     val fromEndIsoCode: String? = null,
     val fromEndName: String? = null,
@@ -4827,7 +4827,7 @@ data class TopologicalNode(
 
 @Entity
 data class TopologyBoundaryVersion(
-    @Id var topologyBoundaryVersionId: UUID? = null,
+    @Id val topologyBoundaryVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -4842,7 +4842,7 @@ data class TopologyBoundaryVersion(
 
 @Entity
 data class TopologyVersion(
-    @Id var topologyVersionId: UUID? = null,
+    @Id val topologyVersionId: UUID? = null,
     val baseUML: String? = null,
     val baseURI: String? = null,
     val date: String? = null,
@@ -4857,7 +4857,7 @@ data class TopologyVersion(
 
 @Entity
 data class TransformerEnd(
-    @Id var transformerEndId: UUID? = null,
+    @Id val transformerEndId: UUID? = null,
     val endNumber: String? = null,
     val grounded: String? = null,
     val rground: String? = null,
@@ -4866,7 +4866,7 @@ data class TransformerEnd(
 
 @Entity
 data class TurbLCFB1(
-    @Id var turbLCFB1Id: UUID? = null,
+    @Id val turbLCFB1Id: UUID? = null,
     val db: String? = null,
     val emax: String? = null,
     val fb: String? = null,
@@ -4888,7 +4888,7 @@ data class TurbineGovernorDynamics(
 
 @Entity
 data class TurbineGovernorUserDefined(
-    @Id var turbineGovernorUserDefinedId: UUID? = null,
+    @Id val turbineGovernorUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -4899,13 +4899,13 @@ data class TurbineLoadControllerDynamics(
 
 @Entity
 data class TurbineLoadControllerUserDefined(
-    @Id var turbineLoadControllerUserDefinedId: UUID? = null,
+    @Id val turbineLoadControllerUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class UnderexcLim2Simplified(
-    @Id var underexcLim2SimplifiedId: UUID? = null,
+    @Id val underexcLim2SimplifiedId: UUID? = null,
     val kui: String? = null,
     val p0: String? = null,
     val p1: String? = null,
@@ -4917,7 +4917,7 @@ data class UnderexcLim2Simplified(
 
 @Entity
 data class UnderexcLimIEEE1(
-    @Id var underexcLimIEEE1Id: UUID? = null,
+    @Id val underexcLimIEEE1Id: UUID? = null,
     val kuc: String? = null,
     val kuf: String? = null,
     val kui: String? = null,
@@ -4937,7 +4937,7 @@ data class UnderexcLimIEEE1(
 
 @Entity
 data class UnderexcLimIEEE2(
-    @Id var underexcLimIEEE2Id: UUID? = null,
+    @Id val underexcLimIEEE2Id: UUID? = null,
     val k1: String? = null,
     val k2: String? = null,
     val kfb: String? = null,
@@ -4982,7 +4982,7 @@ data class UnderexcLimIEEE2(
 
 @Entity
 data class UnderexcLimX1(
-    @Id var underexcLimX1Id: UUID? = null,
+    @Id val underexcLimX1Id: UUID? = null,
     val k: String? = null,
     val kf2: String? = null,
     val km: String? = null,
@@ -4993,7 +4993,7 @@ data class UnderexcLimX1(
 
 @Entity
 data class UnderexcLimX2(
-    @Id var underexcLimX2Id: UUID? = null,
+    @Id val underexcLimX2Id: UUID? = null,
     val kf2: String? = null,
     val km: String? = null,
     val melmax: String? = null,
@@ -5010,7 +5010,7 @@ data class UnderexcitationLimiterDynamics(
 
 @Entity
 data class UnderexcitationLimiterUserDefined(
-    @Id var underexcitationLimiterUserDefinedId: UUID? = null,
+    @Id val underexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -5021,7 +5021,7 @@ data class Unresolvedname(
 
 @Entity
 data class VAdjIEEE(
-    @Id var vAdjIEEEId: UUID? = null,
+    @Id val vAdjIEEEId: UUID? = null,
     val adjslew: String? = null,
     val taoff: String? = null,
     val taon: String? = null,
@@ -5032,7 +5032,7 @@ data class VAdjIEEE(
 
 @Entity
 data class VCompIEEEType1(
-    @Id var vCompIEEEType1Id: UUID? = null,
+    @Id val vCompIEEEType1Id: UUID? = null,
     val rc: String? = null,
     val tr: String? = null,
     val xc: String? = null
@@ -5040,7 +5040,7 @@ data class VCompIEEEType1(
 
 @Entity
 data class VCompIEEEType2(
-    @Id var vCompIEEEType2Id: UUID? = null,
+    @Id val vCompIEEEType2Id: UUID? = null,
     val tr: String? = null
 )
 
@@ -5051,19 +5051,19 @@ data class ValueAliasSet(
 
 @Entity
 data class ValueToAlias(
-    @Id var valueToAliasId: UUID? = null,
+    @Id val valueToAliasId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class VisibilityLayer(
-    @Id var visibilityLayerId: UUID? = null,
+    @Id val visibilityLayerId: UUID? = null,
     val drawingOrder: String? = null
 )
 
 @Entity
 data class Voltage(
-    @Id var voltageId: UUID? = null,
+    @Id val voltageId: UUID? = null,
     val multiplier: String? = null,
     val unit: String? = null,
     val value: String? = null
@@ -5076,7 +5076,7 @@ data class VoltageAdjusterDynamics(
 
 @Entity
 data class VoltageAdjusterUserDefined(
-    @Id var voltageAdjusterUserDefinedId: UUID? = null,
+    @Id val voltageAdjusterUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
@@ -5087,26 +5087,26 @@ data class VoltageCompensatorDynamics(
 
 @Entity
 data class VoltageCompensatorUserDefined(
-    @Id var voltageCompensatorUserDefinedId: UUID? = null,
+    @Id val voltageCompensatorUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class VoltageLevel(
-    @Id var voltageLevelId: UUID? = null,
+    @Id val voltageLevelId: UUID? = null,
     val highVoltageLimit: String? = null,
     val lowVoltageLimit: String? = null
 )
 
 @Entity
 data class VoltageLimit(
-    @Id var voltageLimitId: UUID? = null,
+    @Id val voltageLimitId: UUID? = null,
     val value: String? = null
 )
 
 @Entity
 data class VoltagePerReactivePower(
-    @Id var voltagePerReactivePowerId: UUID? = null,
+    @Id val voltagePerReactivePowerId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -5116,7 +5116,7 @@ data class VoltagePerReactivePower(
 
 @Entity
 data class VolumeFlowRate(
-    @Id var volumeFlowRateId: UUID? = null,
+    @Id val volumeFlowRateId: UUID? = null,
     val denominatorMultiplier: String? = null,
     val denominatorUnit: String? = null,
     val multiplier: String? = null,
@@ -5131,7 +5131,7 @@ data class VsCapabilityCurve(
 
 @Entity
 data class VsConverter(
-    @Id var vsConverterId: UUID? = null,
+    @Id val vsConverterId: UUID? = null,
     val maxModulationIndex: String? = null,
     val maxValveCurrent: String? = null
 )
@@ -5143,7 +5143,7 @@ data class WindAeroConstIEC(
 
 @Entity
 data class WindAeroLinearIEC(
-    @Id var windAeroLinearIECId: UUID? = null,
+    @Id val windAeroLinearIECId: UUID? = null,
     val dpomega: String? = null,
     val dptheta: String? = null,
     val omegazero: String? = null,
@@ -5153,7 +5153,7 @@ data class WindAeroLinearIEC(
 
 @Entity
 data class WindContCurrLimIEC(
-    @Id var windContCurrLimIECId: UUID? = null,
+    @Id val windContCurrLimIECId: UUID? = null,
     val imax: String? = null,
     val imaxdip: String? = null,
     val mdfslim: String? = null,
@@ -5163,7 +5163,7 @@ data class WindContCurrLimIEC(
 
 @Entity
 data class WindContPType3IEC(
-    @Id var windContPType3IECId: UUID? = null,
+    @Id val windContPType3IECId: UUID? = null,
     val dpmax: String? = null,
     val dtrisemaxlvrt: String? = null,
     val kdtd: String? = null,
@@ -5189,7 +5189,7 @@ data class WindContPType3IEC(
 
 @Entity
 data class WindContPType4aIEC(
-    @Id var windContPType4aIECId: UUID? = null,
+    @Id val windContPType4aIECId: UUID? = null,
     val dpmax: String? = null,
     val tpord: String? = null,
     val tufilt: String? = null
@@ -5197,7 +5197,7 @@ data class WindContPType4aIEC(
 
 @Entity
 data class WindContPType4bIEC(
-    @Id var windContPType4bIECId: UUID? = null,
+    @Id val windContPType4bIECId: UUID? = null,
     val dpmax: String? = null,
     val tpaero: String? = null,
     val tpord: String? = null,
@@ -5206,7 +5206,7 @@ data class WindContPType4bIEC(
 
 @Entity
 data class WindContPitchAngleIEC(
-    @Id var windContPitchAngleIECId: UUID? = null,
+    @Id val windContPitchAngleIECId: UUID? = null,
     val dthetamax: String? = null,
     val dthetamin: String? = null,
     val kic: String? = null,
@@ -5221,7 +5221,7 @@ data class WindContPitchAngleIEC(
 
 @Entity
 data class WindContQIEC(
-    @Id var windContQIECId: UUID? = null,
+    @Id val windContQIECId: UUID? = null,
     val iqh1: String? = null,
     val iqmax: String? = null,
     val iqmin: String? = null,
@@ -5252,7 +5252,7 @@ data class WindContQIEC(
 
 @Entity
 data class WindContRotorRIEC(
-    @Id var windContRotorRIECId: UUID? = null,
+    @Id val windContRotorRIECId: UUID? = null,
     val kirr: String? = null,
     val komegafilt: String? = null,
     val kpfilt: String? = null,
@@ -5265,7 +5265,7 @@ data class WindContRotorRIEC(
 
 @Entity
 data class WindDynamicsLookupTable(
-    @Id var windDynamicsLookupTableId: UUID? = null,
+    @Id val windDynamicsLookupTableId: UUID? = null,
     val input: String? = null,
     val lookupTableFunctionType: String? = null,
     val output: String? = null,
@@ -5284,14 +5284,14 @@ data class WindGenTurbineType2IEC(
 
 @Entity
 data class WindGenTurbineType3IEC(
-    @Id var windGenTurbineType3IECId: UUID? = null,
+    @Id val windGenTurbineType3IECId: UUID? = null,
     val dipmax: String? = null,
     val diqmax: String? = null
 )
 
 @Entity
 data class WindGenTurbineType3aIEC(
-    @Id var windGenTurbineType3aIECId: UUID? = null,
+    @Id val windGenTurbineType3aIECId: UUID? = null,
     val kpc: String? = null,
     val tic: String? = null,
     val xs: String? = null
@@ -5299,7 +5299,7 @@ data class WindGenTurbineType3aIEC(
 
 @Entity
 data class WindGenTurbineType3bIEC(
-    @Id var windGenTurbineType3bIECId: UUID? = null,
+    @Id val windGenTurbineType3bIECId: UUID? = null,
     val fducw: String? = null,
     val mwtcwp: String? = null,
     val tg: String? = null,
@@ -5309,7 +5309,7 @@ data class WindGenTurbineType3bIEC(
 
 @Entity
 data class WindGenType4IEC(
-    @Id var windGenType4IECId: UUID? = null,
+    @Id val windGenType4IECId: UUID? = null,
     val dipmax: String? = null,
     val diqmax: String? = null,
     val diqmin: String? = null,
@@ -5318,13 +5318,13 @@ data class WindGenType4IEC(
 
 @Entity
 data class WindGeneratingUnit(
-    @Id var windGeneratingUnitId: UUID? = null,
+    @Id val windGeneratingUnitId: UUID? = null,
     val windGenUnitType: String? = null
 )
 
 @Entity
 data class WindMechIEC(
-    @Id var windMechIECId: UUID? = null,
+    @Id val windMechIECId: UUID? = null,
     val cdrt: String? = null,
     val hgen: String? = null,
     val hwtr: String? = null,
@@ -5333,7 +5333,7 @@ data class WindMechIEC(
 
 @Entity
 data class WindPitchContEmulIEC(
-    @Id var windPitchContEmulIECId: UUID? = null,
+    @Id val windPitchContEmulIECId: UUID? = null,
     val kdroop: String? = null,
     val kipce: String? = null,
     val komegaaero: String? = null,
@@ -5353,7 +5353,7 @@ data class WindPlantDynamics(
 
 @Entity
 data class WindPlantFreqPcontrolIEC(
-    @Id var windPlantFreqPcontrolIECId: UUID? = null,
+    @Id val windPlantFreqPcontrolIECId: UUID? = null,
     val dprefmax: String? = null,
     val dprefmin: String? = null,
     val kiwpp: String? = null,
@@ -5373,7 +5373,7 @@ data class WindPlantIEC(
 
 @Entity
 data class WindPlantReactiveControlIEC(
-    @Id var windPlantReactiveControlIECId: UUID? = null,
+    @Id val windPlantReactiveControlIECId: UUID? = null,
     val kiwpx: String? = null,
     val kpwpx: String? = null,
     val kwpqu: String? = null,
@@ -5391,13 +5391,13 @@ data class WindPlantReactiveControlIEC(
 
 @Entity
 data class WindPlantUserDefined(
-    @Id var windPlantUserDefinedId: UUID? = null,
+    @Id val windPlantUserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class WindProtectionIEC(
-    @Id var windProtectionIECId: UUID? = null,
+    @Id val windProtectionIECId: UUID? = null,
     val fover: String? = null,
     val funder: String? = null,
     val tfover: String? = null,
@@ -5440,13 +5440,13 @@ data class WindTurbineType4bIEC(
 
 @Entity
 data class WindType1or2UserDefined(
-    @Id var windType1or2UserDefinedId: UUID? = null,
+    @Id val windType1or2UserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
 @Entity
 data class WindType3or4UserDefined(
-    @Id var windType3or4UserDefinedId: UUID? = null,
+    @Id val windType3or4UserDefinedId: UUID? = null,
     val proprietary: String? = null
 )
 
