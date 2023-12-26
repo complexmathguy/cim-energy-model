@@ -1,0 +1,111 @@
+version: 2.1
+
+
+references:
+
+working_directory: &working_directory
+  /home/circleci/gitRoot/
+
+repo_cache_key: &repo_cache_key
+  v1-repo-{{ .Branch }}-{{ .Revision }}
+
+# Step to restore repository from cache
+restore_repo: &restore_repo
+  restore_cache:
+    key: *repo_cache_key
+
+save_repo: &save_repo
+  save_cache:
+    key: *repo_cache_key
+    paths:
+        - *working_directory
+
+jobs: 
+
+  # core job
+  build_test_project:
+
+    # assign the working directory
+    working_directory: *working_directory
+        
+    # run the steps with Docker as the primary container
+    # job commands run in this container
+    # CircleCI Java11 image, installs Apache Maven
+    # H2 image
+    docker:
+      - image: circleci/openjdk:11.0
+      - image: buildo/h2database
+
+    # env var assignments
+
+    # steps the core build test job
+    steps:
+
+      # check out source code to working directory
+      - checkout
+      # changing ownership
+      - run:
+          name: Assigning vars for Git
+          command: export EMAIL=circleci@circleci.com && export GIT_AUTHOR_NAME=CircleCi && export GIT_COMMITTER_NAME=CircleCi
+
+      - run:
+          name: Initializing
+          command: echo initializaing...
+                   
+
+      - run: export DEFAULT_HOST_ADDRESS=127.0.0.1 
+      - run: export DEFAULT_HOST_PORT=27017 
+      - run: export DATABASE_USERNAME=root 
+      - run: export DATABASE_PASSWORD=letmein2 
+      - run: export DATABASE_DIALECT=org.hibernate.dialect.MySQL8Dialect 
+      - run: export DATABASE_DRIVER=com.mysql.cj.jdbc.Driver 
+      - run: export DATABASE_URL=jdbc:mysql://localhost:3306/demo?createDatabaseIfNotExist=true 
+      - run:
+          name: Building with testing
+          command: echo building with testing...
+
+      - run: mvn package -Dcompile=compile 
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/test-results/junit/
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          when: always
+      # cache the entire project 
+      - *save_repo
+      # Upload test results for display in Test Summary:
+      # https://circleci.com/docs/2.0/collect-test-data/
+      - store_test_results:
+          path: ~/test-results
+      # Upload test summary for display in Artifacts:
+      # https://circleci.com/docs/2.0/artifacts/
+      - store_artifacts:
+          path: ~/test-results/junit
+
+
+  docker_build:
+    # assign the working directory
+    working_directory: *working_directory
+
+    docker: # run the steps with Docker, this image is not used and therefore ignored
+      - image: circleci/python:3.7  
+      
+    steps:
+      - *restore_repo
+      - setup_remote_docker:
+          version: 20.10.14
+      - run:
+          name: creating docker image..considering using env vars DOCKER_USER and DOCKER_PASS
+          command: |
+            docker login --username  --password  
+            docker build -t /: -f Dockerfile .
+            docker push /:
+
+# a workflow to build out the environment
+workflows:
+  build_test_deploy_workflow:
+    jobs:
+      - build_test_project:
+          filters:
+            tags:
+              only: latest

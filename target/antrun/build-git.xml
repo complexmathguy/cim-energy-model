@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="git"  >
+<target name="git">
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+  <if>
+    <equals arg2="true" arg1="true"/>
+    <then>
+      <if>
+        <os family="unix"/>
+        <then>
+          <exec logError="false" failifexecutionfails="false" failonerror="false" executable="dos2unix">
+            <arg value="/usr/local/tomcat/temp/harbormaster_working_dir/archives/.project.creation.output/project_gen_Axon4_BH5xjHer/gitpush.sh"/>
+          </exec>
+          <exec logError="false" failifexecutionfails="false" failonerror="false" executable="chmod">
+            <arg value="+x"/>
+            <arg value="/usr/local/tomcat/temp/harbormaster_working_dir/archives/.project.creation.output/project_gen_Axon4_BH5xjHer/gitpush.sh"/>
+          </exec>
+        </then>
+      </if>
+      <exec logError="false" failifexecutionfails="false" failonerror="false" executable="bash">
+        <arg value="--login"/>
+        <arg value="/usr/local/tomcat/temp/harbormaster_working_dir/archives/.project.creation.output/project_gen_Axon4_BH5xjHer/gitpush.sh"/>
+        <arg value="/usr/local/tomcat/temp/harbormaster_working_dir/archives/.project.creation.output/project_gen_Axon4_BH5xjHer"/>
+      </exec>
+    </then>
+  </if>
+</target>
+</project>

@@ -1,0 +1,35 @@
+<!--
+  Turnstone Biologics Confidential
+  
+  2018 Turnstone Biologics, Inc.
+  All Rights Reserved.
+  
+  This file is subject to the terms and conditions defined in
+  file 'license.txt', which is part of this source code package.
+   
+  Contributors :
+        Turnstone Biologics - General Release
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>  
+	<groupId>com.occulue</groupId>  
+	<artifactId>demo-parent</artifactId>  
+	<version>1.0.0</version>  
+
+    <packaging>pom</packaging>
+
+	<name>demo</name>
+	
+    <modules>
+    </modules>
+
+	<properties>
+    	<maven.compiler.source>1.8</maven.compiler.source>
+    	<maven.compiler.target>1.8</maven.compiler.target>
+  	</properties>
+
+</project>

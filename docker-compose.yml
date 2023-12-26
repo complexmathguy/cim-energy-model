@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    image:buildo/h2database
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+
+  platform:
+    image: /:
+    ports:
+      - ":"
+    depends_on:
+      - db
+    links:
+      - db
+

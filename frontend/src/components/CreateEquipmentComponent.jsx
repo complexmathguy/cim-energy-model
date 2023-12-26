@@ -1,0 +1,87 @@
+import React, { Component } from 'react'
+import EquipmentService from '../services/EquipmentService';
+
+class CreateEquipmentComponent extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            // step 2
+            id: this.props.match.params.id,
+        }
+    }
+
+    // step 3
+    componentDidMount(){
+
+        // step 4
+        if(this.state.id === '_add'){
+            return
+        }else{
+            EquipmentService.getEquipmentById(this.state.id).then( (res) =>{
+                let equipment = res.data;
+                this.setState({
+                });
+            });
+        }        
+    }
+    saveOrUpdateEquipment = (e) => {
+        e.preventDefault();
+        let equipment = {
+                equipmentId: this.state.id,
+            };
+        console.log('equipment => ' + JSON.stringify(equipment));
+
+        // step 5
+        if(this.state.id === '_add'){
+            equipment.equipmentId=''
+            EquipmentService.createEquipment(equipment).then(res =>{
+                this.props.history.push('/equipments');
+            });
+        }else{
+            EquipmentService.updateEquipment(equipment).then( res => {
+                this.props.history.push('/equipments');
+            });
+        }
+    }
+    
+
+    cancel(){
+        this.props.history.push('/equipments');
+    }
+
+    getTitle(){
+        if(this.state.id === '_add'){
+            return <h3 className="text-center">Add Equipment</h3>
+        }else{
+            return <h3 className="text-center">Update Equipment</h3>
+        }
+    }
+    render() {
+        return (
+            <div>
+                <br></br>
+                   <div className = "container">
+                        <div className = "row">
+                            <div className = "card col-md-6 offset-md-3 offset-md-3">
+                                {
+                                    this.getTitle()
+                                }
+                                <div className = "card-body">
+                                    <form>
+                                        <div className = "form-group">
+                                        </div>
+
+                                        <button className="btn btn-success" onClick={this.saveOrUpdateEquipment}>Save</button>
+                                        <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+        )
+    }
+}
+
+export default CreateEquipmentComponent
