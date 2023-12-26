@@ -27,32 +27,32 @@ import com.occulue.entity.*;
 // ACDCConverter Events
 
 data class CreateACDCConverterEvent(
-    @Id val aCDCConverterId: UUID? = null,
-    val baseS: String,
-    val idleLoss: String,
-    val maxUdc: String,
-    val minUdc: String,
-    val numberOfValves: String,
-    val ratedUdc: String,
-    val resistiveLoss: String,
-    val switchingLoss: String,
-    val valveU0: String
+    @Id var aCDCConverterId: UUID? = null,
+    var baseS: String,
+    var idleLoss: String,
+    var maxUdc: String,
+    var minUdc: String,
+    var numberOfValves: String,
+    var ratedUdc: String,
+    var resistiveLoss: String,
+    var switchingLoss: String,
+    var valveU0: String
 )
 
 data class UpdateACDCConverterEvent(
-    @Id val aCDCConverterId: UUID? = null,
-    val baseS: String,
-    val idleLoss: String,
-    val maxUdc: String,
-    val minUdc: String,
-    val numberOfValves: String,
-    val ratedUdc: String,
-    val resistiveLoss: String,
-    val switchingLoss: String,
-    val valveU0: String
+    @Id var aCDCConverterId: UUID? = null,
+    var baseS: String,
+    var idleLoss: String,
+    var maxUdc: String,
+    var minUdc: String,
+    var numberOfValves: String,
+    var ratedUdc: String,
+    var resistiveLoss: String,
+    var switchingLoss: String,
+    var valveU0: String
 )
 
-data class DeleteACDCConverterEvent(@Id val aCDCConverterId: UUID? = null)
+data class DeleteACDCConverterEvent(@Id var aCDCConverterId: UUID? = null)
 
 // single association events
 
@@ -62,16 +62,16 @@ data class DeleteACDCConverterEvent(@Id val aCDCConverterId: UUID? = null)
 // ACDCConverterDCTerminal Events
 
 data class CreateACDCConverterDCTerminalEvent(
-    @Id val aCDCConverterDCTerminalId: UUID? = null,
-    val polarity: String
+    @Id var aCDCConverterDCTerminalId: UUID? = null,
+    var polarity: String
 )
 
 data class UpdateACDCConverterDCTerminalEvent(
-    @Id val aCDCConverterDCTerminalId: UUID? = null,
-    val polarity: String
+    @Id var aCDCConverterDCTerminalId: UUID? = null,
+    var polarity: String
 )
 
-data class DeleteACDCConverterDCTerminalEvent(@Id val aCDCConverterDCTerminalId: UUID? = null)
+data class DeleteACDCConverterDCTerminalEvent(@Id var aCDCConverterDCTerminalId: UUID? = null)
 
 // single association events
 
@@ -81,16 +81,16 @@ data class DeleteACDCConverterDCTerminalEvent(@Id val aCDCConverterDCTerminalId:
 // ACDCTerminal Events
 
 data class CreateACDCTerminalEvent(
-    @Id val aCDCTerminalId: UUID? = null,
-    val sequenceNumber: String
+    @Id var aCDCTerminalId: UUID? = null,
+    var sequenceNumber: String
 )
 
 data class UpdateACDCTerminalEvent(
-    @Id val aCDCTerminalId: UUID? = null,
-    val sequenceNumber: String
+    @Id var aCDCTerminalId: UUID? = null,
+    var sequenceNumber: String
 )
 
-data class DeleteACDCTerminalEvent(@Id val aCDCTerminalId: UUID? = null)
+data class DeleteACDCTerminalEvent(@Id var aCDCTerminalId: UUID? = null)
 
 // single association events
 
@@ -100,32 +100,32 @@ data class DeleteACDCTerminalEvent(@Id val aCDCTerminalId: UUID? = null)
 // ACLineSegment Events
 
 data class CreateACLineSegmentEvent(
-    @Id val aCLineSegmentId: UUID? = null,
-    val b0ch: String,
-    val bch: String,
-    val g0ch: String,
-    val gch: String,
-    val r: String,
-    val r0: String,
-    val shortCircuitEndTemperature: String,
-    val x: String,
-    val x0: String
+    @Id var aCLineSegmentId: UUID? = null,
+    var b0ch: String,
+    var bch: String,
+    var g0ch: String,
+    var gch: String,
+    var r: String,
+    var r0: String,
+    var shortCircuitEndTemperature: String,
+    var x: String,
+    var x0: String
 )
 
 data class UpdateACLineSegmentEvent(
-    @Id val aCLineSegmentId: UUID? = null,
-    val b0ch: String,
-    val bch: String,
-    val g0ch: String,
-    val gch: String,
-    val r: String,
-    val r0: String,
-    val shortCircuitEndTemperature: String,
-    val x: String,
-    val x0: String
+    @Id var aCLineSegmentId: UUID? = null,
+    var b0ch: String,
+    var bch: String,
+    var g0ch: String,
+    var gch: String,
+    var r: String,
+    var r0: String,
+    var shortCircuitEndTemperature: String,
+    var x: String,
+    var x0: String
 )
 
-data class DeleteACLineSegmentEvent(@Id val aCLineSegmentId: UUID? = null)
+data class DeleteACLineSegmentEvent(@Id var aCLineSegmentId: UUID? = null)
 
 // single association events
 
@@ -135,14 +135,14 @@ data class DeleteACLineSegmentEvent(@Id val aCLineSegmentId: UUID? = null)
 // Accumulator Events
 
 data class CreateAccumulatorEvent(
-     val accumulatorId: UUID? = null
+     var accumulatorId: UUID? = null
 )
 
 data class UpdateAccumulatorEvent(
-     val accumulatorId: UUID? = null
+     var accumulatorId: UUID? = null
 )
 
-data class DeleteAccumulatorEvent(@Id val accumulatorId: UUID? = null)
+data class DeleteAccumulatorEvent(@Id var accumulatorId: UUID? = null)
 
 // single association events
 
@@ -152,16 +152,16 @@ data class DeleteAccumulatorEvent(@Id val accumulatorId: UUID? = null)
 // AccumulatorLimit Events
 
 data class CreateAccumulatorLimitEvent(
-    @Id val accumulatorLimitId: UUID? = null,
-    val value: String
+    @Id var accumulatorLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateAccumulatorLimitEvent(
-    @Id val accumulatorLimitId: UUID? = null,
-    val value: String
+    @Id var accumulatorLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteAccumulatorLimitEvent(@Id val accumulatorLimitId: UUID? = null)
+data class DeleteAccumulatorLimitEvent(@Id var accumulatorLimitId: UUID? = null)
 
 // single association events
 
@@ -171,14 +171,14 @@ data class DeleteAccumulatorLimitEvent(@Id val accumulatorLimitId: UUID? = null)
 // AccumulatorLimitSet Events
 
 data class CreateAccumulatorLimitSetEvent(
-     val accumulatorLimitSetId: UUID? = null
+     var accumulatorLimitSetId: UUID? = null
 )
 
 data class UpdateAccumulatorLimitSetEvent(
-     val accumulatorLimitSetId: UUID? = null
+     var accumulatorLimitSetId: UUID? = null
 )
 
-data class DeleteAccumulatorLimitSetEvent(@Id val accumulatorLimitSetId: UUID? = null)
+data class DeleteAccumulatorLimitSetEvent(@Id var accumulatorLimitSetId: UUID? = null)
 
 // single association events
 
@@ -188,14 +188,14 @@ data class DeleteAccumulatorLimitSetEvent(@Id val accumulatorLimitSetId: UUID? =
 // AccumulatorReset Events
 
 data class CreateAccumulatorResetEvent(
-     val accumulatorResetId: UUID? = null
+     var accumulatorResetId: UUID? = null
 )
 
 data class UpdateAccumulatorResetEvent(
-     val accumulatorResetId: UUID? = null
+     var accumulatorResetId: UUID? = null
 )
 
-data class DeleteAccumulatorResetEvent(@Id val accumulatorResetId: UUID? = null)
+data class DeleteAccumulatorResetEvent(@Id var accumulatorResetId: UUID? = null)
 
 // single association events
 
@@ -205,16 +205,16 @@ data class DeleteAccumulatorResetEvent(@Id val accumulatorResetId: UUID? = null)
 // AccumulatorValue Events
 
 data class CreateAccumulatorValueEvent(
-    @Id val accumulatorValueId: UUID? = null,
-    val value: String
+    @Id var accumulatorValueId: UUID? = null,
+    var value: String
 )
 
 data class UpdateAccumulatorValueEvent(
-    @Id val accumulatorValueId: UUID? = null,
-    val value: String
+    @Id var accumulatorValueId: UUID? = null,
+    var value: String
 )
 
-data class DeleteAccumulatorValueEvent(@Id val accumulatorValueId: UUID? = null)
+data class DeleteAccumulatorValueEvent(@Id var accumulatorValueId: UUID? = null)
 
 // single association events
 
@@ -224,20 +224,20 @@ data class DeleteAccumulatorValueEvent(@Id val accumulatorValueId: UUID? = null)
 // ActivePower Events
 
 data class CreateActivePowerEvent(
-    @Id val activePowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateActivePowerEvent(
-    @Id val activePowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteActivePowerEvent(@Id val activePowerId: UUID? = null)
+data class DeleteActivePowerEvent(@Id var activePowerId: UUID? = null)
 
 // single association events
 
@@ -247,16 +247,16 @@ data class DeleteActivePowerEvent(@Id val activePowerId: UUID? = null)
 // ActivePowerLimit Events
 
 data class CreateActivePowerLimitEvent(
-    @Id val activePowerLimitId: UUID? = null,
-    val value: String
+    @Id var activePowerLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateActivePowerLimitEvent(
-    @Id val activePowerLimitId: UUID? = null,
-    val value: String
+    @Id var activePowerLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteActivePowerLimitEvent(@Id val activePowerLimitId: UUID? = null)
+data class DeleteActivePowerLimitEvent(@Id var activePowerLimitId: UUID? = null)
 
 // single association events
 
@@ -266,24 +266,24 @@ data class DeleteActivePowerLimitEvent(@Id val activePowerLimitId: UUID? = null)
 // ActivePowerPerCurrentFlow Events
 
 data class CreateActivePowerPerCurrentFlowEvent(
-    @Id val activePowerPerCurrentFlowId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerPerCurrentFlowId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateActivePowerPerCurrentFlowEvent(
-    @Id val activePowerPerCurrentFlowId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerPerCurrentFlowId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteActivePowerPerCurrentFlowEvent(@Id val activePowerPerCurrentFlowId: UUID? = null)
+data class DeleteActivePowerPerCurrentFlowEvent(@Id var activePowerPerCurrentFlowId: UUID? = null)
 
 // single association events
 
@@ -293,24 +293,24 @@ data class DeleteActivePowerPerCurrentFlowEvent(@Id val activePowerPerCurrentFlo
 // ActivePowerPerFrequency Events
 
 data class CreateActivePowerPerFrequencyEvent(
-    @Id val activePowerPerFrequencyId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerPerFrequencyId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateActivePowerPerFrequencyEvent(
-    @Id val activePowerPerFrequencyId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var activePowerPerFrequencyId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteActivePowerPerFrequencyEvent(@Id val activePowerPerFrequencyId: UUID? = null)
+data class DeleteActivePowerPerFrequencyEvent(@Id var activePowerPerFrequencyId: UUID? = null)
 
 // single association events
 
@@ -320,16 +320,16 @@ data class DeleteActivePowerPerFrequencyEvent(@Id val activePowerPerFrequencyId:
 // Analog Events
 
 data class CreateAnalogEvent(
-    @Id val analogId: UUID? = null,
-    val positiveFlowIn: String
+    @Id var analogId: UUID? = null,
+    var positiveFlowIn: String
 )
 
 data class UpdateAnalogEvent(
-    @Id val analogId: UUID? = null,
-    val positiveFlowIn: String
+    @Id var analogId: UUID? = null,
+    var positiveFlowIn: String
 )
 
-data class DeleteAnalogEvent(@Id val analogId: UUID? = null)
+data class DeleteAnalogEvent(@Id var analogId: UUID? = null)
 
 // single association events
 
@@ -339,18 +339,18 @@ data class DeleteAnalogEvent(@Id val analogId: UUID? = null)
 // AnalogControl Events
 
 data class CreateAnalogControlEvent(
-    @Id val analogControlId: UUID? = null,
-    val maxValue: String,
-    val minValue: String
+    @Id var analogControlId: UUID? = null,
+    var maxValue: String,
+    var minValue: String
 )
 
 data class UpdateAnalogControlEvent(
-    @Id val analogControlId: UUID? = null,
-    val maxValue: String,
-    val minValue: String
+    @Id var analogControlId: UUID? = null,
+    var maxValue: String,
+    var minValue: String
 )
 
-data class DeleteAnalogControlEvent(@Id val analogControlId: UUID? = null)
+data class DeleteAnalogControlEvent(@Id var analogControlId: UUID? = null)
 
 // single association events
 
@@ -360,16 +360,16 @@ data class DeleteAnalogControlEvent(@Id val analogControlId: UUID? = null)
 // AnalogLimit Events
 
 data class CreateAnalogLimitEvent(
-    @Id val analogLimitId: UUID? = null,
-    val value: String
+    @Id var analogLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateAnalogLimitEvent(
-    @Id val analogLimitId: UUID? = null,
-    val value: String
+    @Id var analogLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteAnalogLimitEvent(@Id val analogLimitId: UUID? = null)
+data class DeleteAnalogLimitEvent(@Id var analogLimitId: UUID? = null)
 
 // single association events
 
@@ -379,14 +379,14 @@ data class DeleteAnalogLimitEvent(@Id val analogLimitId: UUID? = null)
 // AnalogLimitSet Events
 
 data class CreateAnalogLimitSetEvent(
-     val analogLimitSetId: UUID? = null
+     var analogLimitSetId: UUID? = null
 )
 
 data class UpdateAnalogLimitSetEvent(
-     val analogLimitSetId: UUID? = null
+     var analogLimitSetId: UUID? = null
 )
 
-data class DeleteAnalogLimitSetEvent(@Id val analogLimitSetId: UUID? = null)
+data class DeleteAnalogLimitSetEvent(@Id var analogLimitSetId: UUID? = null)
 
 // single association events
 
@@ -396,16 +396,16 @@ data class DeleteAnalogLimitSetEvent(@Id val analogLimitSetId: UUID? = null)
 // AnalogValue Events
 
 data class CreateAnalogValueEvent(
-    @Id val analogValueId: UUID? = null,
-    val value: String
+    @Id var analogValueId: UUID? = null,
+    var value: String
 )
 
 data class UpdateAnalogValueEvent(
-    @Id val analogValueId: UUID? = null,
-    val value: String
+    @Id var analogValueId: UUID? = null,
+    var value: String
 )
 
-data class DeleteAnalogValueEvent(@Id val analogValueId: UUID? = null)
+data class DeleteAnalogValueEvent(@Id var analogValueId: UUID? = null)
 
 // single association events
 
@@ -415,20 +415,20 @@ data class DeleteAnalogValueEvent(@Id val analogValueId: UUID? = null)
 // AngleDegrees Events
 
 data class CreateAngleDegreesEvent(
-    @Id val angleDegreesId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var angleDegreesId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateAngleDegreesEvent(
-    @Id val angleDegreesId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var angleDegreesId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteAngleDegreesEvent(@Id val angleDegreesId: UUID? = null)
+data class DeleteAngleDegreesEvent(@Id var angleDegreesId: UUID? = null)
 
 // single association events
 
@@ -438,20 +438,20 @@ data class DeleteAngleDegreesEvent(@Id val angleDegreesId: UUID? = null)
 // AngleRadians Events
 
 data class CreateAngleRadiansEvent(
-    @Id val angleRadiansId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var angleRadiansId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateAngleRadiansEvent(
-    @Id val angleRadiansId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var angleRadiansId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteAngleRadiansEvent(@Id val angleRadiansId: UUID? = null)
+data class DeleteAngleRadiansEvent(@Id var angleRadiansId: UUID? = null)
 
 // single association events
 
@@ -461,20 +461,20 @@ data class DeleteAngleRadiansEvent(@Id val angleRadiansId: UUID? = null)
 // ApparentPower Events
 
 data class CreateApparentPowerEvent(
-    @Id val apparentPowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var apparentPowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateApparentPowerEvent(
-    @Id val apparentPowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var apparentPowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteApparentPowerEvent(@Id val apparentPowerId: UUID? = null)
+data class DeleteApparentPowerEvent(@Id var apparentPowerId: UUID? = null)
 
 // single association events
 
@@ -484,16 +484,16 @@ data class DeleteApparentPowerEvent(@Id val apparentPowerId: UUID? = null)
 // ApparentPowerLimit Events
 
 data class CreateApparentPowerLimitEvent(
-    @Id val apparentPowerLimitId: UUID? = null,
-    val value: String
+    @Id var apparentPowerLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateApparentPowerLimitEvent(
-    @Id val apparentPowerLimitId: UUID? = null,
-    val value: String
+    @Id var apparentPowerLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteApparentPowerLimitEvent(@Id val apparentPowerLimitId: UUID? = null)
+data class DeleteApparentPowerLimitEvent(@Id var apparentPowerLimitId: UUID? = null)
 
 // single association events
 
@@ -503,20 +503,20 @@ data class DeleteApparentPowerLimitEvent(@Id val apparentPowerLimitId: UUID? = n
 // Area Events
 
 data class CreateAreaEvent(
-    @Id val areaId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var areaId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateAreaEvent(
-    @Id val areaId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var areaId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteAreaEvent(@Id val areaId: UUID? = null)
+data class DeleteAreaEvent(@Id var areaId: UUID? = null)
 
 // single association events
 
@@ -526,32 +526,32 @@ data class DeleteAreaEvent(@Id val areaId: UUID? = null)
 // AsynchronousMachine Events
 
 data class CreateAsynchronousMachineEvent(
-    @Id val asynchronousMachineId: UUID? = null,
-    val converterFedDrive: String,
-    val efficiency: String,
-    val iaIrRatio: String,
-    val nominalFrequency: String,
-    val nominalSpeed: String,
-    val polePairNumber: String,
-    val ratedMechanicalPower: String,
-    val reversible: String,
-    val rxLockedRotorRatio: String
+    @Id var asynchronousMachineId: UUID? = null,
+    var converterFedDrive: String,
+    var efficiency: String,
+    var iaIrRatio: String,
+    var nominalFrequency: String,
+    var nominalSpeed: String,
+    var polePairNumber: String,
+    var ratedMechanicalPower: String,
+    var reversible: String,
+    var rxLockedRotorRatio: String
 )
 
 data class UpdateAsynchronousMachineEvent(
-    @Id val asynchronousMachineId: UUID? = null,
-    val converterFedDrive: String,
-    val efficiency: String,
-    val iaIrRatio: String,
-    val nominalFrequency: String,
-    val nominalSpeed: String,
-    val polePairNumber: String,
-    val ratedMechanicalPower: String,
-    val reversible: String,
-    val rxLockedRotorRatio: String
+    @Id var asynchronousMachineId: UUID? = null,
+    var converterFedDrive: String,
+    var efficiency: String,
+    var iaIrRatio: String,
+    var nominalFrequency: String,
+    var nominalSpeed: String,
+    var polePairNumber: String,
+    var ratedMechanicalPower: String,
+    var reversible: String,
+    var rxLockedRotorRatio: String
 )
 
-data class DeleteAsynchronousMachineEvent(@Id val asynchronousMachineId: UUID? = null)
+data class DeleteAsynchronousMachineEvent(@Id var asynchronousMachineId: UUID? = null)
 
 // single association events
 
@@ -561,14 +561,14 @@ data class DeleteAsynchronousMachineEvent(@Id val asynchronousMachineId: UUID? =
 // AsynchronousMachineDynamics Events
 
 data class CreateAsynchronousMachineDynamicsEvent(
-     val asynchronousMachineDynamicsId: UUID? = null
+     var asynchronousMachineDynamicsId: UUID? = null
 )
 
 data class UpdateAsynchronousMachineDynamicsEvent(
-     val asynchronousMachineDynamicsId: UUID? = null
+     var asynchronousMachineDynamicsId: UUID? = null
 )
 
-data class DeleteAsynchronousMachineDynamicsEvent(@Id val asynchronousMachineDynamicsId: UUID? = null)
+data class DeleteAsynchronousMachineDynamicsEvent(@Id var asynchronousMachineDynamicsId: UUID? = null)
 
 // single association events
 
@@ -578,24 +578,24 @@ data class DeleteAsynchronousMachineDynamicsEvent(@Id val asynchronousMachineDyn
 // AsynchronousMachineEquivalentCircuit Events
 
 data class CreateAsynchronousMachineEquivalentCircuitEvent(
-    @Id val asynchronousMachineEquivalentCircuitId: UUID? = null,
-    val rr1: String,
-    val rr2: String,
-    val xlr1: String,
-    val xlr2: String,
-    val xm: String
+    @Id var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    var rr1: String,
+    var rr2: String,
+    var xlr1: String,
+    var xlr2: String,
+    var xm: String
 )
 
 data class UpdateAsynchronousMachineEquivalentCircuitEvent(
-    @Id val asynchronousMachineEquivalentCircuitId: UUID? = null,
-    val rr1: String,
-    val rr2: String,
-    val xlr1: String,
-    val xlr2: String,
-    val xm: String
+    @Id var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    var rr1: String,
+    var rr2: String,
+    var xlr1: String,
+    var xlr2: String,
+    var xm: String
 )
 
-data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id val asynchronousMachineEquivalentCircuitId: UUID? = null)
+data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id var asynchronousMachineEquivalentCircuitId: UUID? = null)
 
 // single association events
 
@@ -605,24 +605,24 @@ data class DeleteAsynchronousMachineEquivalentCircuitEvent(@Id val asynchronousM
 // AsynchronousMachineTimeConstantReactance Events
 
 data class CreateAsynchronousMachineTimeConstantReactanceEvent(
-    @Id val asynchronousMachineTimeConstantReactanceId: UUID? = null,
-    val tpo: String,
-    val tppo: String,
-    val xp: String,
-    val xpp: String,
-    val xs: String
+    @Id var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    var tpo: String,
+    var tppo: String,
+    var xp: String,
+    var xpp: String,
+    var xs: String
 )
 
 data class UpdateAsynchronousMachineTimeConstantReactanceEvent(
-    @Id val asynchronousMachineTimeConstantReactanceId: UUID? = null,
-    val tpo: String,
-    val tppo: String,
-    val xp: String,
-    val xpp: String,
-    val xs: String
+    @Id var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    var tpo: String,
+    var tppo: String,
+    var xp: String,
+    var xpp: String,
+    var xs: String
 )
 
-data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id val asynchronousMachineTimeConstantReactanceId: UUID? = null)
+data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id var asynchronousMachineTimeConstantReactanceId: UUID? = null)
 
 // single association events
 
@@ -632,16 +632,16 @@ data class DeleteAsynchronousMachineTimeConstantReactanceEvent(@Id val asynchron
 // AsynchronousMachineUserDefined Events
 
 data class CreateAsynchronousMachineUserDefinedEvent(
-    @Id val asynchronousMachineUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var asynchronousMachineUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateAsynchronousMachineUserDefinedEvent(
-    @Id val asynchronousMachineUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var asynchronousMachineUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteAsynchronousMachineUserDefinedEvent(@Id val asynchronousMachineUserDefinedId: UUID? = null)
+data class DeleteAsynchronousMachineUserDefinedEvent(@Id var asynchronousMachineUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -651,16 +651,16 @@ data class DeleteAsynchronousMachineUserDefinedEvent(@Id val asynchronousMachine
 // BaseVoltage Events
 
 data class CreateBaseVoltageEvent(
-    @Id val baseVoltageId: UUID? = null,
-    val nominalVoltage: String
+    @Id var baseVoltageId: UUID? = null,
+    var nominalVoltage: String
 )
 
 data class UpdateBaseVoltageEvent(
-    @Id val baseVoltageId: UUID? = null,
-    val nominalVoltage: String
+    @Id var baseVoltageId: UUID? = null,
+    var nominalVoltage: String
 )
 
-data class DeleteBaseVoltageEvent(@Id val baseVoltageId: UUID? = null)
+data class DeleteBaseVoltageEvent(@Id var baseVoltageId: UUID? = null)
 
 // single association events
 
@@ -670,20 +670,20 @@ data class DeleteBaseVoltageEvent(@Id val baseVoltageId: UUID? = null)
 // BasicIntervalSchedule Events
 
 data class CreateBasicIntervalScheduleEvent(
-    @Id val basicIntervalScheduleId: UUID? = null,
-    val startTime: String,
-    val value1Unit: String,
-    val value2Unit: String
+    @Id var basicIntervalScheduleId: UUID? = null,
+    var startTime: String,
+    var value1Unit: String,
+    var value2Unit: String
 )
 
 data class UpdateBasicIntervalScheduleEvent(
-    @Id val basicIntervalScheduleId: UUID? = null,
-    val startTime: String,
-    val value1Unit: String,
-    val value2Unit: String
+    @Id var basicIntervalScheduleId: UUID? = null,
+    var startTime: String,
+    var value1Unit: String,
+    var value2Unit: String
 )
 
-data class DeleteBasicIntervalScheduleEvent(@Id val basicIntervalScheduleId: UUID? = null)
+data class DeleteBasicIntervalScheduleEvent(@Id var basicIntervalScheduleId: UUID? = null)
 
 // single association events
 
@@ -693,14 +693,14 @@ data class DeleteBasicIntervalScheduleEvent(@Id val basicIntervalScheduleId: UUI
 // Bay Events
 
 data class CreateBayEvent(
-     val bayId: UUID? = null
+     var bayId: UUID? = null
 )
 
 data class UpdateBayEvent(
-     val bayId: UUID? = null
+     var bayId: UUID? = null
 )
 
-data class DeleteBayEvent(@Id val bayId: UUID? = null)
+data class DeleteBayEvent(@Id var bayId: UUID? = null)
 
 // single association events
 
@@ -710,14 +710,14 @@ data class DeleteBayEvent(@Id val bayId: UUID? = null)
 // BooleanProxy Events
 
 data class CreateBooleanProxyEvent(
-     val booleanProxyId: UUID? = null
+     var booleanProxyId: UUID? = null
 )
 
 data class UpdateBooleanProxyEvent(
-     val booleanProxyId: UUID? = null
+     var booleanProxyId: UUID? = null
 )
 
-data class DeleteBooleanProxyEvent(@Id val booleanProxyId: UUID? = null)
+data class DeleteBooleanProxyEvent(@Id var booleanProxyId: UUID? = null)
 
 // single association events
 
@@ -727,28 +727,28 @@ data class DeleteBooleanProxyEvent(@Id val booleanProxyId: UUID? = null)
 // BoundaryExtensions Events
 
 data class CreateBoundaryExtensionsEvent(
-    @Id val boundaryExtensionsId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var boundaryExtensionsId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
 data class UpdateBoundaryExtensionsEvent(
-    @Id val boundaryExtensionsId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var boundaryExtensionsId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
-data class DeleteBoundaryExtensionsEvent(@Id val boundaryExtensionsId: UUID? = null)
+data class DeleteBoundaryExtensionsEvent(@Id var boundaryExtensionsId: UUID? = null)
 
 // single association events
 
@@ -758,14 +758,14 @@ data class DeleteBoundaryExtensionsEvent(@Id val boundaryExtensionsId: UUID? = n
 // Breaker Events
 
 data class CreateBreakerEvent(
-     val breakerId: UUID? = null
+     var breakerId: UUID? = null
 )
 
 data class UpdateBreakerEvent(
-     val breakerId: UUID? = null
+     var breakerId: UUID? = null
 )
 
-data class DeleteBreakerEvent(@Id val breakerId: UUID? = null)
+data class DeleteBreakerEvent(@Id var breakerId: UUID? = null)
 
 // single association events
 
@@ -775,16 +775,16 @@ data class DeleteBreakerEvent(@Id val breakerId: UUID? = null)
 // BusNameMarker Events
 
 data class CreateBusNameMarkerEvent(
-    @Id val busNameMarkerId: UUID? = null,
-    val priority: String
+    @Id var busNameMarkerId: UUID? = null,
+    var priority: String
 )
 
 data class UpdateBusNameMarkerEvent(
-    @Id val busNameMarkerId: UUID? = null,
-    val priority: String
+    @Id var busNameMarkerId: UUID? = null,
+    var priority: String
 )
 
-data class DeleteBusNameMarkerEvent(@Id val busNameMarkerId: UUID? = null)
+data class DeleteBusNameMarkerEvent(@Id var busNameMarkerId: UUID? = null)
 
 // single association events
 
@@ -794,16 +794,16 @@ data class DeleteBusNameMarkerEvent(@Id val busNameMarkerId: UUID? = null)
 // BusbarSection Events
 
 data class CreateBusbarSectionEvent(
-    @Id val busbarSectionId: UUID? = null,
-    val ipMax: String
+    @Id var busbarSectionId: UUID? = null,
+    var ipMax: String
 )
 
 data class UpdateBusbarSectionEvent(
-    @Id val busbarSectionId: UUID? = null,
-    val ipMax: String
+    @Id var busbarSectionId: UUID? = null,
+    var ipMax: String
 )
 
-data class DeleteBusbarSectionEvent(@Id val busbarSectionId: UUID? = null)
+data class DeleteBusbarSectionEvent(@Id var busbarSectionId: UUID? = null)
 
 // single association events
 
@@ -813,20 +813,20 @@ data class DeleteBusbarSectionEvent(@Id val busbarSectionId: UUID? = null)
 // Capacitance Events
 
 data class CreateCapacitanceEvent(
-    @Id val capacitanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var capacitanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateCapacitanceEvent(
-    @Id val capacitanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var capacitanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteCapacitanceEvent(@Id val capacitanceId: UUID? = null)
+data class DeleteCapacitanceEvent(@Id var capacitanceId: UUID? = null)
 
 // single association events
 
@@ -836,24 +836,24 @@ data class DeleteCapacitanceEvent(@Id val capacitanceId: UUID? = null)
 // CapacitancePerLength Events
 
 data class CreateCapacitancePerLengthEvent(
-    @Id val capacitancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var capacitancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateCapacitancePerLengthEvent(
-    @Id val capacitancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var capacitancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteCapacitancePerLengthEvent(@Id val capacitancePerLengthId: UUID? = null)
+data class DeleteCapacitancePerLengthEvent(@Id var capacitancePerLengthId: UUID? = null)
 
 // single association events
 
@@ -863,18 +863,18 @@ data class DeleteCapacitancePerLengthEvent(@Id val capacitancePerLengthId: UUID?
 // Command Events
 
 data class CreateCommandEvent(
-    @Id val commandId: UUID? = null,
-    val normalValue: String,
-    val value: String
+    @Id var commandId: UUID? = null,
+    var normalValue: String,
+    var value: String
 )
 
 data class UpdateCommandEvent(
-    @Id val commandId: UUID? = null,
-    val normalValue: String,
-    val value: String
+    @Id var commandId: UUID? = null,
+    var normalValue: String,
+    var value: String
 )
 
-data class DeleteCommandEvent(@Id val commandId: UUID? = null)
+data class DeleteCommandEvent(@Id var commandId: UUID? = null)
 
 // single association events
 
@@ -884,20 +884,20 @@ data class DeleteCommandEvent(@Id val commandId: UUID? = null)
 // Conductance Events
 
 data class CreateConductanceEvent(
-    @Id val conductanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var conductanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateConductanceEvent(
-    @Id val conductanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var conductanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteConductanceEvent(@Id val conductanceId: UUID? = null)
+data class DeleteConductanceEvent(@Id var conductanceId: UUID? = null)
 
 // single association events
 
@@ -907,14 +907,14 @@ data class DeleteConductanceEvent(@Id val conductanceId: UUID? = null)
 // ConductingEquipment Events
 
 data class CreateConductingEquipmentEvent(
-     val conductingEquipmentId: UUID? = null
+     var conductingEquipmentId: UUID? = null
 )
 
 data class UpdateConductingEquipmentEvent(
-     val conductingEquipmentId: UUID? = null
+     var conductingEquipmentId: UUID? = null
 )
 
-data class DeleteConductingEquipmentEvent(@Id val conductingEquipmentId: UUID? = null)
+data class DeleteConductingEquipmentEvent(@Id var conductingEquipmentId: UUID? = null)
 
 // single association events
 
@@ -924,16 +924,16 @@ data class DeleteConductingEquipmentEvent(@Id val conductingEquipmentId: UUID? =
 // Conductor Events
 
 data class CreateConductorEvent(
-    @Id val conductorId: UUID? = null,
-    val length: String
+    @Id var conductorId: UUID? = null,
+    var length: String
 )
 
 data class UpdateConductorEvent(
-    @Id val conductorId: UUID? = null,
-    val length: String
+    @Id var conductorId: UUID? = null,
+    var length: String
 )
 
-data class DeleteConductorEvent(@Id val conductorId: UUID? = null)
+data class DeleteConductorEvent(@Id var conductorId: UUID? = null)
 
 // single association events
 
@@ -943,14 +943,14 @@ data class DeleteConductorEvent(@Id val conductorId: UUID? = null)
 // ConformLoad Events
 
 data class CreateConformLoadEvent(
-     val conformLoadId: UUID? = null
+     var conformLoadId: UUID? = null
 )
 
 data class UpdateConformLoadEvent(
-     val conformLoadId: UUID? = null
+     var conformLoadId: UUID? = null
 )
 
-data class DeleteConformLoadEvent(@Id val conformLoadId: UUID? = null)
+data class DeleteConformLoadEvent(@Id var conformLoadId: UUID? = null)
 
 // single association events
 
@@ -960,14 +960,14 @@ data class DeleteConformLoadEvent(@Id val conformLoadId: UUID? = null)
 // ConformLoadGroup Events
 
 data class CreateConformLoadGroupEvent(
-     val conformLoadGroupId: UUID? = null
+     var conformLoadGroupId: UUID? = null
 )
 
 data class UpdateConformLoadGroupEvent(
-     val conformLoadGroupId: UUID? = null
+     var conformLoadGroupId: UUID? = null
 )
 
-data class DeleteConformLoadGroupEvent(@Id val conformLoadGroupId: UUID? = null)
+data class DeleteConformLoadGroupEvent(@Id var conformLoadGroupId: UUID? = null)
 
 // single association events
 
@@ -977,14 +977,14 @@ data class DeleteConformLoadGroupEvent(@Id val conformLoadGroupId: UUID? = null)
 // ConformLoadSchedule Events
 
 data class CreateConformLoadScheduleEvent(
-     val conformLoadScheduleId: UUID? = null
+     var conformLoadScheduleId: UUID? = null
 )
 
 data class UpdateConformLoadScheduleEvent(
-     val conformLoadScheduleId: UUID? = null
+     var conformLoadScheduleId: UUID? = null
 )
 
-data class DeleteConformLoadScheduleEvent(@Id val conformLoadScheduleId: UUID? = null)
+data class DeleteConformLoadScheduleEvent(@Id var conformLoadScheduleId: UUID? = null)
 
 // single association events
 
@@ -994,28 +994,28 @@ data class DeleteConformLoadScheduleEvent(@Id val conformLoadScheduleId: UUID? =
 // ConnectivityNode Events
 
 data class CreateConnectivityNodeEvent(
-    @Id val connectivityNodeId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var connectivityNodeId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
 data class UpdateConnectivityNodeEvent(
-    @Id val connectivityNodeId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var connectivityNodeId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
-data class DeleteConnectivityNodeEvent(@Id val connectivityNodeId: UUID? = null)
+data class DeleteConnectivityNodeEvent(@Id var connectivityNodeId: UUID? = null)
 
 // single association events
 
@@ -1025,14 +1025,14 @@ data class DeleteConnectivityNodeEvent(@Id val connectivityNodeId: UUID? = null)
 // ConnectivityNodeContainer Events
 
 data class CreateConnectivityNodeContainerEvent(
-     val connectivityNodeContainerId: UUID? = null
+     var connectivityNodeContainerId: UUID? = null
 )
 
 data class UpdateConnectivityNodeContainerEvent(
-     val connectivityNodeContainerId: UUID? = null
+     var connectivityNodeContainerId: UUID? = null
 )
 
-data class DeleteConnectivityNodeContainerEvent(@Id val connectivityNodeContainerId: UUID? = null)
+data class DeleteConnectivityNodeContainerEvent(@Id var connectivityNodeContainerId: UUID? = null)
 
 // single association events
 
@@ -1042,14 +1042,14 @@ data class DeleteConnectivityNodeContainerEvent(@Id val connectivityNodeContaine
 // Connector Events
 
 data class CreateConnectorEvent(
-     val connectorId: UUID? = null
+     var connectorId: UUID? = null
 )
 
 data class UpdateConnectorEvent(
-     val connectorId: UUID? = null
+     var connectorId: UUID? = null
 )
 
-data class DeleteConnectorEvent(@Id val connectorId: UUID? = null)
+data class DeleteConnectorEvent(@Id var connectorId: UUID? = null)
 
 // single association events
 
@@ -1059,24 +1059,24 @@ data class DeleteConnectorEvent(@Id val connectorId: UUID? = null)
 // Control Events
 
 data class CreateControlEvent(
-    @Id val controlId: UUID? = null,
-    val controlType: String,
-    val operationInProgress: String,
-    val timeStamp: String,
-    val unitMultiplier: String,
-    val unitSymbol: String
+    @Id var controlId: UUID? = null,
+    var controlType: String,
+    var operationInProgress: String,
+    var timeStamp: String,
+    var unitMultiplier: String,
+    var unitSymbol: String
 )
 
 data class UpdateControlEvent(
-    @Id val controlId: UUID? = null,
-    val controlType: String,
-    val operationInProgress: String,
-    val timeStamp: String,
-    val unitMultiplier: String,
-    val unitSymbol: String
+    @Id var controlId: UUID? = null,
+    var controlType: String,
+    var operationInProgress: String,
+    var timeStamp: String,
+    var unitMultiplier: String,
+    var unitSymbol: String
 )
 
-data class DeleteControlEvent(@Id val controlId: UUID? = null)
+data class DeleteControlEvent(@Id var controlId: UUID? = null)
 
 // single association events
 
@@ -1086,16 +1086,16 @@ data class DeleteControlEvent(@Id val controlId: UUID? = null)
 // ControlArea Events
 
 data class CreateControlAreaEvent(
-    @Id val controlAreaId: UUID? = null,
-    val type: String
+    @Id var controlAreaId: UUID? = null,
+    var type: String
 )
 
 data class UpdateControlAreaEvent(
-    @Id val controlAreaId: UUID? = null,
-    val type: String
+    @Id var controlAreaId: UUID? = null,
+    var type: String
 )
 
-data class DeleteControlAreaEvent(@Id val controlAreaId: UUID? = null)
+data class DeleteControlAreaEvent(@Id var controlAreaId: UUID? = null)
 
 // single association events
 
@@ -1105,14 +1105,14 @@ data class DeleteControlAreaEvent(@Id val controlAreaId: UUID? = null)
 // ControlAreaGeneratingUnit Events
 
 data class CreateControlAreaGeneratingUnitEvent(
-     val controlAreaGeneratingUnitId: UUID? = null
+     var controlAreaGeneratingUnitId: UUID? = null
 )
 
 data class UpdateControlAreaGeneratingUnitEvent(
-     val controlAreaGeneratingUnitId: UUID? = null
+     var controlAreaGeneratingUnitId: UUID? = null
 )
 
-data class DeleteControlAreaGeneratingUnitEvent(@Id val controlAreaGeneratingUnitId: UUID? = null)
+data class DeleteControlAreaGeneratingUnitEvent(@Id var controlAreaGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -1122,16 +1122,16 @@ data class DeleteControlAreaGeneratingUnitEvent(@Id val controlAreaGeneratingUni
 // CoordinateSystem Events
 
 data class CreateCoordinateSystemEvent(
-    @Id val coordinateSystemId: UUID? = null,
-    val crsUrn: String
+    @Id var coordinateSystemId: UUID? = null,
+    var crsUrn: String
 )
 
 data class UpdateCoordinateSystemEvent(
-    @Id val coordinateSystemId: UUID? = null,
-    val crsUrn: String
+    @Id var coordinateSystemId: UUID? = null,
+    var crsUrn: String
 )
 
-data class DeleteCoordinateSystemEvent(@Id val coordinateSystemId: UUID? = null)
+data class DeleteCoordinateSystemEvent(@Id var coordinateSystemId: UUID? = null)
 
 // single association events
 
@@ -1141,28 +1141,28 @@ data class DeleteCoordinateSystemEvent(@Id val coordinateSystemId: UUID? = null)
 // CsConverter Events
 
 data class CreateCsConverterEvent(
-    @Id val csConverterId: UUID? = null,
-    val maxAlpha: String,
-    val maxGamma: String,
-    val maxIdc: String,
-    val minAlpha: String,
-    val minGamma: String,
-    val minIdc: String,
-    val ratedIdc: String
+    @Id var csConverterId: UUID? = null,
+    var maxAlpha: String,
+    var maxGamma: String,
+    var maxIdc: String,
+    var minAlpha: String,
+    var minGamma: String,
+    var minIdc: String,
+    var ratedIdc: String
 )
 
 data class UpdateCsConverterEvent(
-    @Id val csConverterId: UUID? = null,
-    val maxAlpha: String,
-    val maxGamma: String,
-    val maxIdc: String,
-    val minAlpha: String,
-    val minGamma: String,
-    val minIdc: String,
-    val ratedIdc: String
+    @Id var csConverterId: UUID? = null,
+    var maxAlpha: String,
+    var maxGamma: String,
+    var maxIdc: String,
+    var minAlpha: String,
+    var minGamma: String,
+    var minIdc: String,
+    var ratedIdc: String
 )
 
-data class DeleteCsConverterEvent(@Id val csConverterId: UUID? = null)
+data class DeleteCsConverterEvent(@Id var csConverterId: UUID? = null)
 
 // single association events
 
@@ -1172,20 +1172,20 @@ data class DeleteCsConverterEvent(@Id val csConverterId: UUID? = null)
 // CurrentFlow Events
 
 data class CreateCurrentFlowEvent(
-    @Id val currentFlowId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var currentFlowId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateCurrentFlowEvent(
-    @Id val currentFlowId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var currentFlowId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteCurrentFlowEvent(@Id val currentFlowId: UUID? = null)
+data class DeleteCurrentFlowEvent(@Id var currentFlowId: UUID? = null)
 
 // single association events
 
@@ -1195,16 +1195,16 @@ data class DeleteCurrentFlowEvent(@Id val currentFlowId: UUID? = null)
 // CurrentLimit Events
 
 data class CreateCurrentLimitEvent(
-    @Id val currentLimitId: UUID? = null,
-    val value: String
+    @Id var currentLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateCurrentLimitEvent(
-    @Id val currentLimitId: UUID? = null,
-    val value: String
+    @Id var currentLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteCurrentLimitEvent(@Id val currentLimitId: UUID? = null)
+data class DeleteCurrentLimitEvent(@Id var currentLimitId: UUID? = null)
 
 // single association events
 
@@ -1214,22 +1214,22 @@ data class DeleteCurrentLimitEvent(@Id val currentLimitId: UUID? = null)
 // Curve Events
 
 data class CreateCurveEvent(
-    @Id val curveId: UUID? = null,
-    val curveStyle: String,
-    val xUnit: String,
-    val y1Unit: String,
-    val y2Unit: String
+    @Id var curveId: UUID? = null,
+    var curveStyle: String,
+    var xUnit: String,
+    var y1Unit: String,
+    var y2Unit: String
 )
 
 data class UpdateCurveEvent(
-    @Id val curveId: UUID? = null,
-    val curveStyle: String,
-    val xUnit: String,
-    val y1Unit: String,
-    val y2Unit: String
+    @Id var curveId: UUID? = null,
+    var curveStyle: String,
+    var xUnit: String,
+    var y1Unit: String,
+    var y2Unit: String
 )
 
-data class DeleteCurveEvent(@Id val curveId: UUID? = null)
+data class DeleteCurveEvent(@Id var curveId: UUID? = null)
 
 // single association events
 
@@ -1239,20 +1239,20 @@ data class DeleteCurveEvent(@Id val curveId: UUID? = null)
 // CurveData Events
 
 data class CreateCurveDataEvent(
-    @Id val curveDataId: UUID? = null,
-    val xvalue: String,
-    val y1value: String,
-    val y2value: String
+    @Id var curveDataId: UUID? = null,
+    var xvalue: String,
+    var y1value: String,
+    var y2value: String
 )
 
 data class UpdateCurveDataEvent(
-    @Id val curveDataId: UUID? = null,
-    val xvalue: String,
-    val y1value: String,
-    val y2value: String
+    @Id var curveDataId: UUID? = null,
+    var xvalue: String,
+    var y1value: String,
+    var y2value: String
 )
 
-data class DeleteCurveDataEvent(@Id val curveDataId: UUID? = null)
+data class DeleteCurveDataEvent(@Id var curveDataId: UUID? = null)
 
 // single association events
 
@@ -1262,14 +1262,14 @@ data class DeleteCurveDataEvent(@Id val curveDataId: UUID? = null)
 // DCBaseTerminal Events
 
 data class CreateDCBaseTerminalEvent(
-     val dCBaseTerminalId: UUID? = null
+     var dCBaseTerminalId: UUID? = null
 )
 
 data class UpdateDCBaseTerminalEvent(
-     val dCBaseTerminalId: UUID? = null
+     var dCBaseTerminalId: UUID? = null
 )
 
-data class DeleteDCBaseTerminalEvent(@Id val dCBaseTerminalId: UUID? = null)
+data class DeleteDCBaseTerminalEvent(@Id var dCBaseTerminalId: UUID? = null)
 
 // single association events
 
@@ -1279,14 +1279,14 @@ data class DeleteDCBaseTerminalEvent(@Id val dCBaseTerminalId: UUID? = null)
 // DCBreaker Events
 
 data class CreateDCBreakerEvent(
-     val dCBreakerId: UUID? = null
+     var dCBreakerId: UUID? = null
 )
 
 data class UpdateDCBreakerEvent(
-     val dCBreakerId: UUID? = null
+     var dCBreakerId: UUID? = null
 )
 
-data class DeleteDCBreakerEvent(@Id val dCBreakerId: UUID? = null)
+data class DeleteDCBreakerEvent(@Id var dCBreakerId: UUID? = null)
 
 // single association events
 
@@ -1296,14 +1296,14 @@ data class DeleteDCBreakerEvent(@Id val dCBreakerId: UUID? = null)
 // DCBusbar Events
 
 data class CreateDCBusbarEvent(
-     val dCBusbarId: UUID? = null
+     var dCBusbarId: UUID? = null
 )
 
 data class UpdateDCBusbarEvent(
-     val dCBusbarId: UUID? = null
+     var dCBusbarId: UUID? = null
 )
 
-data class DeleteDCBusbarEvent(@Id val dCBusbarId: UUID? = null)
+data class DeleteDCBusbarEvent(@Id var dCBusbarId: UUID? = null)
 
 // single association events
 
@@ -1313,14 +1313,14 @@ data class DeleteDCBusbarEvent(@Id val dCBusbarId: UUID? = null)
 // DCChopper Events
 
 data class CreateDCChopperEvent(
-     val dCChopperId: UUID? = null
+     var dCChopperId: UUID? = null
 )
 
 data class UpdateDCChopperEvent(
-     val dCChopperId: UUID? = null
+     var dCChopperId: UUID? = null
 )
 
-data class DeleteDCChopperEvent(@Id val dCChopperId: UUID? = null)
+data class DeleteDCChopperEvent(@Id var dCChopperId: UUID? = null)
 
 // single association events
 
@@ -1330,14 +1330,14 @@ data class DeleteDCChopperEvent(@Id val dCChopperId: UUID? = null)
 // DCConductingEquipment Events
 
 data class CreateDCConductingEquipmentEvent(
-     val dCConductingEquipmentId: UUID? = null
+     var dCConductingEquipmentId: UUID? = null
 )
 
 data class UpdateDCConductingEquipmentEvent(
-     val dCConductingEquipmentId: UUID? = null
+     var dCConductingEquipmentId: UUID? = null
 )
 
-data class DeleteDCConductingEquipmentEvent(@Id val dCConductingEquipmentId: UUID? = null)
+data class DeleteDCConductingEquipmentEvent(@Id var dCConductingEquipmentId: UUID? = null)
 
 // single association events
 
@@ -1347,16 +1347,16 @@ data class DeleteDCConductingEquipmentEvent(@Id val dCConductingEquipmentId: UUI
 // DCConverterUnit Events
 
 data class CreateDCConverterUnitEvent(
-    @Id val dCConverterUnitId: UUID? = null,
-    val operationMode: String
+    @Id var dCConverterUnitId: UUID? = null,
+    var operationMode: String
 )
 
 data class UpdateDCConverterUnitEvent(
-    @Id val dCConverterUnitId: UUID? = null,
-    val operationMode: String
+    @Id var dCConverterUnitId: UUID? = null,
+    var operationMode: String
 )
 
-data class DeleteDCConverterUnitEvent(@Id val dCConverterUnitId: UUID? = null)
+data class DeleteDCConverterUnitEvent(@Id var dCConverterUnitId: UUID? = null)
 
 // single association events
 
@@ -1366,14 +1366,14 @@ data class DeleteDCConverterUnitEvent(@Id val dCConverterUnitId: UUID? = null)
 // DCDisconnector Events
 
 data class CreateDCDisconnectorEvent(
-     val dCDisconnectorId: UUID? = null
+     var dCDisconnectorId: UUID? = null
 )
 
 data class UpdateDCDisconnectorEvent(
-     val dCDisconnectorId: UUID? = null
+     var dCDisconnectorId: UUID? = null
 )
 
-data class DeleteDCDisconnectorEvent(@Id val dCDisconnectorId: UUID? = null)
+data class DeleteDCDisconnectorEvent(@Id var dCDisconnectorId: UUID? = null)
 
 // single association events
 
@@ -1383,14 +1383,14 @@ data class DeleteDCDisconnectorEvent(@Id val dCDisconnectorId: UUID? = null)
 // DCEquipmentContainer Events
 
 data class CreateDCEquipmentContainerEvent(
-     val dCEquipmentContainerId: UUID? = null
+     var dCEquipmentContainerId: UUID? = null
 )
 
 data class UpdateDCEquipmentContainerEvent(
-     val dCEquipmentContainerId: UUID? = null
+     var dCEquipmentContainerId: UUID? = null
 )
 
-data class DeleteDCEquipmentContainerEvent(@Id val dCEquipmentContainerId: UUID? = null)
+data class DeleteDCEquipmentContainerEvent(@Id var dCEquipmentContainerId: UUID? = null)
 
 // single association events
 
@@ -1400,18 +1400,18 @@ data class DeleteDCEquipmentContainerEvent(@Id val dCEquipmentContainerId: UUID?
 // DCGround Events
 
 data class CreateDCGroundEvent(
-    @Id val dCGroundId: UUID? = null,
-    val inductance: String,
-    val r: String
+    @Id var dCGroundId: UUID? = null,
+    var inductance: String,
+    var r: String
 )
 
 data class UpdateDCGroundEvent(
-    @Id val dCGroundId: UUID? = null,
-    val inductance: String,
-    val r: String
+    @Id var dCGroundId: UUID? = null,
+    var inductance: String,
+    var r: String
 )
 
-data class DeleteDCGroundEvent(@Id val dCGroundId: UUID? = null)
+data class DeleteDCGroundEvent(@Id var dCGroundId: UUID? = null)
 
 // single association events
 
@@ -1421,14 +1421,14 @@ data class DeleteDCGroundEvent(@Id val dCGroundId: UUID? = null)
 // DCLine Events
 
 data class CreateDCLineEvent(
-     val dCLineId: UUID? = null
+     var dCLineId: UUID? = null
 )
 
 data class UpdateDCLineEvent(
-     val dCLineId: UUID? = null
+     var dCLineId: UUID? = null
 )
 
-data class DeleteDCLineEvent(@Id val dCLineId: UUID? = null)
+data class DeleteDCLineEvent(@Id var dCLineId: UUID? = null)
 
 // single association events
 
@@ -1438,22 +1438,22 @@ data class DeleteDCLineEvent(@Id val dCLineId: UUID? = null)
 // DCLineSegment Events
 
 data class CreateDCLineSegmentEvent(
-    @Id val dCLineSegmentId: UUID? = null,
-    val capacitance: String,
-    val inductance: String,
-    val length: String,
-    val resistance: String
+    @Id var dCLineSegmentId: UUID? = null,
+    var capacitance: String,
+    var inductance: String,
+    var length: String,
+    var resistance: String
 )
 
 data class UpdateDCLineSegmentEvent(
-    @Id val dCLineSegmentId: UUID? = null,
-    val capacitance: String,
-    val inductance: String,
-    val length: String,
-    val resistance: String
+    @Id var dCLineSegmentId: UUID? = null,
+    var capacitance: String,
+    var inductance: String,
+    var length: String,
+    var resistance: String
 )
 
-data class DeleteDCLineSegmentEvent(@Id val dCLineSegmentId: UUID? = null)
+data class DeleteDCLineSegmentEvent(@Id var dCLineSegmentId: UUID? = null)
 
 // single association events
 
@@ -1463,14 +1463,14 @@ data class DeleteDCLineSegmentEvent(@Id val dCLineSegmentId: UUID? = null)
 // DCNode Events
 
 data class CreateDCNodeEvent(
-     val dCNodeId: UUID? = null
+     var dCNodeId: UUID? = null
 )
 
 data class UpdateDCNodeEvent(
-     val dCNodeId: UUID? = null
+     var dCNodeId: UUID? = null
 )
 
-data class DeleteDCNodeEvent(@Id val dCNodeId: UUID? = null)
+data class DeleteDCNodeEvent(@Id var dCNodeId: UUID? = null)
 
 // single association events
 
@@ -1480,20 +1480,20 @@ data class DeleteDCNodeEvent(@Id val dCNodeId: UUID? = null)
 // DCSeriesDevice Events
 
 data class CreateDCSeriesDeviceEvent(
-    @Id val dCSeriesDeviceId: UUID? = null,
-    val inductance: String,
-    val ratedUdc: String,
-    val resistance: String
+    @Id var dCSeriesDeviceId: UUID? = null,
+    var inductance: String,
+    var ratedUdc: String,
+    var resistance: String
 )
 
 data class UpdateDCSeriesDeviceEvent(
-    @Id val dCSeriesDeviceId: UUID? = null,
-    val inductance: String,
-    val ratedUdc: String,
-    val resistance: String
+    @Id var dCSeriesDeviceId: UUID? = null,
+    var inductance: String,
+    var ratedUdc: String,
+    var resistance: String
 )
 
-data class DeleteDCSeriesDeviceEvent(@Id val dCSeriesDeviceId: UUID? = null)
+data class DeleteDCSeriesDeviceEvent(@Id var dCSeriesDeviceId: UUID? = null)
 
 // single association events
 
@@ -1503,20 +1503,20 @@ data class DeleteDCSeriesDeviceEvent(@Id val dCSeriesDeviceId: UUID? = null)
 // DCShunt Events
 
 data class CreateDCShuntEvent(
-    @Id val dCShuntId: UUID? = null,
-    val capacitance: String,
-    val ratedUdc: String,
-    val resistance: String
+    @Id var dCShuntId: UUID? = null,
+    var capacitance: String,
+    var ratedUdc: String,
+    var resistance: String
 )
 
 data class UpdateDCShuntEvent(
-    @Id val dCShuntId: UUID? = null,
-    val capacitance: String,
-    val ratedUdc: String,
-    val resistance: String
+    @Id var dCShuntId: UUID? = null,
+    var capacitance: String,
+    var ratedUdc: String,
+    var resistance: String
 )
 
-data class DeleteDCShuntEvent(@Id val dCShuntId: UUID? = null)
+data class DeleteDCShuntEvent(@Id var dCShuntId: UUID? = null)
 
 // single association events
 
@@ -1526,14 +1526,14 @@ data class DeleteDCShuntEvent(@Id val dCShuntId: UUID? = null)
 // DCSwitch Events
 
 data class CreateDCSwitchEvent(
-     val dCSwitchId: UUID? = null
+     var dCSwitchId: UUID? = null
 )
 
 data class UpdateDCSwitchEvent(
-     val dCSwitchId: UUID? = null
+     var dCSwitchId: UUID? = null
 )
 
-data class DeleteDCSwitchEvent(@Id val dCSwitchId: UUID? = null)
+data class DeleteDCSwitchEvent(@Id var dCSwitchId: UUID? = null)
 
 // single association events
 
@@ -1543,14 +1543,14 @@ data class DeleteDCSwitchEvent(@Id val dCSwitchId: UUID? = null)
 // DCTerminal Events
 
 data class CreateDCTerminalEvent(
-     val dCTerminalId: UUID? = null
+     var dCTerminalId: UUID? = null
 )
 
 data class UpdateDCTerminalEvent(
-     val dCTerminalId: UUID? = null
+     var dCTerminalId: UUID? = null
 )
 
-data class DeleteDCTerminalEvent(@Id val dCTerminalId: UUID? = null)
+data class DeleteDCTerminalEvent(@Id var dCTerminalId: UUID? = null)
 
 // single association events
 
@@ -1560,14 +1560,14 @@ data class DeleteDCTerminalEvent(@Id val dCTerminalId: UUID? = null)
 // DCTopologicalIsland Events
 
 data class CreateDCTopologicalIslandEvent(
-     val dCTopologicalIslandId: UUID? = null
+     var dCTopologicalIslandId: UUID? = null
 )
 
 data class UpdateDCTopologicalIslandEvent(
-     val dCTopologicalIslandId: UUID? = null
+     var dCTopologicalIslandId: UUID? = null
 )
 
-data class DeleteDCTopologicalIslandEvent(@Id val dCTopologicalIslandId: UUID? = null)
+data class DeleteDCTopologicalIslandEvent(@Id var dCTopologicalIslandId: UUID? = null)
 
 // single association events
 
@@ -1577,14 +1577,14 @@ data class DeleteDCTopologicalIslandEvent(@Id val dCTopologicalIslandId: UUID? =
 // DCTopologicalNode Events
 
 data class CreateDCTopologicalNodeEvent(
-     val dCTopologicalNodeId: UUID? = null
+     var dCTopologicalNodeId: UUID? = null
 )
 
 data class UpdateDCTopologicalNodeEvent(
-     val dCTopologicalNodeId: UUID? = null
+     var dCTopologicalNodeId: UUID? = null
 )
 
-data class DeleteDCTopologicalNodeEvent(@Id val dCTopologicalNodeId: UUID? = null)
+data class DeleteDCTopologicalNodeEvent(@Id var dCTopologicalNodeId: UUID? = null)
 
 // single association events
 
@@ -1594,14 +1594,14 @@ data class DeleteDCTopologicalNodeEvent(@Id val dCTopologicalNodeId: UUID? = nul
 // DateProxy Events
 
 data class CreateDateProxyEvent(
-     val dateProxyId: UUID? = null
+     var dateProxyId: UUID? = null
 )
 
 data class UpdateDateProxyEvent(
-     val dateProxyId: UUID? = null
+     var dateProxyId: UUID? = null
 )
 
-data class DeleteDateProxyEvent(@Id val dateProxyId: UUID? = null)
+data class DeleteDateProxyEvent(@Id var dateProxyId: UUID? = null)
 
 // single association events
 
@@ -1611,14 +1611,14 @@ data class DeleteDateProxyEvent(@Id val dateProxyId: UUID? = null)
 // DateTime Events
 
 data class CreateDateTimeEvent(
-     val dateTimeId: UUID? = null
+     var dateTimeId: UUID? = null
 )
 
 data class UpdateDateTimeEvent(
-     val dateTimeId: UUID? = null
+     var dateTimeId: UUID? = null
 )
 
-data class DeleteDateTimeEvent(@Id val dateTimeId: UUID? = null)
+data class DeleteDateTimeEvent(@Id var dateTimeId: UUID? = null)
 
 // single association events
 
@@ -1628,14 +1628,14 @@ data class DeleteDateTimeEvent(@Id val dateTimeId: UUID? = null)
 // DayType Events
 
 data class CreateDayTypeEvent(
-     val dayTypeId: UUID? = null
+     var dayTypeId: UUID? = null
 )
 
 data class UpdateDayTypeEvent(
-     val dayTypeId: UUID? = null
+     var dayTypeId: UUID? = null
 )
 
-data class DeleteDayTypeEvent(@Id val dayTypeId: UUID? = null)
+data class DeleteDayTypeEvent(@Id var dayTypeId: UUID? = null)
 
 // single association events
 
@@ -1645,14 +1645,14 @@ data class DeleteDayTypeEvent(@Id val dayTypeId: UUID? = null)
 // DecimalProxy Events
 
 data class CreateDecimalProxyEvent(
-     val decimalProxyId: UUID? = null
+     var decimalProxyId: UUID? = null
 )
 
 data class UpdateDecimalProxyEvent(
-     val decimalProxyId: UUID? = null
+     var decimalProxyId: UUID? = null
 )
 
-data class DeleteDecimalProxyEvent(@Id val decimalProxyId: UUID? = null)
+data class DeleteDecimalProxyEvent(@Id var decimalProxyId: UUID? = null)
 
 // single association events
 
@@ -1662,24 +1662,24 @@ data class DeleteDecimalProxyEvent(@Id val decimalProxyId: UUID? = null)
 // Diagram Events
 
 data class CreateDiagramEvent(
-    @Id val diagramId: UUID? = null,
-    val orientation: String,
-    val x1InitialView: String,
-    val x2InitialView: String,
-    val y1InitialView: String,
-    val y2InitialView: String
+    @Id var diagramId: UUID? = null,
+    var orientation: String,
+    var x1InitialView: String,
+    var x2InitialView: String,
+    var y1InitialView: String,
+    var y2InitialView: String
 )
 
 data class UpdateDiagramEvent(
-    @Id val diagramId: UUID? = null,
-    val orientation: String,
-    val x1InitialView: String,
-    val x2InitialView: String,
-    val y1InitialView: String,
-    val y2InitialView: String
+    @Id var diagramId: UUID? = null,
+    var orientation: String,
+    var x1InitialView: String,
+    var x2InitialView: String,
+    var y1InitialView: String,
+    var y2InitialView: String
 )
 
-data class DeleteDiagramEvent(@Id val diagramId: UUID? = null)
+data class DeleteDiagramEvent(@Id var diagramId: UUID? = null)
 
 // single association events
 
@@ -1689,34 +1689,34 @@ data class DeleteDiagramEvent(@Id val diagramId: UUID? = null)
 // DiagramLayoutVersion Events
 
 data class CreateDiagramLayoutVersionEvent(
-    @Id val diagramLayoutVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var diagramLayoutVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateDiagramLayoutVersionEvent(
-    @Id val diagramLayoutVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var diagramLayoutVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteDiagramLayoutVersionEvent(@Id val diagramLayoutVersionId: UUID? = null)
+data class DeleteDiagramLayoutVersionEvent(@Id var diagramLayoutVersionId: UUID? = null)
 
 // single association events
 
@@ -1726,24 +1726,24 @@ data class DeleteDiagramLayoutVersionEvent(@Id val diagramLayoutVersionId: UUID?
 // DiagramObject Events
 
 data class CreateDiagramObjectEvent(
-    @Id val diagramObjectId: UUID? = null,
-    val drawingOrder: String,
-    val isPolygon: String,
-    val offsetX: String,
-    val offsetY: String,
-    val rotation: String
+    @Id var diagramObjectId: UUID? = null,
+    var drawingOrder: String,
+    var isPolygon: String,
+    var offsetX: String,
+    var offsetY: String,
+    var rotation: String
 )
 
 data class UpdateDiagramObjectEvent(
-    @Id val diagramObjectId: UUID? = null,
-    val drawingOrder: String,
-    val isPolygon: String,
-    val offsetX: String,
-    val offsetY: String,
-    val rotation: String
+    @Id var diagramObjectId: UUID? = null,
+    var drawingOrder: String,
+    var isPolygon: String,
+    var offsetX: String,
+    var offsetY: String,
+    var rotation: String
 )
 
-data class DeleteDiagramObjectEvent(@Id val diagramObjectId: UUID? = null)
+data class DeleteDiagramObjectEvent(@Id var diagramObjectId: UUID? = null)
 
 // single association events
 
@@ -1753,14 +1753,14 @@ data class DeleteDiagramObjectEvent(@Id val diagramObjectId: UUID? = null)
 // DiagramObjectGluePoint Events
 
 data class CreateDiagramObjectGluePointEvent(
-     val diagramObjectGluePointId: UUID? = null
+     var diagramObjectGluePointId: UUID? = null
 )
 
 data class UpdateDiagramObjectGluePointEvent(
-     val diagramObjectGluePointId: UUID? = null
+     var diagramObjectGluePointId: UUID? = null
 )
 
-data class DeleteDiagramObjectGluePointEvent(@Id val diagramObjectGluePointId: UUID? = null)
+data class DeleteDiagramObjectGluePointEvent(@Id var diagramObjectGluePointId: UUID? = null)
 
 // single association events
 
@@ -1770,22 +1770,22 @@ data class DeleteDiagramObjectGluePointEvent(@Id val diagramObjectGluePointId: U
 // DiagramObjectPoint Events
 
 data class CreateDiagramObjectPointEvent(
-    @Id val diagramObjectPointId: UUID? = null,
-    val sequenceNumber: String,
-    val xPosition: String,
-    val yPosition: String,
-    val zPosition: String
+    @Id var diagramObjectPointId: UUID? = null,
+    var sequenceNumber: String,
+    var xPosition: String,
+    var yPosition: String,
+    var zPosition: String
 )
 
 data class UpdateDiagramObjectPointEvent(
-    @Id val diagramObjectPointId: UUID? = null,
-    val sequenceNumber: String,
-    val xPosition: String,
-    val yPosition: String,
-    val zPosition: String
+    @Id var diagramObjectPointId: UUID? = null,
+    var sequenceNumber: String,
+    var xPosition: String,
+    var yPosition: String,
+    var zPosition: String
 )
 
-data class DeleteDiagramObjectPointEvent(@Id val diagramObjectPointId: UUID? = null)
+data class DeleteDiagramObjectPointEvent(@Id var diagramObjectPointId: UUID? = null)
 
 // single association events
 
@@ -1795,14 +1795,14 @@ data class DeleteDiagramObjectPointEvent(@Id val diagramObjectPointId: UUID? = n
 // DiagramObjectStyle Events
 
 data class CreateDiagramObjectStyleEvent(
-     val diagramObjectStyleId: UUID? = null
+     var diagramObjectStyleId: UUID? = null
 )
 
 data class UpdateDiagramObjectStyleEvent(
-     val diagramObjectStyleId: UUID? = null
+     var diagramObjectStyleId: UUID? = null
 )
 
-data class DeleteDiagramObjectStyleEvent(@Id val diagramObjectStyleId: UUID? = null)
+data class DeleteDiagramObjectStyleEvent(@Id var diagramObjectStyleId: UUID? = null)
 
 // single association events
 
@@ -1812,14 +1812,14 @@ data class DeleteDiagramObjectStyleEvent(@Id val diagramObjectStyleId: UUID? = n
 // DiagramStyle Events
 
 data class CreateDiagramStyleEvent(
-     val diagramStyleId: UUID? = null
+     var diagramStyleId: UUID? = null
 )
 
 data class UpdateDiagramStyleEvent(
-     val diagramStyleId: UUID? = null
+     var diagramStyleId: UUID? = null
 )
 
-data class DeleteDiagramStyleEvent(@Id val diagramStyleId: UUID? = null)
+data class DeleteDiagramStyleEvent(@Id var diagramStyleId: UUID? = null)
 
 // single association events
 
@@ -1829,50 +1829,50 @@ data class DeleteDiagramStyleEvent(@Id val diagramStyleId: UUID? = null)
 // DiscExcContIEEEDEC1A Events
 
 data class CreateDiscExcContIEEEDEC1AEvent(
-    @Id val discExcContIEEEDEC1AId: UUID? = null,
-    val esc: String,
-    val kan: String,
-    val ketl: String,
-    val tan: String,
-    val td: String,
-    val tl1: String,
-    val tl2: String,
-    val tw5: String,
-    val value: String,
-    val vanmax: String,
-    val vomax: String,
-    val vomin: String,
-    val vsmax: String,
-    val vsmin: String,
-    val vtc: String,
-    val vtlmt: String,
-    val vtm: String,
-    val vtn: String
+    @Id var discExcContIEEEDEC1AId: UUID? = null,
+    var esc: String,
+    var kan: String,
+    var ketl: String,
+    var tan: String,
+    var td: String,
+    var tl1: String,
+    var tl2: String,
+    var tw5: String,
+    var value: String,
+    var vanmax: String,
+    var vomax: String,
+    var vomin: String,
+    var vsmax: String,
+    var vsmin: String,
+    var vtc: String,
+    var vtlmt: String,
+    var vtm: String,
+    var vtn: String
 )
 
 data class UpdateDiscExcContIEEEDEC1AEvent(
-    @Id val discExcContIEEEDEC1AId: UUID? = null,
-    val esc: String,
-    val kan: String,
-    val ketl: String,
-    val tan: String,
-    val td: String,
-    val tl1: String,
-    val tl2: String,
-    val tw5: String,
-    val value: String,
-    val vanmax: String,
-    val vomax: String,
-    val vomin: String,
-    val vsmax: String,
-    val vsmin: String,
-    val vtc: String,
-    val vtlmt: String,
-    val vtm: String,
-    val vtn: String
+    @Id var discExcContIEEEDEC1AId: UUID? = null,
+    var esc: String,
+    var kan: String,
+    var ketl: String,
+    var tan: String,
+    var td: String,
+    var tl1: String,
+    var tl2: String,
+    var tw5: String,
+    var value: String,
+    var vanmax: String,
+    var vomax: String,
+    var vomin: String,
+    var vsmax: String,
+    var vsmin: String,
+    var vtc: String,
+    var vtlmt: String,
+    var vtm: String,
+    var vtn: String
 )
 
-data class DeleteDiscExcContIEEEDEC1AEvent(@Id val discExcContIEEEDEC1AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC1AEvent(@Id var discExcContIEEEDEC1AId: UUID? = null)
 
 // single association events
 
@@ -1882,24 +1882,24 @@ data class DeleteDiscExcContIEEEDEC1AEvent(@Id val discExcContIEEEDEC1AId: UUID?
 // DiscExcContIEEEDEC2A Events
 
 data class CreateDiscExcContIEEEDEC2AEvent(
-    @Id val discExcContIEEEDEC2AId: UUID? = null,
-    val td1: String,
-    val td2: String,
-    val vdmax: String,
-    val vdmin: String,
-    val vk: String
+    @Id var discExcContIEEEDEC2AId: UUID? = null,
+    var td1: String,
+    var td2: String,
+    var vdmax: String,
+    var vdmin: String,
+    var vk: String
 )
 
 data class UpdateDiscExcContIEEEDEC2AEvent(
-    @Id val discExcContIEEEDEC2AId: UUID? = null,
-    val td1: String,
-    val td2: String,
-    val vdmax: String,
-    val vdmin: String,
-    val vk: String
+    @Id var discExcContIEEEDEC2AId: UUID? = null,
+    var td1: String,
+    var td2: String,
+    var vdmax: String,
+    var vdmin: String,
+    var vk: String
 )
 
-data class DeleteDiscExcContIEEEDEC2AEvent(@Id val discExcContIEEEDEC2AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC2AEvent(@Id var discExcContIEEEDEC2AId: UUID? = null)
 
 // single association events
 
@@ -1909,18 +1909,18 @@ data class DeleteDiscExcContIEEEDEC2AEvent(@Id val discExcContIEEEDEC2AId: UUID?
 // DiscExcContIEEEDEC3A Events
 
 data class CreateDiscExcContIEEEDEC3AEvent(
-    @Id val discExcContIEEEDEC3AId: UUID? = null,
-    val tdr: String,
-    val vtmin: String
+    @Id var discExcContIEEEDEC3AId: UUID? = null,
+    var tdr: String,
+    var vtmin: String
 )
 
 data class UpdateDiscExcContIEEEDEC3AEvent(
-    @Id val discExcContIEEEDEC3AId: UUID? = null,
-    val tdr: String,
-    val vtmin: String
+    @Id var discExcContIEEEDEC3AId: UUID? = null,
+    var tdr: String,
+    var vtmin: String
 )
 
-data class DeleteDiscExcContIEEEDEC3AEvent(@Id val discExcContIEEEDEC3AId: UUID? = null)
+data class DeleteDiscExcContIEEEDEC3AEvent(@Id var discExcContIEEEDEC3AId: UUID? = null)
 
 // single association events
 
@@ -1930,14 +1930,14 @@ data class DeleteDiscExcContIEEEDEC3AEvent(@Id val discExcContIEEEDEC3AId: UUID?
 // Disconnector Events
 
 data class CreateDisconnectorEvent(
-     val disconnectorId: UUID? = null
+     var disconnectorId: UUID? = null
 )
 
 data class UpdateDisconnectorEvent(
-     val disconnectorId: UUID? = null
+     var disconnectorId: UUID? = null
 )
 
-data class DeleteDisconnectorEvent(@Id val disconnectorId: UUID? = null)
+data class DeleteDisconnectorEvent(@Id var disconnectorId: UUID? = null)
 
 // single association events
 
@@ -1947,14 +1947,14 @@ data class DeleteDisconnectorEvent(@Id val disconnectorId: UUID? = null)
 // DiscontinuousExcitationControlDynamics Events
 
 data class CreateDiscontinuousExcitationControlDynamicsEvent(
-     val discontinuousExcitationControlDynamicsId: UUID? = null
+     var discontinuousExcitationControlDynamicsId: UUID? = null
 )
 
 data class UpdateDiscontinuousExcitationControlDynamicsEvent(
-     val discontinuousExcitationControlDynamicsId: UUID? = null
+     var discontinuousExcitationControlDynamicsId: UUID? = null
 )
 
-data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id val discontinuousExcitationControlDynamicsId: UUID? = null)
+data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id var discontinuousExcitationControlDynamicsId: UUID? = null)
 
 // single association events
 
@@ -1964,16 +1964,16 @@ data class DeleteDiscontinuousExcitationControlDynamicsEvent(@Id val discontinuo
 // DiscontinuousExcitationControlUserDefined Events
 
 data class CreateDiscontinuousExcitationControlUserDefinedEvent(
-    @Id val discontinuousExcitationControlUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateDiscontinuousExcitationControlUserDefinedEvent(
-    @Id val discontinuousExcitationControlUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id val discontinuousExcitationControlUserDefinedId: UUID? = null)
+data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id var discontinuousExcitationControlUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -1983,14 +1983,14 @@ data class DeleteDiscontinuousExcitationControlUserDefinedEvent(@Id val disconti
 // Discrete Events
 
 data class CreateDiscreteEvent(
-     val discreteId: UUID? = null
+     var discreteId: UUID? = null
 )
 
 data class UpdateDiscreteEvent(
-     val discreteId: UUID? = null
+     var discreteId: UUID? = null
 )
 
-data class DeleteDiscreteEvent(@Id val discreteId: UUID? = null)
+data class DeleteDiscreteEvent(@Id var discreteId: UUID? = null)
 
 // single association events
 
@@ -2000,16 +2000,16 @@ data class DeleteDiscreteEvent(@Id val discreteId: UUID? = null)
 // DiscreteValue Events
 
 data class CreateDiscreteValueEvent(
-    @Id val discreteValueId: UUID? = null,
-    val value: String
+    @Id var discreteValueId: UUID? = null,
+    var value: String
 )
 
 data class UpdateDiscreteValueEvent(
-    @Id val discreteValueId: UUID? = null,
-    val value: String
+    @Id var discreteValueId: UUID? = null,
+    var value: String
 )
 
-data class DeleteDiscreteValueEvent(@Id val discreteValueId: UUID? = null)
+data class DeleteDiscreteValueEvent(@Id var discreteValueId: UUID? = null)
 
 // single association events
 
@@ -2019,22 +2019,22 @@ data class DeleteDiscreteValueEvent(@Id val discreteValueId: UUID? = null)
 // DomainVersion Events
 
 data class CreateDomainVersionEvent(
-    @Id val domainVersionId: UUID? = null,
-    val baseUML: String,
-    val date: String,
-    val entsoeUML: String,
-    val version: String
+    @Id var domainVersionId: UUID? = null,
+    var baseUML: String,
+    var date: String,
+    var entsoeUML: String,
+    var version: String
 )
 
 data class UpdateDomainVersionEvent(
-    @Id val domainVersionId: UUID? = null,
-    val baseUML: String,
-    val date: String,
-    val entsoeUML: String,
-    val version: String
+    @Id var domainVersionId: UUID? = null,
+    var baseUML: String,
+    var date: String,
+    var entsoeUML: String,
+    var version: String
 )
 
-data class DeleteDomainVersionEvent(@Id val domainVersionId: UUID? = null)
+data class DeleteDomainVersionEvent(@Id var domainVersionId: UUID? = null)
 
 // single association events
 
@@ -2044,16 +2044,16 @@ data class DeleteDomainVersionEvent(@Id val domainVersionId: UUID? = null)
 // DynamicsFunctionBlock Events
 
 data class CreateDynamicsFunctionBlockEvent(
-    @Id val dynamicsFunctionBlockId: UUID? = null,
-    val enabled: String
+    @Id var dynamicsFunctionBlockId: UUID? = null,
+    var enabled: String
 )
 
 data class UpdateDynamicsFunctionBlockEvent(
-    @Id val dynamicsFunctionBlockId: UUID? = null,
-    val enabled: String
+    @Id var dynamicsFunctionBlockId: UUID? = null,
+    var enabled: String
 )
 
-data class DeleteDynamicsFunctionBlockEvent(@Id val dynamicsFunctionBlockId: UUID? = null)
+data class DeleteDynamicsFunctionBlockEvent(@Id var dynamicsFunctionBlockId: UUID? = null)
 
 // single association events
 
@@ -2063,34 +2063,34 @@ data class DeleteDynamicsFunctionBlockEvent(@Id val dynamicsFunctionBlockId: UUI
 // DynamicsVersion Events
 
 data class CreateDynamicsVersionEvent(
-    @Id val dynamicsVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var dynamicsVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateDynamicsVersionEvent(
-    @Id val dynamicsVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var dynamicsVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteDynamicsVersionEvent(@Id val dynamicsVersionId: UUID? = null)
+data class DeleteDynamicsVersionEvent(@Id var dynamicsVersionId: UUID? = null)
 
 // single association events
 
@@ -2100,14 +2100,14 @@ data class DeleteDynamicsVersionEvent(@Id val dynamicsVersionId: UUID? = null)
 // Dynamicsmodel Events
 
 data class CreateDynamicsmodelEvent(
-     val dynamicsmodelId: UUID? = null
+     var dynamicsmodelId: UUID? = null
 )
 
 data class UpdateDynamicsmodelEvent(
-     val dynamicsmodelId: UUID? = null
+     var dynamicsmodelId: UUID? = null
 )
 
-data class DeleteDynamicsmodelEvent(@Id val dynamicsmodelId: UUID? = null)
+data class DeleteDynamicsmodelEvent(@Id var dynamicsmodelId: UUID? = null)
 
 // single association events
 
@@ -2117,14 +2117,14 @@ data class DeleteDynamicsmodelEvent(@Id val dynamicsmodelId: UUID? = null)
 // ENTSOEConnectivityNode Events
 
 data class CreateENTSOEConnectivityNodeEvent(
-     val eNTSOEConnectivityNodeId: UUID? = null
+     var eNTSOEConnectivityNodeId: UUID? = null
 )
 
 data class UpdateENTSOEConnectivityNodeEvent(
-     val eNTSOEConnectivityNodeId: UUID? = null
+     var eNTSOEConnectivityNodeId: UUID? = null
 )
 
-data class DeleteENTSOEConnectivityNodeEvent(@Id val eNTSOEConnectivityNodeId: UUID? = null)
+data class DeleteENTSOEConnectivityNodeEvent(@Id var eNTSOEConnectivityNodeId: UUID? = null)
 
 // single association events
 
@@ -2134,18 +2134,18 @@ data class DeleteENTSOEConnectivityNodeEvent(@Id val eNTSOEConnectivityNodeId: U
 // ENTSOEIdentifiedObject Events
 
 data class CreateENTSOEIdentifiedObjectEvent(
-    @Id val eNTSOEIdentifiedObjectId: UUID? = null,
-    val energyIdentCodeEic: String,
-    val shortName: String
+    @Id var eNTSOEIdentifiedObjectId: UUID? = null,
+    var energyIdentCodeEic: String,
+    var shortName: String
 )
 
 data class UpdateENTSOEIdentifiedObjectEvent(
-    @Id val eNTSOEIdentifiedObjectId: UUID? = null,
-    val energyIdentCodeEic: String,
-    val shortName: String
+    @Id var eNTSOEIdentifiedObjectId: UUID? = null,
+    var energyIdentCodeEic: String,
+    var shortName: String
 )
 
-data class DeleteENTSOEIdentifiedObjectEvent(@Id val eNTSOEIdentifiedObjectId: UUID? = null)
+data class DeleteENTSOEIdentifiedObjectEvent(@Id var eNTSOEIdentifiedObjectId: UUID? = null)
 
 // single association events
 
@@ -2155,14 +2155,14 @@ data class DeleteENTSOEIdentifiedObjectEvent(@Id val eNTSOEIdentifiedObjectId: U
 // ENTSOEJunction Events
 
 data class CreateENTSOEJunctionEvent(
-     val eNTSOEJunctionId: UUID? = null
+     var eNTSOEJunctionId: UUID? = null
 )
 
 data class UpdateENTSOEJunctionEvent(
-     val eNTSOEJunctionId: UUID? = null
+     var eNTSOEJunctionId: UUID? = null
 )
 
-data class DeleteENTSOEJunctionEvent(@Id val eNTSOEJunctionId: UUID? = null)
+data class DeleteENTSOEJunctionEvent(@Id var eNTSOEJunctionId: UUID? = null)
 
 // single association events
 
@@ -2172,16 +2172,16 @@ data class DeleteENTSOEJunctionEvent(@Id val eNTSOEJunctionId: UUID? = null)
 // ENTSOEOperationalLimitType Events
 
 data class CreateENTSOEOperationalLimitTypeEvent(
-    @Id val eNTSOEOperationalLimitTypeId: UUID? = null,
-    val limitType: String
+    @Id var eNTSOEOperationalLimitTypeId: UUID? = null,
+    var limitType: String
 )
 
 data class UpdateENTSOEOperationalLimitTypeEvent(
-    @Id val eNTSOEOperationalLimitTypeId: UUID? = null,
-    val limitType: String
+    @Id var eNTSOEOperationalLimitTypeId: UUID? = null,
+    var limitType: String
 )
 
-data class DeleteENTSOEOperationalLimitTypeEvent(@Id val eNTSOEOperationalLimitTypeId: UUID? = null)
+data class DeleteENTSOEOperationalLimitTypeEvent(@Id var eNTSOEOperationalLimitTypeId: UUID? = null)
 
 // single association events
 
@@ -2191,14 +2191,14 @@ data class DeleteENTSOEOperationalLimitTypeEvent(@Id val eNTSOEOperationalLimitT
 // ENTSOETopologicalNode Events
 
 data class CreateENTSOETopologicalNodeEvent(
-     val eNTSOETopologicalNodeId: UUID? = null
+     var eNTSOETopologicalNodeId: UUID? = null
 )
 
 data class UpdateENTSOETopologicalNodeEvent(
-     val eNTSOETopologicalNodeId: UUID? = null
+     var eNTSOETopologicalNodeId: UUID? = null
 )
 
-data class DeleteENTSOETopologicalNodeEvent(@Id val eNTSOETopologicalNodeId: UUID? = null)
+data class DeleteENTSOETopologicalNodeEvent(@Id var eNTSOETopologicalNodeId: UUID? = null)
 
 // single association events
 
@@ -2208,16 +2208,16 @@ data class DeleteENTSOETopologicalNodeEvent(@Id val eNTSOETopologicalNodeId: UUI
 // EarthFaultCompensator Events
 
 data class CreateEarthFaultCompensatorEvent(
-    @Id val earthFaultCompensatorId: UUID? = null,
-    val r: String
+    @Id var earthFaultCompensatorId: UUID? = null,
+    var r: String
 )
 
 data class UpdateEarthFaultCompensatorEvent(
-    @Id val earthFaultCompensatorId: UUID? = null,
-    val r: String
+    @Id var earthFaultCompensatorId: UUID? = null,
+    var r: String
 )
 
-data class DeleteEarthFaultCompensatorEvent(@Id val earthFaultCompensatorId: UUID? = null)
+data class DeleteEarthFaultCompensatorEvent(@Id var earthFaultCompensatorId: UUID? = null)
 
 // single association events
 
@@ -2227,14 +2227,14 @@ data class DeleteEarthFaultCompensatorEvent(@Id val earthFaultCompensatorId: UUI
 // EnergyArea Events
 
 data class CreateEnergyAreaEvent(
-     val energyAreaId: UUID? = null
+     var energyAreaId: UUID? = null
 )
 
 data class UpdateEnergyAreaEvent(
-     val energyAreaId: UUID? = null
+     var energyAreaId: UUID? = null
 )
 
-data class DeleteEnergyAreaEvent(@Id val energyAreaId: UUID? = null)
+data class DeleteEnergyAreaEvent(@Id var energyAreaId: UUID? = null)
 
 // single association events
 
@@ -2244,22 +2244,22 @@ data class DeleteEnergyAreaEvent(@Id val energyAreaId: UUID? = null)
 // EnergyConsumer Events
 
 data class CreateEnergyConsumerEvent(
-    @Id val energyConsumerId: UUID? = null,
-    val pfixed: String,
-    val pfixedPct: String,
-    val qfixed: String,
-    val qfixedPct: String
+    @Id var energyConsumerId: UUID? = null,
+    var pfixed: String,
+    var pfixedPct: String,
+    var qfixed: String,
+    var qfixedPct: String
 )
 
 data class UpdateEnergyConsumerEvent(
-    @Id val energyConsumerId: UUID? = null,
-    val pfixed: String,
-    val pfixedPct: String,
-    val qfixed: String,
-    val qfixedPct: String
+    @Id var energyConsumerId: UUID? = null,
+    var pfixed: String,
+    var pfixedPct: String,
+    var qfixed: String,
+    var qfixedPct: String
 )
 
-data class DeleteEnergyConsumerEvent(@Id val energyConsumerId: UUID? = null)
+data class DeleteEnergyConsumerEvent(@Id var energyConsumerId: UUID? = null)
 
 // single association events
 
@@ -2269,14 +2269,14 @@ data class DeleteEnergyConsumerEvent(@Id val energyConsumerId: UUID? = null)
 // EnergySchedulingType Events
 
 data class CreateEnergySchedulingTypeEvent(
-     val energySchedulingTypeId: UUID? = null
+     var energySchedulingTypeId: UUID? = null
 )
 
 data class UpdateEnergySchedulingTypeEvent(
-     val energySchedulingTypeId: UUID? = null
+     var energySchedulingTypeId: UUID? = null
 )
 
-data class DeleteEnergySchedulingTypeEvent(@Id val energySchedulingTypeId: UUID? = null)
+data class DeleteEnergySchedulingTypeEvent(@Id var energySchedulingTypeId: UUID? = null)
 
 // single association events
 
@@ -2286,14 +2286,14 @@ data class DeleteEnergySchedulingTypeEvent(@Id val energySchedulingTypeId: UUID?
 // EnergySource Events
 
 data class CreateEnergySourceEvent(
-     val energySourceId: UUID? = null
+     var energySourceId: UUID? = null
 )
 
 data class UpdateEnergySourceEvent(
-     val energySourceId: UUID? = null
+     var energySourceId: UUID? = null
 )
 
-data class DeleteEnergySourceEvent(@Id val energySourceId: UUID? = null)
+data class DeleteEnergySourceEvent(@Id var energySourceId: UUID? = null)
 
 // single association events
 
@@ -2303,14 +2303,14 @@ data class DeleteEnergySourceEvent(@Id val energySourceId: UUID? = null)
 // Equipment Events
 
 data class CreateEquipmentEvent(
-     val equipmentId: UUID? = null
+     var equipmentId: UUID? = null
 )
 
 data class UpdateEquipmentEvent(
-     val equipmentId: UUID? = null
+     var equipmentId: UUID? = null
 )
 
-data class DeleteEquipmentEvent(@Id val equipmentId: UUID? = null)
+data class DeleteEquipmentEvent(@Id var equipmentId: UUID? = null)
 
 // single association events
 
@@ -2320,36 +2320,36 @@ data class DeleteEquipmentEvent(@Id val equipmentId: UUID? = null)
 // EquipmentBoundaryVersion Events
 
 data class CreateEquipmentBoundaryVersionEvent(
-    @Id val equipmentBoundaryVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURIcore: String,
-    val entsoeURIoperation: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var equipmentBoundaryVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURIcore: String,
+    var entsoeURIoperation: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateEquipmentBoundaryVersionEvent(
-    @Id val equipmentBoundaryVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURIcore: String,
-    val entsoeURIoperation: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var equipmentBoundaryVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURIcore: String,
+    var entsoeURIoperation: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteEquipmentBoundaryVersionEvent(@Id val equipmentBoundaryVersionId: UUID? = null)
+data class DeleteEquipmentBoundaryVersionEvent(@Id var equipmentBoundaryVersionId: UUID? = null)
 
 // single association events
 
@@ -2359,14 +2359,14 @@ data class DeleteEquipmentBoundaryVersionEvent(@Id val equipmentBoundaryVersionI
 // EquipmentContainer Events
 
 data class CreateEquipmentContainerEvent(
-     val equipmentContainerId: UUID? = null
+     var equipmentContainerId: UUID? = null
 )
 
 data class UpdateEquipmentContainerEvent(
-     val equipmentContainerId: UUID? = null
+     var equipmentContainerId: UUID? = null
 )
 
-data class DeleteEquipmentContainerEvent(@Id val equipmentContainerId: UUID? = null)
+data class DeleteEquipmentContainerEvent(@Id var equipmentContainerId: UUID? = null)
 
 // single association events
 
@@ -2376,42 +2376,42 @@ data class DeleteEquipmentContainerEvent(@Id val equipmentContainerId: UUID? = n
 // EquipmentVersion Events
 
 data class CreateEquipmentVersionEvent(
-    @Id val equipmentVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURIcore: String,
-    val baseURIoperation: String,
-    val baseURIshortCircuit: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURIcore: String,
-    val entsoeURIoperation: String,
-    val entsoeURIshortCircuit: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var equipmentVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURIcore: String,
+    var baseURIoperation: String,
+    var baseURIshortCircuit: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURIcore: String,
+    var entsoeURIoperation: String,
+    var entsoeURIshortCircuit: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateEquipmentVersionEvent(
-    @Id val equipmentVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURIcore: String,
-    val baseURIoperation: String,
-    val baseURIshortCircuit: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURIcore: String,
-    val entsoeURIoperation: String,
-    val entsoeURIshortCircuit: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var equipmentVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURIcore: String,
+    var baseURIoperation: String,
+    var baseURIshortCircuit: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURIcore: String,
+    var entsoeURIoperation: String,
+    var entsoeURIshortCircuit: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteEquipmentVersionEvent(@Id val equipmentVersionId: UUID? = null)
+data class DeleteEquipmentVersionEvent(@Id var equipmentVersionId: UUID? = null)
 
 // single association events
 
@@ -2421,46 +2421,46 @@ data class DeleteEquipmentVersionEvent(@Id val equipmentVersionId: UUID? = null)
 // EquivalentBranch Events
 
 data class CreateEquivalentBranchEvent(
-    @Id val equivalentBranchId: UUID? = null,
-    val negativeR12: String,
-    val negativeR21: String,
-    val negativeX12: String,
-    val negativeX21: String,
-    val positiveR12: String,
-    val positiveR21: String,
-    val positiveX12: String,
-    val positiveX21: String,
-    val r: String,
-    val r21: String,
-    val x: String,
-    val x21: String,
-    val zeroR12: String,
-    val zeroR21: String,
-    val zeroX12: String,
-    val zeroX21: String
+    @Id var equivalentBranchId: UUID? = null,
+    var negativeR12: String,
+    var negativeR21: String,
+    var negativeX12: String,
+    var negativeX21: String,
+    var positiveR12: String,
+    var positiveR21: String,
+    var positiveX12: String,
+    var positiveX21: String,
+    var r: String,
+    var r21: String,
+    var x: String,
+    var x21: String,
+    var zeroR12: String,
+    var zeroR21: String,
+    var zeroX12: String,
+    var zeroX21: String
 )
 
 data class UpdateEquivalentBranchEvent(
-    @Id val equivalentBranchId: UUID? = null,
-    val negativeR12: String,
-    val negativeR21: String,
-    val negativeX12: String,
-    val negativeX21: String,
-    val positiveR12: String,
-    val positiveR21: String,
-    val positiveX12: String,
-    val positiveX21: String,
-    val r: String,
-    val r21: String,
-    val x: String,
-    val x21: String,
-    val zeroR12: String,
-    val zeroR21: String,
-    val zeroX12: String,
-    val zeroX21: String
+    @Id var equivalentBranchId: UUID? = null,
+    var negativeR12: String,
+    var negativeR21: String,
+    var negativeX12: String,
+    var negativeX21: String,
+    var positiveR12: String,
+    var positiveR21: String,
+    var positiveX12: String,
+    var positiveX21: String,
+    var r: String,
+    var r21: String,
+    var x: String,
+    var x21: String,
+    var zeroR12: String,
+    var zeroR21: String,
+    var zeroX12: String,
+    var zeroX21: String
 )
 
-data class DeleteEquivalentBranchEvent(@Id val equivalentBranchId: UUID? = null)
+data class DeleteEquivalentBranchEvent(@Id var equivalentBranchId: UUID? = null)
 
 // single association events
 
@@ -2470,14 +2470,14 @@ data class DeleteEquivalentBranchEvent(@Id val equivalentBranchId: UUID? = null)
 // EquivalentEquipment Events
 
 data class CreateEquivalentEquipmentEvent(
-     val equivalentEquipmentId: UUID? = null
+     var equivalentEquipmentId: UUID? = null
 )
 
 data class UpdateEquivalentEquipmentEvent(
-     val equivalentEquipmentId: UUID? = null
+     var equivalentEquipmentId: UUID? = null
 )
 
-data class DeleteEquivalentEquipmentEvent(@Id val equivalentEquipmentId: UUID? = null)
+data class DeleteEquivalentEquipmentEvent(@Id var equivalentEquipmentId: UUID? = null)
 
 // single association events
 
@@ -2487,36 +2487,36 @@ data class DeleteEquivalentEquipmentEvent(@Id val equivalentEquipmentId: UUID? =
 // EquivalentInjection Events
 
 data class CreateEquivalentInjectionEvent(
-    @Id val equivalentInjectionId: UUID? = null,
-    val maxP: String,
-    val maxQ: String,
-    val minP: String,
-    val minQ: String,
-    val r: String,
-    val r0: String,
-    val r2: String,
-    val regulationCapability: String,
-    val x: String,
-    val x0: String,
-    val x2: String
+    @Id var equivalentInjectionId: UUID? = null,
+    var maxP: String,
+    var maxQ: String,
+    var minP: String,
+    var minQ: String,
+    var r: String,
+    var r0: String,
+    var r2: String,
+    var regulationCapability: String,
+    var x: String,
+    var x0: String,
+    var x2: String
 )
 
 data class UpdateEquivalentInjectionEvent(
-    @Id val equivalentInjectionId: UUID? = null,
-    val maxP: String,
-    val maxQ: String,
-    val minP: String,
-    val minQ: String,
-    val r: String,
-    val r0: String,
-    val r2: String,
-    val regulationCapability: String,
-    val x: String,
-    val x0: String,
-    val x2: String
+    @Id var equivalentInjectionId: UUID? = null,
+    var maxP: String,
+    var maxQ: String,
+    var minP: String,
+    var minQ: String,
+    var r: String,
+    var r0: String,
+    var r2: String,
+    var regulationCapability: String,
+    var x: String,
+    var x0: String,
+    var x2: String
 )
 
-data class DeleteEquivalentInjectionEvent(@Id val equivalentInjectionId: UUID? = null)
+data class DeleteEquivalentInjectionEvent(@Id var equivalentInjectionId: UUID? = null)
 
 // single association events
 
@@ -2526,14 +2526,14 @@ data class DeleteEquivalentInjectionEvent(@Id val equivalentInjectionId: UUID? =
 // EquivalentNetwork Events
 
 data class CreateEquivalentNetworkEvent(
-     val equivalentNetworkId: UUID? = null
+     var equivalentNetworkId: UUID? = null
 )
 
 data class UpdateEquivalentNetworkEvent(
-     val equivalentNetworkId: UUID? = null
+     var equivalentNetworkId: UUID? = null
 )
 
-data class DeleteEquivalentNetworkEvent(@Id val equivalentNetworkId: UUID? = null)
+data class DeleteEquivalentNetworkEvent(@Id var equivalentNetworkId: UUID? = null)
 
 // single association events
 
@@ -2543,18 +2543,18 @@ data class DeleteEquivalentNetworkEvent(@Id val equivalentNetworkId: UUID? = nul
 // EquivalentShunt Events
 
 data class CreateEquivalentShuntEvent(
-    @Id val equivalentShuntId: UUID? = null,
-    val b: String,
-    val g: String
+    @Id var equivalentShuntId: UUID? = null,
+    var b: String,
+    var g: String
 )
 
 data class UpdateEquivalentShuntEvent(
-    @Id val equivalentShuntId: UUID? = null,
-    val b: String,
-    val g: String
+    @Id var equivalentShuntId: UUID? = null,
+    var b: String,
+    var g: String
 )
 
-data class DeleteEquivalentShuntEvent(@Id val equivalentShuntId: UUID? = null)
+data class DeleteEquivalentShuntEvent(@Id var equivalentShuntId: UUID? = null)
 
 // single association events
 
@@ -2564,58 +2564,58 @@ data class DeleteEquivalentShuntEvent(@Id val equivalentShuntId: UUID? = null)
 // ExcAC1A Events
 
 data class CreateExcAC1AEvent(
-    @Id val excAC1AId: UUID? = null,
-    val hvlvgates: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kf1: String,
-    val kf2: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC1AId: UUID? = null,
+    var hvlvgates: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kf1: String,
+    var kf2: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcAC1AEvent(
-    @Id val excAC1AId: UUID? = null,
-    val hvlvgates: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kf1: String,
-    val kf2: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC1AId: UUID? = null,
+    var hvlvgates: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kf1: String,
+    var kf2: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcAC1AEvent(@Id val excAC1AId: UUID? = null)
+data class DeleteExcAC1AEvent(@Id var excAC1AId: UUID? = null)
 
 // single association events
 
@@ -2625,70 +2625,70 @@ data class DeleteExcAC1AEvent(@Id val excAC1AId: UUID? = null)
 // ExcAC2A Events
 
 data class CreateExcAC2AEvent(
-    @Id val excAC2AId: UUID? = null,
-    val hvgate: String,
-    val ka: String,
-    val kb: String,
-    val kb1: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kh: String,
-    val kl: String,
-    val kl1: String,
-    val ks: String,
-    val lvgate: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfemax: String,
-    val vlr: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC2AId: UUID? = null,
+    var hvgate: String,
+    var ka: String,
+    var kb: String,
+    var kb1: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kh: String,
+    var kl: String,
+    var kl1: String,
+    var ks: String,
+    var lvgate: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfemax: String,
+    var vlr: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcAC2AEvent(
-    @Id val excAC2AId: UUID? = null,
-    val hvgate: String,
-    val ka: String,
-    val kb: String,
-    val kb1: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kh: String,
-    val kl: String,
-    val kl1: String,
-    val ks: String,
-    val lvgate: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfemax: String,
-    val vlr: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC2AId: UUID? = null,
+    var hvgate: String,
+    var ka: String,
+    var kb: String,
+    var kb1: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kh: String,
+    var kl: String,
+    var kl1: String,
+    var ks: String,
+    var lvgate: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfemax: String,
+    var vlr: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcAC2AEvent(@Id val excAC2AId: UUID? = null)
+data class DeleteExcAC2AEvent(@Id var excAC2AId: UUID? = null)
 
 // single association events
 
@@ -2698,66 +2698,66 @@ data class DeleteExcAC2AEvent(@Id val excAC2AId: UUID? = null)
 // ExcAC3A Events
 
 data class CreateExcAC3AEvent(
-    @Id val excAC3AId: UUID? = null,
-    val efdn: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kf1: String,
-    val kf2: String,
-    val klv: String,
-    val kn: String,
-    val kr: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vlv: String
+    @Id var excAC3AId: UUID? = null,
+    var efdn: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kf1: String,
+    var kf2: String,
+    var klv: String,
+    var kn: String,
+    var kr: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vlv: String
 )
 
 data class UpdateExcAC3AEvent(
-    @Id val excAC3AId: UUID? = null,
-    val efdn: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kf1: String,
-    val kf2: String,
-    val klv: String,
-    val kn: String,
-    val kr: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vlv: String
+    @Id var excAC3AId: UUID? = null,
+    var efdn: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kf1: String,
+    var kf2: String,
+    var klv: String,
+    var kn: String,
+    var kr: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vlv: String
 )
 
-data class DeleteExcAC3AEvent(@Id val excAC3AId: UUID? = null)
+data class DeleteExcAC3AEvent(@Id var excAC3AId: UUID? = null)
 
 // single association events
 
@@ -2767,32 +2767,32 @@ data class DeleteExcAC3AEvent(@Id val excAC3AId: UUID? = null)
 // ExcAC4A Events
 
 data class CreateExcAC4AEvent(
-    @Id val excAC4AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC4AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcAC4AEvent(
-    @Id val excAC4AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC4AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcAC4AEvent(@Id val excAC4AId: UUID? = null)
+data class DeleteExcAC4AEvent(@Id var excAC4AId: UUID? = null)
 
 // single association events
 
@@ -2802,50 +2802,50 @@ data class DeleteExcAC4AEvent(@Id val excAC4AId: UUID? = null)
 // ExcAC5A Events
 
 data class CreateExcAC5AEvent(
-    @Id val excAC5AId: UUID? = null,
-    val a: String,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val tf3: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC5AId: UUID? = null,
+    var a: String,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var tf3: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcAC5AEvent(
-    @Id val excAC5AId: UUID? = null,
-    val a: String,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val tf3: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC5AId: UUID? = null,
+    var a: String,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var tf3: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcAC5AEvent(@Id val excAC5AId: UUID? = null)
+data class DeleteExcAC5AEvent(@Id var excAC5AId: UUID? = null)
 
 // single association events
 
@@ -2855,60 +2855,60 @@ data class DeleteExcAC5AEvent(@Id val excAC5AId: UUID? = null)
 // ExcAC6A Events
 
 data class CreateExcAC6AEvent(
-    @Id val excAC6AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kh: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val th: String,
-    val tj: String,
-    val tk: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfelim: String,
-    val vhmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC6AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kh: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var th: String,
+    var tj: String,
+    var tk: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfelim: String,
+    var vhmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcAC6AEvent(
-    @Id val excAC6AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kh: String,
-    val ks: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val th: String,
-    val tj: String,
-    val tk: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfelim: String,
-    val vhmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excAC6AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kh: String,
+    var ks: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var th: String,
+    var tj: String,
+    var tk: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfelim: String,
+    var vhmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcAC6AEvent(@Id val excAC6AId: UUID? = null)
+data class DeleteExcAC6AEvent(@Id var excAC6AId: UUID? = null)
 
 // single association events
 
@@ -2918,68 +2918,68 @@ data class DeleteExcAC6AEvent(@Id val excAC6AId: UUID? = null)
 // ExcAC8B Events
 
 data class CreateExcAC8BEvent(
-    @Id val excAC8BId: UUID? = null,
-    val inlim: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kir: String,
-    val kpr: String,
-    val ks: String,
-    val pidlim: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tdr: String,
-    val te: String,
-    val telim: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vimax: String,
-    val vimin: String,
-    val vpidmax: String,
-    val vpidmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val vtmult: String
+    @Id var excAC8BId: UUID? = null,
+    var inlim: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kir: String,
+    var kpr: String,
+    var ks: String,
+    var pidlim: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tdr: String,
+    var te: String,
+    var telim: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vimax: String,
+    var vimin: String,
+    var vpidmax: String,
+    var vpidmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var vtmult: String
 )
 
 data class UpdateExcAC8BEvent(
-    @Id val excAC8BId: UUID? = null,
-    val inlim: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kir: String,
-    val kpr: String,
-    val ks: String,
-    val pidlim: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tdr: String,
-    val te: String,
-    val telim: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vimax: String,
-    val vimin: String,
-    val vpidmax: String,
-    val vpidmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val vtmult: String
+    @Id var excAC8BId: UUID? = null,
+    var inlim: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kir: String,
+    var kpr: String,
+    var ks: String,
+    var pidlim: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tdr: String,
+    var te: String,
+    var telim: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vimax: String,
+    var vimin: String,
+    var vpidmax: String,
+    var vpidmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var vtmult: String
 )
 
-data class DeleteExcAC8BEvent(@Id val excAC8BId: UUID? = null)
+data class DeleteExcAC8BEvent(@Id var excAC8BId: UUID? = null)
 
 // single association events
 
@@ -2989,42 +2989,42 @@ data class DeleteExcAC8BEvent(@Id val excAC8BId: UUID? = null)
 // ExcANS Events
 
 data class CreateExcANSEvent(
-    @Id val excANSId: UUID? = null,
-    val blint: String,
-    val ifmn: String,
-    val ifmx: String,
-    val k2: String,
-    val k3: String,
-    val kce: String,
-    val krvecc: String,
-    val kvfif: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val tb: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excANSId: UUID? = null,
+    var blint: String,
+    var ifmn: String,
+    var ifmx: String,
+    var k2: String,
+    var k3: String,
+    var kce: String,
+    var krvecc: String,
+    var kvfif: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var tb: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
 data class UpdateExcANSEvent(
-    @Id val excANSId: UUID? = null,
-    val blint: String,
-    val ifmn: String,
-    val ifmx: String,
-    val k2: String,
-    val k3: String,
-    val kce: String,
-    val krvecc: String,
-    val kvfif: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val tb: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excANSId: UUID? = null,
+    var blint: String,
+    var ifmn: String,
+    var ifmx: String,
+    var k2: String,
+    var k3: String,
+    var kce: String,
+    var krvecc: String,
+    var kvfif: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var tb: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
-data class DeleteExcANSEvent(@Id val excANSId: UUID? = null)
+data class DeleteExcANSEvent(@Id var excANSId: UUID? = null)
 
 // single association events
 
@@ -3034,38 +3034,38 @@ data class DeleteExcANSEvent(@Id val excANSId: UUID? = null)
 // ExcAVR1 Events
 
 data class CreateExcAVR1Event(
-    @Id val excAVR1Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kf: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb: String,
-    val te: String,
-    val tf: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR1Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kf: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb: String,
+    var te: String,
+    var tf: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
 data class UpdateExcAVR1Event(
-    @Id val excAVR1Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kf: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb: String,
-    val te: String,
-    val tf: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR1Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kf: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb: String,
+    var te: String,
+    var tf: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
-data class DeleteExcAVR1Event(@Id val excAVR1Id: UUID? = null)
+data class DeleteExcAVR1Event(@Id var excAVR1Id: UUID? = null)
 
 // single association events
 
@@ -3075,40 +3075,40 @@ data class DeleteExcAVR1Event(@Id val excAVR1Id: UUID? = null)
 // ExcAVR2 Events
 
 data class CreateExcAVR2Event(
-    @Id val excAVR2Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kf: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR2Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kf: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
 data class UpdateExcAVR2Event(
-    @Id val excAVR2Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kf: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR2Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kf: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
-data class DeleteExcAVR2Event(@Id val excAVR2Id: UUID? = null)
+data class DeleteExcAVR2Event(@Id var excAVR2Id: UUID? = null)
 
 // single association events
 
@@ -3118,38 +3118,38 @@ data class DeleteExcAVR2Event(@Id val excAVR2Id: UUID? = null)
 // ExcAVR3 Events
 
 data class CreateExcAVR3Event(
-    @Id val excAVR3Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val se1: String,
-    val se2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val te: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR3Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var se1: String,
+    var se2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var te: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
 data class UpdateExcAVR3Event(
-    @Id val excAVR3Id: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val se1: String,
-    val se2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val te: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR3Id: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var se1: String,
+    var se2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var te: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
-data class DeleteExcAVR3Event(@Id val excAVR3Id: UUID? = null)
+data class DeleteExcAVR3Event(@Id var excAVR3Id: UUID? = null)
 
 // single association events
 
@@ -3159,42 +3159,42 @@ data class DeleteExcAVR3Event(@Id val excAVR3Id: UUID? = null)
 // ExcAVR4 Events
 
 data class CreateExcAVR4Event(
-    @Id val excAVR4Id: UUID? = null,
-    val imul: String,
-    val ka: String,
-    val ke: String,
-    val kif: String,
-    val t1: String,
-    val t1if: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val tif: String,
-    val vfmn: String,
-    val vfmx: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR4Id: UUID? = null,
+    var imul: String,
+    var ka: String,
+    var ke: String,
+    var kif: String,
+    var t1: String,
+    var t1if: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var tif: String,
+    var vfmn: String,
+    var vfmx: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
 data class UpdateExcAVR4Event(
-    @Id val excAVR4Id: UUID? = null,
-    val imul: String,
-    val ka: String,
-    val ke: String,
-    val kif: String,
-    val t1: String,
-    val t1if: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val tif: String,
-    val vfmn: String,
-    val vfmx: String,
-    val vrmn: String,
-    val vrmx: String
+    @Id var excAVR4Id: UUID? = null,
+    var imul: String,
+    var ka: String,
+    var ke: String,
+    var kif: String,
+    var t1: String,
+    var t1if: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var tif: String,
+    var vfmn: String,
+    var vfmx: String,
+    var vrmn: String,
+    var vrmx: String
 )
 
-data class DeleteExcAVR4Event(@Id val excAVR4Id: UUID? = null)
+data class DeleteExcAVR4Event(@Id var excAVR4Id: UUID? = null)
 
 // single association events
 
@@ -3204,20 +3204,20 @@ data class DeleteExcAVR4Event(@Id val excAVR4Id: UUID? = null)
 // ExcAVR5 Events
 
 data class CreateExcAVR5Event(
-    @Id val excAVR5Id: UUID? = null,
-    val ka: String,
-    val rex: String,
-    val ta: String
+    @Id var excAVR5Id: UUID? = null,
+    var ka: String,
+    var rex: String,
+    var ta: String
 )
 
 data class UpdateExcAVR5Event(
-    @Id val excAVR5Id: UUID? = null,
-    val ka: String,
-    val rex: String,
-    val ta: String
+    @Id var excAVR5Id: UUID? = null,
+    var ka: String,
+    var rex: String,
+    var ta: String
 )
 
-data class DeleteExcAVR5Event(@Id val excAVR5Id: UUID? = null)
+data class DeleteExcAVR5Event(@Id var excAVR5Id: UUID? = null)
 
 // single association events
 
@@ -3227,56 +3227,56 @@ data class DeleteExcAVR5Event(@Id val excAVR5Id: UUID? = null)
 // ExcAVR7 Events
 
 data class CreateExcAVR7Event(
-    @Id val excAVR7Id: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val k1: String,
-    val k3: String,
-    val k5: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vmax1: String,
-    val vmax3: String,
-    val vmax5: String,
-    val vmin1: String,
-    val vmin3: String,
-    val vmin5: String
+    @Id var excAVR7Id: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var k1: String,
+    var k3: String,
+    var k5: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vmax1: String,
+    var vmax3: String,
+    var vmax5: String,
+    var vmin1: String,
+    var vmin3: String,
+    var vmin5: String
 )
 
 data class UpdateExcAVR7Event(
-    @Id val excAVR7Id: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val k1: String,
-    val k3: String,
-    val k5: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vmax1: String,
-    val vmax3: String,
-    val vmax5: String,
-    val vmin1: String,
-    val vmin3: String,
-    val vmin5: String
+    @Id var excAVR7Id: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var k1: String,
+    var k3: String,
+    var k5: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vmax1: String,
+    var vmax3: String,
+    var vmax5: String,
+    var vmin1: String,
+    var vmin3: String,
+    var vmin5: String
 )
 
-data class DeleteExcAVR7Event(@Id val excAVR7Id: UUID? = null)
+data class DeleteExcAVR7Event(@Id var excAVR7Id: UUID? = null)
 
 // single association events
 
@@ -3286,36 +3286,36 @@ data class DeleteExcAVR7Event(@Id val excAVR7Id: UUID? = null)
 // ExcBBC Events
 
 data class CreateExcBBCEvent(
-    @Id val excBBCId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val k: String,
-    val switchIt: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xe: String
+    @Id var excBBCId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var k: String,
+    var switchIt: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xe: String
 )
 
 data class UpdateExcBBCEvent(
-    @Id val excBBCId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val k: String,
-    val switchIt: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xe: String
+    @Id var excBBCId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var k: String,
+    var switchIt: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xe: String
 )
 
-data class DeleteExcBBCEvent(@Id val excBBCId: UUID? = null)
+data class DeleteExcBBCEvent(@Id var excBBCId: UUID? = null)
 
 // single association events
 
@@ -3325,34 +3325,34 @@ data class DeleteExcBBCEvent(@Id val excBBCId: UUID? = null)
 // ExcCZ Events
 
 data class CreateExcCZEvent(
-    @Id val excCZId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val ka: String,
-    val ke: String,
-    val kp: String,
-    val ta: String,
-    val tc: String,
-    val te: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excCZId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var ka: String,
+    var ke: String,
+    var kp: String,
+    var ta: String,
+    var tc: String,
+    var te: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcCZEvent(
-    @Id val excCZId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val ka: String,
-    val ke: String,
-    val kp: String,
-    val ta: String,
-    val tc: String,
-    val te: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excCZId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var ka: String,
+    var ke: String,
+    var kp: String,
+    var ta: String,
+    var tc: String,
+    var te: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcCZEvent(@Id val excCZId: UUID? = null)
+data class DeleteExcCZEvent(@Id var excCZId: UUID? = null)
 
 // single association events
 
@@ -3362,50 +3362,50 @@ data class DeleteExcCZEvent(@Id val excCZId: UUID? = null)
 // ExcDC1A Events
 
 data class CreateExcDC1AEvent(
-    @Id val excDC1AId: UUID? = null,
-    val edfmax: String,
-    val efd1: String,
-    val efd2: String,
-    val efdmin: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC1AId: UUID? = null,
+    var edfmax: String,
+    var efd1: String,
+    var efd2: String,
+    var efdmin: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcDC1AEvent(
-    @Id val excDC1AId: UUID? = null,
-    val edfmax: String,
-    val efd1: String,
-    val efd2: String,
-    val efdmin: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC1AId: UUID? = null,
+    var edfmax: String,
+    var efd1: String,
+    var efd2: String,
+    var efdmin: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcDC1AEvent(@Id val excDC1AId: UUID? = null)
+data class DeleteExcDC1AEvent(@Id var excDC1AId: UUID? = null)
 
 // single association events
 
@@ -3415,50 +3415,50 @@ data class DeleteExcDC1AEvent(@Id val excDC1AId: UUID? = null)
 // ExcDC2A Events
 
 data class CreateExcDC2AEvent(
-    @Id val excDC2AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val tf1: String,
-    val vrmax: String,
-    val vrmin: String,
-    val vtlim: String
+    @Id var excDC2AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var tf1: String,
+    var vrmax: String,
+    var vrmin: String,
+    var vtlim: String
 )
 
 data class UpdateExcDC2AEvent(
-    @Id val excDC2AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ks: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val tf1: String,
-    val vrmax: String,
-    val vrmin: String,
-    val vtlim: String
+    @Id var excDC2AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ks: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var tf1: String,
+    var vrmax: String,
+    var vrmin: String,
+    var vtlim: String
 )
 
-data class DeleteExcDC2AEvent(@Id val excDC2AId: UUID? = null)
+data class DeleteExcDC2AEvent(@Id var excDC2AId: UUID? = null)
 
 // single association events
 
@@ -3468,46 +3468,46 @@ data class DeleteExcDC2AEvent(@Id val excDC2AId: UUID? = null)
 // ExcDC3A Events
 
 data class CreateExcDC3AEvent(
-    @Id val excDC3AId: UUID? = null,
-    val edfmax: String,
-    val efd1: String,
-    val efd2: String,
-    val efdlim: String,
-    val efdmin: String,
-    val exclim: String,
-    val ke: String,
-    val kr: String,
-    val ks: String,
-    val kv: String,
-    val seefd1: String,
-    val seefd2: String,
-    val te: String,
-    val trh: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC3AId: UUID? = null,
+    var edfmax: String,
+    var efd1: String,
+    var efd2: String,
+    var efdlim: String,
+    var efdmin: String,
+    var exclim: String,
+    var ke: String,
+    var kr: String,
+    var ks: String,
+    var kv: String,
+    var seefd1: String,
+    var seefd2: String,
+    var te: String,
+    var trh: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcDC3AEvent(
-    @Id val excDC3AId: UUID? = null,
-    val edfmax: String,
-    val efd1: String,
-    val efd2: String,
-    val efdlim: String,
-    val efdmin: String,
-    val exclim: String,
-    val ke: String,
-    val kr: String,
-    val ks: String,
-    val kv: String,
-    val seefd1: String,
-    val seefd2: String,
-    val te: String,
-    val trh: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC3AId: UUID? = null,
+    var edfmax: String,
+    var efd1: String,
+    var efd2: String,
+    var efdlim: String,
+    var efdmin: String,
+    var exclim: String,
+    var ke: String,
+    var kr: String,
+    var ks: String,
+    var kv: String,
+    var seefd1: String,
+    var seefd2: String,
+    var te: String,
+    var trh: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcDC3AEvent(@Id val excDC3AId: UUID? = null)
+data class DeleteExcDC3AEvent(@Id var excDC3AId: UUID? = null)
 
 // single association events
 
@@ -3517,42 +3517,42 @@ data class DeleteExcDC3AEvent(@Id val excDC3AId: UUID? = null)
 // ExcDC3A1 Events
 
 data class CreateExcDC3A1Event(
-    @Id val excDC3A1Id: UUID? = null,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val te: String,
-    val tf: String,
-    val vb1max: String,
-    val vblim: String,
-    val vbmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC3A1Id: UUID? = null,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var te: String,
+    var tf: String,
+    var vb1max: String,
+    var vblim: String,
+    var vbmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcDC3A1Event(
-    @Id val excDC3A1Id: UUID? = null,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val te: String,
-    val tf: String,
-    val vb1max: String,
-    val vblim: String,
-    val vbmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excDC3A1Id: UUID? = null,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var te: String,
+    var tf: String,
+    var vb1max: String,
+    var vblim: String,
+    var vbmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcDC3A1Event(@Id val excDC3A1Id: UUID? = null)
+data class DeleteExcDC3A1Event(@Id var excDC3A1Id: UUID? = null)
 
 // single association events
 
@@ -3562,44 +3562,44 @@ data class DeleteExcDC3A1Event(@Id val excDC3A1Id: UUID? = null)
 // ExcELIN1 Events
 
 data class CreateExcELIN1Event(
-    @Id val excELIN1Id: UUID? = null,
-    val dpnf: String,
-    val efmax: String,
-    val efmin: String,
-    val ks1: String,
-    val ks2: String,
-    val smax: String,
-    val tfi: String,
-    val tnu: String,
-    val ts1: String,
-    val ts2: String,
-    val tsw: String,
-    val vpi: String,
-    val vpnf: String,
-    val vpu: String,
-    val xe: String
+    @Id var excELIN1Id: UUID? = null,
+    var dpnf: String,
+    var efmax: String,
+    var efmin: String,
+    var ks1: String,
+    var ks2: String,
+    var smax: String,
+    var tfi: String,
+    var tnu: String,
+    var ts1: String,
+    var ts2: String,
+    var tsw: String,
+    var vpi: String,
+    var vpnf: String,
+    var vpu: String,
+    var xe: String
 )
 
 data class UpdateExcELIN1Event(
-    @Id val excELIN1Id: UUID? = null,
-    val dpnf: String,
-    val efmax: String,
-    val efmin: String,
-    val ks1: String,
-    val ks2: String,
-    val smax: String,
-    val tfi: String,
-    val tnu: String,
-    val ts1: String,
-    val ts2: String,
-    val tsw: String,
-    val vpi: String,
-    val vpnf: String,
-    val vpu: String,
-    val xe: String
+    @Id var excELIN1Id: UUID? = null,
+    var dpnf: String,
+    var efmax: String,
+    var efmin: String,
+    var ks1: String,
+    var ks2: String,
+    var smax: String,
+    var tfi: String,
+    var tnu: String,
+    var ts1: String,
+    var ts2: String,
+    var tsw: String,
+    var vpi: String,
+    var vpnf: String,
+    var vpu: String,
+    var xe: String
 )
 
-data class DeleteExcELIN1Event(@Id val excELIN1Id: UUID? = null)
+data class DeleteExcELIN1Event(@Id var excELIN1Id: UUID? = null)
 
 // single association events
 
@@ -3609,68 +3609,68 @@ data class DeleteExcELIN1Event(@Id val excELIN1Id: UUID? = null)
 // ExcELIN2 Events
 
 data class CreateExcELIN2Event(
-    @Id val excELIN2Id: UUID? = null,
-    val efdbas: String,
-    val iefmax: String,
-    val iefmax2: String,
-    val iefmin: String,
-    val k1: String,
-    val k1ec: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val kd1: String,
-    val ke2: String,
-    val ketb: String,
-    val pid1max: String,
-    val seve1: String,
-    val seve2: String,
-    val tb1: String,
-    val te: String,
-    val te2: String,
-    val ti1: String,
-    val ti3: String,
-    val ti4: String,
-    val tr4: String,
-    val upmax: String,
-    val upmin: String,
-    val ve1: String,
-    val ve2: String,
-    val xp: String
+    @Id var excELIN2Id: UUID? = null,
+    var efdbas: String,
+    var iefmax: String,
+    var iefmax2: String,
+    var iefmin: String,
+    var k1: String,
+    var k1ec: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var kd1: String,
+    var ke2: String,
+    var ketb: String,
+    var pid1max: String,
+    var seve1: String,
+    var seve2: String,
+    var tb1: String,
+    var te: String,
+    var te2: String,
+    var ti1: String,
+    var ti3: String,
+    var ti4: String,
+    var tr4: String,
+    var upmax: String,
+    var upmin: String,
+    var ve1: String,
+    var ve2: String,
+    var xp: String
 )
 
 data class UpdateExcELIN2Event(
-    @Id val excELIN2Id: UUID? = null,
-    val efdbas: String,
-    val iefmax: String,
-    val iefmax2: String,
-    val iefmin: String,
-    val k1: String,
-    val k1ec: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val kd1: String,
-    val ke2: String,
-    val ketb: String,
-    val pid1max: String,
-    val seve1: String,
-    val seve2: String,
-    val tb1: String,
-    val te: String,
-    val te2: String,
-    val ti1: String,
-    val ti3: String,
-    val ti4: String,
-    val tr4: String,
-    val upmax: String,
-    val upmin: String,
-    val ve1: String,
-    val ve2: String,
-    val xp: String
+    @Id var excELIN2Id: UUID? = null,
+    var efdbas: String,
+    var iefmax: String,
+    var iefmax2: String,
+    var iefmin: String,
+    var k1: String,
+    var k1ec: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var kd1: String,
+    var ke2: String,
+    var ketb: String,
+    var pid1max: String,
+    var seve1: String,
+    var seve2: String,
+    var tb1: String,
+    var te: String,
+    var te2: String,
+    var ti1: String,
+    var ti3: String,
+    var ti4: String,
+    var tr4: String,
+    var upmax: String,
+    var upmin: String,
+    var ve1: String,
+    var ve2: String,
+    var xp: String
 )
 
-data class DeleteExcELIN2Event(@Id val excELIN2Id: UUID? = null)
+data class DeleteExcELIN2Event(@Id var excELIN2Id: UUID? = null)
 
 // single association events
 
@@ -3680,38 +3680,38 @@ data class DeleteExcELIN2Event(@Id val excELIN2Id: UUID? = null)
 // ExcHU Events
 
 data class CreateExcHUEvent(
-    @Id val excHUId: UUID? = null,
-    val ae: String,
-    val ai: String,
-    val atr: String,
-    val emax: String,
-    val emin: String,
-    val imax: String,
-    val imin: String,
-    val ke: String,
-    val ki: String,
-    val te: String,
-    val ti: String,
-    val tr: String
+    @Id var excHUId: UUID? = null,
+    var ae: String,
+    var ai: String,
+    var atr: String,
+    var emax: String,
+    var emin: String,
+    var imax: String,
+    var imin: String,
+    var ke: String,
+    var ki: String,
+    var te: String,
+    var ti: String,
+    var tr: String
 )
 
 data class UpdateExcHUEvent(
-    @Id val excHUId: UUID? = null,
-    val ae: String,
-    val ai: String,
-    val atr: String,
-    val emax: String,
-    val emin: String,
-    val imax: String,
-    val imin: String,
-    val ke: String,
-    val ki: String,
-    val te: String,
-    val ti: String,
-    val tr: String
+    @Id var excHUId: UUID? = null,
+    var ae: String,
+    var ai: String,
+    var atr: String,
+    var emax: String,
+    var emin: String,
+    var imax: String,
+    var imin: String,
+    var ke: String,
+    var ki: String,
+    var te: String,
+    var ti: String,
+    var tr: String
 )
 
-data class DeleteExcHUEvent(@Id val excHUId: UUID? = null)
+data class DeleteExcHUEvent(@Id var excHUId: UUID? = null)
 
 // single association events
 
@@ -3721,50 +3721,50 @@ data class DeleteExcHUEvent(@Id val excHUId: UUID? = null)
 // ExcIEEEAC1A Events
 
 data class CreateExcIEEEAC1AEvent(
-    @Id val excIEEEAC1AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC1AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC1AEvent(
-    @Id val excIEEEAC1AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC1AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC1AEvent(@Id val excIEEEAC1AId: UUID? = null)
+data class DeleteExcIEEEAC1AEvent(@Id var excIEEEAC1AId: UUID? = null)
 
 // single association events
 
@@ -3774,56 +3774,56 @@ data class DeleteExcIEEEAC1AEvent(@Id val excIEEEAC1AId: UUID? = null)
 // ExcIEEEAC2A Events
 
 data class CreateExcIEEEAC2AEvent(
-    @Id val excIEEEAC2AId: UUID? = null,
-    val ka: String,
-    val kb: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kh: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC2AId: UUID? = null,
+    var ka: String,
+    var kb: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kh: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC2AEvent(
-    @Id val excIEEEAC2AId: UUID? = null,
-    val ka: String,
-    val kb: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kh: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC2AId: UUID? = null,
+    var ka: String,
+    var kb: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kh: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC2AEvent(@Id val excIEEEAC2AId: UUID? = null)
+data class DeleteExcIEEEAC2AEvent(@Id var excIEEEAC2AId: UUID? = null)
 
 // single association events
 
@@ -3833,56 +3833,56 @@ data class DeleteExcIEEEAC2AEvent(@Id val excIEEEAC2AId: UUID? = null)
 // ExcIEEEAC3A Events
 
 data class CreateExcIEEEAC3AEvent(
-    @Id val excIEEEAC3AId: UUID? = null,
-    val efdn: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kn: String,
-    val kr: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String
+    @Id var excIEEEAC3AId: UUID? = null,
+    var efdn: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kn: String,
+    var kr: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String
 )
 
 data class UpdateExcIEEEAC3AEvent(
-    @Id val excIEEEAC3AId: UUID? = null,
-    val efdn: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val kn: String,
-    val kr: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String
+    @Id var excIEEEAC3AId: UUID? = null,
+    var efdn: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var kn: String,
+    var kr: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String
 )
 
-data class DeleteExcIEEEAC3AEvent(@Id val excIEEEAC3AId: UUID? = null)
+data class DeleteExcIEEEAC3AEvent(@Id var excIEEEAC3AId: UUID? = null)
 
 // single association events
 
@@ -3892,32 +3892,32 @@ data class DeleteExcIEEEAC3AEvent(@Id val excIEEEAC3AId: UUID? = null)
 // ExcIEEEAC4A Events
 
 data class CreateExcIEEEAC4AEvent(
-    @Id val excIEEEAC4AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC4AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC4AEvent(
-    @Id val excIEEEAC4AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC4AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC4AEvent(@Id val excIEEEAC4AId: UUID? = null)
+data class DeleteExcIEEEAC4AEvent(@Id var excIEEEAC4AId: UUID? = null)
 
 // single association events
 
@@ -3927,42 +3927,42 @@ data class DeleteExcIEEEAC4AEvent(@Id val excIEEEAC4AId: UUID? = null)
 // ExcIEEEAC5A Events
 
 data class CreateExcIEEEAC5AEvent(
-    @Id val excIEEEAC5AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val tf3: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC5AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var tf3: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC5AEvent(
-    @Id val excIEEEAC5AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val tf3: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC5AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var tf3: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC5AEvent(@Id val excIEEEAC5AId: UUID? = null)
+data class DeleteExcIEEEAC5AEvent(@Id var excIEEEAC5AId: UUID? = null)
 
 // single association events
 
@@ -3972,58 +3972,58 @@ data class DeleteExcIEEEAC5AEvent(@Id val excIEEEAC5AId: UUID? = null)
 // ExcIEEEAC6A Events
 
 data class CreateExcIEEEAC6AEvent(
-    @Id val excIEEEAC6AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kh: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val th: String,
-    val tj: String,
-    val tk: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfelim: String,
-    val vhmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC6AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kh: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var th: String,
+    var tj: String,
+    var tk: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfelim: String,
+    var vhmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC6AEvent(
-    @Id val excIEEEAC6AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kh: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val th: String,
-    val tj: String,
-    val tk: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vfelim: String,
-    val vhmax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC6AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kh: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var th: String,
+    var tj: String,
+    var tk: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vfelim: String,
+    var vhmax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC6AEvent(@Id val excIEEEAC6AId: UUID? = null)
+data class DeleteExcIEEEAC6AEvent(@Id var excIEEEAC6AId: UUID? = null)
 
 // single association events
 
@@ -4033,66 +4033,66 @@ data class DeleteExcIEEEAC6AEvent(@Id val excIEEEAC6AId: UUID? = null)
 // ExcIEEEAC7B Events
 
 data class CreateExcIEEEAC7BEvent(
-    @Id val excIEEEAC7BId: UUID? = null,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kf1: String,
-    val kf2: String,
-    val kf3: String,
-    val kia: String,
-    val kir: String,
-    val kl: String,
-    val kp: String,
-    val kpa: String,
-    val kpr: String,
-    val seve1: String,
-    val seve2: String,
-    val tdr: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC7BId: UUID? = null,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kf1: String,
+    var kf2: String,
+    var kf3: String,
+    var kia: String,
+    var kir: String,
+    var kl: String,
+    var kp: String,
+    var kpa: String,
+    var kpr: String,
+    var seve1: String,
+    var seve2: String,
+    var tdr: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC7BEvent(
-    @Id val excIEEEAC7BId: UUID? = null,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kf1: String,
-    val kf2: String,
-    val kf3: String,
-    val kia: String,
-    val kir: String,
-    val kl: String,
-    val kp: String,
-    val kpa: String,
-    val kpr: String,
-    val seve1: String,
-    val seve2: String,
-    val tdr: String,
-    val te: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC7BId: UUID? = null,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kf1: String,
+    var kf2: String,
+    var kf3: String,
+    var kia: String,
+    var kir: String,
+    var kl: String,
+    var kp: String,
+    var kpa: String,
+    var kpr: String,
+    var seve1: String,
+    var seve2: String,
+    var tdr: String,
+    var te: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC7BEvent(@Id val excIEEEAC7BId: UUID? = null)
+data class DeleteExcIEEEAC7BEvent(@Id var excIEEEAC7BId: UUID? = null)
 
 // single association events
 
@@ -4102,50 +4102,50 @@ data class DeleteExcIEEEAC7BEvent(@Id val excIEEEAC7BId: UUID? = null)
 // ExcIEEEAC8B Events
 
 data class CreateExcIEEEAC8BEvent(
-    @Id val excIEEEAC8BId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kir: String,
-    val kpr: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tdr: String,
-    val te: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC8BId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kir: String,
+    var kpr: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tdr: String,
+    var te: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEAC8BEvent(
-    @Id val excIEEEAC8BId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val kdr: String,
-    val ke: String,
-    val kir: String,
-    val kpr: String,
-    val seve1: String,
-    val seve2: String,
-    val ta: String,
-    val tdr: String,
-    val te: String,
-    val ve1: String,
-    val ve2: String,
-    val vemin: String,
-    val vfemax: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEAC8BId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var kdr: String,
+    var ke: String,
+    var kir: String,
+    var kpr: String,
+    var seve1: String,
+    var seve2: String,
+    var ta: String,
+    var tdr: String,
+    var te: String,
+    var ve1: String,
+    var ve2: String,
+    var vemin: String,
+    var vfemax: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEAC8BEvent(@Id val excIEEEAC8BId: UUID? = null)
+data class DeleteExcIEEEAC8BEvent(@Id var excIEEEAC8BId: UUID? = null)
 
 // single association events
 
@@ -4155,46 +4155,46 @@ data class DeleteExcIEEEAC8BEvent(@Id val excIEEEAC8BId: UUID? = null)
 // ExcIEEEDC1A Events
 
 data class CreateExcIEEEDC1AEvent(
-    @Id val excIEEEDC1AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC1AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEDC1AEvent(
-    @Id val excIEEEDC1AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC1AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEDC1AEvent(@Id val excIEEEDC1AId: UUID? = null)
+data class DeleteExcIEEEDC1AEvent(@Id var excIEEEDC1AId: UUID? = null)
 
 // single association events
 
@@ -4204,46 +4204,46 @@ data class DeleteExcIEEEDC1AEvent(@Id val excIEEEDC1AId: UUID? = null)
 // ExcIEEEDC2A Events
 
 data class CreateExcIEEEDC2AEvent(
-    @Id val excIEEEDC2AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC2AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEDC2AEvent(
-    @Id val excIEEEDC2AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ka: String,
-    val ke: String,
-    val kf: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC2AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ka: String,
+    var ke: String,
+    var kf: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEDC2AEvent(@Id val excIEEEDC2AId: UUID? = null)
+data class DeleteExcIEEEDC2AEvent(@Id var excIEEEDC2AId: UUID? = null)
 
 // single association events
 
@@ -4253,36 +4253,36 @@ data class DeleteExcIEEEDC2AEvent(@Id val excIEEEDC2AId: UUID? = null)
 // ExcIEEEDC3A Events
 
 data class CreateExcIEEEDC3AEvent(
-    @Id val excIEEEDC3AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ke: String,
-    val kv: String,
-    val seefd1: String,
-    val seefd2: String,
-    val te: String,
-    val trh: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC3AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ke: String,
+    var kv: String,
+    var seefd1: String,
+    var seefd2: String,
+    var te: String,
+    var trh: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEDC3AEvent(
-    @Id val excIEEEDC3AId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val exclim: String,
-    val ke: String,
-    val kv: String,
-    val seefd1: String,
-    val seefd2: String,
-    val te: String,
-    val trh: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC3AId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var exclim: String,
+    var ke: String,
+    var kv: String,
+    var seefd1: String,
+    var seefd2: String,
+    var te: String,
+    var trh: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEDC3AEvent(@Id val excIEEEDC3AId: UUID? = null)
+data class DeleteExcIEEEDC3AEvent(@Id var excIEEEDC3AId: UUID? = null)
 
 // single association events
 
@@ -4292,52 +4292,52 @@ data class DeleteExcIEEEDC3AEvent(@Id val excIEEEDC3AId: UUID? = null)
 // ExcIEEEDC4B Events
 
 data class CreateExcIEEEDC4BEvent(
-    @Id val excIEEEDC4BId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val oelin: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val td: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vemin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC4BId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var oelin: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var td: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vemin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEDC4BEvent(
-    @Id val excIEEEDC4BId: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val ka: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val oelin: String,
-    val seefd1: String,
-    val seefd2: String,
-    val ta: String,
-    val td: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vemin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEDC4BId: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var ka: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var oelin: String,
+    var seefd1: String,
+    var seefd2: String,
+    var ta: String,
+    var td: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vemin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEDC4BEvent(@Id val excIEEEDC4BId: UUID? = null)
+data class DeleteExcIEEEDC4BEvent(@Id var excIEEEDC4BId: UUID? = null)
 
 // single association events
 
@@ -4347,52 +4347,52 @@ data class DeleteExcIEEEDC4BEvent(@Id val excIEEEDC4BId: UUID? = null)
 // ExcIEEEST1A Events
 
 data class CreateExcIEEEST1AEvent(
-    @Id val excIEEEST1AId: UUID? = null,
-    val ilr: String,
-    val ka: String,
-    val kc: String,
-    val kf: String,
-    val klr: String,
-    val pssin: String,
-    val ta: String,
-    val tb: String,
-    val tb1: String,
-    val tc: String,
-    val tc1: String,
-    val tf: String,
-    val uelin: String,
-    val vamax: String,
-    val vamin: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST1AId: UUID? = null,
+    var ilr: String,
+    var ka: String,
+    var kc: String,
+    var kf: String,
+    var klr: String,
+    var pssin: String,
+    var ta: String,
+    var tb: String,
+    var tb1: String,
+    var tc: String,
+    var tc1: String,
+    var tf: String,
+    var uelin: String,
+    var vamax: String,
+    var vamin: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEST1AEvent(
-    @Id val excIEEEST1AId: UUID? = null,
-    val ilr: String,
-    val ka: String,
-    val kc: String,
-    val kf: String,
-    val klr: String,
-    val pssin: String,
-    val ta: String,
-    val tb: String,
-    val tb1: String,
-    val tc: String,
-    val tc1: String,
-    val tf: String,
-    val uelin: String,
-    val vamax: String,
-    val vamin: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST1AId: UUID? = null,
+    var ilr: String,
+    var ka: String,
+    var kc: String,
+    var kf: String,
+    var klr: String,
+    var pssin: String,
+    var ta: String,
+    var tb: String,
+    var tb1: String,
+    var tc: String,
+    var tc1: String,
+    var tf: String,
+    var uelin: String,
+    var vamax: String,
+    var vamin: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEST1AEvent(@Id val excIEEEST1AId: UUID? = null)
+data class DeleteExcIEEEST1AEvent(@Id var excIEEEST1AId: UUID? = null)
 
 // single association events
 
@@ -4402,40 +4402,40 @@ data class DeleteExcIEEEST1AEvent(@Id val excIEEEST1AId: UUID? = null)
 // ExcIEEEST2A Events
 
 data class CreateExcIEEEST2AEvent(
-    @Id val excIEEEST2AId: UUID? = null,
-    val efdmax: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST2AId: UUID? = null,
+    var efdmax: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEST2AEvent(
-    @Id val excIEEEST2AId: UUID? = null,
-    val efdmax: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST2AId: UUID? = null,
+    var efdmax: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEST2AEvent(@Id val excIEEEST2AId: UUID? = null)
+data class DeleteExcIEEEST2AEvent(@Id var excIEEEST2AId: UUID? = null)
 
 // single association events
 
@@ -4445,54 +4445,54 @@ data class DeleteExcIEEEST2AEvent(@Id val excIEEEST2AId: UUID? = null)
 // ExcIEEEST3A Events
 
 data class CreateExcIEEEST3AEvent(
-    @Id val excIEEEST3AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val km: String,
-    val kp: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val thetap: String,
-    val tm: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vimax: String,
-    val vimin: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excIEEEST3AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var km: String,
+    var kp: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var thetap: String,
+    var tm: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vimax: String,
+    var vimin: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
 data class UpdateExcIEEEST3AEvent(
-    @Id val excIEEEST3AId: UUID? = null,
-    val ka: String,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val km: String,
-    val kp: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val thetap: String,
-    val tm: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vimax: String,
-    val vimin: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excIEEEST3AId: UUID? = null,
+    var ka: String,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var km: String,
+    var kp: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var thetap: String,
+    var tm: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vimax: String,
+    var vimin: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
-data class DeleteExcIEEEST3AEvent(@Id val excIEEEST3AId: UUID? = null)
+data class DeleteExcIEEEST3AEvent(@Id var excIEEEST3AId: UUID? = null)
 
 // single association events
 
@@ -4502,46 +4502,46 @@ data class DeleteExcIEEEST3AEvent(@Id val excIEEEST3AId: UUID? = null)
 // ExcIEEEST4B Events
 
 data class CreateExcIEEEST4BEvent(
-    @Id val excIEEEST4BId: UUID? = null,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kim: String,
-    val kir: String,
-    val kp: String,
-    val kpm: String,
-    val kpr: String,
-    val ta: String,
-    val thetap: String,
-    val vbmax: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excIEEEST4BId: UUID? = null,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kim: String,
+    var kir: String,
+    var kp: String,
+    var kpm: String,
+    var kpr: String,
+    var ta: String,
+    var thetap: String,
+    var vbmax: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
 data class UpdateExcIEEEST4BEvent(
-    @Id val excIEEEST4BId: UUID? = null,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kim: String,
-    val kir: String,
-    val kp: String,
-    val kpm: String,
-    val kpr: String,
-    val ta: String,
-    val thetap: String,
-    val vbmax: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excIEEEST4BId: UUID? = null,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kim: String,
+    var kir: String,
+    var kp: String,
+    var kpm: String,
+    var kpr: String,
+    var ta: String,
+    var thetap: String,
+    var vbmax: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
-data class DeleteExcIEEEST4BEvent(@Id val excIEEEST4BId: UUID? = null)
+data class DeleteExcIEEEST4BEvent(@Id var excIEEEST4BId: UUID? = null)
 
 // single association events
 
@@ -4551,48 +4551,48 @@ data class DeleteExcIEEEST4BEvent(@Id val excIEEEST4BId: UUID? = null)
 // ExcIEEEST5B Events
 
 data class CreateExcIEEEST5BEvent(
-    @Id val excIEEEST5BId: UUID? = null,
-    val kc: String,
-    val kr: String,
-    val t1: String,
-    val tb1: String,
-    val tb2: String,
-    val tc1: String,
-    val tc2: String,
-    val tob1: String,
-    val tob2: String,
-    val toc1: String,
-    val toc2: String,
-    val tub1: String,
-    val tub2: String,
-    val tuc1: String,
-    val tuc2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST5BId: UUID? = null,
+    var kc: String,
+    var kr: String,
+    var t1: String,
+    var tb1: String,
+    var tb2: String,
+    var tc1: String,
+    var tc2: String,
+    var tob1: String,
+    var tob2: String,
+    var toc1: String,
+    var toc2: String,
+    var tub1: String,
+    var tub2: String,
+    var tuc1: String,
+    var tuc2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEST5BEvent(
-    @Id val excIEEEST5BId: UUID? = null,
-    val kc: String,
-    val kr: String,
-    val t1: String,
-    val tb1: String,
-    val tb2: String,
-    val tc1: String,
-    val tc2: String,
-    val tob1: String,
-    val tob2: String,
-    val toc1: String,
-    val toc2: String,
-    val tub1: String,
-    val tub2: String,
-    val tuc1: String,
-    val tuc2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST5BId: UUID? = null,
+    var kc: String,
+    var kr: String,
+    var t1: String,
+    var tb1: String,
+    var tb2: String,
+    var tc1: String,
+    var tc2: String,
+    var tob1: String,
+    var tob2: String,
+    var toc1: String,
+    var toc2: String,
+    var tub1: String,
+    var tub2: String,
+    var tuc1: String,
+    var tuc2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEST5BEvent(@Id val excIEEEST5BId: UUID? = null)
+data class DeleteExcIEEEST5BEvent(@Id var excIEEEST5BId: UUID? = null)
 
 // single association events
 
@@ -4602,42 +4602,42 @@ data class DeleteExcIEEEST5BEvent(@Id val excIEEEST5BId: UUID? = null)
 // ExcIEEEST6B Events
 
 data class CreateExcIEEEST6BEvent(
-    @Id val excIEEEST6BId: UUID? = null,
-    val ilr: String,
-    val kci: String,
-    val kff: String,
-    val kg: String,
-    val kia: String,
-    val klr: String,
-    val km: String,
-    val kpa: String,
-    val oelin: String,
-    val tg: String,
-    val vamax: String,
-    val vamin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST6BId: UUID? = null,
+    var ilr: String,
+    var kci: String,
+    var kff: String,
+    var kg: String,
+    var kia: String,
+    var klr: String,
+    var km: String,
+    var kpa: String,
+    var oelin: String,
+    var tg: String,
+    var vamax: String,
+    var vamin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEST6BEvent(
-    @Id val excIEEEST6BId: UUID? = null,
-    val ilr: String,
-    val kci: String,
-    val kff: String,
-    val kg: String,
-    val kia: String,
-    val klr: String,
-    val km: String,
-    val kpa: String,
-    val oelin: String,
-    val tg: String,
-    val vamax: String,
-    val vamin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST6BId: UUID? = null,
+    var ilr: String,
+    var kci: String,
+    var kff: String,
+    var kg: String,
+    var kia: String,
+    var klr: String,
+    var km: String,
+    var kpa: String,
+    var oelin: String,
+    var tg: String,
+    var vamax: String,
+    var vamin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEST6BEvent(@Id val excIEEEST6BId: UUID? = null)
+data class DeleteExcIEEEST6BEvent(@Id var excIEEEST6BId: UUID? = null)
 
 // single association events
 
@@ -4647,44 +4647,44 @@ data class DeleteExcIEEEST6BEvent(@Id val excIEEEST6BId: UUID? = null)
 // ExcIEEEST7B Events
 
 data class CreateExcIEEEST7BEvent(
-    @Id val excIEEEST7BId: UUID? = null,
-    val kh: String,
-    val kia: String,
-    val kl: String,
-    val kpa: String,
-    val oelin: String,
-    val tb: String,
-    val tc: String,
-    val tf: String,
-    val tg: String,
-    val tia: String,
-    val uelin: String,
-    val vmax: String,
-    val vmin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST7BId: UUID? = null,
+    var kh: String,
+    var kia: String,
+    var kl: String,
+    var kpa: String,
+    var oelin: String,
+    var tb: String,
+    var tc: String,
+    var tf: String,
+    var tg: String,
+    var tia: String,
+    var uelin: String,
+    var vmax: String,
+    var vmin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcIEEEST7BEvent(
-    @Id val excIEEEST7BId: UUID? = null,
-    val kh: String,
-    val kia: String,
-    val kl: String,
-    val kpa: String,
-    val oelin: String,
-    val tb: String,
-    val tc: String,
-    val tf: String,
-    val tg: String,
-    val tia: String,
-    val uelin: String,
-    val vmax: String,
-    val vmin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excIEEEST7BId: UUID? = null,
+    var kh: String,
+    var kia: String,
+    var kl: String,
+    var kpa: String,
+    var oelin: String,
+    var tb: String,
+    var tc: String,
+    var tf: String,
+    var tg: String,
+    var tia: String,
+    var uelin: String,
+    var vmax: String,
+    var vmin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcIEEEST7BEvent(@Id val excIEEEST7BId: UUID? = null)
+data class DeleteExcIEEEST7BEvent(@Id var excIEEEST7BId: UUID? = null)
 
 // single association events
 
@@ -4694,52 +4694,52 @@ data class DeleteExcIEEEST7BEvent(@Id val excIEEEST7BId: UUID? = null)
 // ExcOEX3T Events
 
 data class CreateExcOEX3TEvent(
-    @Id val excOEX3TId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val see1: String,
-    val see2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val te: String,
-    val tf: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excOEX3TId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var see1: String,
+    var see2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var te: String,
+    var tf: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcOEX3TEvent(
-    @Id val excOEX3TId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val ka: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kf: String,
-    val see1: String,
-    val see2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val te: String,
-    val tf: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excOEX3TId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var ka: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kf: String,
+    var see1: String,
+    var see2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var te: String,
+    var tf: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcOEX3TEvent(@Id val excOEX3TId: UUID? = null)
+data class DeleteExcOEX3TEvent(@Id var excOEX3TId: UUID? = null)
 
 // single association events
 
@@ -4749,60 +4749,60 @@ data class DeleteExcOEX3TEvent(@Id val excOEX3TId: UUID? = null)
 // ExcPIC Events
 
 data class CreateExcPICEvent(
-    @Id val excPICId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val efdmax: String,
-    val efdmin: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val se1: String,
-    val se2: String,
-    val ta1: String,
-    val ta2: String,
-    val ta3: String,
-    val ta4: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val vr1: String,
-    val vr2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excPICId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var efdmax: String,
+    var efdmin: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var se1: String,
+    var se2: String,
+    var ta1: String,
+    var ta2: String,
+    var ta3: String,
+    var ta4: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var vr1: String,
+    var vr2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcPICEvent(
-    @Id val excPICId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val efdmax: String,
-    val efdmin: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val se1: String,
-    val se2: String,
-    val ta1: String,
-    val ta2: String,
-    val ta3: String,
-    val ta4: String,
-    val te: String,
-    val tf1: String,
-    val tf2: String,
-    val vr1: String,
-    val vr2: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excPICId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var efdmax: String,
+    var efdmin: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var se1: String,
+    var se2: String,
+    var ta1: String,
+    var ta2: String,
+    var ta3: String,
+    var ta4: String,
+    var te: String,
+    var tf1: String,
+    var tf2: String,
+    var vr1: String,
+    var vr2: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcPICEvent(@Id val excPICId: UUID? = null)
+data class DeleteExcPICEvent(@Id var excPICId: UUID? = null)
 
 // single association events
 
@@ -4812,86 +4812,86 @@ data class DeleteExcPICEvent(@Id val excPICId: UUID? = null)
 // ExcREXS Events
 
 data class CreateExcREXSEvent(
-    @Id val excREXSId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val fbf: String,
-    val flimf: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kefd: String,
-    val kf: String,
-    val kh: String,
-    val kii: String,
-    val kip: String,
-    val ks: String,
-    val kvi: String,
-    val kvp: String,
-    val kvphz: String,
-    val nvphz: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb1: String,
-    val tb2: String,
-    val tc1: String,
-    val tc2: String,
-    val te: String,
-    val tf: String,
-    val tf1: String,
-    val tf2: String,
-    val tp: String,
-    val vcmax: String,
-    val vfmax: String,
-    val vfmin: String,
-    val vimax: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xc: String
+    @Id var excREXSId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var fbf: String,
+    var flimf: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kefd: String,
+    var kf: String,
+    var kh: String,
+    var kii: String,
+    var kip: String,
+    var ks: String,
+    var kvi: String,
+    var kvp: String,
+    var kvphz: String,
+    var nvphz: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb1: String,
+    var tb2: String,
+    var tc1: String,
+    var tc2: String,
+    var te: String,
+    var tf: String,
+    var tf1: String,
+    var tf2: String,
+    var tp: String,
+    var vcmax: String,
+    var vfmax: String,
+    var vfmin: String,
+    var vimax: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xc: String
 )
 
 data class UpdateExcREXSEvent(
-    @Id val excREXSId: UUID? = null,
-    val e1: String,
-    val e2: String,
-    val fbf: String,
-    val flimf: String,
-    val kc: String,
-    val kd: String,
-    val ke: String,
-    val kefd: String,
-    val kf: String,
-    val kh: String,
-    val kii: String,
-    val kip: String,
-    val ks: String,
-    val kvi: String,
-    val kvp: String,
-    val kvphz: String,
-    val nvphz: String,
-    val se1: String,
-    val se2: String,
-    val ta: String,
-    val tb1: String,
-    val tb2: String,
-    val tc1: String,
-    val tc2: String,
-    val te: String,
-    val tf: String,
-    val tf1: String,
-    val tf2: String,
-    val tp: String,
-    val vcmax: String,
-    val vfmax: String,
-    val vfmin: String,
-    val vimax: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xc: String
+    @Id var excREXSId: UUID? = null,
+    var e1: String,
+    var e2: String,
+    var fbf: String,
+    var flimf: String,
+    var kc: String,
+    var kd: String,
+    var ke: String,
+    var kefd: String,
+    var kf: String,
+    var kh: String,
+    var kii: String,
+    var kip: String,
+    var ks: String,
+    var kvi: String,
+    var kvp: String,
+    var kvphz: String,
+    var nvphz: String,
+    var se1: String,
+    var se2: String,
+    var ta: String,
+    var tb1: String,
+    var tb2: String,
+    var tc1: String,
+    var tc2: String,
+    var te: String,
+    var tf: String,
+    var tf1: String,
+    var tf2: String,
+    var tp: String,
+    var vcmax: String,
+    var vfmax: String,
+    var vfmin: String,
+    var vimax: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xc: String
 )
 
-data class DeleteExcREXSEvent(@Id val excREXSId: UUID? = null)
+data class DeleteExcREXSEvent(@Id var excREXSId: UUID? = null)
 
 // single association events
 
@@ -4901,30 +4901,30 @@ data class DeleteExcREXSEvent(@Id val excREXSId: UUID? = null)
 // ExcSCRX Events
 
 data class CreateExcSCRXEvent(
-    @Id val excSCRXId: UUID? = null,
-    val cswitch: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val rcrfd: String,
-    val tatb: String,
-    val tb: String,
-    val te: String
+    @Id var excSCRXId: UUID? = null,
+    var cswitch: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var rcrfd: String,
+    var tatb: String,
+    var tb: String,
+    var te: String
 )
 
 data class UpdateExcSCRXEvent(
-    @Id val excSCRXId: UUID? = null,
-    val cswitch: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val rcrfd: String,
-    val tatb: String,
-    val tb: String,
-    val te: String
+    @Id var excSCRXId: UUID? = null,
+    var cswitch: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var rcrfd: String,
+    var tatb: String,
+    var tb: String,
+    var te: String
 )
 
-data class DeleteExcSCRXEvent(@Id val excSCRXId: UUID? = null)
+data class DeleteExcSCRXEvent(@Id var excSCRXId: UUID? = null)
 
 // single association events
 
@@ -4934,34 +4934,34 @@ data class DeleteExcSCRXEvent(@Id val excSCRXId: UUID? = null)
 // ExcSEXS Events
 
 data class CreateExcSEXSEvent(
-    @Id val excSEXSId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val kc: String,
-    val tatb: String,
-    val tb: String,
-    val tc: String,
-    val te: String
+    @Id var excSEXSId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var kc: String,
+    var tatb: String,
+    var tb: String,
+    var tc: String,
+    var te: String
 )
 
 data class UpdateExcSEXSEvent(
-    @Id val excSEXSId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val kc: String,
-    val tatb: String,
-    val tb: String,
-    val tc: String,
-    val te: String
+    @Id var excSEXSId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var kc: String,
+    var tatb: String,
+    var tb: String,
+    var tc: String,
+    var te: String
 )
 
-data class DeleteExcSEXSEvent(@Id val excSEXSId: UUID? = null)
+data class DeleteExcSEXSEvent(@Id var excSEXSId: UUID? = null)
 
 // single association events
 
@@ -4971,78 +4971,78 @@ data class DeleteExcSEXSEvent(@Id val excSEXSId: UUID? = null)
 // ExcSK Events
 
 data class CreateExcSKEvent(
-    @Id val excSKId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val kc: String,
-    val kce: String,
-    val kd: String,
-    val kgob: String,
-    val kp: String,
-    val kqi: String,
-    val kqob: String,
-    val kqp: String,
-    val nq: String,
-    val qconoff: String,
-    val qz: String,
-    val remote: String,
-    val sbase: String,
-    val tc: String,
-    val te: String,
-    val ti: String,
-    val tp: String,
-    val tr: String,
-    val uimax: String,
-    val uimin: String,
-    val urmax: String,
-    val urmin: String,
-    val vtmax: String,
-    val vtmin: String,
-    val yp: String
+    @Id var excSKId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var kc: String,
+    var kce: String,
+    var kd: String,
+    var kgob: String,
+    var kp: String,
+    var kqi: String,
+    var kqob: String,
+    var kqp: String,
+    var nq: String,
+    var qconoff: String,
+    var qz: String,
+    var remote: String,
+    var sbase: String,
+    var tc: String,
+    var te: String,
+    var ti: String,
+    var tp: String,
+    var tr: String,
+    var uimax: String,
+    var uimin: String,
+    var urmax: String,
+    var urmin: String,
+    var vtmax: String,
+    var vtmin: String,
+    var yp: String
 )
 
 data class UpdateExcSKEvent(
-    @Id val excSKId: UUID? = null,
-    val efdmax: String,
-    val efdmin: String,
-    val emax: String,
-    val emin: String,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val kc: String,
-    val kce: String,
-    val kd: String,
-    val kgob: String,
-    val kp: String,
-    val kqi: String,
-    val kqob: String,
-    val kqp: String,
-    val nq: String,
-    val qconoff: String,
-    val qz: String,
-    val remote: String,
-    val sbase: String,
-    val tc: String,
-    val te: String,
-    val ti: String,
-    val tp: String,
-    val tr: String,
-    val uimax: String,
-    val uimin: String,
-    val urmax: String,
-    val urmin: String,
-    val vtmax: String,
-    val vtmin: String,
-    val yp: String
+    @Id var excSKId: UUID? = null,
+    var efdmax: String,
+    var efdmin: String,
+    var emax: String,
+    var emin: String,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var kc: String,
+    var kce: String,
+    var kd: String,
+    var kgob: String,
+    var kp: String,
+    var kqi: String,
+    var kqob: String,
+    var kqp: String,
+    var nq: String,
+    var qconoff: String,
+    var qz: String,
+    var remote: String,
+    var sbase: String,
+    var tc: String,
+    var te: String,
+    var ti: String,
+    var tp: String,
+    var tr: String,
+    var uimax: String,
+    var uimin: String,
+    var urmax: String,
+    var urmin: String,
+    var vtmax: String,
+    var vtmin: String,
+    var yp: String
 )
 
-data class DeleteExcSKEvent(@Id val excSKId: UUID? = null)
+data class DeleteExcSKEvent(@Id var excSKId: UUID? = null)
 
 // single association events
 
@@ -5052,50 +5052,50 @@ data class DeleteExcSKEvent(@Id val excSKId: UUID? = null)
 // ExcST1A Events
 
 data class CreateExcST1AEvent(
-    @Id val excST1AId: UUID? = null,
-    val ilr: String,
-    val ka: String,
-    val kc: String,
-    val kf: String,
-    val klr: String,
-    val ta: String,
-    val tb: String,
-    val tb1: String,
-    val tc: String,
-    val tc1: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xe: String
+    @Id var excST1AId: UUID? = null,
+    var ilr: String,
+    var ka: String,
+    var kc: String,
+    var kf: String,
+    var klr: String,
+    var ta: String,
+    var tb: String,
+    var tb1: String,
+    var tc: String,
+    var tc1: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xe: String
 )
 
 data class UpdateExcST1AEvent(
-    @Id val excST1AId: UUID? = null,
-    val ilr: String,
-    val ka: String,
-    val kc: String,
-    val kf: String,
-    val klr: String,
-    val ta: String,
-    val tb: String,
-    val tb1: String,
-    val tc: String,
-    val tc1: String,
-    val tf: String,
-    val vamax: String,
-    val vamin: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xe: String
+    @Id var excST1AId: UUID? = null,
+    var ilr: String,
+    var ka: String,
+    var kc: String,
+    var kf: String,
+    var klr: String,
+    var ta: String,
+    var tb: String,
+    var tb1: String,
+    var tc: String,
+    var tc1: String,
+    var tf: String,
+    var vamax: String,
+    var vamin: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xe: String
 )
 
-data class DeleteExcST1AEvent(@Id val excST1AId: UUID? = null)
+data class DeleteExcST1AEvent(@Id var excST1AId: UUID? = null)
 
 // single association events
 
@@ -5105,44 +5105,44 @@ data class DeleteExcST1AEvent(@Id val excST1AId: UUID? = null)
 // ExcST2A Events
 
 data class CreateExcST2AEvent(
-    @Id val excST2AId: UUID? = null,
-    val efdmax: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excST2AId: UUID? = null,
+    var efdmax: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcST2AEvent(
-    @Id val excST2AId: UUID? = null,
-    val efdmax: String,
-    val ka: String,
-    val kc: String,
-    val ke: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val te: String,
-    val tf: String,
-    val uelin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excST2AId: UUID? = null,
+    var efdmax: String,
+    var ka: String,
+    var kc: String,
+    var ke: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var te: String,
+    var tf: String,
+    var uelin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcST2AEvent(@Id val excST2AId: UUID? = null)
+data class DeleteExcST2AEvent(@Id var excST2AId: UUID? = null)
 
 // single association events
 
@@ -5152,54 +5152,54 @@ data class DeleteExcST2AEvent(@Id val excST2AId: UUID? = null)
 // ExcST3A Events
 
 data class CreateExcST3AEvent(
-    @Id val excST3AId: UUID? = null,
-    val efdmax: String,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kj: String,
-    val km: String,
-    val kp: String,
-    val ks: String,
-    val ks1: String,
-    val tb: String,
-    val tc: String,
-    val thetap: String,
-    val tm: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excST3AId: UUID? = null,
+    var efdmax: String,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kj: String,
+    var km: String,
+    var kp: String,
+    var ks: String,
+    var ks1: String,
+    var tb: String,
+    var tc: String,
+    var thetap: String,
+    var tm: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
 data class UpdateExcST3AEvent(
-    @Id val excST3AId: UUID? = null,
-    val efdmax: String,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kj: String,
-    val km: String,
-    val kp: String,
-    val ks: String,
-    val ks1: String,
-    val tb: String,
-    val tc: String,
-    val thetap: String,
-    val tm: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vimax: String,
-    val vimin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excST3AId: UUID? = null,
+    var efdmax: String,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kj: String,
+    var km: String,
+    var kp: String,
+    var ks: String,
+    var ks1: String,
+    var tb: String,
+    var tc: String,
+    var thetap: String,
+    var tm: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vimax: String,
+    var vimin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
-data class DeleteExcST3AEvent(@Id val excST3AId: UUID? = null)
+data class DeleteExcST3AEvent(@Id var excST3AId: UUID? = null)
 
 // single association events
 
@@ -5209,52 +5209,52 @@ data class DeleteExcST3AEvent(@Id val excST3AId: UUID? = null)
 // ExcST4B Events
 
 data class CreateExcST4BEvent(
-    @Id val excST4BId: UUID? = null,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kim: String,
-    val kir: String,
-    val kp: String,
-    val kpm: String,
-    val kpr: String,
-    val lvgate: String,
-    val ta: String,
-    val thetap: String,
-    val uel: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excST4BId: UUID? = null,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kim: String,
+    var kir: String,
+    var kp: String,
+    var kpm: String,
+    var kpr: String,
+    var lvgate: String,
+    var ta: String,
+    var thetap: String,
+    var uel: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
 data class UpdateExcST4BEvent(
-    @Id val excST4BId: UUID? = null,
-    val kc: String,
-    val kg: String,
-    val ki: String,
-    val kim: String,
-    val kir: String,
-    val kp: String,
-    val kpm: String,
-    val kpr: String,
-    val lvgate: String,
-    val ta: String,
-    val thetap: String,
-    val uel: String,
-    val vbmax: String,
-    val vgmax: String,
-    val vmmax: String,
-    val vmmin: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xl: String
+    @Id var excST4BId: UUID? = null,
+    var kc: String,
+    var kg: String,
+    var ki: String,
+    var kim: String,
+    var kir: String,
+    var kp: String,
+    var kpm: String,
+    var kpr: String,
+    var lvgate: String,
+    var ta: String,
+    var thetap: String,
+    var uel: String,
+    var vbmax: String,
+    var vgmax: String,
+    var vmmax: String,
+    var vmmin: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xl: String
 )
 
-data class DeleteExcST4BEvent(@Id val excST4BId: UUID? = null)
+data class DeleteExcST4BEvent(@Id var excST4BId: UUID? = null)
 
 // single association events
 
@@ -5264,60 +5264,60 @@ data class DeleteExcST4BEvent(@Id val excST4BId: UUID? = null)
 // ExcST6B Events
 
 data class CreateExcST6BEvent(
-    @Id val excST6BId: UUID? = null,
-    val ilr: String,
-    val k1: String,
-    val kcl: String,
-    val kff: String,
-    val kg: String,
-    val kia: String,
-    val klr: String,
-    val km: String,
-    val kpa: String,
-    val kvd: String,
-    val oelin: String,
-    val tg: String,
-    val ts: String,
-    val tvd: String,
-    val vamax: String,
-    val vamin: String,
-    val vilim: String,
-    val vimax: String,
-    val vimin: String,
-    val vmult: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xc: String
+    @Id var excST6BId: UUID? = null,
+    var ilr: String,
+    var k1: String,
+    var kcl: String,
+    var kff: String,
+    var kg: String,
+    var kia: String,
+    var klr: String,
+    var km: String,
+    var kpa: String,
+    var kvd: String,
+    var oelin: String,
+    var tg: String,
+    var ts: String,
+    var tvd: String,
+    var vamax: String,
+    var vamin: String,
+    var vilim: String,
+    var vimax: String,
+    var vimin: String,
+    var vmult: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xc: String
 )
 
 data class UpdateExcST6BEvent(
-    @Id val excST6BId: UUID? = null,
-    val ilr: String,
-    val k1: String,
-    val kcl: String,
-    val kff: String,
-    val kg: String,
-    val kia: String,
-    val klr: String,
-    val km: String,
-    val kpa: String,
-    val kvd: String,
-    val oelin: String,
-    val tg: String,
-    val ts: String,
-    val tvd: String,
-    val vamax: String,
-    val vamin: String,
-    val vilim: String,
-    val vimax: String,
-    val vimin: String,
-    val vmult: String,
-    val vrmax: String,
-    val vrmin: String,
-    val xc: String
+    @Id var excST6BId: UUID? = null,
+    var ilr: String,
+    var k1: String,
+    var kcl: String,
+    var kff: String,
+    var kg: String,
+    var kia: String,
+    var klr: String,
+    var km: String,
+    var kpa: String,
+    var kvd: String,
+    var oelin: String,
+    var tg: String,
+    var ts: String,
+    var tvd: String,
+    var vamax: String,
+    var vamin: String,
+    var vilim: String,
+    var vimax: String,
+    var vimin: String,
+    var vmult: String,
+    var vrmax: String,
+    var vrmin: String,
+    var xc: String
 )
 
-data class DeleteExcST6BEvent(@Id val excST6BId: UUID? = null)
+data class DeleteExcST6BEvent(@Id var excST6BId: UUID? = null)
 
 // single association events
 
@@ -5327,46 +5327,46 @@ data class DeleteExcST6BEvent(@Id val excST6BId: UUID? = null)
 // ExcST7B Events
 
 data class CreateExcST7BEvent(
-    @Id val excST7BId: UUID? = null,
-    val kh: String,
-    val kia: String,
-    val kl: String,
-    val kpa: String,
-    val oelin: String,
-    val tb: String,
-    val tc: String,
-    val tf: String,
-    val tg: String,
-    val tia: String,
-    val ts: String,
-    val uelin: String,
-    val vmax: String,
-    val vmin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excST7BId: UUID? = null,
+    var kh: String,
+    var kia: String,
+    var kl: String,
+    var kpa: String,
+    var oelin: String,
+    var tb: String,
+    var tc: String,
+    var tf: String,
+    var tg: String,
+    var tia: String,
+    var ts: String,
+    var uelin: String,
+    var vmax: String,
+    var vmin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdateExcST7BEvent(
-    @Id val excST7BId: UUID? = null,
-    val kh: String,
-    val kia: String,
-    val kl: String,
-    val kpa: String,
-    val oelin: String,
-    val tb: String,
-    val tc: String,
-    val tf: String,
-    val tg: String,
-    val tia: String,
-    val ts: String,
-    val uelin: String,
-    val vmax: String,
-    val vmin: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var excST7BId: UUID? = null,
+    var kh: String,
+    var kia: String,
+    var kl: String,
+    var kpa: String,
+    var oelin: String,
+    var tb: String,
+    var tc: String,
+    var tf: String,
+    var tg: String,
+    var tia: String,
+    var ts: String,
+    var uelin: String,
+    var vmax: String,
+    var vmin: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeleteExcST7BEvent(@Id val excST7BId: UUID? = null)
+data class DeleteExcST7BEvent(@Id var excST7BId: UUID? = null)
 
 // single association events
 
@@ -5376,14 +5376,14 @@ data class DeleteExcST7BEvent(@Id val excST7BId: UUID? = null)
 // ExcitationSystemDynamics Events
 
 data class CreateExcitationSystemDynamicsEvent(
-     val excitationSystemDynamicsId: UUID? = null
+     var excitationSystemDynamicsId: UUID? = null
 )
 
 data class UpdateExcitationSystemDynamicsEvent(
-     val excitationSystemDynamicsId: UUID? = null
+     var excitationSystemDynamicsId: UUID? = null
 )
 
-data class DeleteExcitationSystemDynamicsEvent(@Id val excitationSystemDynamicsId: UUID? = null)
+data class DeleteExcitationSystemDynamicsEvent(@Id var excitationSystemDynamicsId: UUID? = null)
 
 // single association events
 
@@ -5393,16 +5393,16 @@ data class DeleteExcitationSystemDynamicsEvent(@Id val excitationSystemDynamicsI
 // ExcitationSystemUserDefined Events
 
 data class CreateExcitationSystemUserDefinedEvent(
-    @Id val excitationSystemUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var excitationSystemUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateExcitationSystemUserDefinedEvent(
-    @Id val excitationSystemUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var excitationSystemUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteExcitationSystemUserDefinedEvent(@Id val excitationSystemUserDefinedId: UUID? = null)
+data class DeleteExcitationSystemUserDefinedEvent(@Id var excitationSystemUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -5412,18 +5412,18 @@ data class DeleteExcitationSystemUserDefinedEvent(@Id val excitationSystemUserDe
 // ExtensionVersion Events
 
 data class CreateExtensionVersionEvent(
-    @Id val extensionVersionId: UUID? = null,
-    val date: String,
-    val namespaceURI: String
+    @Id var extensionVersionId: UUID? = null,
+    var date: String,
+    var namespaceURI: String
 )
 
 data class UpdateExtensionVersionEvent(
-    @Id val extensionVersionId: UUID? = null,
-    val date: String,
-    val namespaceURI: String
+    @Id var extensionVersionId: UUID? = null,
+    var date: String,
+    var namespaceURI: String
 )
 
-data class DeleteExtensionVersionEvent(@Id val extensionVersionId: UUID? = null)
+data class DeleteExtensionVersionEvent(@Id var extensionVersionId: UUID? = null)
 
 // single association events
 
@@ -5433,44 +5433,44 @@ data class DeleteExtensionVersionEvent(@Id val extensionVersionId: UUID? = null)
 // ExternalNetworkInjection Events
 
 data class CreateExternalNetworkInjectionEvent(
-    @Id val externalNetworkInjectionId: UUID? = null,
-    val governorSCD: String,
-    val ikSecond: String,
-    val maxInitialSymShCCurrent: String,
-    val maxP: String,
-    val maxQ: String,
-    val maxR0ToX0Ratio: String,
-    val maxR1ToX1Ratio: String,
-    val maxZ0ToZ1Ratio: String,
-    val minInitialSymShCCurrent: String,
-    val minP: String,
-    val minQ: String,
-    val minR0ToX0Ratio: String,
-    val minR1ToX1Ratio: String,
-    val minZ0ToZ1Ratio: String,
-    val voltageFactor: String
+    @Id var externalNetworkInjectionId: UUID? = null,
+    var governorSCD: String,
+    var ikSecond: String,
+    var maxInitialSymShCCurrent: String,
+    var maxP: String,
+    var maxQ: String,
+    var maxR0ToX0Ratio: String,
+    var maxR1ToX1Ratio: String,
+    var maxZ0ToZ1Ratio: String,
+    var minInitialSymShCCurrent: String,
+    var minP: String,
+    var minQ: String,
+    var minR0ToX0Ratio: String,
+    var minR1ToX1Ratio: String,
+    var minZ0ToZ1Ratio: String,
+    var voltageFactor: String
 )
 
 data class UpdateExternalNetworkInjectionEvent(
-    @Id val externalNetworkInjectionId: UUID? = null,
-    val governorSCD: String,
-    val ikSecond: String,
-    val maxInitialSymShCCurrent: String,
-    val maxP: String,
-    val maxQ: String,
-    val maxR0ToX0Ratio: String,
-    val maxR1ToX1Ratio: String,
-    val maxZ0ToZ1Ratio: String,
-    val minInitialSymShCCurrent: String,
-    val minP: String,
-    val minQ: String,
-    val minR0ToX0Ratio: String,
-    val minR1ToX1Ratio: String,
-    val minZ0ToZ1Ratio: String,
-    val voltageFactor: String
+    @Id var externalNetworkInjectionId: UUID? = null,
+    var governorSCD: String,
+    var ikSecond: String,
+    var maxInitialSymShCCurrent: String,
+    var maxP: String,
+    var maxQ: String,
+    var maxR0ToX0Ratio: String,
+    var maxR1ToX1Ratio: String,
+    var maxZ0ToZ1Ratio: String,
+    var minInitialSymShCCurrent: String,
+    var minP: String,
+    var minQ: String,
+    var minR0ToX0Ratio: String,
+    var minR1ToX1Ratio: String,
+    var minZ0ToZ1Ratio: String,
+    var voltageFactor: String
 )
 
-data class DeleteExternalNetworkInjectionEvent(@Id val externalNetworkInjectionId: UUID? = null)
+data class DeleteExternalNetworkInjectionEvent(@Id var externalNetworkInjectionId: UUID? = null)
 
 // single association events
 
@@ -5480,14 +5480,14 @@ data class DeleteExternalNetworkInjectionEvent(@Id val externalNetworkInjectionI
 // FloatProxy Events
 
 data class CreateFloatProxyEvent(
-     val floatProxyId: UUID? = null
+     var floatProxyId: UUID? = null
 )
 
 data class UpdateFloatProxyEvent(
-     val floatProxyId: UUID? = null
+     var floatProxyId: UUID? = null
 )
 
-data class DeleteFloatProxyEvent(@Id val floatProxyId: UUID? = null)
+data class DeleteFloatProxyEvent(@Id var floatProxyId: UUID? = null)
 
 // single association events
 
@@ -5497,16 +5497,16 @@ data class DeleteFloatProxyEvent(@Id val floatProxyId: UUID? = null)
 // FossilFuel Events
 
 data class CreateFossilFuelEvent(
-    @Id val fossilFuelId: UUID? = null,
-    val fossilFuelType: String
+    @Id var fossilFuelId: UUID? = null,
+    var fossilFuelType: String
 )
 
 data class UpdateFossilFuelEvent(
-    @Id val fossilFuelId: UUID? = null,
-    val fossilFuelType: String
+    @Id var fossilFuelId: UUID? = null,
+    var fossilFuelType: String
 )
 
-data class DeleteFossilFuelEvent(@Id val fossilFuelId: UUID? = null)
+data class DeleteFossilFuelEvent(@Id var fossilFuelId: UUID? = null)
 
 // single association events
 
@@ -5516,20 +5516,20 @@ data class DeleteFossilFuelEvent(@Id val fossilFuelId: UUID? = null)
 // Frequency Events
 
 data class CreateFrequencyEvent(
-    @Id val frequencyId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var frequencyId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateFrequencyEvent(
-    @Id val frequencyId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var frequencyId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteFrequencyEvent(@Id val frequencyId: UUID? = null)
+data class DeleteFrequencyEvent(@Id var frequencyId: UUID? = null)
 
 // single association events
 
@@ -5539,18 +5539,18 @@ data class DeleteFrequencyEvent(@Id val frequencyId: UUID? = null)
 // GenICompensationForGenJ Events
 
 data class CreateGenICompensationForGenJEvent(
-    @Id val genICompensationForGenJId: UUID? = null,
-    val rcij: String,
-    val xcij: String
+    @Id var genICompensationForGenJId: UUID? = null,
+    var rcij: String,
+    var xcij: String
 )
 
 data class UpdateGenICompensationForGenJEvent(
-    @Id val genICompensationForGenJId: UUID? = null,
-    val rcij: String,
-    val xcij: String
+    @Id var genICompensationForGenJId: UUID? = null,
+    var rcij: String,
+    var xcij: String
 )
 
-data class DeleteGenICompensationForGenJEvent(@Id val genICompensationForGenJId: UUID? = null)
+data class DeleteGenICompensationForGenJEvent(@Id var genICompensationForGenJId: UUID? = null)
 
 // single association events
 
@@ -5560,44 +5560,44 @@ data class DeleteGenICompensationForGenJEvent(@Id val genICompensationForGenJId:
 // GeneratingUnit Events
 
 data class CreateGeneratingUnitEvent(
-    @Id val generatingUnitId: UUID? = null,
-    val genControlSource: String,
-    val governorSCD: String,
-    val initialP: String,
-    val longPF: String,
-    val maximumAllowableSpinningReserve: String,
-    val maxOperatingP: String,
-    val minOperatingP: String,
-    val nominalP: String,
-    val ratedGrossMaxP: String,
-    val ratedGrossMinP: String,
-    val ratedNetMaxP: String,
-    val shortPF: String,
-    val startupCost: String,
-    val totalEfficiency: String,
-    val variableCost: String
+    @Id var generatingUnitId: UUID? = null,
+    var genControlSource: String,
+    var governorSCD: String,
+    var initialP: String,
+    var longPF: String,
+    var maximumAllowableSpinningReserve: String,
+    var maxOperatingP: String,
+    var minOperatingP: String,
+    var nominalP: String,
+    var ratedGrossMaxP: String,
+    var ratedGrossMinP: String,
+    var ratedNetMaxP: String,
+    var shortPF: String,
+    var startupCost: String,
+    var totalEfficiency: String,
+    var variableCost: String
 )
 
 data class UpdateGeneratingUnitEvent(
-    @Id val generatingUnitId: UUID? = null,
-    val genControlSource: String,
-    val governorSCD: String,
-    val initialP: String,
-    val longPF: String,
-    val maximumAllowableSpinningReserve: String,
-    val maxOperatingP: String,
-    val minOperatingP: String,
-    val nominalP: String,
-    val ratedGrossMaxP: String,
-    val ratedGrossMinP: String,
-    val ratedNetMaxP: String,
-    val shortPF: String,
-    val startupCost: String,
-    val totalEfficiency: String,
-    val variableCost: String
+    @Id var generatingUnitId: UUID? = null,
+    var genControlSource: String,
+    var governorSCD: String,
+    var initialP: String,
+    var longPF: String,
+    var maximumAllowableSpinningReserve: String,
+    var maxOperatingP: String,
+    var minOperatingP: String,
+    var nominalP: String,
+    var ratedGrossMaxP: String,
+    var ratedGrossMinP: String,
+    var ratedNetMaxP: String,
+    var shortPF: String,
+    var startupCost: String,
+    var totalEfficiency: String,
+    var variableCost: String
 )
 
-data class DeleteGeneratingUnitEvent(@Id val generatingUnitId: UUID? = null)
+data class DeleteGeneratingUnitEvent(@Id var generatingUnitId: UUID? = null)
 
 // single association events
 
@@ -5607,34 +5607,34 @@ data class DeleteGeneratingUnitEvent(@Id val generatingUnitId: UUID? = null)
 // GeographicalLocationVersion Events
 
 data class CreateGeographicalLocationVersionEvent(
-    @Id val geographicalLocationVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var geographicalLocationVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateGeographicalLocationVersionEvent(
-    @Id val geographicalLocationVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var geographicalLocationVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteGeographicalLocationVersionEvent(@Id val geographicalLocationVersionId: UUID? = null)
+data class DeleteGeographicalLocationVersionEvent(@Id var geographicalLocationVersionId: UUID? = null)
 
 // single association events
 
@@ -5644,14 +5644,14 @@ data class DeleteGeographicalLocationVersionEvent(@Id val geographicalLocationVe
 // GeographicalRegion Events
 
 data class CreateGeographicalRegionEvent(
-     val geographicalRegionId: UUID? = null
+     var geographicalRegionId: UUID? = null
 )
 
 data class UpdateGeographicalRegionEvent(
-     val geographicalRegionId: UUID? = null
+     var geographicalRegionId: UUID? = null
 )
 
-data class DeleteGeographicalRegionEvent(@Id val geographicalRegionId: UUID? = null)
+data class DeleteGeographicalRegionEvent(@Id var geographicalRegionId: UUID? = null)
 
 // single association events
 
@@ -5661,84 +5661,84 @@ data class DeleteGeographicalRegionEvent(@Id val geographicalRegionId: UUID? = n
 // GovCT1 Events
 
 data class CreateGovCT1Event(
-    @Id val govCT1Id: UUID? = null,
-    val aset: String,
-    val db: String,
-    val dm: String,
-    val ka: String,
-    val kdgov: String,
-    val kigov: String,
-    val kiload: String,
-    val kimw: String,
-    val kpgov: String,
-    val kpload: String,
-    val kturb: String,
-    val ldref: String,
-    val maxerr: String,
-    val minerr: String,
-    val mwbase: String,
-    val r: String,
-    val rclose: String,
-    val rdown: String,
-    val ropen: String,
-    val rselect: String,
-    val rup: String,
-    val ta: String,
-    val tact: String,
-    val tb: String,
-    val tc: String,
-    val tdgov: String,
-    val teng: String,
-    val tfload: String,
-    val tpelec: String,
-    val tsa: String,
-    val tsb: String,
-    val vmax: String,
-    val vmin: String,
-    val wfnl: String,
-    val wfspd: String
+    @Id var govCT1Id: UUID? = null,
+    var aset: String,
+    var db: String,
+    var dm: String,
+    var ka: String,
+    var kdgov: String,
+    var kigov: String,
+    var kiload: String,
+    var kimw: String,
+    var kpgov: String,
+    var kpload: String,
+    var kturb: String,
+    var ldref: String,
+    var maxerr: String,
+    var minerr: String,
+    var mwbase: String,
+    var r: String,
+    var rclose: String,
+    var rdown: String,
+    var ropen: String,
+    var rselect: String,
+    var rup: String,
+    var ta: String,
+    var tact: String,
+    var tb: String,
+    var tc: String,
+    var tdgov: String,
+    var teng: String,
+    var tfload: String,
+    var tpelec: String,
+    var tsa: String,
+    var tsb: String,
+    var vmax: String,
+    var vmin: String,
+    var wfnl: String,
+    var wfspd: String
 )
 
 data class UpdateGovCT1Event(
-    @Id val govCT1Id: UUID? = null,
-    val aset: String,
-    val db: String,
-    val dm: String,
-    val ka: String,
-    val kdgov: String,
-    val kigov: String,
-    val kiload: String,
-    val kimw: String,
-    val kpgov: String,
-    val kpload: String,
-    val kturb: String,
-    val ldref: String,
-    val maxerr: String,
-    val minerr: String,
-    val mwbase: String,
-    val r: String,
-    val rclose: String,
-    val rdown: String,
-    val ropen: String,
-    val rselect: String,
-    val rup: String,
-    val ta: String,
-    val tact: String,
-    val tb: String,
-    val tc: String,
-    val tdgov: String,
-    val teng: String,
-    val tfload: String,
-    val tpelec: String,
-    val tsa: String,
-    val tsb: String,
-    val vmax: String,
-    val vmin: String,
-    val wfnl: String,
-    val wfspd: String
+    @Id var govCT1Id: UUID? = null,
+    var aset: String,
+    var db: String,
+    var dm: String,
+    var ka: String,
+    var kdgov: String,
+    var kigov: String,
+    var kiload: String,
+    var kimw: String,
+    var kpgov: String,
+    var kpload: String,
+    var kturb: String,
+    var ldref: String,
+    var maxerr: String,
+    var minerr: String,
+    var mwbase: String,
+    var r: String,
+    var rclose: String,
+    var rdown: String,
+    var ropen: String,
+    var rselect: String,
+    var rup: String,
+    var ta: String,
+    var tact: String,
+    var tb: String,
+    var tc: String,
+    var tdgov: String,
+    var teng: String,
+    var tfload: String,
+    var tpelec: String,
+    var tsa: String,
+    var tsb: String,
+    var vmax: String,
+    var vmin: String,
+    var wfnl: String,
+    var wfspd: String
 )
 
-data class DeleteGovCT1Event(@Id val govCT1Id: UUID? = null)
+data class DeleteGovCT1Event(@Id var govCT1Id: UUID? = null)
 
 // single association events
 
@@ -5748,126 +5748,126 @@ data class DeleteGovCT1Event(@Id val govCT1Id: UUID? = null)
 // GovCT2 Events
 
 data class CreateGovCT2Event(
-    @Id val govCT2Id: UUID? = null,
-    val aset: String,
-    val db: String,
-    val dm: String,
-    val flim1: String,
-    val flim10: String,
-    val flim2: String,
-    val flim3: String,
-    val flim4: String,
-    val flim5: String,
-    val flim6: String,
-    val flim7: String,
-    val flim8: String,
-    val flim9: String,
-    val ka: String,
-    val kdgov: String,
-    val kigov: String,
-    val kiload: String,
-    val kimw: String,
-    val kpgov: String,
-    val kpload: String,
-    val kturb: String,
-    val ldref: String,
-    val maxerr: String,
-    val minerr: String,
-    val mwbase: String,
-    val plim1: String,
-    val plim10: String,
-    val plim2: String,
-    val plim3: String,
-    val plim4: String,
-    val plim5: String,
-    val plim6: String,
-    val plim7: String,
-    val plim8: String,
-    val plim9: String,
-    val prate: String,
-    val r: String,
-    val rclose: String,
-    val rdown: String,
-    val ropen: String,
-    val rselect: String,
-    val rup: String,
-    val ta: String,
-    val tact: String,
-    val tb: String,
-    val tc: String,
-    val tdgov: String,
-    val teng: String,
-    val tfload: String,
-    val tpelec: String,
-    val tsa: String,
-    val tsb: String,
-    val vmax: String,
-    val vmin: String,
-    val wfnl: String,
-    val wfspd: String
+    @Id var govCT2Id: UUID? = null,
+    var aset: String,
+    var db: String,
+    var dm: String,
+    var flim1: String,
+    var flim10: String,
+    var flim2: String,
+    var flim3: String,
+    var flim4: String,
+    var flim5: String,
+    var flim6: String,
+    var flim7: String,
+    var flim8: String,
+    var flim9: String,
+    var ka: String,
+    var kdgov: String,
+    var kigov: String,
+    var kiload: String,
+    var kimw: String,
+    var kpgov: String,
+    var kpload: String,
+    var kturb: String,
+    var ldref: String,
+    var maxerr: String,
+    var minerr: String,
+    var mwbase: String,
+    var plim1: String,
+    var plim10: String,
+    var plim2: String,
+    var plim3: String,
+    var plim4: String,
+    var plim5: String,
+    var plim6: String,
+    var plim7: String,
+    var plim8: String,
+    var plim9: String,
+    var prate: String,
+    var r: String,
+    var rclose: String,
+    var rdown: String,
+    var ropen: String,
+    var rselect: String,
+    var rup: String,
+    var ta: String,
+    var tact: String,
+    var tb: String,
+    var tc: String,
+    var tdgov: String,
+    var teng: String,
+    var tfload: String,
+    var tpelec: String,
+    var tsa: String,
+    var tsb: String,
+    var vmax: String,
+    var vmin: String,
+    var wfnl: String,
+    var wfspd: String
 )
 
 data class UpdateGovCT2Event(
-    @Id val govCT2Id: UUID? = null,
-    val aset: String,
-    val db: String,
-    val dm: String,
-    val flim1: String,
-    val flim10: String,
-    val flim2: String,
-    val flim3: String,
-    val flim4: String,
-    val flim5: String,
-    val flim6: String,
-    val flim7: String,
-    val flim8: String,
-    val flim9: String,
-    val ka: String,
-    val kdgov: String,
-    val kigov: String,
-    val kiload: String,
-    val kimw: String,
-    val kpgov: String,
-    val kpload: String,
-    val kturb: String,
-    val ldref: String,
-    val maxerr: String,
-    val minerr: String,
-    val mwbase: String,
-    val plim1: String,
-    val plim10: String,
-    val plim2: String,
-    val plim3: String,
-    val plim4: String,
-    val plim5: String,
-    val plim6: String,
-    val plim7: String,
-    val plim8: String,
-    val plim9: String,
-    val prate: String,
-    val r: String,
-    val rclose: String,
-    val rdown: String,
-    val ropen: String,
-    val rselect: String,
-    val rup: String,
-    val ta: String,
-    val tact: String,
-    val tb: String,
-    val tc: String,
-    val tdgov: String,
-    val teng: String,
-    val tfload: String,
-    val tpelec: String,
-    val tsa: String,
-    val tsb: String,
-    val vmax: String,
-    val vmin: String,
-    val wfnl: String,
-    val wfspd: String
+    @Id var govCT2Id: UUID? = null,
+    var aset: String,
+    var db: String,
+    var dm: String,
+    var flim1: String,
+    var flim10: String,
+    var flim2: String,
+    var flim3: String,
+    var flim4: String,
+    var flim5: String,
+    var flim6: String,
+    var flim7: String,
+    var flim8: String,
+    var flim9: String,
+    var ka: String,
+    var kdgov: String,
+    var kigov: String,
+    var kiload: String,
+    var kimw: String,
+    var kpgov: String,
+    var kpload: String,
+    var kturb: String,
+    var ldref: String,
+    var maxerr: String,
+    var minerr: String,
+    var mwbase: String,
+    var plim1: String,
+    var plim10: String,
+    var plim2: String,
+    var plim3: String,
+    var plim4: String,
+    var plim5: String,
+    var plim6: String,
+    var plim7: String,
+    var plim8: String,
+    var plim9: String,
+    var prate: String,
+    var r: String,
+    var rclose: String,
+    var rdown: String,
+    var ropen: String,
+    var rselect: String,
+    var rup: String,
+    var ta: String,
+    var tact: String,
+    var tb: String,
+    var tc: String,
+    var tdgov: String,
+    var teng: String,
+    var tfload: String,
+    var tpelec: String,
+    var tsa: String,
+    var tsb: String,
+    var vmax: String,
+    var vmin: String,
+    var wfnl: String,
+    var wfspd: String
 )
 
-data class DeleteGovCT2Event(@Id val govCT2Id: UUID? = null)
+data class DeleteGovCT2Event(@Id var govCT2Id: UUID? = null)
 
 // single association events
 
@@ -5877,34 +5877,34 @@ data class DeleteGovCT2Event(@Id val govCT2Id: UUID? = null)
 // GovGAST Events
 
 data class CreateGovGASTEvent(
-    @Id val govGASTId: UUID? = null,
-    val at: String,
-    val dturb: String,
-    val kt: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govGASTId: UUID? = null,
+    var at: String,
+    var dturb: String,
+    var kt: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vmax: String,
+    var vmin: String
 )
 
 data class UpdateGovGASTEvent(
-    @Id val govGASTId: UUID? = null,
-    val at: String,
-    val dturb: String,
-    val kt: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govGASTId: UUID? = null,
+    var at: String,
+    var dturb: String,
+    var kt: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vmax: String,
+    var vmin: String
 )
 
-data class DeleteGovGASTEvent(@Id val govGASTId: UUID? = null)
+data class DeleteGovGASTEvent(@Id var govGASTId: UUID? = null)
 
 // single association events
 
@@ -5914,82 +5914,82 @@ data class DeleteGovGASTEvent(@Id val govGASTId: UUID? = null)
 // GovGAST1 Events
 
 data class CreateGovGAST1Event(
-    @Id val govGAST1Id: UUID? = null,
-    val a: String,
-    val b: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val fidle: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val ka: String,
-    val kt: String,
-    val lmax: String,
-    val loadinc: String,
-    val ltrate: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val r: String,
-    val rmax: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tltr: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govGAST1Id: UUID? = null,
+    var a: String,
+    var b: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var fidle: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var ka: String,
+    var kt: String,
+    var lmax: String,
+    var loadinc: String,
+    var ltrate: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var r: String,
+    var rmax: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tltr: String,
+    var vmax: String,
+    var vmin: String
 )
 
 data class UpdateGovGAST1Event(
-    @Id val govGAST1Id: UUID? = null,
-    val a: String,
-    val b: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val fidle: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val ka: String,
-    val kt: String,
-    val lmax: String,
-    val loadinc: String,
-    val ltrate: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val r: String,
-    val rmax: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tltr: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govGAST1Id: UUID? = null,
+    var a: String,
+    var b: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var fidle: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var ka: String,
+    var kt: String,
+    var lmax: String,
+    var loadinc: String,
+    var ltrate: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var r: String,
+    var rmax: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tltr: String,
+    var vmax: String,
+    var vmin: String
 )
 
-data class DeleteGovGAST1Event(@Id val govGAST1Id: UUID? = null)
+data class DeleteGovGAST1Event(@Id var govGAST1Id: UUID? = null)
 
 // single association events
 
@@ -5999,78 +5999,78 @@ data class DeleteGovGAST1Event(@Id val govGAST1Id: UUID? = null)
 // GovGAST2 Events
 
 data class CreateGovGAST2Event(
-    @Id val govGAST2Id: UUID? = null,
-    val a: String,
-    val af1: String,
-    val af2: String,
-    val b: String,
-    val bf1: String,
-    val bf2: String,
-    val c: String,
-    val cf2: String,
-    val ecr: String,
-    val etd: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val kf: String,
-    val mwbase: String,
-    val t: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tc: String,
-    val tcd: String,
-    val tf: String,
-    val tmax: String,
-    val tmin: String,
-    val tr: String,
-    val trate: String,
-    val tt: String,
-    val w: String,
-    val x: String,
-    val y: String,
-    val z: String
+    @Id var govGAST2Id: UUID? = null,
+    var a: String,
+    var af1: String,
+    var af2: String,
+    var b: String,
+    var bf1: String,
+    var bf2: String,
+    var c: String,
+    var cf2: String,
+    var ecr: String,
+    var etd: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var kf: String,
+    var mwbase: String,
+    var t: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tc: String,
+    var tcd: String,
+    var tf: String,
+    var tmax: String,
+    var tmin: String,
+    var tr: String,
+    var trate: String,
+    var tt: String,
+    var w: String,
+    var x: String,
+    var y: String,
+    var z: String
 )
 
 data class UpdateGovGAST2Event(
-    @Id val govGAST2Id: UUID? = null,
-    val a: String,
-    val af1: String,
-    val af2: String,
-    val b: String,
-    val bf1: String,
-    val bf2: String,
-    val c: String,
-    val cf2: String,
-    val ecr: String,
-    val etd: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val kf: String,
-    val mwbase: String,
-    val t: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tc: String,
-    val tcd: String,
-    val tf: String,
-    val tmax: String,
-    val tmin: String,
-    val tr: String,
-    val trate: String,
-    val tt: String,
-    val w: String,
-    val x: String,
-    val y: String,
-    val z: String
+    @Id var govGAST2Id: UUID? = null,
+    var a: String,
+    var af1: String,
+    var af2: String,
+    var b: String,
+    var bf1: String,
+    var bf2: String,
+    var c: String,
+    var cf2: String,
+    var ecr: String,
+    var etd: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var kf: String,
+    var mwbase: String,
+    var t: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tc: String,
+    var tcd: String,
+    var tf: String,
+    var tmax: String,
+    var tmin: String,
+    var tr: String,
+    var trate: String,
+    var tt: String,
+    var w: String,
+    var x: String,
+    var y: String,
+    var z: String
 )
 
-data class DeleteGovGAST2Event(@Id val govGAST2Id: UUID? = null)
+data class DeleteGovGAST2Event(@Id var govGAST2Id: UUID? = null)
 
 // single association events
 
@@ -6080,56 +6080,56 @@ data class DeleteGovGAST2Event(@Id val govGAST2Id: UUID? = null)
 // GovGAST3 Events
 
 data class CreateGovGAST3Event(
-    @Id val govGAST3Id: UUID? = null,
-    val bca: String,
-    val bp: String,
-    val dtc: String,
-    val ka: String,
-    val kac: String,
-    val kca: String,
-    val ksi: String,
-    val ky: String,
-    val mnef: String,
-    val mxef: String,
-    val rcmn: String,
-    val rcmx: String,
-    val tac: String,
-    val tc: String,
-    val td: String,
-    val tfen: String,
-    val tg: String,
-    val tsi: String,
-    val tt: String,
-    val ttc: String,
-    val ty: String
+    @Id var govGAST3Id: UUID? = null,
+    var bca: String,
+    var bp: String,
+    var dtc: String,
+    var ka: String,
+    var kac: String,
+    var kca: String,
+    var ksi: String,
+    var ky: String,
+    var mnef: String,
+    var mxef: String,
+    var rcmn: String,
+    var rcmx: String,
+    var tac: String,
+    var tc: String,
+    var td: String,
+    var tfen: String,
+    var tg: String,
+    var tsi: String,
+    var tt: String,
+    var ttc: String,
+    var ty: String
 )
 
 data class UpdateGovGAST3Event(
-    @Id val govGAST3Id: UUID? = null,
-    val bca: String,
-    val bp: String,
-    val dtc: String,
-    val ka: String,
-    val kac: String,
-    val kca: String,
-    val ksi: String,
-    val ky: String,
-    val mnef: String,
-    val mxef: String,
-    val rcmn: String,
-    val rcmx: String,
-    val tac: String,
-    val tc: String,
-    val td: String,
-    val tfen: String,
-    val tg: String,
-    val tsi: String,
-    val tt: String,
-    val ttc: String,
-    val ty: String
+    @Id var govGAST3Id: UUID? = null,
+    var bca: String,
+    var bp: String,
+    var dtc: String,
+    var ka: String,
+    var kac: String,
+    var kca: String,
+    var ksi: String,
+    var ky: String,
+    var mnef: String,
+    var mxef: String,
+    var rcmn: String,
+    var rcmx: String,
+    var tac: String,
+    var tc: String,
+    var td: String,
+    var tfen: String,
+    var tg: String,
+    var tsi: String,
+    var tt: String,
+    var ttc: String,
+    var ty: String
 )
 
-data class DeleteGovGAST3Event(@Id val govGAST3Id: UUID? = null)
+data class DeleteGovGAST3Event(@Id var govGAST3Id: UUID? = null)
 
 // single association events
 
@@ -6139,36 +6139,36 @@ data class DeleteGovGAST3Event(@Id val govGAST3Id: UUID? = null)
 // GovGAST4 Events
 
 data class CreateGovGAST4Event(
-    @Id val govGAST4Id: UUID? = null,
-    val bp: String,
-    val ktm: String,
-    val mnef: String,
-    val mxef: String,
-    val rymn: String,
-    val rymx: String,
-    val ta: String,
-    val tc: String,
-    val tcm: String,
-    val tm: String,
-    val tv: String
+    @Id var govGAST4Id: UUID? = null,
+    var bp: String,
+    var ktm: String,
+    var mnef: String,
+    var mxef: String,
+    var rymn: String,
+    var rymx: String,
+    var ta: String,
+    var tc: String,
+    var tcm: String,
+    var tm: String,
+    var tv: String
 )
 
 data class UpdateGovGAST4Event(
-    @Id val govGAST4Id: UUID? = null,
-    val bp: String,
-    val ktm: String,
-    val mnef: String,
-    val mxef: String,
-    val rymn: String,
-    val rymx: String,
-    val ta: String,
-    val tc: String,
-    val tcm: String,
-    val tm: String,
-    val tv: String
+    @Id var govGAST4Id: UUID? = null,
+    var bp: String,
+    var ktm: String,
+    var mnef: String,
+    var mxef: String,
+    var rymn: String,
+    var rymx: String,
+    var ta: String,
+    var tc: String,
+    var tcm: String,
+    var tm: String,
+    var tv: String
 )
 
-data class DeleteGovGAST4Event(@Id val govGAST4Id: UUID? = null)
+data class DeleteGovGAST4Event(@Id var govGAST4Id: UUID? = null)
 
 // single association events
 
@@ -6178,80 +6178,80 @@ data class DeleteGovGAST4Event(@Id val govGAST4Id: UUID? = null)
 // GovGASTWD Events
 
 data class CreateGovGASTWDEvent(
-    @Id val govGASTWDId: UUID? = null,
-    val a: String,
-    val af1: String,
-    val af2: String,
-    val b: String,
-    val bf1: String,
-    val bf2: String,
-    val c: String,
-    val cf2: String,
-    val ecr: String,
-    val etd: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val kd: String,
-    val kdroop: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val t: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tc: String,
-    val tcd: String,
-    val td: String,
-    val tf: String,
-    val tmax: String,
-    val tmin: String,
-    val tr: String,
-    val trate: String,
-    val tt: String
+    @Id var govGASTWDId: UUID? = null,
+    var a: String,
+    var af1: String,
+    var af2: String,
+    var b: String,
+    var bf1: String,
+    var bf2: String,
+    var c: String,
+    var cf2: String,
+    var ecr: String,
+    var etd: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var kd: String,
+    var kdroop: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var t: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tc: String,
+    var tcd: String,
+    var td: String,
+    var tf: String,
+    var tmax: String,
+    var tmin: String,
+    var tr: String,
+    var trate: String,
+    var tt: String
 )
 
 data class UpdateGovGASTWDEvent(
-    @Id val govGASTWDId: UUID? = null,
-    val a: String,
-    val af1: String,
-    val af2: String,
-    val b: String,
-    val bf1: String,
-    val bf2: String,
-    val c: String,
-    val cf2: String,
-    val ecr: String,
-    val etd: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val kd: String,
-    val kdroop: String,
-    val kf: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val t: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val tc: String,
-    val tcd: String,
-    val td: String,
-    val tf: String,
-    val tmax: String,
-    val tmin: String,
-    val tr: String,
-    val trate: String,
-    val tt: String
+    @Id var govGASTWDId: UUID? = null,
+    var a: String,
+    var af1: String,
+    var af2: String,
+    var b: String,
+    var bf1: String,
+    var bf2: String,
+    var c: String,
+    var cf2: String,
+    var ecr: String,
+    var etd: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var kd: String,
+    var kdroop: String,
+    var kf: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var t: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var tc: String,
+    var tcd: String,
+    var td: String,
+    var tf: String,
+    var tmax: String,
+    var tmin: String,
+    var tr: String,
+    var trate: String,
+    var tt: String
 )
 
-data class DeleteGovGASTWDEvent(@Id val govGASTWDId: UUID? = null)
+data class DeleteGovGASTWDEvent(@Id var govGASTWDId: UUID? = null)
 
 // single association events
 
@@ -6261,42 +6261,42 @@ data class DeleteGovGASTWDEvent(@Id val govGASTWDId: UUID? = null)
 // GovHydro1 Events
 
 data class CreateGovHydro1Event(
-    @Id val govHydro1Id: UUID? = null,
-    val at: String,
-    val dturb: String,
-    val gmax: String,
-    val gmin: String,
-    val hdam: String,
-    val mwbase: String,
-    val qnl: String,
-    val rperm: String,
-    val rtemp: String,
-    val tf: String,
-    val tg: String,
-    val tr: String,
-    val tw: String,
-    val velm: String
+    @Id var govHydro1Id: UUID? = null,
+    var at: String,
+    var dturb: String,
+    var gmax: String,
+    var gmin: String,
+    var hdam: String,
+    var mwbase: String,
+    var qnl: String,
+    var rperm: String,
+    var rtemp: String,
+    var tf: String,
+    var tg: String,
+    var tr: String,
+    var tw: String,
+    var velm: String
 )
 
 data class UpdateGovHydro1Event(
-    @Id val govHydro1Id: UUID? = null,
-    val at: String,
-    val dturb: String,
-    val gmax: String,
-    val gmin: String,
-    val hdam: String,
-    val mwbase: String,
-    val qnl: String,
-    val rperm: String,
-    val rtemp: String,
-    val tf: String,
-    val tg: String,
-    val tr: String,
-    val tw: String,
-    val velm: String
+    @Id var govHydro1Id: UUID? = null,
+    var at: String,
+    var dturb: String,
+    var gmax: String,
+    var gmin: String,
+    var hdam: String,
+    var mwbase: String,
+    var qnl: String,
+    var rperm: String,
+    var rtemp: String,
+    var tf: String,
+    var tg: String,
+    var tr: String,
+    var tw: String,
+    var velm: String
 )
 
-data class DeleteGovHydro1Event(@Id val govHydro1Id: UUID? = null)
+data class DeleteGovHydro1Event(@Id var govHydro1Id: UUID? = null)
 
 // single association events
 
@@ -6306,72 +6306,72 @@ data class DeleteGovHydro1Event(@Id val govHydro1Id: UUID? = null)
 // GovHydro2 Events
 
 data class CreateGovHydro2Event(
-    @Id val govHydro2Id: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val kturb: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val rperm: String,
-    val rtemp: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydro2Id: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var kturb: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var rperm: String,
+    var rtemp: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
 data class UpdateGovHydro2Event(
-    @Id val govHydro2Id: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val kturb: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val rperm: String,
-    val rtemp: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydro2Id: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var kturb: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var rperm: String,
+    var rtemp: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
-data class DeleteGovHydro2Event(@Id val govHydro2Id: UUID? = null)
+data class DeleteGovHydro2Event(@Id var govHydro2Id: UUID? = null)
 
 // single association events
 
@@ -6381,86 +6381,86 @@ data class DeleteGovHydro2Event(@Id val govHydro2Id: UUID? = null)
 // GovHydro3 Events
 
 data class CreateGovHydro3Event(
-    @Id val govHydro3Id: UUID? = null,
-    val at: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val governorControl: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val h0: String,
-    val k1: String,
-    val k2: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val qnl: String,
-    val relec: String,
-    val rgate: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tw: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydro3Id: UUID? = null,
+    var at: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var governorControl: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var h0: String,
+    var k1: String,
+    var k2: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var qnl: String,
+    var relec: String,
+    var rgate: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tw: String,
+    var velcl: String,
+    var velop: String
 )
 
 data class UpdateGovHydro3Event(
-    @Id val govHydro3Id: UUID? = null,
-    val at: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val governorControl: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val h0: String,
-    val k1: String,
-    val k2: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val qnl: String,
-    val relec: String,
-    val rgate: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tw: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydro3Id: UUID? = null,
+    var at: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var governorControl: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var h0: String,
+    var k1: String,
+    var k2: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var qnl: String,
+    var relec: String,
+    var rgate: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tw: String,
+    var velcl: String,
+    var velop: String
 )
 
-data class DeleteGovHydro3Event(@Id val govHydro3Id: UUID? = null)
+data class DeleteGovHydro3Event(@Id var govHydro3Id: UUID? = null)
 
 // single association events
 
@@ -6470,90 +6470,90 @@ data class DeleteGovHydro3Event(@Id val govHydro3Id: UUID? = null)
 // GovHydro4 Events
 
 data class CreateGovHydro4Event(
-    @Id val govHydro4Id: UUID? = null,
-    val at: String,
-    val bgv0: String,
-    val bgv1: String,
-    val bgv2: String,
-    val bgv3: String,
-    val bgv4: String,
-    val bgv5: String,
-    val bmax: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv0: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val hdam: String,
-    val mwbase: String,
-    val pgv0: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val qn1: String,
-    val rperm: String,
-    val rtemp: String,
-    val tblade: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydro4Id: UUID? = null,
+    var at: String,
+    var bgv0: String,
+    var bgv1: String,
+    var bgv2: String,
+    var bgv3: String,
+    var bgv4: String,
+    var bgv5: String,
+    var bmax: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv0: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var hdam: String,
+    var mwbase: String,
+    var pgv0: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var qn1: String,
+    var rperm: String,
+    var rtemp: String,
+    var tblade: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
 data class UpdateGovHydro4Event(
-    @Id val govHydro4Id: UUID? = null,
-    val at: String,
-    val bgv0: String,
-    val bgv1: String,
-    val bgv2: String,
-    val bgv3: String,
-    val bgv4: String,
-    val bgv5: String,
-    val bmax: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv0: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val hdam: String,
-    val mwbase: String,
-    val pgv0: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val qn1: String,
-    val rperm: String,
-    val rtemp: String,
-    val tblade: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydro4Id: UUID? = null,
+    var at: String,
+    var bgv0: String,
+    var bgv1: String,
+    var bgv2: String,
+    var bgv3: String,
+    var bgv4: String,
+    var bgv5: String,
+    var bmax: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv0: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var hdam: String,
+    var mwbase: String,
+    var pgv0: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var qn1: String,
+    var rperm: String,
+    var rtemp: String,
+    var tblade: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
-data class DeleteGovHydro4Event(@Id val govHydro4Id: UUID? = null)
+data class DeleteGovHydro4Event(@Id var govHydro4Id: UUID? = null)
 
 // single association events
 
@@ -6563,84 +6563,84 @@ data class DeleteGovHydro4Event(@Id val govHydro4Id: UUID? = null)
 // GovHydroDD Events
 
 data class CreateGovHydroDDEvent(
-    @Id val govHydroDDId: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val inputSignal: String,
-    val k1: String,
-    val k2: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val r: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tturb: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroDDId: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var inputSignal: String,
+    var k1: String,
+    var k2: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var r: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tturb: String,
+    var velcl: String,
+    var velop: String
 )
 
 data class UpdateGovHydroDDEvent(
-    @Id val govHydroDDId: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val inputSignal: String,
-    val k1: String,
-    val k2: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val r: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tturb: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroDDId: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var inputSignal: String,
+    var k1: String,
+    var k2: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var r: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tturb: String,
+    var velcl: String,
+    var velop: String
 )
 
-data class DeleteGovHydroDDEvent(@Id val govHydroDDId: UUID? = null)
+data class DeleteGovHydroDDEvent(@Id var govHydroDDId: UUID? = null)
 
 // single association events
 
@@ -6650,68 +6650,68 @@ data class DeleteGovHydroDDEvent(@Id val govHydroDDId: UUID? = null)
 // GovHydroFrancis Events
 
 data class CreateGovHydroFrancisEvent(
-    @Id val govHydroFrancisId: UUID? = null,
-    val am: String,
-    val av0: String,
-    val av1: String,
-    val bp: String,
-    val db1: String,
-    val etamax: String,
-    val governorControl: String,
-    val h1: String,
-    val h2: String,
-    val hn: String,
-    val kc: String,
-    val kg: String,
-    val kt: String,
-    val qc0: String,
-    val qn: String,
-    val ta: String,
-    val td: String,
-    val ts: String,
-    val twnc: String,
-    val twng: String,
-    val tx: String,
-    val va: String,
-    val valvmax: String,
-    val valvmin: String,
-    val vc: String,
-    val waterTunnelSurgeChamberSimulation: String,
-    val zsfc: String
+    @Id var govHydroFrancisId: UUID? = null,
+    var am: String,
+    var av0: String,
+    var av1: String,
+    var bp: String,
+    var db1: String,
+    var etamax: String,
+    var governorControl: String,
+    var h1: String,
+    var h2: String,
+    var hn: String,
+    var kc: String,
+    var kg: String,
+    var kt: String,
+    var qc0: String,
+    var qn: String,
+    var ta: String,
+    var td: String,
+    var ts: String,
+    var twnc: String,
+    var twng: String,
+    var tx: String,
+    var va: String,
+    var valvmax: String,
+    var valvmin: String,
+    var vc: String,
+    var waterTunnelSurgeChamberSimulation: String,
+    var zsfc: String
 )
 
 data class UpdateGovHydroFrancisEvent(
-    @Id val govHydroFrancisId: UUID? = null,
-    val am: String,
-    val av0: String,
-    val av1: String,
-    val bp: String,
-    val db1: String,
-    val etamax: String,
-    val governorControl: String,
-    val h1: String,
-    val h2: String,
-    val hn: String,
-    val kc: String,
-    val kg: String,
-    val kt: String,
-    val qc0: String,
-    val qn: String,
-    val ta: String,
-    val td: String,
-    val ts: String,
-    val twnc: String,
-    val twng: String,
-    val tx: String,
-    val va: String,
-    val valvmax: String,
-    val valvmin: String,
-    val vc: String,
-    val waterTunnelSurgeChamberSimulation: String,
-    val zsfc: String
+    @Id var govHydroFrancisId: UUID? = null,
+    var am: String,
+    var av0: String,
+    var av1: String,
+    var bp: String,
+    var db1: String,
+    var etamax: String,
+    var governorControl: String,
+    var h1: String,
+    var h2: String,
+    var hn: String,
+    var kc: String,
+    var kg: String,
+    var kt: String,
+    var qc0: String,
+    var qn: String,
+    var ta: String,
+    var td: String,
+    var ts: String,
+    var twnc: String,
+    var twng: String,
+    var tx: String,
+    var va: String,
+    var valvmax: String,
+    var valvmin: String,
+    var vc: String,
+    var waterTunnelSurgeChamberSimulation: String,
+    var zsfc: String
 )
 
-data class DeleteGovHydroFrancisEvent(@Id val govHydroFrancisId: UUID? = null)
+data class DeleteGovHydroFrancisEvent(@Id var govHydroFrancisId: UUID? = null)
 
 // single association events
 
@@ -6721,30 +6721,30 @@ data class DeleteGovHydroFrancisEvent(@Id val govHydroFrancisId: UUID? = null)
 // GovHydroIEEE0 Events
 
 data class CreateGovHydroIEEE0Event(
-    @Id val govHydroIEEE0Id: UUID? = null,
-    val k: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String
+    @Id var govHydroIEEE0Id: UUID? = null,
+    var k: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String
 )
 
 data class UpdateGovHydroIEEE0Event(
-    @Id val govHydroIEEE0Id: UUID? = null,
-    val k: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String
+    @Id var govHydroIEEE0Id: UUID? = null,
+    var k: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String
 )
 
-data class DeleteGovHydroIEEE0Event(@Id val govHydroIEEE0Id: UUID? = null)
+data class DeleteGovHydroIEEE0Event(@Id var govHydroIEEE0Id: UUID? = null)
 
 // single association events
 
@@ -6754,66 +6754,66 @@ data class DeleteGovHydroIEEE0Event(@Id val govHydroIEEE0Id: UUID? = null)
 // GovHydroIEEE2 Events
 
 data class CreateGovHydroIEEE2Event(
-    @Id val govHydroIEEE2Id: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val kturb: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val rperm: String,
-    val rtemp: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydroIEEE2Id: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var kturb: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var rperm: String,
+    var rtemp: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
 data class UpdateGovHydroIEEE2Event(
-    @Id val govHydroIEEE2Id: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val kturb: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val rperm: String,
-    val rtemp: String,
-    val tg: String,
-    val tp: String,
-    val tr: String,
-    val tw: String,
-    val uc: String,
-    val uo: String
+    @Id var govHydroIEEE2Id: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var kturb: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var rperm: String,
+    var rtemp: String,
+    var tg: String,
+    var tp: String,
+    var tr: String,
+    var tw: String,
+    var uc: String,
+    var uo: String
 )
 
-data class DeleteGovHydroIEEE2Event(@Id val govHydroIEEE2Id: UUID? = null)
+data class DeleteGovHydroIEEE2Event(@Id var govHydroIEEE2Id: UUID? = null)
 
 // single association events
 
@@ -6823,80 +6823,80 @@ data class DeleteGovHydroIEEE2Event(@Id val govHydroIEEE2Id: UUID? = null)
 // GovHydroPID Events
 
 data class CreateGovHydroPIDEvent(
-    @Id val govHydroPIDId: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val inputSignal: String,
-    val kd: String,
-    val kg: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val r: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tturb: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroPIDId: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var inputSignal: String,
+    var kd: String,
+    var kg: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var r: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tturb: String,
+    var velcl: String,
+    var velop: String
 )
 
 data class UpdateGovHydroPIDEvent(
-    @Id val govHydroPIDId: UUID? = null,
-    val aturb: String,
-    val bturb: String,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val inputSignal: String,
-    val kd: String,
-    val kg: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val r: String,
-    val td: String,
-    val tf: String,
-    val tp: String,
-    val tt: String,
-    val tturb: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroPIDId: UUID? = null,
+    var aturb: String,
+    var bturb: String,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var inputSignal: String,
+    var kd: String,
+    var kg: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var r: String,
+    var td: String,
+    var tf: String,
+    var tp: String,
+    var tt: String,
+    var tturb: String,
+    var velcl: String,
+    var velop: String
 )
 
-data class DeleteGovHydroPIDEvent(@Id val govHydroPIDId: UUID? = null)
+data class DeleteGovHydroPIDEvent(@Id var govHydroPIDId: UUID? = null)
 
 // single association events
 
@@ -6906,58 +6906,58 @@ data class DeleteGovHydroPIDEvent(@Id val govHydroPIDId: UUID? = null)
 // GovHydroPID2 Events
 
 data class CreateGovHydroPID2Event(
-    @Id val govHydroPID2Id: UUID? = null,
-    val atw: String,
-    val d: String,
-    val feedbackSignal: String,
-    val g0: String,
-    val g1: String,
-    val g2: String,
-    val gmax: String,
-    val gmin: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val p1: String,
-    val p2: String,
-    val p3: String,
-    val rperm: String,
-    val ta: String,
-    val tb: String,
-    val treg: String,
-    val tw: String,
-    val velmax: String,
-    val velmin: String
+    @Id var govHydroPID2Id: UUID? = null,
+    var atw: String,
+    var d: String,
+    var feedbackSignal: String,
+    var g0: String,
+    var g1: String,
+    var g2: String,
+    var gmax: String,
+    var gmin: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var p1: String,
+    var p2: String,
+    var p3: String,
+    var rperm: String,
+    var ta: String,
+    var tb: String,
+    var treg: String,
+    var tw: String,
+    var velmax: String,
+    var velmin: String
 )
 
 data class UpdateGovHydroPID2Event(
-    @Id val govHydroPID2Id: UUID? = null,
-    val atw: String,
-    val d: String,
-    val feedbackSignal: String,
-    val g0: String,
-    val g1: String,
-    val g2: String,
-    val gmax: String,
-    val gmin: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val p1: String,
-    val p2: String,
-    val p3: String,
-    val rperm: String,
-    val ta: String,
-    val tb: String,
-    val treg: String,
-    val tw: String,
-    val velmax: String,
-    val velmin: String
+    @Id var govHydroPID2Id: UUID? = null,
+    var atw: String,
+    var d: String,
+    var feedbackSignal: String,
+    var g0: String,
+    var g1: String,
+    var g2: String,
+    var gmax: String,
+    var gmin: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var p1: String,
+    var p2: String,
+    var p3: String,
+    var rperm: String,
+    var ta: String,
+    var tb: String,
+    var treg: String,
+    var tw: String,
+    var velmax: String,
+    var velmin: String
 )
 
-data class DeleteGovHydroPID2Event(@Id val govHydroPID2Id: UUID? = null)
+data class DeleteGovHydroPID2Event(@Id var govHydroPID2Id: UUID? = null)
 
 // single association events
 
@@ -6967,70 +6967,70 @@ data class DeleteGovHydroPID2Event(@Id val govHydroPID2Id: UUID? = null)
 // GovHydroPelton Events
 
 data class CreateGovHydroPeltonEvent(
-    @Id val govHydroPeltonId: UUID? = null,
-    val av0: String,
-    val av1: String,
-    val bp: String,
-    val db1: String,
-    val db2: String,
-    val h1: String,
-    val h2: String,
-    val hn: String,
-    val kc: String,
-    val kg: String,
-    val qc0: String,
-    val qn: String,
-    val simplifiedPelton: String,
-    val staticCompensating: String,
-    val ta: String,
-    val ts: String,
-    val tv: String,
-    val twnc: String,
-    val twng: String,
-    val tx: String,
-    val va: String,
-    val valvmax: String,
-    val valvmin: String,
-    val vav: String,
-    val vc: String,
-    val vcv: String,
-    val waterTunnelSurgeChamberSimulation: String,
-    val zsfc: String
+    @Id var govHydroPeltonId: UUID? = null,
+    var av0: String,
+    var av1: String,
+    var bp: String,
+    var db1: String,
+    var db2: String,
+    var h1: String,
+    var h2: String,
+    var hn: String,
+    var kc: String,
+    var kg: String,
+    var qc0: String,
+    var qn: String,
+    var simplifiedPelton: String,
+    var staticCompensating: String,
+    var ta: String,
+    var ts: String,
+    var tv: String,
+    var twnc: String,
+    var twng: String,
+    var tx: String,
+    var va: String,
+    var valvmax: String,
+    var valvmin: String,
+    var vav: String,
+    var vc: String,
+    var vcv: String,
+    var waterTunnelSurgeChamberSimulation: String,
+    var zsfc: String
 )
 
 data class UpdateGovHydroPeltonEvent(
-    @Id val govHydroPeltonId: UUID? = null,
-    val av0: String,
-    val av1: String,
-    val bp: String,
-    val db1: String,
-    val db2: String,
-    val h1: String,
-    val h2: String,
-    val hn: String,
-    val kc: String,
-    val kg: String,
-    val qc0: String,
-    val qn: String,
-    val simplifiedPelton: String,
-    val staticCompensating: String,
-    val ta: String,
-    val ts: String,
-    val tv: String,
-    val twnc: String,
-    val twng: String,
-    val tx: String,
-    val va: String,
-    val valvmax: String,
-    val valvmin: String,
-    val vav: String,
-    val vc: String,
-    val vcv: String,
-    val waterTunnelSurgeChamberSimulation: String,
-    val zsfc: String
+    @Id var govHydroPeltonId: UUID? = null,
+    var av0: String,
+    var av1: String,
+    var bp: String,
+    var db1: String,
+    var db2: String,
+    var h1: String,
+    var h2: String,
+    var hn: String,
+    var kc: String,
+    var kg: String,
+    var qc0: String,
+    var qn: String,
+    var simplifiedPelton: String,
+    var staticCompensating: String,
+    var ta: String,
+    var ts: String,
+    var tv: String,
+    var twnc: String,
+    var twng: String,
+    var tx: String,
+    var va: String,
+    var valvmax: String,
+    var valvmin: String,
+    var vav: String,
+    var vc: String,
+    var vcv: String,
+    var waterTunnelSurgeChamberSimulation: String,
+    var zsfc: String
 )
 
-data class DeleteGovHydroPeltonEvent(@Id val govHydroPeltonId: UUID? = null)
+data class DeleteGovHydroPeltonEvent(@Id var govHydroPeltonId: UUID? = null)
 
 // single association events
 
@@ -7040,98 +7040,98 @@ data class DeleteGovHydroPeltonEvent(@Id val govHydroPeltonId: UUID? = null)
 // GovHydroR Events
 
 data class CreateGovHydroREvent(
-    @Id val govHydroRId: UUID? = null,
-    val at: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val h0: String,
-    val inputSignal: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val qnl: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val td: String,
-    val tp: String,
-    val tt: String,
-    val tw: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroRId: UUID? = null,
+    var at: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var h0: String,
+    var inputSignal: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var qnl: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var td: String,
+    var tp: String,
+    var tt: String,
+    var tw: String,
+    var velcl: String,
+    var velop: String
 )
 
 data class UpdateGovHydroREvent(
-    @Id val govHydroRId: UUID? = null,
-    val at: String,
-    val db1: String,
-    val db2: String,
-    val dturb: String,
-    val eps: String,
-    val gmax: String,
-    val gmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val h0: String,
-    val inputSignal: String,
-    val kg: String,
-    val ki: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val qnl: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val td: String,
-    val tp: String,
-    val tt: String,
-    val tw: String,
-    val velcl: String,
-    val velop: String
+    @Id var govHydroRId: UUID? = null,
+    var at: String,
+    var db1: String,
+    var db2: String,
+    var dturb: String,
+    var eps: String,
+    var gmax: String,
+    var gmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var h0: String,
+    var inputSignal: String,
+    var kg: String,
+    var ki: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var qnl: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var td: String,
+    var tp: String,
+    var tt: String,
+    var tw: String,
+    var velcl: String,
+    var velop: String
 )
 
-data class DeleteGovHydroREvent(@Id val govHydroRId: UUID? = null)
+data class DeleteGovHydroREvent(@Id var govHydroRId: UUID? = null)
 
 // single association events
 
@@ -7141,116 +7141,116 @@ data class DeleteGovHydroREvent(@Id val govHydroRId: UUID? = null)
 // GovHydroWEH Events
 
 data class CreateGovHydroWEHEvent(
-    @Id val govHydroWEHId: UUID? = null,
-    val db: String,
-    val dicn: String,
-    val dpv: String,
-    val dturb: String,
-    val feedbackSignal: String,
-    val fl1: String,
-    val fl2: String,
-    val fl3: String,
-    val fl4: String,
-    val fl5: String,
-    val fp1: String,
-    val fp10: String,
-    val fp2: String,
-    val fp3: String,
-    val fp4: String,
-    val fp5: String,
-    val fp6: String,
-    val fp7: String,
-    val fp8: String,
-    val fp9: String,
-    val gmax: String,
-    val gmin: String,
-    val gtmxcl: String,
-    val gtmxop: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pmss1: String,
-    val pmss10: String,
-    val pmss2: String,
-    val pmss3: String,
-    val pmss4: String,
-    val pmss5: String,
-    val pmss6: String,
-    val pmss7: String,
-    val pmss8: String,
-    val pmss9: String,
-    val rpg: String,
-    val rpp: String,
-    val td: String,
-    val tdv: String,
-    val tg: String,
-    val tp: String,
-    val tpe: String,
-    val tw: String
+    @Id var govHydroWEHId: UUID? = null,
+    var db: String,
+    var dicn: String,
+    var dpv: String,
+    var dturb: String,
+    var feedbackSignal: String,
+    var fl1: String,
+    var fl2: String,
+    var fl3: String,
+    var fl4: String,
+    var fl5: String,
+    var fp1: String,
+    var fp10: String,
+    var fp2: String,
+    var fp3: String,
+    var fp4: String,
+    var fp5: String,
+    var fp6: String,
+    var fp7: String,
+    var fp8: String,
+    var fp9: String,
+    var gmax: String,
+    var gmin: String,
+    var gtmxcl: String,
+    var gtmxop: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pmss1: String,
+    var pmss10: String,
+    var pmss2: String,
+    var pmss3: String,
+    var pmss4: String,
+    var pmss5: String,
+    var pmss6: String,
+    var pmss7: String,
+    var pmss8: String,
+    var pmss9: String,
+    var rpg: String,
+    var rpp: String,
+    var td: String,
+    var tdv: String,
+    var tg: String,
+    var tp: String,
+    var tpe: String,
+    var tw: String
 )
 
 data class UpdateGovHydroWEHEvent(
-    @Id val govHydroWEHId: UUID? = null,
-    val db: String,
-    val dicn: String,
-    val dpv: String,
-    val dturb: String,
-    val feedbackSignal: String,
-    val fl1: String,
-    val fl2: String,
-    val fl3: String,
-    val fl4: String,
-    val fl5: String,
-    val fp1: String,
-    val fp10: String,
-    val fp2: String,
-    val fp3: String,
-    val fp4: String,
-    val fp5: String,
-    val fp6: String,
-    val fp7: String,
-    val fp8: String,
-    val fp9: String,
-    val gmax: String,
-    val gmin: String,
-    val gtmxcl: String,
-    val gtmxop: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pmss1: String,
-    val pmss10: String,
-    val pmss2: String,
-    val pmss3: String,
-    val pmss4: String,
-    val pmss5: String,
-    val pmss6: String,
-    val pmss7: String,
-    val pmss8: String,
-    val pmss9: String,
-    val rpg: String,
-    val rpp: String,
-    val td: String,
-    val tdv: String,
-    val tg: String,
-    val tp: String,
-    val tpe: String,
-    val tw: String
+    @Id var govHydroWEHId: UUID? = null,
+    var db: String,
+    var dicn: String,
+    var dpv: String,
+    var dturb: String,
+    var feedbackSignal: String,
+    var fl1: String,
+    var fl2: String,
+    var fl3: String,
+    var fl4: String,
+    var fl5: String,
+    var fp1: String,
+    var fp10: String,
+    var fp2: String,
+    var fp3: String,
+    var fp4: String,
+    var fp5: String,
+    var fp6: String,
+    var fp7: String,
+    var fp8: String,
+    var fp9: String,
+    var gmax: String,
+    var gmin: String,
+    var gtmxcl: String,
+    var gtmxop: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pmss1: String,
+    var pmss10: String,
+    var pmss2: String,
+    var pmss3: String,
+    var pmss4: String,
+    var pmss5: String,
+    var pmss6: String,
+    var pmss7: String,
+    var pmss8: String,
+    var pmss9: String,
+    var rpg: String,
+    var rpp: String,
+    var td: String,
+    var tdv: String,
+    var tg: String,
+    var tp: String,
+    var tpe: String,
+    var tw: String
 )
 
-data class DeleteGovHydroWEHEvent(@Id val govHydroWEHId: UUID? = null)
+data class DeleteGovHydroWEHEvent(@Id var govHydroWEHId: UUID? = null)
 
 // single association events
 
@@ -7260,58 +7260,58 @@ data class DeleteGovHydroWEHEvent(@Id val govHydroWEHId: UUID? = null)
 // GovHydroWPID Events
 
 data class CreateGovHydroWPIDEvent(
-    @Id val govHydroWPIDId: UUID? = null,
-    val d: String,
-    val gatmax: String,
-    val gatmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pmax: String,
-    val pmin: String,
-    val reg: String,
-    val ta: String,
-    val tb: String,
-    val treg: String,
-    val tw: String,
-    val velmax: String,
-    val velmin: String
+    @Id var govHydroWPIDId: UUID? = null,
+    var d: String,
+    var gatmax: String,
+    var gatmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pmax: String,
+    var pmin: String,
+    var reg: String,
+    var ta: String,
+    var tb: String,
+    var treg: String,
+    var tw: String,
+    var velmax: String,
+    var velmin: String
 )
 
 data class UpdateGovHydroWPIDEvent(
-    @Id val govHydroWPIDId: UUID? = null,
-    val d: String,
-    val gatmax: String,
-    val gatmin: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val kd: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pmax: String,
-    val pmin: String,
-    val reg: String,
-    val ta: String,
-    val tb: String,
-    val treg: String,
-    val tw: String,
-    val velmax: String,
-    val velmin: String
+    @Id var govHydroWPIDId: UUID? = null,
+    var d: String,
+    var gatmax: String,
+    var gatmin: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var kd: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pmax: String,
+    var pmin: String,
+    var reg: String,
+    var ta: String,
+    var tb: String,
+    var treg: String,
+    var tw: String,
+    var velmax: String,
+    var velmin: String
 )
 
-data class DeleteGovHydroWPIDEvent(@Id val govHydroWPIDId: UUID? = null)
+data class DeleteGovHydroWPIDEvent(@Id var govHydroWPIDId: UUID? = null)
 
 // single association events
 
@@ -7321,30 +7321,30 @@ data class DeleteGovHydroWPIDEvent(@Id val govHydroWPIDId: UUID? = null)
 // GovSteam0 Events
 
 data class CreateGovSteam0Event(
-    @Id val govSteam0Id: UUID? = null,
-    val dt: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govSteam0Id: UUID? = null,
+    var dt: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vmax: String,
+    var vmin: String
 )
 
 data class UpdateGovSteam0Event(
-    @Id val govSteam0Id: UUID? = null,
-    val dt: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govSteam0Id: UUID? = null,
+    var dt: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vmax: String,
+    var vmin: String
 )
 
-data class DeleteGovSteam0Event(@Id val govSteam0Id: UUID? = null)
+data class DeleteGovSteam0Event(@Id var govSteam0Id: UUID? = null)
 
 // single association events
 
@@ -7354,92 +7354,92 @@ data class DeleteGovSteam0Event(@Id val govSteam0Id: UUID? = null)
 // GovSteam1 Events
 
 data class CreateGovSteam1Event(
-    @Id val govSteam1Id: UUID? = null,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val k7: String,
-    val k8: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val sdb1: String,
-    val sdb2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val uc: String,
-    val uo: String,
-    val valve: String
+    @Id var govSteam1Id: UUID? = null,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var k7: String,
+    var k8: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var sdb1: String,
+    var sdb2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var uc: String,
+    var uo: String,
+    var valve: String
 )
 
 data class UpdateGovSteam1Event(
-    @Id val govSteam1Id: UUID? = null,
-    val db1: String,
-    val db2: String,
-    val eps: String,
-    val gv1: String,
-    val gv2: String,
-    val gv3: String,
-    val gv4: String,
-    val gv5: String,
-    val gv6: String,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val k7: String,
-    val k8: String,
-    val mwbase: String,
-    val pgv1: String,
-    val pgv2: String,
-    val pgv3: String,
-    val pgv4: String,
-    val pgv5: String,
-    val pgv6: String,
-    val pmax: String,
-    val pmin: String,
-    val sdb1: String,
-    val sdb2: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val uc: String,
-    val uo: String,
-    val valve: String
+    @Id var govSteam1Id: UUID? = null,
+    var db1: String,
+    var db2: String,
+    var eps: String,
+    var gv1: String,
+    var gv2: String,
+    var gv3: String,
+    var gv4: String,
+    var gv5: String,
+    var gv6: String,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var k7: String,
+    var k8: String,
+    var mwbase: String,
+    var pgv1: String,
+    var pgv2: String,
+    var pgv3: String,
+    var pgv4: String,
+    var pgv5: String,
+    var pgv6: String,
+    var pmax: String,
+    var pmin: String,
+    var sdb1: String,
+    var sdb2: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var uc: String,
+    var uo: String,
+    var valve: String
 )
 
-data class DeleteGovSteam1Event(@Id val govSteam1Id: UUID? = null)
+data class DeleteGovSteam1Event(@Id var govSteam1Id: UUID? = null)
 
 // single association events
 
@@ -7449,30 +7449,30 @@ data class DeleteGovSteam1Event(@Id val govSteam1Id: UUID? = null)
 // GovSteam2 Events
 
 data class CreateGovSteam2Event(
-    @Id val govSteam2Id: UUID? = null,
-    val dbf: String,
-    val k: String,
-    val mnef: String,
-    val mxef: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String
+    @Id var govSteam2Id: UUID? = null,
+    var dbf: String,
+    var k: String,
+    var mnef: String,
+    var mxef: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String
 )
 
 data class UpdateGovSteam2Event(
-    @Id val govSteam2Id: UUID? = null,
-    val dbf: String,
-    val k: String,
-    val mnef: String,
-    val mxef: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String
+    @Id var govSteam2Id: UUID? = null,
+    var dbf: String,
+    var k: String,
+    var mnef: String,
+    var mxef: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String
 )
 
-data class DeleteGovSteam2Event(@Id val govSteam2Id: UUID? = null)
+data class DeleteGovSteam2Event(@Id var govSteam2Id: UUID? = null)
 
 // single association events
 
@@ -7482,48 +7482,48 @@ data class DeleteGovSteam2Event(@Id val govSteam2Id: UUID? = null)
 // GovSteamCC Events
 
 data class CreateGovSteamCCEvent(
-    @Id val govSteamCCId: UUID? = null,
-    val dhp: String,
-    val dlp: String,
-    val fhp: String,
-    val flp: String,
-    val mwbase: String,
-    val pmaxhp: String,
-    val pmaxlp: String,
-    val rhp: String,
-    val rlp: String,
-    val t1hp: String,
-    val t1lp: String,
-    val t3hp: String,
-    val t3lp: String,
-    val t4hp: String,
-    val t4lp: String,
-    val t5hp: String,
-    val t5lp: String
+    @Id var govSteamCCId: UUID? = null,
+    var dhp: String,
+    var dlp: String,
+    var fhp: String,
+    var flp: String,
+    var mwbase: String,
+    var pmaxhp: String,
+    var pmaxlp: String,
+    var rhp: String,
+    var rlp: String,
+    var t1hp: String,
+    var t1lp: String,
+    var t3hp: String,
+    var t3lp: String,
+    var t4hp: String,
+    var t4lp: String,
+    var t5hp: String,
+    var t5lp: String
 )
 
 data class UpdateGovSteamCCEvent(
-    @Id val govSteamCCId: UUID? = null,
-    val dhp: String,
-    val dlp: String,
-    val fhp: String,
-    val flp: String,
-    val mwbase: String,
-    val pmaxhp: String,
-    val pmaxlp: String,
-    val rhp: String,
-    val rlp: String,
-    val t1hp: String,
-    val t1lp: String,
-    val t3hp: String,
-    val t3lp: String,
-    val t4hp: String,
-    val t4lp: String,
-    val t5hp: String,
-    val t5lp: String
+    @Id var govSteamCCId: UUID? = null,
+    var dhp: String,
+    var dlp: String,
+    var fhp: String,
+    var flp: String,
+    var mwbase: String,
+    var pmaxhp: String,
+    var pmaxlp: String,
+    var rhp: String,
+    var rlp: String,
+    var t1hp: String,
+    var t1lp: String,
+    var t3hp: String,
+    var t3lp: String,
+    var t4hp: String,
+    var t4lp: String,
+    var t5hp: String,
+    var t5lp: String
 )
 
-data class DeleteGovSteamCCEvent(@Id val govSteamCCId: UUID? = null)
+data class DeleteGovSteamCCEvent(@Id var govSteamCCId: UUID? = null)
 
 // single association events
 
@@ -7533,84 +7533,84 @@ data class DeleteGovSteamCCEvent(@Id val govSteamCCId: UUID? = null)
 // GovSteamEU Events
 
 data class CreateGovSteamEUEvent(
-    @Id val govSteamEUId: UUID? = null,
-    val chc: String,
-    val cho: String,
-    val cic: String,
-    val cio: String,
-    val db1: String,
-    val db2: String,
-    val hhpmax: String,
-    val ke: String,
-    val kfcor: String,
-    val khp: String,
-    val klp: String,
-    val kwcor: String,
-    val mwbase: String,
-    val pmax: String,
-    val prhmax: String,
-    val simx: String,
-    val tb: String,
-    val tdp: String,
-    val ten: String,
-    val tf: String,
-    val tfp: String,
-    val thp: String,
-    val tip: String,
-    val tlp: String,
-    val tp: String,
-    val trh: String,
-    val tvhp: String,
-    val tvip: String,
-    val tw: String,
-    val wfmax: String,
-    val wfmin: String,
-    val wmax1: String,
-    val wmax2: String,
-    val wwmax: String,
-    val wwmin: String
+    @Id var govSteamEUId: UUID? = null,
+    var chc: String,
+    var cho: String,
+    var cic: String,
+    var cio: String,
+    var db1: String,
+    var db2: String,
+    var hhpmax: String,
+    var ke: String,
+    var kfcor: String,
+    var khp: String,
+    var klp: String,
+    var kwcor: String,
+    var mwbase: String,
+    var pmax: String,
+    var prhmax: String,
+    var simx: String,
+    var tb: String,
+    var tdp: String,
+    var ten: String,
+    var tf: String,
+    var tfp: String,
+    var thp: String,
+    var tip: String,
+    var tlp: String,
+    var tp: String,
+    var trh: String,
+    var tvhp: String,
+    var tvip: String,
+    var tw: String,
+    var wfmax: String,
+    var wfmin: String,
+    var wmax1: String,
+    var wmax2: String,
+    var wwmax: String,
+    var wwmin: String
 )
 
 data class UpdateGovSteamEUEvent(
-    @Id val govSteamEUId: UUID? = null,
-    val chc: String,
-    val cho: String,
-    val cic: String,
-    val cio: String,
-    val db1: String,
-    val db2: String,
-    val hhpmax: String,
-    val ke: String,
-    val kfcor: String,
-    val khp: String,
-    val klp: String,
-    val kwcor: String,
-    val mwbase: String,
-    val pmax: String,
-    val prhmax: String,
-    val simx: String,
-    val tb: String,
-    val tdp: String,
-    val ten: String,
-    val tf: String,
-    val tfp: String,
-    val thp: String,
-    val tip: String,
-    val tlp: String,
-    val tp: String,
-    val trh: String,
-    val tvhp: String,
-    val tvip: String,
-    val tw: String,
-    val wfmax: String,
-    val wfmin: String,
-    val wmax1: String,
-    val wmax2: String,
-    val wwmax: String,
-    val wwmin: String
+    @Id var govSteamEUId: UUID? = null,
+    var chc: String,
+    var cho: String,
+    var cic: String,
+    var cio: String,
+    var db1: String,
+    var db2: String,
+    var hhpmax: String,
+    var ke: String,
+    var kfcor: String,
+    var khp: String,
+    var klp: String,
+    var kwcor: String,
+    var mwbase: String,
+    var pmax: String,
+    var prhmax: String,
+    var simx: String,
+    var tb: String,
+    var tdp: String,
+    var ten: String,
+    var tf: String,
+    var tfp: String,
+    var thp: String,
+    var tip: String,
+    var tlp: String,
+    var tp: String,
+    var trh: String,
+    var tvhp: String,
+    var tvip: String,
+    var tw: String,
+    var wfmax: String,
+    var wfmin: String,
+    var wmax1: String,
+    var wmax2: String,
+    var wwmax: String,
+    var wwmin: String
 )
 
-data class DeleteGovSteamEUEvent(@Id val govSteamEUId: UUID? = null)
+data class DeleteGovSteamEUEvent(@Id var govSteamEUId: UUID? = null)
 
 // single association events
 
@@ -7620,40 +7620,40 @@ data class DeleteGovSteamEUEvent(@Id val govSteamEUId: UUID? = null)
 // GovSteamFV2 Events
 
 data class CreateGovSteamFV2Event(
-    @Id val govSteamFV2Id: UUID? = null,
-    val dt: String,
-    val k: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t3: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val ti: String,
-    val tt: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govSteamFV2Id: UUID? = null,
+    var dt: String,
+    var k: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t3: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var ti: String,
+    var tt: String,
+    var vmax: String,
+    var vmin: String
 )
 
 data class UpdateGovSteamFV2Event(
-    @Id val govSteamFV2Id: UUID? = null,
-    val dt: String,
-    val k: String,
-    val mwbase: String,
-    val r: String,
-    val t1: String,
-    val t3: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val ti: String,
-    val tt: String,
-    val vmax: String,
-    val vmin: String
+    @Id var govSteamFV2Id: UUID? = null,
+    var dt: String,
+    var k: String,
+    var mwbase: String,
+    var r: String,
+    var t1: String,
+    var t3: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var ti: String,
+    var tt: String,
+    var vmax: String,
+    var vmin: String
 )
 
-data class DeleteGovSteamFV2Event(@Id val govSteamFV2Id: UUID? = null)
+data class DeleteGovSteamFV2Event(@Id var govSteamFV2Id: UUID? = null)
 
 // single association events
 
@@ -7663,52 +7663,52 @@ data class DeleteGovSteamFV2Event(@Id val govSteamFV2Id: UUID? = null)
 // GovSteamFV3 Events
 
 data class CreateGovSteamFV3Event(
-    @Id val govSteamFV3Id: UUID? = null,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val prmax: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val uc: String,
-    val uo: String
+    @Id var govSteamFV3Id: UUID? = null,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var prmax: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var uc: String,
+    var uo: String
 )
 
 data class UpdateGovSteamFV3Event(
-    @Id val govSteamFV3Id: UUID? = null,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val prmax: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val uc: String,
-    val uo: String
+    @Id var govSteamFV3Id: UUID? = null,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var prmax: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var uc: String,
+    var uo: String
 )
 
-data class DeleteGovSteamFV3Event(@Id val govSteamFV3Id: UUID? = null)
+data class DeleteGovSteamFV3Event(@Id var govSteamFV3Id: UUID? = null)
 
 // single association events
 
@@ -7718,116 +7718,116 @@ data class DeleteGovSteamFV3Event(@Id val govSteamFV3Id: UUID? = null)
 // GovSteamFV4 Events
 
 data class CreateGovSteamFV4Event(
-    @Id val govSteamFV4Id: UUID? = null,
-    val cpsmn: String,
-    val cpsmx: String,
-    val crmn: String,
-    val crmx: String,
-    val kdc: String,
-    val kf1: String,
-    val kf3: String,
-    val khp: String,
-    val kic: String,
-    val kip: String,
-    val kit: String,
-    val kmp1: String,
-    val kmp2: String,
-    val kpc: String,
-    val kpp: String,
-    val kpt: String,
-    val krc: String,
-    val ksh: String,
-    val lpi: String,
-    val lps: String,
-    val mnef: String,
-    val mxef: String,
-    val pr1: String,
-    val pr2: String,
-    val psmn: String,
-    val rsmimn: String,
-    val rsmimx: String,
-    val rvgmn: String,
-    val rvgmx: String,
-    val srmn: String,
-    val srmx: String,
-    val srsmp: String,
-    val svmn: String,
-    val svmx: String,
-    val ta: String,
-    val tam: String,
-    val tc: String,
-    val tcm: String,
-    val tdc: String,
-    val tf1: String,
-    val tf2: String,
-    val thp: String,
-    val tmp: String,
-    val trh: String,
-    val tv: String,
-    val ty: String,
-    val y: String,
-    val yhpmn: String,
-    val yhpmx: String,
-    val ympmn: String,
-    val ympmx: String
+    @Id var govSteamFV4Id: UUID? = null,
+    var cpsmn: String,
+    var cpsmx: String,
+    var crmn: String,
+    var crmx: String,
+    var kdc: String,
+    var kf1: String,
+    var kf3: String,
+    var khp: String,
+    var kic: String,
+    var kip: String,
+    var kit: String,
+    var kmp1: String,
+    var kmp2: String,
+    var kpc: String,
+    var kpp: String,
+    var kpt: String,
+    var krc: String,
+    var ksh: String,
+    var lpi: String,
+    var lps: String,
+    var mnef: String,
+    var mxef: String,
+    var pr1: String,
+    var pr2: String,
+    var psmn: String,
+    var rsmimn: String,
+    var rsmimx: String,
+    var rvgmn: String,
+    var rvgmx: String,
+    var srmn: String,
+    var srmx: String,
+    var srsmp: String,
+    var svmn: String,
+    var svmx: String,
+    var ta: String,
+    var tam: String,
+    var tc: String,
+    var tcm: String,
+    var tdc: String,
+    var tf1: String,
+    var tf2: String,
+    var thp: String,
+    var tmp: String,
+    var trh: String,
+    var tv: String,
+    var ty: String,
+    var y: String,
+    var yhpmn: String,
+    var yhpmx: String,
+    var ympmn: String,
+    var ympmx: String
 )
 
 data class UpdateGovSteamFV4Event(
-    @Id val govSteamFV4Id: UUID? = null,
-    val cpsmn: String,
-    val cpsmx: String,
-    val crmn: String,
-    val crmx: String,
-    val kdc: String,
-    val kf1: String,
-    val kf3: String,
-    val khp: String,
-    val kic: String,
-    val kip: String,
-    val kit: String,
-    val kmp1: String,
-    val kmp2: String,
-    val kpc: String,
-    val kpp: String,
-    val kpt: String,
-    val krc: String,
-    val ksh: String,
-    val lpi: String,
-    val lps: String,
-    val mnef: String,
-    val mxef: String,
-    val pr1: String,
-    val pr2: String,
-    val psmn: String,
-    val rsmimn: String,
-    val rsmimx: String,
-    val rvgmn: String,
-    val rvgmx: String,
-    val srmn: String,
-    val srmx: String,
-    val srsmp: String,
-    val svmn: String,
-    val svmx: String,
-    val ta: String,
-    val tam: String,
-    val tc: String,
-    val tcm: String,
-    val tdc: String,
-    val tf1: String,
-    val tf2: String,
-    val thp: String,
-    val tmp: String,
-    val trh: String,
-    val tv: String,
-    val ty: String,
-    val y: String,
-    val yhpmn: String,
-    val yhpmx: String,
-    val ympmn: String,
-    val ympmx: String
+    @Id var govSteamFV4Id: UUID? = null,
+    var cpsmn: String,
+    var cpsmx: String,
+    var crmn: String,
+    var crmx: String,
+    var kdc: String,
+    var kf1: String,
+    var kf3: String,
+    var khp: String,
+    var kic: String,
+    var kip: String,
+    var kit: String,
+    var kmp1: String,
+    var kmp2: String,
+    var kpc: String,
+    var kpp: String,
+    var kpt: String,
+    var krc: String,
+    var ksh: String,
+    var lpi: String,
+    var lps: String,
+    var mnef: String,
+    var mxef: String,
+    var pr1: String,
+    var pr2: String,
+    var psmn: String,
+    var rsmimn: String,
+    var rsmimx: String,
+    var rvgmn: String,
+    var rvgmx: String,
+    var srmn: String,
+    var srmx: String,
+    var srsmp: String,
+    var svmn: String,
+    var svmx: String,
+    var ta: String,
+    var tam: String,
+    var tc: String,
+    var tcm: String,
+    var tdc: String,
+    var tf1: String,
+    var tf2: String,
+    var thp: String,
+    var tmp: String,
+    var trh: String,
+    var tv: String,
+    var ty: String,
+    var y: String,
+    var yhpmn: String,
+    var yhpmx: String,
+    var ympmn: String,
+    var ympmx: String
 )
 
-data class DeleteGovSteamFV4Event(@Id val govSteamFV4Id: UUID? = null)
+data class DeleteGovSteamFV4Event(@Id var govSteamFV4Id: UUID? = null)
 
 // single association events
 
@@ -7837,56 +7837,56 @@ data class DeleteGovSteamFV4Event(@Id val govSteamFV4Id: UUID? = null)
 // GovSteamIEEE1 Events
 
 data class CreateGovSteamIEEE1Event(
-    @Id val govSteamIEEE1Id: UUID? = null,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val k7: String,
-    val k8: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val uc: String,
-    val uo: String
+    @Id var govSteamIEEE1Id: UUID? = null,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var k7: String,
+    var k8: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var uc: String,
+    var uo: String
 )
 
 data class UpdateGovSteamIEEE1Event(
-    @Id val govSteamIEEE1Id: UUID? = null,
-    val k: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val k5: String,
-    val k6: String,
-    val k7: String,
-    val k8: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val uc: String,
-    val uo: String
+    @Id var govSteamIEEE1Id: UUID? = null,
+    var k: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var k5: String,
+    var k6: String,
+    var k7: String,
+    var k8: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var uc: String,
+    var uo: String
 )
 
-data class DeleteGovSteamIEEE1Event(@Id val govSteamIEEE1Id: UUID? = null)
+data class DeleteGovSteamIEEE1Event(@Id var govSteamIEEE1Id: UUID? = null)
 
 // single association events
 
@@ -7896,38 +7896,38 @@ data class DeleteGovSteamIEEE1Event(@Id val govSteamIEEE1Id: UUID? = null)
 // GovSteamSGO Events
 
 data class CreateGovSteamSGOEvent(
-    @Id val govSteamSGOId: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String
+    @Id var govSteamSGOId: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String
 )
 
 data class UpdateGovSteamSGOEvent(
-    @Id val govSteamSGOId: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val mwbase: String,
-    val pmax: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String
+    @Id var govSteamSGOId: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var mwbase: String,
+    var pmax: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String
 )
 
-data class DeleteGovSteamSGOEvent(@Id val govSteamSGOId: UUID? = null)
+data class DeleteGovSteamSGOEvent(@Id var govSteamSGOId: UUID? = null)
 
 // single association events
 
@@ -7937,14 +7937,14 @@ data class DeleteGovSteamSGOEvent(@Id val govSteamSGOId: UUID? = null)
 // GrossToNetActivePowerCurve Events
 
 data class CreateGrossToNetActivePowerCurveEvent(
-     val grossToNetActivePowerCurveId: UUID? = null
+     var grossToNetActivePowerCurveId: UUID? = null
 )
 
 data class UpdateGrossToNetActivePowerCurveEvent(
-     val grossToNetActivePowerCurveId: UUID? = null
+     var grossToNetActivePowerCurveId: UUID? = null
 )
 
-data class DeleteGrossToNetActivePowerCurveEvent(@Id val grossToNetActivePowerCurveId: UUID? = null)
+data class DeleteGrossToNetActivePowerCurveEvent(@Id var grossToNetActivePowerCurveId: UUID? = null)
 
 // single association events
 
@@ -7954,14 +7954,14 @@ data class DeleteGrossToNetActivePowerCurveEvent(@Id val grossToNetActivePowerCu
 // Ground Events
 
 data class CreateGroundEvent(
-     val groundId: UUID? = null
+     var groundId: UUID? = null
 )
 
 data class UpdateGroundEvent(
-     val groundId: UUID? = null
+     var groundId: UUID? = null
 )
 
-data class DeleteGroundEvent(@Id val groundId: UUID? = null)
+data class DeleteGroundEvent(@Id var groundId: UUID? = null)
 
 // single association events
 
@@ -7971,14 +7971,14 @@ data class DeleteGroundEvent(@Id val groundId: UUID? = null)
 // GroundDisconnector Events
 
 data class CreateGroundDisconnectorEvent(
-     val groundDisconnectorId: UUID? = null
+     var groundDisconnectorId: UUID? = null
 )
 
 data class UpdateGroundDisconnectorEvent(
-     val groundDisconnectorId: UUID? = null
+     var groundDisconnectorId: UUID? = null
 )
 
-data class DeleteGroundDisconnectorEvent(@Id val groundDisconnectorId: UUID? = null)
+data class DeleteGroundDisconnectorEvent(@Id var groundDisconnectorId: UUID? = null)
 
 // single association events
 
@@ -7988,16 +7988,16 @@ data class DeleteGroundDisconnectorEvent(@Id val groundDisconnectorId: UUID? = n
 // GroundingImpedance Events
 
 data class CreateGroundingImpedanceEvent(
-    @Id val groundingImpedanceId: UUID? = null,
-    val x: String
+    @Id var groundingImpedanceId: UUID? = null,
+    var x: String
 )
 
 data class UpdateGroundingImpedanceEvent(
-    @Id val groundingImpedanceId: UUID? = null,
-    val x: String
+    @Id var groundingImpedanceId: UUID? = null,
+    var x: String
 )
 
-data class DeleteGroundingImpedanceEvent(@Id val groundingImpedanceId: UUID? = null)
+data class DeleteGroundingImpedanceEvent(@Id var groundingImpedanceId: UUID? = null)
 
 // single association events
 
@@ -8007,16 +8007,16 @@ data class DeleteGroundingImpedanceEvent(@Id val groundingImpedanceId: UUID? = n
 // HydroGeneratingUnit Events
 
 data class CreateHydroGeneratingUnitEvent(
-    @Id val hydroGeneratingUnitId: UUID? = null,
-    val energyConversionCapability: String
+    @Id var hydroGeneratingUnitId: UUID? = null,
+    var energyConversionCapability: String
 )
 
 data class UpdateHydroGeneratingUnitEvent(
-    @Id val hydroGeneratingUnitId: UUID? = null,
-    val energyConversionCapability: String
+    @Id var hydroGeneratingUnitId: UUID? = null,
+    var energyConversionCapability: String
 )
 
-data class DeleteHydroGeneratingUnitEvent(@Id val hydroGeneratingUnitId: UUID? = null)
+data class DeleteHydroGeneratingUnitEvent(@Id var hydroGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -8026,16 +8026,16 @@ data class DeleteHydroGeneratingUnitEvent(@Id val hydroGeneratingUnitId: UUID? =
 // HydroPowerPlant Events
 
 data class CreateHydroPowerPlantEvent(
-    @Id val hydroPowerPlantId: UUID? = null,
-    val hydroPlantStorageType: String
+    @Id var hydroPowerPlantId: UUID? = null,
+    var hydroPlantStorageType: String
 )
 
 data class UpdateHydroPowerPlantEvent(
-    @Id val hydroPowerPlantId: UUID? = null,
-    val hydroPlantStorageType: String
+    @Id var hydroPowerPlantId: UUID? = null,
+    var hydroPlantStorageType: String
 )
 
-data class DeleteHydroPowerPlantEvent(@Id val hydroPowerPlantId: UUID? = null)
+data class DeleteHydroPowerPlantEvent(@Id var hydroPowerPlantId: UUID? = null)
 
 // single association events
 
@@ -8045,14 +8045,14 @@ data class DeleteHydroPowerPlantEvent(@Id val hydroPowerPlantId: UUID? = null)
 // HydroPump Events
 
 data class CreateHydroPumpEvent(
-     val hydroPumpId: UUID? = null
+     var hydroPumpId: UUID? = null
 )
 
 data class UpdateHydroPumpEvent(
-     val hydroPumpId: UUID? = null
+     var hydroPumpId: UUID? = null
 )
 
-data class DeleteHydroPumpEvent(@Id val hydroPumpId: UUID? = null)
+data class DeleteHydroPumpEvent(@Id var hydroPumpId: UUID? = null)
 
 // single association events
 
@@ -8062,24 +8062,24 @@ data class DeleteHydroPumpEvent(@Id val hydroPumpId: UUID? = null)
 // IdentifiedObject Events
 
 data class CreateIdentifiedObjectEvent(
-    @Id val identifiedObjectId: UUID? = null,
-    val description: String,
-    val energyIdentCodeEic: String,
-    val mRID: String,
-    val name: String,
-    val shortName: String
+    @Id var identifiedObjectId: UUID? = null,
+    var description: String,
+    var energyIdentCodeEic: String,
+    var mRID: String,
+    var name: String,
+    var shortName: String
 )
 
 data class UpdateIdentifiedObjectEvent(
-    @Id val identifiedObjectId: UUID? = null,
-    val description: String,
-    val energyIdentCodeEic: String,
-    val mRID: String,
-    val name: String,
-    val shortName: String
+    @Id var identifiedObjectId: UUID? = null,
+    var description: String,
+    var energyIdentCodeEic: String,
+    var mRID: String,
+    var name: String,
+    var shortName: String
 )
 
-data class DeleteIdentifiedObjectEvent(@Id val identifiedObjectId: UUID? = null)
+data class DeleteIdentifiedObjectEvent(@Id var identifiedObjectId: UUID? = null)
 
 // single association events
 
@@ -8089,20 +8089,20 @@ data class DeleteIdentifiedObjectEvent(@Id val identifiedObjectId: UUID? = null)
 // Inductance Events
 
 data class CreateInductanceEvent(
-    @Id val inductanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var inductanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateInductanceEvent(
-    @Id val inductanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var inductanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteInductanceEvent(@Id val inductanceId: UUID? = null)
+data class DeleteInductanceEvent(@Id var inductanceId: UUID? = null)
 
 // single association events
 
@@ -8112,24 +8112,24 @@ data class DeleteInductanceEvent(@Id val inductanceId: UUID? = null)
 // InductancePerLength Events
 
 data class CreateInductancePerLengthEvent(
-    @Id val inductancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var inductancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateInductancePerLengthEvent(
-    @Id val inductancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var inductancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteInductancePerLengthEvent(@Id val inductancePerLengthId: UUID? = null)
+data class DeleteInductancePerLengthEvent(@Id var inductancePerLengthId: UUID? = null)
 
 // single association events
 
@@ -8139,14 +8139,14 @@ data class DeleteInductancePerLengthEvent(@Id val inductancePerLengthId: UUID? =
 // IntegerProxy Events
 
 data class CreateIntegerProxyEvent(
-     val integerProxyId: UUID? = null
+     var integerProxyId: UUID? = null
 )
 
 data class UpdateIntegerProxyEvent(
-     val integerProxyId: UUID? = null
+     var integerProxyId: UUID? = null
 )
 
-data class DeleteIntegerProxyEvent(@Id val integerProxyId: UUID? = null)
+data class DeleteIntegerProxyEvent(@Id var integerProxyId: UUID? = null)
 
 // single association events
 
@@ -8156,14 +8156,14 @@ data class DeleteIntegerProxyEvent(@Id val integerProxyId: UUID? = null)
 // Junction Events
 
 data class CreateJunctionEvent(
-     val junctionId: UUID? = null
+     var junctionId: UUID? = null
 )
 
 data class UpdateJunctionEvent(
-     val junctionId: UUID? = null
+     var junctionId: UUID? = null
 )
 
-data class DeleteJunctionEvent(@Id val junctionId: UUID? = null)
+data class DeleteJunctionEvent(@Id var junctionId: UUID? = null)
 
 // single association events
 
@@ -8173,20 +8173,20 @@ data class DeleteJunctionEvent(@Id val junctionId: UUID? = null)
 // Length Events
 
 data class CreateLengthEvent(
-    @Id val lengthId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var lengthId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateLengthEvent(
-    @Id val lengthId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var lengthId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteLengthEvent(@Id val lengthId: UUID? = null)
+data class DeleteLengthEvent(@Id var lengthId: UUID? = null)
 
 // single association events
 
@@ -8196,14 +8196,14 @@ data class DeleteLengthEvent(@Id val lengthId: UUID? = null)
 // Limit Events
 
 data class CreateLimitEvent(
-     val limitId: UUID? = null
+     var limitId: UUID? = null
 )
 
 data class UpdateLimitEvent(
-     val limitId: UUID? = null
+     var limitId: UUID? = null
 )
 
-data class DeleteLimitEvent(@Id val limitId: UUID? = null)
+data class DeleteLimitEvent(@Id var limitId: UUID? = null)
 
 // single association events
 
@@ -8213,16 +8213,16 @@ data class DeleteLimitEvent(@Id val limitId: UUID? = null)
 // LimitSet Events
 
 data class CreateLimitSetEvent(
-    @Id val limitSetId: UUID? = null,
-    val isPercentageLimits: String
+    @Id var limitSetId: UUID? = null,
+    var isPercentageLimits: String
 )
 
 data class UpdateLimitSetEvent(
-    @Id val limitSetId: UUID? = null,
-    val isPercentageLimits: String
+    @Id var limitSetId: UUID? = null,
+    var isPercentageLimits: String
 )
 
-data class DeleteLimitSetEvent(@Id val limitSetId: UUID? = null)
+data class DeleteLimitSetEvent(@Id var limitSetId: UUID? = null)
 
 // single association events
 
@@ -8232,14 +8232,14 @@ data class DeleteLimitSetEvent(@Id val limitSetId: UUID? = null)
 // Line Events
 
 data class CreateLineEvent(
-     val lineId: UUID? = null
+     var lineId: UUID? = null
 )
 
 data class UpdateLineEvent(
-     val lineId: UUID? = null
+     var lineId: UUID? = null
 )
 
-data class DeleteLineEvent(@Id val lineId: UUID? = null)
+data class DeleteLineEvent(@Id var lineId: UUID? = null)
 
 // single association events
 
@@ -8249,22 +8249,22 @@ data class DeleteLineEvent(@Id val lineId: UUID? = null)
 // LinearShuntCompensator Events
 
 data class CreateLinearShuntCompensatorEvent(
-    @Id val linearShuntCompensatorId: UUID? = null,
-    val b0PerSection: String,
-    val bPerSection: String,
-    val g0PerSection: String,
-    val gPerSection: String
+    @Id var linearShuntCompensatorId: UUID? = null,
+    var b0PerSection: String,
+    var bPerSection: String,
+    var g0PerSection: String,
+    var gPerSection: String
 )
 
 data class UpdateLinearShuntCompensatorEvent(
-    @Id val linearShuntCompensatorId: UUID? = null,
-    val b0PerSection: String,
-    val bPerSection: String,
-    val g0PerSection: String,
-    val gPerSection: String
+    @Id var linearShuntCompensatorId: UUID? = null,
+    var b0PerSection: String,
+    var bPerSection: String,
+    var g0PerSection: String,
+    var gPerSection: String
 )
 
-data class DeleteLinearShuntCompensatorEvent(@Id val linearShuntCompensatorId: UUID? = null)
+data class DeleteLinearShuntCompensatorEvent(@Id var linearShuntCompensatorId: UUID? = null)
 
 // single association events
 
@@ -8274,14 +8274,14 @@ data class DeleteLinearShuntCompensatorEvent(@Id val linearShuntCompensatorId: U
 // LoadAggregate Events
 
 data class CreateLoadAggregateEvent(
-     val loadAggregateId: UUID? = null
+     var loadAggregateId: UUID? = null
 )
 
 data class UpdateLoadAggregateEvent(
-     val loadAggregateId: UUID? = null
+     var loadAggregateId: UUID? = null
 )
 
-data class DeleteLoadAggregateEvent(@Id val loadAggregateId: UUID? = null)
+data class DeleteLoadAggregateEvent(@Id var loadAggregateId: UUID? = null)
 
 // single association events
 
@@ -8291,14 +8291,14 @@ data class DeleteLoadAggregateEvent(@Id val loadAggregateId: UUID? = null)
 // LoadArea Events
 
 data class CreateLoadAreaEvent(
-     val loadAreaId: UUID? = null
+     var loadAreaId: UUID? = null
 )
 
 data class UpdateLoadAreaEvent(
-     val loadAreaId: UUID? = null
+     var loadAreaId: UUID? = null
 )
 
-data class DeleteLoadAreaEvent(@Id val loadAreaId: UUID? = null)
+data class DeleteLoadAreaEvent(@Id var loadAreaId: UUID? = null)
 
 // single association events
 
@@ -8308,14 +8308,14 @@ data class DeleteLoadAreaEvent(@Id val loadAreaId: UUID? = null)
 // LoadBreakSwitch Events
 
 data class CreateLoadBreakSwitchEvent(
-     val loadBreakSwitchId: UUID? = null
+     var loadBreakSwitchId: UUID? = null
 )
 
 data class UpdateLoadBreakSwitchEvent(
-     val loadBreakSwitchId: UUID? = null
+     var loadBreakSwitchId: UUID? = null
 )
 
-data class DeleteLoadBreakSwitchEvent(@Id val loadBreakSwitchId: UUID? = null)
+data class DeleteLoadBreakSwitchEvent(@Id var loadBreakSwitchId: UUID? = null)
 
 // single association events
 
@@ -8325,36 +8325,36 @@ data class DeleteLoadBreakSwitchEvent(@Id val loadBreakSwitchId: UUID? = null)
 // LoadComposite Events
 
 data class CreateLoadCompositeEvent(
-    @Id val loadCompositeId: UUID? = null,
-    val epfd: String,
-    val epfs: String,
-    val epvd: String,
-    val epvs: String,
-    val eqfd: String,
-    val eqfs: String,
-    val eqvd: String,
-    val eqvs: String,
-    val h: String,
-    val lfrac: String,
-    val pfrac: String
+    @Id var loadCompositeId: UUID? = null,
+    var epfd: String,
+    var epfs: String,
+    var epvd: String,
+    var epvs: String,
+    var eqfd: String,
+    var eqfs: String,
+    var eqvd: String,
+    var eqvs: String,
+    var h: String,
+    var lfrac: String,
+    var pfrac: String
 )
 
 data class UpdateLoadCompositeEvent(
-    @Id val loadCompositeId: UUID? = null,
-    val epfd: String,
-    val epfs: String,
-    val epvd: String,
-    val epvs: String,
-    val eqfd: String,
-    val eqfs: String,
-    val eqvd: String,
-    val eqvs: String,
-    val h: String,
-    val lfrac: String,
-    val pfrac: String
+    @Id var loadCompositeId: UUID? = null,
+    var epfd: String,
+    var epfs: String,
+    var epvd: String,
+    var epvs: String,
+    var eqfd: String,
+    var eqfs: String,
+    var eqvd: String,
+    var eqvs: String,
+    var h: String,
+    var lfrac: String,
+    var pfrac: String
 )
 
-data class DeleteLoadCompositeEvent(@Id val loadCompositeId: UUID? = null)
+data class DeleteLoadCompositeEvent(@Id var loadCompositeId: UUID? = null)
 
 // single association events
 
@@ -8364,14 +8364,14 @@ data class DeleteLoadCompositeEvent(@Id val loadCompositeId: UUID? = null)
 // LoadDynamics Events
 
 data class CreateLoadDynamicsEvent(
-     val loadDynamicsId: UUID? = null
+     var loadDynamicsId: UUID? = null
 )
 
 data class UpdateLoadDynamicsEvent(
-     val loadDynamicsId: UUID? = null
+     var loadDynamicsId: UUID? = null
 )
 
-data class DeleteLoadDynamicsEvent(@Id val loadDynamicsId: UUID? = null)
+data class DeleteLoadDynamicsEvent(@Id var loadDynamicsId: UUID? = null)
 
 // single association events
 
@@ -8381,32 +8381,32 @@ data class DeleteLoadDynamicsEvent(@Id val loadDynamicsId: UUID? = null)
 // LoadGenericNonLinear Events
 
 data class CreateLoadGenericNonLinearEvent(
-    @Id val loadGenericNonLinearId: UUID? = null,
-    val bs: String,
-    val bt: String,
-    val genericNonLinearLoadModelType: String,
-    val ls: String,
-    val lt: String,
-    val pt: String,
-    val qt: String,
-    val tp: String,
-    val tq: String
+    @Id var loadGenericNonLinearId: UUID? = null,
+    var bs: String,
+    var bt: String,
+    var genericNonLinearLoadModelType: String,
+    var ls: String,
+    var lt: String,
+    var pt: String,
+    var qt: String,
+    var tp: String,
+    var tq: String
 )
 
 data class UpdateLoadGenericNonLinearEvent(
-    @Id val loadGenericNonLinearId: UUID? = null,
-    val bs: String,
-    val bt: String,
-    val genericNonLinearLoadModelType: String,
-    val ls: String,
-    val lt: String,
-    val pt: String,
-    val qt: String,
-    val tp: String,
-    val tq: String
+    @Id var loadGenericNonLinearId: UUID? = null,
+    var bs: String,
+    var bt: String,
+    var genericNonLinearLoadModelType: String,
+    var ls: String,
+    var lt: String,
+    var pt: String,
+    var qt: String,
+    var tp: String,
+    var tq: String
 )
 
-data class DeleteLoadGenericNonLinearEvent(@Id val loadGenericNonLinearId: UUID? = null)
+data class DeleteLoadGenericNonLinearEvent(@Id var loadGenericNonLinearId: UUID? = null)
 
 // single association events
 
@@ -8416,14 +8416,14 @@ data class DeleteLoadGenericNonLinearEvent(@Id val loadGenericNonLinearId: UUID?
 // LoadGroup Events
 
 data class CreateLoadGroupEvent(
-     val loadGroupId: UUID? = null
+     var loadGroupId: UUID? = null
 )
 
 data class UpdateLoadGroupEvent(
-     val loadGroupId: UUID? = null
+     var loadGroupId: UUID? = null
 )
 
-data class DeleteLoadGroupEvent(@Id val loadGroupId: UUID? = null)
+data class DeleteLoadGroupEvent(@Id var loadGroupId: UUID? = null)
 
 // single association events
 
@@ -8433,40 +8433,40 @@ data class DeleteLoadGroupEvent(@Id val loadGroupId: UUID? = null)
 // LoadMotor Events
 
 data class CreateLoadMotorEvent(
-    @Id val loadMotorId: UUID? = null,
-    val d: String,
-    val h: String,
-    val lfac: String,
-    val lp: String,
-    val lpp: String,
-    val ls: String,
-    val pfrac: String,
-    val ra: String,
-    val tbkr: String,
-    val tpo: String,
-    val tppo: String,
-    val tv: String,
-    val vt: String
+    @Id var loadMotorId: UUID? = null,
+    var d: String,
+    var h: String,
+    var lfac: String,
+    var lp: String,
+    var lpp: String,
+    var ls: String,
+    var pfrac: String,
+    var ra: String,
+    var tbkr: String,
+    var tpo: String,
+    var tppo: String,
+    var tv: String,
+    var vt: String
 )
 
 data class UpdateLoadMotorEvent(
-    @Id val loadMotorId: UUID? = null,
-    val d: String,
-    val h: String,
-    val lfac: String,
-    val lp: String,
-    val lpp: String,
-    val ls: String,
-    val pfrac: String,
-    val ra: String,
-    val tbkr: String,
-    val tpo: String,
-    val tppo: String,
-    val tv: String,
-    val vt: String
+    @Id var loadMotorId: UUID? = null,
+    var d: String,
+    var h: String,
+    var lfac: String,
+    var lp: String,
+    var lpp: String,
+    var ls: String,
+    var pfrac: String,
+    var ra: String,
+    var tbkr: String,
+    var tpo: String,
+    var tppo: String,
+    var tv: String,
+    var vt: String
 )
 
-data class DeleteLoadMotorEvent(@Id val loadMotorId: UUID? = null)
+data class DeleteLoadMotorEvent(@Id var loadMotorId: UUID? = null)
 
 // single association events
 
@@ -8476,36 +8476,36 @@ data class DeleteLoadMotorEvent(@Id val loadMotorId: UUID? = null)
 // LoadResponseCharacteristic Events
 
 data class CreateLoadResponseCharacteristicEvent(
-    @Id val loadResponseCharacteristicId: UUID? = null,
-    val exponentModel: String,
-    val pConstantCurrent: String,
-    val pConstantImpedance: String,
-    val pConstantPower: String,
-    val pFrequencyExponent: String,
-    val pVoltageExponent: String,
-    val qConstantCurrent: String,
-    val qConstantImpedance: String,
-    val qConstantPower: String,
-    val qFrequencyExponent: String,
-    val qVoltageExponent: String
+    @Id var loadResponseCharacteristicId: UUID? = null,
+    var exponentModel: String,
+    var pConstantCurrent: String,
+    var pConstantImpedance: String,
+    var pConstantPower: String,
+    var pFrequencyExponent: String,
+    var pVoltageExponent: String,
+    var qConstantCurrent: String,
+    var qConstantImpedance: String,
+    var qConstantPower: String,
+    var qFrequencyExponent: String,
+    var qVoltageExponent: String
 )
 
 data class UpdateLoadResponseCharacteristicEvent(
-    @Id val loadResponseCharacteristicId: UUID? = null,
-    val exponentModel: String,
-    val pConstantCurrent: String,
-    val pConstantImpedance: String,
-    val pConstantPower: String,
-    val pFrequencyExponent: String,
-    val pVoltageExponent: String,
-    val qConstantCurrent: String,
-    val qConstantImpedance: String,
-    val qConstantPower: String,
-    val qFrequencyExponent: String,
-    val qVoltageExponent: String
+    @Id var loadResponseCharacteristicId: UUID? = null,
+    var exponentModel: String,
+    var pConstantCurrent: String,
+    var pConstantImpedance: String,
+    var pConstantPower: String,
+    var pFrequencyExponent: String,
+    var pVoltageExponent: String,
+    var qConstantCurrent: String,
+    var qConstantImpedance: String,
+    var qConstantPower: String,
+    var qFrequencyExponent: String,
+    var qVoltageExponent: String
 )
 
-data class DeleteLoadResponseCharacteristicEvent(@Id val loadResponseCharacteristicId: UUID? = null)
+data class DeleteLoadResponseCharacteristicEvent(@Id var loadResponseCharacteristicId: UUID? = null)
 
 // single association events
 
@@ -8515,48 +8515,48 @@ data class DeleteLoadResponseCharacteristicEvent(@Id val loadResponseCharacteris
 // LoadStatic Events
 
 data class CreateLoadStaticEvent(
-    @Id val loadStaticId: UUID? = null,
-    val ep1: String,
-    val ep2: String,
-    val ep3: String,
-    val eq1: String,
-    val eq2: String,
-    val eq3: String,
-    val kp1: String,
-    val kp2: String,
-    val kp3: String,
-    val kp4: String,
-    val kpf: String,
-    val kq1: String,
-    val kq2: String,
-    val kq3: String,
-    val kq4: String,
-    val kqf: String,
-    val staticLoadModelType: String
+    @Id var loadStaticId: UUID? = null,
+    var ep1: String,
+    var ep2: String,
+    var ep3: String,
+    var eq1: String,
+    var eq2: String,
+    var eq3: String,
+    var kp1: String,
+    var kp2: String,
+    var kp3: String,
+    var kp4: String,
+    var kpf: String,
+    var kq1: String,
+    var kq2: String,
+    var kq3: String,
+    var kq4: String,
+    var kqf: String,
+    var staticLoadModelType: String
 )
 
 data class UpdateLoadStaticEvent(
-    @Id val loadStaticId: UUID? = null,
-    val ep1: String,
-    val ep2: String,
-    val ep3: String,
-    val eq1: String,
-    val eq2: String,
-    val eq3: String,
-    val kp1: String,
-    val kp2: String,
-    val kp3: String,
-    val kp4: String,
-    val kpf: String,
-    val kq1: String,
-    val kq2: String,
-    val kq3: String,
-    val kq4: String,
-    val kqf: String,
-    val staticLoadModelType: String
+    @Id var loadStaticId: UUID? = null,
+    var ep1: String,
+    var ep2: String,
+    var ep3: String,
+    var eq1: String,
+    var eq2: String,
+    var eq3: String,
+    var kp1: String,
+    var kp2: String,
+    var kp3: String,
+    var kp4: String,
+    var kpf: String,
+    var kq1: String,
+    var kq2: String,
+    var kq3: String,
+    var kq4: String,
+    var kqf: String,
+    var staticLoadModelType: String
 )
 
-data class DeleteLoadStaticEvent(@Id val loadStaticId: UUID? = null)
+data class DeleteLoadStaticEvent(@Id var loadStaticId: UUID? = null)
 
 // single association events
 
@@ -8566,16 +8566,16 @@ data class DeleteLoadStaticEvent(@Id val loadStaticId: UUID? = null)
 // LoadUserDefined Events
 
 data class CreateLoadUserDefinedEvent(
-    @Id val loadUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var loadUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateLoadUserDefinedEvent(
-    @Id val loadUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var loadUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteLoadUserDefinedEvent(@Id val loadUserDefinedId: UUID? = null)
+data class DeleteLoadUserDefinedEvent(@Id var loadUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -8585,14 +8585,14 @@ data class DeleteLoadUserDefinedEvent(@Id val loadUserDefinedId: UUID? = null)
 // Location Events
 
 data class CreateLocationEvent(
-     val locationId: UUID? = null
+     var locationId: UUID? = null
 )
 
 data class UpdateLocationEvent(
-     val locationId: UUID? = null
+     var locationId: UUID? = null
 )
 
-data class DeleteLocationEvent(@Id val locationId: UUID? = null)
+data class DeleteLocationEvent(@Id var locationId: UUID? = null)
 
 // single association events
 
@@ -8602,22 +8602,22 @@ data class DeleteLocationEvent(@Id val locationId: UUID? = null)
 // Measurement Events
 
 data class CreateMeasurementEvent(
-    @Id val measurementId: UUID? = null,
-    val measurementType: String,
-    val phases: String,
-    val unitMultiplier: String,
-    val unitSymbol: String
+    @Id var measurementId: UUID? = null,
+    var measurementType: String,
+    var phases: String,
+    var unitMultiplier: String,
+    var unitSymbol: String
 )
 
 data class UpdateMeasurementEvent(
-    @Id val measurementId: UUID? = null,
-    val measurementType: String,
-    val phases: String,
-    val unitMultiplier: String,
-    val unitSymbol: String
+    @Id var measurementId: UUID? = null,
+    var measurementType: String,
+    var phases: String,
+    var unitMultiplier: String,
+    var unitSymbol: String
 )
 
-data class DeleteMeasurementEvent(@Id val measurementId: UUID? = null)
+data class DeleteMeasurementEvent(@Id var measurementId: UUID? = null)
 
 // single association events
 
@@ -8627,18 +8627,18 @@ data class DeleteMeasurementEvent(@Id val measurementId: UUID? = null)
 // MeasurementValue Events
 
 data class CreateMeasurementValueEvent(
-    @Id val measurementValueId: UUID? = null,
-    val sensorAccuracy: String,
-    val timeStamp: String
+    @Id var measurementValueId: UUID? = null,
+    var sensorAccuracy: String,
+    var timeStamp: String
 )
 
 data class UpdateMeasurementValueEvent(
-    @Id val measurementValueId: UUID? = null,
-    val sensorAccuracy: String,
-    val timeStamp: String
+    @Id var measurementValueId: UUID? = null,
+    var sensorAccuracy: String,
+    var timeStamp: String
 )
 
-data class DeleteMeasurementValueEvent(@Id val measurementValueId: UUID? = null)
+data class DeleteMeasurementValueEvent(@Id var measurementValueId: UUID? = null)
 
 // single association events
 
@@ -8648,14 +8648,14 @@ data class DeleteMeasurementValueEvent(@Id val measurementValueId: UUID? = null)
 // MeasurementValueQuality Events
 
 data class CreateMeasurementValueQualityEvent(
-     val measurementValueQualityId: UUID? = null
+     var measurementValueQualityId: UUID? = null
 )
 
 data class UpdateMeasurementValueQualityEvent(
-     val measurementValueQualityId: UUID? = null
+     var measurementValueQualityId: UUID? = null
 )
 
-data class DeleteMeasurementValueQualityEvent(@Id val measurementValueQualityId: UUID? = null)
+data class DeleteMeasurementValueQualityEvent(@Id var measurementValueQualityId: UUID? = null)
 
 // single association events
 
@@ -8665,14 +8665,14 @@ data class DeleteMeasurementValueQualityEvent(@Id val measurementValueQualityId:
 // MeasurementValueSource Events
 
 data class CreateMeasurementValueSourceEvent(
-     val measurementValueSourceId: UUID? = null
+     var measurementValueSourceId: UUID? = null
 )
 
 data class UpdateMeasurementValueSourceEvent(
-     val measurementValueSourceId: UUID? = null
+     var measurementValueSourceId: UUID? = null
 )
 
-data class DeleteMeasurementValueSourceEvent(@Id val measurementValueSourceId: UUID? = null)
+data class DeleteMeasurementValueSourceEvent(@Id var measurementValueSourceId: UUID? = null)
 
 // single association events
 
@@ -8682,22 +8682,22 @@ data class DeleteMeasurementValueSourceEvent(@Id val measurementValueSourceId: U
 // MechLoad1 Events
 
 data class CreateMechLoad1Event(
-    @Id val mechLoad1Id: UUID? = null,
-    val a: String,
-    val b: String,
-    val d: String,
-    val e: String
+    @Id var mechLoad1Id: UUID? = null,
+    var a: String,
+    var b: String,
+    var d: String,
+    var e: String
 )
 
 data class UpdateMechLoad1Event(
-    @Id val mechLoad1Id: UUID? = null,
-    val a: String,
-    val b: String,
-    val d: String,
-    val e: String
+    @Id var mechLoad1Id: UUID? = null,
+    var a: String,
+    var b: String,
+    var d: String,
+    var e: String
 )
 
-data class DeleteMechLoad1Event(@Id val mechLoad1Id: UUID? = null)
+data class DeleteMechLoad1Event(@Id var mechLoad1Id: UUID? = null)
 
 // single association events
 
@@ -8707,14 +8707,14 @@ data class DeleteMechLoad1Event(@Id val mechLoad1Id: UUID? = null)
 // MechanicalLoadDynamics Events
 
 data class CreateMechanicalLoadDynamicsEvent(
-     val mechanicalLoadDynamicsId: UUID? = null
+     var mechanicalLoadDynamicsId: UUID? = null
 )
 
 data class UpdateMechanicalLoadDynamicsEvent(
-     val mechanicalLoadDynamicsId: UUID? = null
+     var mechanicalLoadDynamicsId: UUID? = null
 )
 
-data class DeleteMechanicalLoadDynamicsEvent(@Id val mechanicalLoadDynamicsId: UUID? = null)
+data class DeleteMechanicalLoadDynamicsEvent(@Id var mechanicalLoadDynamicsId: UUID? = null)
 
 // single association events
 
@@ -8724,16 +8724,16 @@ data class DeleteMechanicalLoadDynamicsEvent(@Id val mechanicalLoadDynamicsId: U
 // MechanicalLoadUserDefined Events
 
 data class CreateMechanicalLoadUserDefinedEvent(
-    @Id val mechanicalLoadUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var mechanicalLoadUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateMechanicalLoadUserDefinedEvent(
-    @Id val mechanicalLoadUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var mechanicalLoadUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteMechanicalLoadUserDefinedEvent(@Id val mechanicalLoadUserDefinedId: UUID? = null)
+data class DeleteMechanicalLoadUserDefinedEvent(@Id var mechanicalLoadUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -8743,20 +8743,20 @@ data class DeleteMechanicalLoadUserDefinedEvent(@Id val mechanicalLoadUserDefine
 // Money Events
 
 data class CreateMoneyEvent(
-    @Id val moneyId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var moneyId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateMoneyEvent(
-    @Id val moneyId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var moneyId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteMoneyEvent(@Id val moneyId: UUID? = null)
+data class DeleteMoneyEvent(@Id var moneyId: UUID? = null)
 
 // single association events
 
@@ -8766,35 +8766,35 @@ data class DeleteMoneyEvent(@Id val moneyId: UUID? = null)
 // MonthDay Events
 
 data class CreateMonthDayEvent(
-     val monthDayId: UUID? = null
+     var monthDayId: UUID? = null
 )
 
 data class UpdateMonthDayEvent(
-     val monthDayId: UUID? = null
+     var monthDayId: UUID? = null
 )
 
-data class DeleteMonthDayEvent(@Id val monthDayId: UUID? = null)
+data class DeleteMonthDayEvent(@Id var monthDayId: UUID? = null)
 
 // single association events
 
 // multiple association events
 
 
-// MonthDayInterval Events
+// MonthDayIntervar Events
 
 data class CreateMonthDayIntervalEvent(
-    @Id val monthDayIntervalId: UUID? = null,
-    val end: String,
-    val start: String
+    @Id var monthDayIntervalId: UUID? = null,
+    var end: String,
+    var start: String
 )
 
 data class UpdateMonthDayIntervalEvent(
-    @Id val monthDayIntervalId: UUID? = null,
-    val end: String,
-    val start: String
+    @Id var monthDayIntervalId: UUID? = null,
+    var end: String,
+    var start: String
 )
 
-data class DeleteMonthDayIntervalEvent(@Id val monthDayIntervalId: UUID? = null)
+data class DeleteMonthDayIntervalEvent(@Id var monthDayIntervalId: UUID? = null)
 
 // single association events
 
@@ -8804,30 +8804,30 @@ data class DeleteMonthDayIntervalEvent(@Id val monthDayIntervalId: UUID? = null)
 // MutualCoupling Events
 
 data class CreateMutualCouplingEvent(
-    @Id val mutualCouplingId: UUID? = null,
-    val b0ch: String,
-    val distance11: String,
-    val distance12: String,
-    val distance21: String,
-    val distance22: String,
-    val g0ch: String,
-    val r0: String,
-    val x0: String
+    @Id var mutualCouplingId: UUID? = null,
+    var b0ch: String,
+    var distance11: String,
+    var distance12: String,
+    var distance21: String,
+    var distance22: String,
+    var g0ch: String,
+    var r0: String,
+    var x0: String
 )
 
 data class UpdateMutualCouplingEvent(
-    @Id val mutualCouplingId: UUID? = null,
-    val b0ch: String,
-    val distance11: String,
-    val distance12: String,
-    val distance21: String,
-    val distance22: String,
-    val g0ch: String,
-    val r0: String,
-    val x0: String
+    @Id var mutualCouplingId: UUID? = null,
+    var b0ch: String,
+    var distance11: String,
+    var distance12: String,
+    var distance21: String,
+    var distance22: String,
+    var g0ch: String,
+    var r0: String,
+    var x0: String
 )
 
-data class DeleteMutualCouplingEvent(@Id val mutualCouplingId: UUID? = null)
+data class DeleteMutualCouplingEvent(@Id var mutualCouplingId: UUID? = null)
 
 // single association events
 
@@ -8837,14 +8837,14 @@ data class DeleteMutualCouplingEvent(@Id val mutualCouplingId: UUID? = null)
 // NonConformLoad Events
 
 data class CreateNonConformLoadEvent(
-     val nonConformLoadId: UUID? = null
+     var nonConformLoadId: UUID? = null
 )
 
 data class UpdateNonConformLoadEvent(
-     val nonConformLoadId: UUID? = null
+     var nonConformLoadId: UUID? = null
 )
 
-data class DeleteNonConformLoadEvent(@Id val nonConformLoadId: UUID? = null)
+data class DeleteNonConformLoadEvent(@Id var nonConformLoadId: UUID? = null)
 
 // single association events
 
@@ -8854,14 +8854,14 @@ data class DeleteNonConformLoadEvent(@Id val nonConformLoadId: UUID? = null)
 // NonConformLoadGroup Events
 
 data class CreateNonConformLoadGroupEvent(
-     val nonConformLoadGroupId: UUID? = null
+     var nonConformLoadGroupId: UUID? = null
 )
 
 data class UpdateNonConformLoadGroupEvent(
-     val nonConformLoadGroupId: UUID? = null
+     var nonConformLoadGroupId: UUID? = null
 )
 
-data class DeleteNonConformLoadGroupEvent(@Id val nonConformLoadGroupId: UUID? = null)
+data class DeleteNonConformLoadGroupEvent(@Id var nonConformLoadGroupId: UUID? = null)
 
 // single association events
 
@@ -8871,14 +8871,14 @@ data class DeleteNonConformLoadGroupEvent(@Id val nonConformLoadGroupId: UUID? =
 // NonConformLoadSchedule Events
 
 data class CreateNonConformLoadScheduleEvent(
-     val nonConformLoadScheduleId: UUID? = null
+     var nonConformLoadScheduleId: UUID? = null
 )
 
 data class UpdateNonConformLoadScheduleEvent(
-     val nonConformLoadScheduleId: UUID? = null
+     var nonConformLoadScheduleId: UUID? = null
 )
 
-data class DeleteNonConformLoadScheduleEvent(@Id val nonConformLoadScheduleId: UUID? = null)
+data class DeleteNonConformLoadScheduleEvent(@Id var nonConformLoadScheduleId: UUID? = null)
 
 // single association events
 
@@ -8888,14 +8888,14 @@ data class DeleteNonConformLoadScheduleEvent(@Id val nonConformLoadScheduleId: U
 // NonlinearShuntCompensator Events
 
 data class CreateNonlinearShuntCompensatorEvent(
-     val nonlinearShuntCompensatorId: UUID? = null
+     var nonlinearShuntCompensatorId: UUID? = null
 )
 
 data class UpdateNonlinearShuntCompensatorEvent(
-     val nonlinearShuntCompensatorId: UUID? = null
+     var nonlinearShuntCompensatorId: UUID? = null
 )
 
-data class DeleteNonlinearShuntCompensatorEvent(@Id val nonlinearShuntCompensatorId: UUID? = null)
+data class DeleteNonlinearShuntCompensatorEvent(@Id var nonlinearShuntCompensatorId: UUID? = null)
 
 // single association events
 
@@ -8905,24 +8905,24 @@ data class DeleteNonlinearShuntCompensatorEvent(@Id val nonlinearShuntCompensato
 // NonlinearShuntCompensatorPoint Events
 
 data class CreateNonlinearShuntCompensatorPointEvent(
-    @Id val nonlinearShuntCompensatorPointId: UUID? = null,
-    val b: String,
-    val b0: String,
-    val g: String,
-    val g0: String,
-    val sectionNumber: String
+    @Id var nonlinearShuntCompensatorPointId: UUID? = null,
+    var b: String,
+    var b0: String,
+    var g: String,
+    var g0: String,
+    var sectionNumber: String
 )
 
 data class UpdateNonlinearShuntCompensatorPointEvent(
-    @Id val nonlinearShuntCompensatorPointId: UUID? = null,
-    val b: String,
-    val b0: String,
-    val g: String,
-    val g0: String,
-    val sectionNumber: String
+    @Id var nonlinearShuntCompensatorPointId: UUID? = null,
+    var b: String,
+    var b0: String,
+    var g: String,
+    var g0: String,
+    var sectionNumber: String
 )
 
-data class DeleteNonlinearShuntCompensatorPointEvent(@Id val nonlinearShuntCompensatorPointId: UUID? = null)
+data class DeleteNonlinearShuntCompensatorPointEvent(@Id var nonlinearShuntCompensatorPointId: UUID? = null)
 
 // single association events
 
@@ -8932,14 +8932,14 @@ data class DeleteNonlinearShuntCompensatorPointEvent(@Id val nonlinearShuntCompe
 // NuclearGeneratingUnit Events
 
 data class CreateNuclearGeneratingUnitEvent(
-     val nuclearGeneratingUnitId: UUID? = null
+     var nuclearGeneratingUnitId: UUID? = null
 )
 
 data class UpdateNuclearGeneratingUnitEvent(
-     val nuclearGeneratingUnitId: UUID? = null
+     var nuclearGeneratingUnitId: UUID? = null
 )
 
-data class DeleteNuclearGeneratingUnitEvent(@Id val nuclearGeneratingUnitId: UUID? = null)
+data class DeleteNuclearGeneratingUnitEvent(@Id var nuclearGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -8949,14 +8949,14 @@ data class DeleteNuclearGeneratingUnitEvent(@Id val nuclearGeneratingUnitId: UUI
 // OperationalLimit Events
 
 data class CreateOperationalLimitEvent(
-     val operationalLimitId: UUID? = null
+     var operationalLimitId: UUID? = null
 )
 
 data class UpdateOperationalLimitEvent(
-     val operationalLimitId: UUID? = null
+     var operationalLimitId: UUID? = null
 )
 
-data class DeleteOperationalLimitEvent(@Id val operationalLimitId: UUID? = null)
+data class DeleteOperationalLimitEvent(@Id var operationalLimitId: UUID? = null)
 
 // single association events
 
@@ -8966,14 +8966,14 @@ data class DeleteOperationalLimitEvent(@Id val operationalLimitId: UUID? = null)
 // OperationalLimitSet Events
 
 data class CreateOperationalLimitSetEvent(
-     val operationalLimitSetId: UUID? = null
+     var operationalLimitSetId: UUID? = null
 )
 
 data class UpdateOperationalLimitSetEvent(
-     val operationalLimitSetId: UUID? = null
+     var operationalLimitSetId: UUID? = null
 )
 
-data class DeleteOperationalLimitSetEvent(@Id val operationalLimitSetId: UUID? = null)
+data class DeleteOperationalLimitSetEvent(@Id var operationalLimitSetId: UUID? = null)
 
 // single association events
 
@@ -8983,20 +8983,20 @@ data class DeleteOperationalLimitSetEvent(@Id val operationalLimitSetId: UUID? =
 // OperationalLimitType Events
 
 data class CreateOperationalLimitTypeEvent(
-    @Id val operationalLimitTypeId: UUID? = null,
-    val acceptableDuration: String,
-    val direction: String,
-    val limitType: String
+    @Id var operationalLimitTypeId: UUID? = null,
+    var acceptableDuration: String,
+    var direction: String,
+    var limitType: String
 )
 
 data class UpdateOperationalLimitTypeEvent(
-    @Id val operationalLimitTypeId: UUID? = null,
-    val acceptableDuration: String,
-    val direction: String,
-    val limitType: String
+    @Id var operationalLimitTypeId: UUID? = null,
+    var acceptableDuration: String,
+    var direction: String,
+    var limitType: String
 )
 
-data class DeleteOperationalLimitTypeEvent(@Id val operationalLimitTypeId: UUID? = null)
+data class DeleteOperationalLimitTypeEvent(@Id var operationalLimitTypeId: UUID? = null)
 
 // single association events
 
@@ -9006,22 +9006,22 @@ data class DeleteOperationalLimitTypeEvent(@Id val operationalLimitTypeId: UUID?
 // OverexcLim2 Events
 
 data class CreateOverexcLim2Event(
-    @Id val overexcLim2Id: UUID? = null,
-    val ifdlim: String,
-    val koi: String,
-    val voimax: String,
-    val voimin: String
+    @Id var overexcLim2Id: UUID? = null,
+    var ifdlim: String,
+    var koi: String,
+    var voimax: String,
+    var voimin: String
 )
 
 data class UpdateOverexcLim2Event(
-    @Id val overexcLim2Id: UUID? = null,
-    val ifdlim: String,
-    val koi: String,
-    val voimax: String,
-    val voimin: String
+    @Id var overexcLim2Id: UUID? = null,
+    var ifdlim: String,
+    var koi: String,
+    var voimax: String,
+    var voimin: String
 )
 
-data class DeleteOverexcLim2Event(@Id val overexcLim2Id: UUID? = null)
+data class DeleteOverexcLim2Event(@Id var overexcLim2Id: UUID? = null)
 
 // single association events
 
@@ -9031,26 +9031,26 @@ data class DeleteOverexcLim2Event(@Id val overexcLim2Id: UUID? = null)
 // OverexcLimIEEE Events
 
 data class CreateOverexcLimIEEEEvent(
-    @Id val overexcLimIEEEId: UUID? = null,
-    val hyst: String,
-    val ifdlim: String,
-    val ifdmax: String,
-    val itfpu: String,
-    val kcd: String,
-    val kramp: String
+    @Id var overexcLimIEEEId: UUID? = null,
+    var hyst: String,
+    var ifdlim: String,
+    var ifdmax: String,
+    var itfpu: String,
+    var kcd: String,
+    var kramp: String
 )
 
 data class UpdateOverexcLimIEEEEvent(
-    @Id val overexcLimIEEEId: UUID? = null,
-    val hyst: String,
-    val ifdlim: String,
-    val ifdmax: String,
-    val itfpu: String,
-    val kcd: String,
-    val kramp: String
+    @Id var overexcLimIEEEId: UUID? = null,
+    var hyst: String,
+    var ifdlim: String,
+    var ifdmax: String,
+    var itfpu: String,
+    var kcd: String,
+    var kramp: String
 )
 
-data class DeleteOverexcLimIEEEEvent(@Id val overexcLimIEEEId: UUID? = null)
+data class DeleteOverexcLimIEEEEvent(@Id var overexcLimIEEEId: UUID? = null)
 
 // single association events
 
@@ -9060,34 +9060,34 @@ data class DeleteOverexcLimIEEEEvent(@Id val overexcLimIEEEId: UUID? = null)
 // OverexcLimX1 Events
 
 data class CreateOverexcLimX1Event(
-    @Id val overexcLimX1Id: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val efd3: String,
-    val efddes: String,
-    val efdrated: String,
-    val kmx: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vlow: String
+    @Id var overexcLimX1Id: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var efd3: String,
+    var efddes: String,
+    var efdrated: String,
+    var kmx: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vlow: String
 )
 
 data class UpdateOverexcLimX1Event(
-    @Id val overexcLimX1Id: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val efd3: String,
-    val efddes: String,
-    val efdrated: String,
-    val kmx: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vlow: String
+    @Id var overexcLimX1Id: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var efd3: String,
+    var efddes: String,
+    var efdrated: String,
+    var kmx: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vlow: String
 )
 
-data class DeleteOverexcLimX1Event(@Id val overexcLimX1Id: UUID? = null)
+data class DeleteOverexcLimX1Event(@Id var overexcLimX1Id: UUID? = null)
 
 // single association events
 
@@ -9097,36 +9097,36 @@ data class DeleteOverexcLimX1Event(@Id val overexcLimX1Id: UUID? = null)
 // OverexcLimX2 Events
 
 data class CreateOverexcLimX2Event(
-    @Id val overexcLimX2Id: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val efd3: String,
-    val efddes: String,
-    val efdrated: String,
-    val kmx: String,
-    val m: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vlow: String
+    @Id var overexcLimX2Id: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var efd3: String,
+    var efddes: String,
+    var efdrated: String,
+    var kmx: String,
+    var m: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vlow: String
 )
 
 data class UpdateOverexcLimX2Event(
-    @Id val overexcLimX2Id: UUID? = null,
-    val efd1: String,
-    val efd2: String,
-    val efd3: String,
-    val efddes: String,
-    val efdrated: String,
-    val kmx: String,
-    val m: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val vlow: String
+    @Id var overexcLimX2Id: UUID? = null,
+    var efd1: String,
+    var efd2: String,
+    var efd3: String,
+    var efddes: String,
+    var efdrated: String,
+    var kmx: String,
+    var m: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var vlow: String
 )
 
-data class DeleteOverexcLimX2Event(@Id val overexcLimX2Id: UUID? = null)
+data class DeleteOverexcLimX2Event(@Id var overexcLimX2Id: UUID? = null)
 
 // single association events
 
@@ -9136,14 +9136,14 @@ data class DeleteOverexcLimX2Event(@Id val overexcLimX2Id: UUID? = null)
 // OverexcitationLimiterDynamics Events
 
 data class CreateOverexcitationLimiterDynamicsEvent(
-     val overexcitationLimiterDynamicsId: UUID? = null
+     var overexcitationLimiterDynamicsId: UUID? = null
 )
 
 data class UpdateOverexcitationLimiterDynamicsEvent(
-     val overexcitationLimiterDynamicsId: UUID? = null
+     var overexcitationLimiterDynamicsId: UUID? = null
 )
 
-data class DeleteOverexcitationLimiterDynamicsEvent(@Id val overexcitationLimiterDynamicsId: UUID? = null)
+data class DeleteOverexcitationLimiterDynamicsEvent(@Id var overexcitationLimiterDynamicsId: UUID? = null)
 
 // single association events
 
@@ -9153,16 +9153,16 @@ data class DeleteOverexcitationLimiterDynamicsEvent(@Id val overexcitationLimite
 // OverexcitationLimiterUserDefined Events
 
 data class CreateOverexcitationLimiterUserDefinedEvent(
-    @Id val overexcitationLimiterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var overexcitationLimiterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateOverexcitationLimiterUserDefinedEvent(
-    @Id val overexcitationLimiterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var overexcitationLimiterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteOverexcitationLimiterUserDefinedEvent(@Id val overexcitationLimiterUserDefinedId: UUID? = null)
+data class DeleteOverexcitationLimiterUserDefinedEvent(@Id var overexcitationLimiterUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -9172,14 +9172,14 @@ data class DeleteOverexcitationLimiterUserDefinedEvent(@Id val overexcitationLim
 // PFVArControllerType1Dynamics Events
 
 data class CreatePFVArControllerType1DynamicsEvent(
-     val pFVArControllerType1DynamicsId: UUID? = null
+     var pFVArControllerType1DynamicsId: UUID? = null
 )
 
 data class UpdatePFVArControllerType1DynamicsEvent(
-     val pFVArControllerType1DynamicsId: UUID? = null
+     var pFVArControllerType1DynamicsId: UUID? = null
 )
 
-data class DeletePFVArControllerType1DynamicsEvent(@Id val pFVArControllerType1DynamicsId: UUID? = null)
+data class DeletePFVArControllerType1DynamicsEvent(@Id var pFVArControllerType1DynamicsId: UUID? = null)
 
 // single association events
 
@@ -9189,16 +9189,16 @@ data class DeletePFVArControllerType1DynamicsEvent(@Id val pFVArControllerType1D
 // PFVArControllerType1UserDefined Events
 
 data class CreatePFVArControllerType1UserDefinedEvent(
-    @Id val pFVArControllerType1UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var pFVArControllerType1UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdatePFVArControllerType1UserDefinedEvent(
-    @Id val pFVArControllerType1UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var pFVArControllerType1UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeletePFVArControllerType1UserDefinedEvent(@Id val pFVArControllerType1UserDefinedId: UUID? = null)
+data class DeletePFVArControllerType1UserDefinedEvent(@Id var pFVArControllerType1UserDefinedId: UUID? = null)
 
 // single association events
 
@@ -9208,14 +9208,14 @@ data class DeletePFVArControllerType1UserDefinedEvent(@Id val pFVArControllerTyp
 // PFVArControllerType2Dynamics Events
 
 data class CreatePFVArControllerType2DynamicsEvent(
-     val pFVArControllerType2DynamicsId: UUID? = null
+     var pFVArControllerType2DynamicsId: UUID? = null
 )
 
 data class UpdatePFVArControllerType2DynamicsEvent(
-     val pFVArControllerType2DynamicsId: UUID? = null
+     var pFVArControllerType2DynamicsId: UUID? = null
 )
 
-data class DeletePFVArControllerType2DynamicsEvent(@Id val pFVArControllerType2DynamicsId: UUID? = null)
+data class DeletePFVArControllerType2DynamicsEvent(@Id var pFVArControllerType2DynamicsId: UUID? = null)
 
 // single association events
 
@@ -9225,16 +9225,16 @@ data class DeletePFVArControllerType2DynamicsEvent(@Id val pFVArControllerType2D
 // PFVArControllerType2UserDefined Events
 
 data class CreatePFVArControllerType2UserDefinedEvent(
-    @Id val pFVArControllerType2UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var pFVArControllerType2UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdatePFVArControllerType2UserDefinedEvent(
-    @Id val pFVArControllerType2UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var pFVArControllerType2UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeletePFVArControllerType2UserDefinedEvent(@Id val pFVArControllerType2UserDefinedId: UUID? = null)
+data class DeletePFVArControllerType2UserDefinedEvent(@Id var pFVArControllerType2UserDefinedId: UUID? = null)
 
 // single association events
 
@@ -9244,30 +9244,30 @@ data class DeletePFVArControllerType2UserDefinedEvent(@Id val pFVArControllerTyp
 // PFVArType1IEEEPFController Events
 
 data class CreatePFVArType1IEEEPFControllerEvent(
-    @Id val pFVArType1IEEEPFControllerId: UUID? = null,
-    val ovex: String,
-    val tpfc: String,
-    val vitmin: String,
-    val vpf: String,
-    val vpfcbw: String,
-    val vpfref: String,
-    val vvtmax: String,
-    val vvtmin: String
+    @Id var pFVArType1IEEEPFControllerId: UUID? = null,
+    var ovex: String,
+    var tpfc: String,
+    var vitmin: String,
+    var vpf: String,
+    var vpfcbw: String,
+    var vpfref: String,
+    var vvtmax: String,
+    var vvtmin: String
 )
 
 data class UpdatePFVArType1IEEEPFControllerEvent(
-    @Id val pFVArType1IEEEPFControllerId: UUID? = null,
-    val ovex: String,
-    val tpfc: String,
-    val vitmin: String,
-    val vpf: String,
-    val vpfcbw: String,
-    val vpfref: String,
-    val vvtmax: String,
-    val vvtmin: String
+    @Id var pFVArType1IEEEPFControllerId: UUID? = null,
+    var ovex: String,
+    var tpfc: String,
+    var vitmin: String,
+    var vpf: String,
+    var vpfcbw: String,
+    var vpfref: String,
+    var vvtmax: String,
+    var vvtmin: String
 )
 
-data class DeletePFVArType1IEEEPFControllerEvent(@Id val pFVArType1IEEEPFControllerId: UUID? = null)
+data class DeletePFVArType1IEEEPFControllerEvent(@Id var pFVArType1IEEEPFControllerId: UUID? = null)
 
 // single association events
 
@@ -9277,26 +9277,26 @@ data class DeletePFVArType1IEEEPFControllerEvent(@Id val pFVArType1IEEEPFControl
 // PFVArType1IEEEVArController Events
 
 data class CreatePFVArType1IEEEVArControllerEvent(
-    @Id val pFVArType1IEEEVArControllerId: UUID? = null,
-    val tvarc: String,
-    val vvar: String,
-    val vvarcbw: String,
-    val vvarref: String,
-    val vvtmax: String,
-    val vvtmin: String
+    @Id var pFVArType1IEEEVArControllerId: UUID? = null,
+    var tvarc: String,
+    var vvar: String,
+    var vvarcbw: String,
+    var vvarref: String,
+    var vvtmax: String,
+    var vvtmin: String
 )
 
 data class UpdatePFVArType1IEEEVArControllerEvent(
-    @Id val pFVArType1IEEEVArControllerId: UUID? = null,
-    val tvarc: String,
-    val vvar: String,
-    val vvarcbw: String,
-    val vvarref: String,
-    val vvtmax: String,
-    val vvtmin: String
+    @Id var pFVArType1IEEEVArControllerId: UUID? = null,
+    var tvarc: String,
+    var vvar: String,
+    var vvarcbw: String,
+    var vvarref: String,
+    var vvtmax: String,
+    var vvtmin: String
 )
 
-data class DeletePFVArType1IEEEVArControllerEvent(@Id val pFVArType1IEEEVArControllerId: UUID? = null)
+data class DeletePFVArType1IEEEVArControllerEvent(@Id var pFVArType1IEEEVArControllerId: UUID? = null)
 
 // single association events
 
@@ -9306,24 +9306,24 @@ data class DeletePFVArType1IEEEVArControllerEvent(@Id val pFVArType1IEEEVArContr
 // PFVArType2Common1 Events
 
 data class CreatePFVArType2Common1Event(
-    @Id val pFVArType2Common1Id: UUID? = null,
-    val j: String,
-    val ki: String,
-    val kp: String,
-    val max: String,
-    val ref: String
+    @Id var pFVArType2Common1Id: UUID? = null,
+    var j: String,
+    var ki: String,
+    var kp: String,
+    var max: String,
+    var ref: String
 )
 
 data class UpdatePFVArType2Common1Event(
-    @Id val pFVArType2Common1Id: UUID? = null,
-    val j: String,
-    val ki: String,
-    val kp: String,
-    val max: String,
-    val ref: String
+    @Id var pFVArType2Common1Id: UUID? = null,
+    var j: String,
+    var ki: String,
+    var kp: String,
+    var max: String,
+    var ref: String
 )
 
-data class DeletePFVArType2Common1Event(@Id val pFVArType2Common1Id: UUID? = null)
+data class DeletePFVArType2Common1Event(@Id var pFVArType2Common1Id: UUID? = null)
 
 // single association events
 
@@ -9333,28 +9333,28 @@ data class DeletePFVArType2Common1Event(@Id val pFVArType2Common1Id: UUID? = nul
 // PFVArType2IEEEPFController Events
 
 data class CreatePFVArType2IEEEPFControllerEvent(
-    @Id val pFVArType2IEEEPFControllerId: UUID? = null,
-    val exlon: String,
-    val ki: String,
-    val kp: String,
-    val pfref: String,
-    val vclmt: String,
-    val vref: String,
-    val vs: String
+    @Id var pFVArType2IEEEPFControllerId: UUID? = null,
+    var exlon: String,
+    var ki: String,
+    var kp: String,
+    var pfref: String,
+    var vclmt: String,
+    var vref: String,
+    var vs: String
 )
 
 data class UpdatePFVArType2IEEEPFControllerEvent(
-    @Id val pFVArType2IEEEPFControllerId: UUID? = null,
-    val exlon: String,
-    val ki: String,
-    val kp: String,
-    val pfref: String,
-    val vclmt: String,
-    val vref: String,
-    val vs: String
+    @Id var pFVArType2IEEEPFControllerId: UUID? = null,
+    var exlon: String,
+    var ki: String,
+    var kp: String,
+    var pfref: String,
+    var vclmt: String,
+    var vref: String,
+    var vs: String
 )
 
-data class DeletePFVArType2IEEEPFControllerEvent(@Id val pFVArType2IEEEPFControllerId: UUID? = null)
+data class DeletePFVArType2IEEEPFControllerEvent(@Id var pFVArType2IEEEPFControllerId: UUID? = null)
 
 // single association events
 
@@ -9364,28 +9364,28 @@ data class DeletePFVArType2IEEEPFControllerEvent(@Id val pFVArType2IEEEPFControl
 // PFVArType2IEEEVArController Events
 
 data class CreatePFVArType2IEEEVArControllerEvent(
-    @Id val pFVArType2IEEEVArControllerId: UUID? = null,
-    val exlon: String,
-    val ki: String,
-    val kp: String,
-    val qref: String,
-    val vclmt: String,
-    val vref: String,
-    val vs: String
+    @Id var pFVArType2IEEEVArControllerId: UUID? = null,
+    var exlon: String,
+    var ki: String,
+    var kp: String,
+    var qref: String,
+    var vclmt: String,
+    var vref: String,
+    var vs: String
 )
 
 data class UpdatePFVArType2IEEEVArControllerEvent(
-    @Id val pFVArType2IEEEVArControllerId: UUID? = null,
-    val exlon: String,
-    val ki: String,
-    val kp: String,
-    val qref: String,
-    val vclmt: String,
-    val vref: String,
-    val vs: String
+    @Id var pFVArType2IEEEVArControllerId: UUID? = null,
+    var exlon: String,
+    var ki: String,
+    var kp: String,
+    var qref: String,
+    var vclmt: String,
+    var vref: String,
+    var vs: String
 )
 
-data class DeletePFVArType2IEEEVArControllerEvent(@Id val pFVArType2IEEEVArControllerId: UUID? = null)
+data class DeletePFVArType2IEEEVArControllerEvent(@Id var pFVArType2IEEEVArControllerId: UUID? = null)
 
 // single association events
 
@@ -9395,20 +9395,20 @@ data class DeletePFVArType2IEEEVArControllerEvent(@Id val pFVArType2IEEEVArContr
 // PU Events
 
 data class CreatePUEvent(
-    @Id val pUId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var pUId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdatePUEvent(
-    @Id val pUId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var pUId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeletePUEvent(@Id val pUId: UUID? = null)
+data class DeletePUEvent(@Id var pUId: UUID? = null)
 
 // single association events
 
@@ -9418,20 +9418,20 @@ data class DeletePUEvent(@Id val pUId: UUID? = null)
 // PerCent Events
 
 data class CreatePerCentEvent(
-    @Id val perCentId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var perCentId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdatePerCentEvent(
-    @Id val perCentId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var perCentId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeletePerCentEvent(@Id val perCentId: UUID? = null)
+data class DeletePerCentEvent(@Id var perCentId: UUID? = null)
 
 // single association events
 
@@ -9441,20 +9441,20 @@ data class DeletePerCentEvent(@Id val perCentId: UUID? = null)
 // PerLengthDCLineParameter Events
 
 data class CreatePerLengthDCLineParameterEvent(
-    @Id val perLengthDCLineParameterId: UUID? = null,
-    val capacitance: String,
-    val inductance: String,
-    val resistance: String
+    @Id var perLengthDCLineParameterId: UUID? = null,
+    var capacitance: String,
+    var inductance: String,
+    var resistance: String
 )
 
 data class UpdatePerLengthDCLineParameterEvent(
-    @Id val perLengthDCLineParameterId: UUID? = null,
-    val capacitance: String,
-    val inductance: String,
-    val resistance: String
+    @Id var perLengthDCLineParameterId: UUID? = null,
+    var capacitance: String,
+    var inductance: String,
+    var resistance: String
 )
 
-data class DeletePerLengthDCLineParameterEvent(@Id val perLengthDCLineParameterId: UUID? = null)
+data class DeletePerLengthDCLineParameterEvent(@Id var perLengthDCLineParameterId: UUID? = null)
 
 // single association events
 
@@ -9464,28 +9464,28 @@ data class DeletePerLengthDCLineParameterEvent(@Id val perLengthDCLineParameterI
 // PetersenCoil Events
 
 data class CreatePetersenCoilEvent(
-    @Id val petersenCoilId: UUID? = null,
-    val mode: String,
-    val nominalU: String,
-    val offsetCurrent: String,
-    val positionCurrent: String,
-    val xGroundMax: String,
-    val xGroundMin: String,
-    val xGroundNominal: String
+    @Id var petersenCoilId: UUID? = null,
+    var mode: String,
+    var nominalU: String,
+    var offsetCurrent: String,
+    var positionCurrent: String,
+    var xGroundMax: String,
+    var xGroundMin: String,
+    var xGroundNominal: String
 )
 
 data class UpdatePetersenCoilEvent(
-    @Id val petersenCoilId: UUID? = null,
-    val mode: String,
-    val nominalU: String,
-    val offsetCurrent: String,
-    val positionCurrent: String,
-    val xGroundMax: String,
-    val xGroundMin: String,
-    val xGroundNominal: String
+    @Id var petersenCoilId: UUID? = null,
+    var mode: String,
+    var nominalU: String,
+    var offsetCurrent: String,
+    var positionCurrent: String,
+    var xGroundMax: String,
+    var xGroundMin: String,
+    var xGroundNominal: String
 )
 
-data class DeletePetersenCoilEvent(@Id val petersenCoilId: UUID? = null)
+data class DeletePetersenCoilEvent(@Id var petersenCoilId: UUID? = null)
 
 // single association events
 
@@ -9495,14 +9495,14 @@ data class DeletePetersenCoilEvent(@Id val petersenCoilId: UUID? = null)
 // PhaseTapChanger Events
 
 data class CreatePhaseTapChangerEvent(
-     val phaseTapChangerId: UUID? = null
+     var phaseTapChangerId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerEvent(
-     val phaseTapChangerId: UUID? = null
+     var phaseTapChangerId: UUID? = null
 )
 
-data class DeletePhaseTapChangerEvent(@Id val phaseTapChangerId: UUID? = null)
+data class DeletePhaseTapChangerEvent(@Id var phaseTapChangerId: UUID? = null)
 
 // single association events
 
@@ -9512,16 +9512,16 @@ data class DeletePhaseTapChangerEvent(@Id val phaseTapChangerId: UUID? = null)
 // PhaseTapChangerAsymmetrical Events
 
 data class CreatePhaseTapChangerAsymmetricalEvent(
-    @Id val phaseTapChangerAsymmetricalId: UUID? = null,
-    val windingConnectionAngle: String
+    @Id var phaseTapChangerAsymmetricalId: UUID? = null,
+    var windingConnectionAngle: String
 )
 
 data class UpdatePhaseTapChangerAsymmetricalEvent(
-    @Id val phaseTapChangerAsymmetricalId: UUID? = null,
-    val windingConnectionAngle: String
+    @Id var phaseTapChangerAsymmetricalId: UUID? = null,
+    var windingConnectionAngle: String
 )
 
-data class DeletePhaseTapChangerAsymmetricalEvent(@Id val phaseTapChangerAsymmetricalId: UUID? = null)
+data class DeletePhaseTapChangerAsymmetricalEvent(@Id var phaseTapChangerAsymmetricalId: UUID? = null)
 
 // single association events
 
@@ -9531,20 +9531,20 @@ data class DeletePhaseTapChangerAsymmetricalEvent(@Id val phaseTapChangerAsymmet
 // PhaseTapChangerLinear Events
 
 data class CreatePhaseTapChangerLinearEvent(
-    @Id val phaseTapChangerLinearId: UUID? = null,
-    val stepPhaseShiftIncrement: String,
-    val xMax: String,
-    val xMin: String
+    @Id var phaseTapChangerLinearId: UUID? = null,
+    var stepPhaseShiftIncrement: String,
+    var xMax: String,
+    var xMin: String
 )
 
 data class UpdatePhaseTapChangerLinearEvent(
-    @Id val phaseTapChangerLinearId: UUID? = null,
-    val stepPhaseShiftIncrement: String,
-    val xMax: String,
-    val xMin: String
+    @Id var phaseTapChangerLinearId: UUID? = null,
+    var stepPhaseShiftIncrement: String,
+    var xMax: String,
+    var xMin: String
 )
 
-data class DeletePhaseTapChangerLinearEvent(@Id val phaseTapChangerLinearId: UUID? = null)
+data class DeletePhaseTapChangerLinearEvent(@Id var phaseTapChangerLinearId: UUID? = null)
 
 // single association events
 
@@ -9554,20 +9554,20 @@ data class DeletePhaseTapChangerLinearEvent(@Id val phaseTapChangerLinearId: UUI
 // PhaseTapChangerNonLinear Events
 
 data class CreatePhaseTapChangerNonLinearEvent(
-    @Id val phaseTapChangerNonLinearId: UUID? = null,
-    val voltageStepIncrement: String,
-    val xMax: String,
-    val xMin: String
+    @Id var phaseTapChangerNonLinearId: UUID? = null,
+    var voltageStepIncrement: String,
+    var xMax: String,
+    var xMin: String
 )
 
 data class UpdatePhaseTapChangerNonLinearEvent(
-    @Id val phaseTapChangerNonLinearId: UUID? = null,
-    val voltageStepIncrement: String,
-    val xMax: String,
-    val xMin: String
+    @Id var phaseTapChangerNonLinearId: UUID? = null,
+    var voltageStepIncrement: String,
+    var xMax: String,
+    var xMin: String
 )
 
-data class DeletePhaseTapChangerNonLinearEvent(@Id val phaseTapChangerNonLinearId: UUID? = null)
+data class DeletePhaseTapChangerNonLinearEvent(@Id var phaseTapChangerNonLinearId: UUID? = null)
 
 // single association events
 
@@ -9577,14 +9577,14 @@ data class DeletePhaseTapChangerNonLinearEvent(@Id val phaseTapChangerNonLinearI
 // PhaseTapChangerSymmetrical Events
 
 data class CreatePhaseTapChangerSymmetricalEvent(
-     val phaseTapChangerSymmetricalId: UUID? = null
+     var phaseTapChangerSymmetricalId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerSymmetricalEvent(
-     val phaseTapChangerSymmetricalId: UUID? = null
+     var phaseTapChangerSymmetricalId: UUID? = null
 )
 
-data class DeletePhaseTapChangerSymmetricalEvent(@Id val phaseTapChangerSymmetricalId: UUID? = null)
+data class DeletePhaseTapChangerSymmetricalEvent(@Id var phaseTapChangerSymmetricalId: UUID? = null)
 
 // single association events
 
@@ -9594,14 +9594,14 @@ data class DeletePhaseTapChangerSymmetricalEvent(@Id val phaseTapChangerSymmetri
 // PhaseTapChangerTable Events
 
 data class CreatePhaseTapChangerTableEvent(
-     val phaseTapChangerTableId: UUID? = null
+     var phaseTapChangerTableId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerTableEvent(
-     val phaseTapChangerTableId: UUID? = null
+     var phaseTapChangerTableId: UUID? = null
 )
 
-data class DeletePhaseTapChangerTableEvent(@Id val phaseTapChangerTableId: UUID? = null)
+data class DeletePhaseTapChangerTableEvent(@Id var phaseTapChangerTableId: UUID? = null)
 
 // single association events
 
@@ -9611,16 +9611,16 @@ data class DeletePhaseTapChangerTableEvent(@Id val phaseTapChangerTableId: UUID?
 // PhaseTapChangerTablePoint Events
 
 data class CreatePhaseTapChangerTablePointEvent(
-    @Id val phaseTapChangerTablePointId: UUID? = null,
-    val angle: String
+    @Id var phaseTapChangerTablePointId: UUID? = null,
+    var angle: String
 )
 
 data class UpdatePhaseTapChangerTablePointEvent(
-    @Id val phaseTapChangerTablePointId: UUID? = null,
-    val angle: String
+    @Id var phaseTapChangerTablePointId: UUID? = null,
+    var angle: String
 )
 
-data class DeletePhaseTapChangerTablePointEvent(@Id val phaseTapChangerTablePointId: UUID? = null)
+data class DeletePhaseTapChangerTablePointEvent(@Id var phaseTapChangerTablePointId: UUID? = null)
 
 // single association events
 
@@ -9630,14 +9630,14 @@ data class DeletePhaseTapChangerTablePointEvent(@Id val phaseTapChangerTablePoin
 // PhaseTapChangerTabular Events
 
 data class CreatePhaseTapChangerTabularEvent(
-     val phaseTapChangerTabularId: UUID? = null
+     var phaseTapChangerTabularId: UUID? = null
 )
 
 data class UpdatePhaseTapChangerTabularEvent(
-     val phaseTapChangerTabularId: UUID? = null
+     var phaseTapChangerTabularId: UUID? = null
 )
 
-data class DeletePhaseTapChangerTabularEvent(@Id val phaseTapChangerTabularId: UUID? = null)
+data class DeletePhaseTapChangerTabularEvent(@Id var phaseTapChangerTabularId: UUID? = null)
 
 // single association events
 
@@ -9647,22 +9647,22 @@ data class DeletePhaseTapChangerTabularEvent(@Id val phaseTapChangerTabularId: U
 // PositionPoint Events
 
 data class CreatePositionPointEvent(
-    @Id val positionPointId: UUID? = null,
-    val sequenceNumber: String,
-    val xPosition: String,
-    val yPosition: String,
-    val zPosition: String
+    @Id var positionPointId: UUID? = null,
+    var sequenceNumber: String,
+    var xPosition: String,
+    var yPosition: String,
+    var zPosition: String
 )
 
 data class UpdatePositionPointEvent(
-    @Id val positionPointId: UUID? = null,
-    val sequenceNumber: String,
-    val xPosition: String,
-    val yPosition: String,
-    val zPosition: String
+    @Id var positionPointId: UUID? = null,
+    var sequenceNumber: String,
+    var xPosition: String,
+    var yPosition: String,
+    var zPosition: String
 )
 
-data class DeletePositionPointEvent(@Id val positionPointId: UUID? = null)
+data class DeletePositionPointEvent(@Id var positionPointId: UUID? = null)
 
 // single association events
 
@@ -9672,14 +9672,14 @@ data class DeletePositionPointEvent(@Id val positionPointId: UUID? = null)
 // PowerSystemResource Events
 
 data class CreatePowerSystemResourceEvent(
-     val powerSystemResourceId: UUID? = null
+     var powerSystemResourceId: UUID? = null
 )
 
 data class UpdatePowerSystemResourceEvent(
-     val powerSystemResourceId: UUID? = null
+     var powerSystemResourceId: UUID? = null
 )
 
-data class DeletePowerSystemResourceEvent(@Id val powerSystemResourceId: UUID? = null)
+data class DeletePowerSystemResourceEvent(@Id var powerSystemResourceId: UUID? = null)
 
 // single association events
 
@@ -9689,14 +9689,14 @@ data class DeletePowerSystemResourceEvent(@Id val powerSystemResourceId: UUID? =
 // PowerSystemStabilizerDynamics Events
 
 data class CreatePowerSystemStabilizerDynamicsEvent(
-     val powerSystemStabilizerDynamicsId: UUID? = null
+     var powerSystemStabilizerDynamicsId: UUID? = null
 )
 
 data class UpdatePowerSystemStabilizerDynamicsEvent(
-     val powerSystemStabilizerDynamicsId: UUID? = null
+     var powerSystemStabilizerDynamicsId: UUID? = null
 )
 
-data class DeletePowerSystemStabilizerDynamicsEvent(@Id val powerSystemStabilizerDynamicsId: UUID? = null)
+data class DeletePowerSystemStabilizerDynamicsEvent(@Id var powerSystemStabilizerDynamicsId: UUID? = null)
 
 // single association events
 
@@ -9706,16 +9706,16 @@ data class DeletePowerSystemStabilizerDynamicsEvent(@Id val powerSystemStabilize
 // PowerSystemStabilizerUserDefined Events
 
 data class CreatePowerSystemStabilizerUserDefinedEvent(
-    @Id val powerSystemStabilizerUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var powerSystemStabilizerUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdatePowerSystemStabilizerUserDefinedEvent(
-    @Id val powerSystemStabilizerUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var powerSystemStabilizerUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeletePowerSystemStabilizerUserDefinedEvent(@Id val powerSystemStabilizerUserDefinedId: UUID? = null)
+data class DeletePowerSystemStabilizerUserDefinedEvent(@Id var powerSystemStabilizerUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -9725,26 +9725,26 @@ data class DeletePowerSystemStabilizerUserDefinedEvent(@Id val powerSystemStabil
 // PowerTransformer Events
 
 data class CreatePowerTransformerEvent(
-    @Id val powerTransformerId: UUID? = null,
-    val beforeShCircuitHighestOperatingCurrent: String,
-    val beforeShCircuitHighestOperatingVoltage: String,
-    val beforeShortCircuitAnglePf: String,
-    val highSideMinOperatingU: String,
-    val isPartOfGeneratorUnit: String,
-    val operationalValuesConsidered: String
+    @Id var powerTransformerId: UUID? = null,
+    var beforeShCircuitHighestOperatingCurrent: String,
+    var beforeShCircuitHighestOperatingVoltage: String,
+    var beforeShortCircuitAnglePf: String,
+    var highSideMinOperatingU: String,
+    var isPartOfGeneratorUnit: String,
+    var operationalValuesConsidered: String
 )
 
 data class UpdatePowerTransformerEvent(
-    @Id val powerTransformerId: UUID? = null,
-    val beforeShCircuitHighestOperatingCurrent: String,
-    val beforeShCircuitHighestOperatingVoltage: String,
-    val beforeShortCircuitAnglePf: String,
-    val highSideMinOperatingU: String,
-    val isPartOfGeneratorUnit: String,
-    val operationalValuesConsidered: String
+    @Id var powerTransformerId: UUID? = null,
+    var beforeShCircuitHighestOperatingCurrent: String,
+    var beforeShCircuitHighestOperatingVoltage: String,
+    var beforeShortCircuitAnglePf: String,
+    var highSideMinOperatingU: String,
+    var isPartOfGeneratorUnit: String,
+    var operationalValuesConsidered: String
 )
 
-data class DeletePowerTransformerEvent(@Id val powerTransformerId: UUID? = null)
+data class DeletePowerTransformerEvent(@Id var powerTransformerId: UUID? = null)
 
 // single association events
 
@@ -9754,38 +9754,38 @@ data class DeletePowerTransformerEvent(@Id val powerTransformerId: UUID? = null)
 // PowerTransformerEnd Events
 
 data class CreatePowerTransformerEndEvent(
-    @Id val powerTransformerEndId: UUID? = null,
-    val b: String,
-    val b0: String,
-    val connectionKind: String,
-    val g: String,
-    val g0: String,
-    val phaseAngleClock: String,
-    val r: String,
-    val r0: String,
-    val ratedS: String,
-    val ratedU: String,
-    val x: String,
-    val x0: String
+    @Id var powerTransformerEndId: UUID? = null,
+    var b: String,
+    var b0: String,
+    var connectionKind: String,
+    var g: String,
+    var g0: String,
+    var phaseAngleClock: String,
+    var r: String,
+    var r0: String,
+    var ratedS: String,
+    var ratedU: String,
+    var x: String,
+    var x0: String
 )
 
 data class UpdatePowerTransformerEndEvent(
-    @Id val powerTransformerEndId: UUID? = null,
-    val b: String,
-    val b0: String,
-    val connectionKind: String,
-    val g: String,
-    val g0: String,
-    val phaseAngleClock: String,
-    val r: String,
-    val r0: String,
-    val ratedS: String,
-    val ratedU: String,
-    val x: String,
-    val x0: String
+    @Id var powerTransformerEndId: UUID? = null,
+    var b: String,
+    var b0: String,
+    var connectionKind: String,
+    var g: String,
+    var g0: String,
+    var phaseAngleClock: String,
+    var r: String,
+    var r0: String,
+    var ratedS: String,
+    var ratedU: String,
+    var x: String,
+    var x0: String
 )
 
-data class DeletePowerTransformerEndEvent(@Id val powerTransformerEndId: UUID? = null)
+data class DeletePowerTransformerEndEvent(@Id var powerTransformerEndId: UUID? = null)
 
 // single association events
 
@@ -9795,22 +9795,22 @@ data class DeletePowerTransformerEndEvent(@Id val powerTransformerEndId: UUID? =
 // ProprietaryParameterDynamics Events
 
 data class CreateProprietaryParameterDynamicsEvent(
-    @Id val proprietaryParameterDynamicsId: UUID? = null,
-    val booleanParameterValue: String,
-    val floatParameterValue: String,
-    val integerParameterValue: String,
-    val parameterNumber: String
+    @Id var proprietaryParameterDynamicsId: UUID? = null,
+    var booleanParameterValue: String,
+    var floatParameterValue: String,
+    var integerParameterValue: String,
+    var parameterNumber: String
 )
 
 data class UpdateProprietaryParameterDynamicsEvent(
-    @Id val proprietaryParameterDynamicsId: UUID? = null,
-    val booleanParameterValue: String,
-    val floatParameterValue: String,
-    val integerParameterValue: String,
-    val parameterNumber: String
+    @Id var proprietaryParameterDynamicsId: UUID? = null,
+    var booleanParameterValue: String,
+    var floatParameterValue: String,
+    var integerParameterValue: String,
+    var parameterNumber: String
 )
 
-data class DeleteProprietaryParameterDynamicsEvent(@Id val proprietaryParameterDynamicsId: UUID? = null)
+data class DeleteProprietaryParameterDynamicsEvent(@Id var proprietaryParameterDynamicsId: UUID? = null)
 
 // single association events
 
@@ -9820,14 +9820,14 @@ data class DeleteProprietaryParameterDynamicsEvent(@Id val proprietaryParameterD
 // ProtectedSwitch Events
 
 data class CreateProtectedSwitchEvent(
-     val protectedSwitchId: UUID? = null
+     var protectedSwitchId: UUID? = null
 )
 
 data class UpdateProtectedSwitchEvent(
-     val protectedSwitchId: UUID? = null
+     var protectedSwitchId: UUID? = null
 )
 
-data class DeleteProtectedSwitchEvent(@Id val protectedSwitchId: UUID? = null)
+data class DeleteProtectedSwitchEvent(@Id var protectedSwitchId: UUID? = null)
 
 // single association events
 
@@ -9837,44 +9837,44 @@ data class DeleteProtectedSwitchEvent(@Id val protectedSwitchId: UUID? = null)
 // Pss1 Events
 
 data class CreatePss1Event(
-    @Id val pss1Id: UUID? = null,
-    val kf: String,
-    val kpe: String,
-    val ks: String,
-    val kw: String,
-    val pmin: String,
-    val t10: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val tpe: String,
-    val vadat: String,
-    val vsmn: String,
-    val vsmx: String
+    @Id var pss1Id: UUID? = null,
+    var kf: String,
+    var kpe: String,
+    var ks: String,
+    var kw: String,
+    var pmin: String,
+    var t10: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var tpe: String,
+    var vadat: String,
+    var vsmn: String,
+    var vsmx: String
 )
 
 data class UpdatePss1Event(
-    @Id val pss1Id: UUID? = null,
-    val kf: String,
-    val kpe: String,
-    val ks: String,
-    val kw: String,
-    val pmin: String,
-    val t10: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val tpe: String,
-    val vadat: String,
-    val vsmn: String,
-    val vsmx: String
+    @Id var pss1Id: UUID? = null,
+    var kf: String,
+    var kpe: String,
+    var ks: String,
+    var kw: String,
+    var pmin: String,
+    var t10: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var tpe: String,
+    var vadat: String,
+    var vsmn: String,
+    var vsmx: String
 )
 
-data class DeletePss1Event(@Id val pss1Id: UUID? = null)
+data class DeletePss1Event(@Id var pss1Id: UUID? = null)
 
 // single association events
 
@@ -9884,58 +9884,58 @@ data class DeletePss1Event(@Id val pss1Id: UUID? = null)
 // Pss1A Events
 
 data class CreatePss1AEvent(
-    @Id val pss1AId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val a7: String,
-    val a8: String,
-    val inputSignalType: String,
-    val kd: String,
-    val ks: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val tdelay: String,
-    val vcl: String,
-    val vcu: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var pss1AId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var a7: String,
+    var a8: String,
+    var inputSignalType: String,
+    var kd: String,
+    var ks: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var tdelay: String,
+    var vcl: String,
+    var vcu: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdatePss1AEvent(
-    @Id val pss1AId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val a7: String,
-    val a8: String,
-    val inputSignalType: String,
-    val kd: String,
-    val ks: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val tdelay: String,
-    val vcl: String,
-    val vcu: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var pss1AId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var a7: String,
+    var a8: String,
+    var inputSignalType: String,
+    var kd: String,
+    var ks: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var tdelay: String,
+    var vcl: String,
+    var vcu: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeletePss1AEvent(@Id val pss1AId: UUID? = null)
+data class DeletePss1AEvent(@Id var pss1AId: UUID? = null)
 
 // single association events
 
@@ -9945,76 +9945,76 @@ data class DeletePss1AEvent(@Id val pss1AId: UUID? = null)
 // Pss2B Events
 
 data class CreatePss2BEvent(
-    @Id val pss2BId: UUID? = null,
-    val a: String,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val ks3: String,
-    val ks4: String,
-    val m: String,
-    val n: String,
-    val t1: String,
-    val t10: String,
-    val t11: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val ta: String,
-    val tb: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val tw4: String,
-    val vsi1max: String,
-    val vsi1min: String,
-    val vsi2max: String,
-    val vsi2min: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pss2BId: UUID? = null,
+    var a: String,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var ks3: String,
+    var ks4: String,
+    var m: String,
+    var n: String,
+    var t1: String,
+    var t10: String,
+    var t11: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var ta: String,
+    var tb: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var tw4: String,
+    var vsi1max: String,
+    var vsi1min: String,
+    var vsi2max: String,
+    var vsi2min: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
 data class UpdatePss2BEvent(
-    @Id val pss2BId: UUID? = null,
-    val a: String,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val ks3: String,
-    val ks4: String,
-    val m: String,
-    val n: String,
-    val t1: String,
-    val t10: String,
-    val t11: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val ta: String,
-    val tb: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val tw4: String,
-    val vsi1max: String,
-    val vsi1min: String,
-    val vsi2max: String,
-    val vsi2min: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pss2BId: UUID? = null,
+    var a: String,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var ks3: String,
+    var ks4: String,
+    var m: String,
+    var n: String,
+    var t1: String,
+    var t10: String,
+    var t11: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var ta: String,
+    var tb: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var tw4: String,
+    var vsi1max: String,
+    var vsi1min: String,
+    var vsi2max: String,
+    var vsi2min: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
-data class DeletePss2BEvent(@Id val pss2BId: UUID? = null)
+data class DeletePss2BEvent(@Id var pss2BId: UUID? = null)
 
 // single association events
 
@@ -10024,50 +10024,50 @@ data class DeletePss2BEvent(@Id val pss2BId: UUID? = null)
 // Pss2ST Events
 
 data class CreatePss2STEvent(
-    @Id val pss2STId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val k1: String,
-    val k2: String,
-    val lsmax: String,
-    val lsmin: String,
-    val t1: String,
-    val t10: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val vcl: String,
-    val vcu: String
+    @Id var pss2STId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var k1: String,
+    var k2: String,
+    var lsmax: String,
+    var lsmin: String,
+    var t1: String,
+    var t10: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var vcl: String,
+    var vcu: String
 )
 
 data class UpdatePss2STEvent(
-    @Id val pss2STId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val k1: String,
-    val k2: String,
-    val lsmax: String,
-    val lsmin: String,
-    val t1: String,
-    val t10: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val vcl: String,
-    val vcu: String
+    @Id var pss2STId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var k1: String,
+    var k2: String,
+    var lsmax: String,
+    var lsmin: String,
+    var t1: String,
+    var t10: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var vcl: String,
+    var vcu: String
 )
 
-data class DeletePss2STEvent(@Id val pss2STId: UUID? = null)
+data class DeletePss2STEvent(@Id var pss2STId: UUID? = null)
 
 // single association events
 
@@ -10077,48 +10077,48 @@ data class DeletePss2STEvent(@Id val pss2STId: UUID? = null)
 // Pss5 Events
 
 data class CreatePss5Event(
-    @Id val pss5Id: UUID? = null,
-    val ctw2: String,
-    val deadband: String,
-    val isfreq: String,
-    val kf: String,
-    val kpe: String,
-    val kpss: String,
-    val pmm: String,
-    val tl1: String,
-    val tl2: String,
-    val tl3: String,
-    val tl4: String,
-    val tpe: String,
-    val tw1: String,
-    val tw2: String,
-    val vadat: String,
-    val vsmn: String,
-    val vsmx: String
+    @Id var pss5Id: UUID? = null,
+    var ctw2: String,
+    var deadband: String,
+    var isfreq: String,
+    var kf: String,
+    var kpe: String,
+    var kpss: String,
+    var pmm: String,
+    var tl1: String,
+    var tl2: String,
+    var tl3: String,
+    var tl4: String,
+    var tpe: String,
+    var tw1: String,
+    var tw2: String,
+    var vadat: String,
+    var vsmn: String,
+    var vsmx: String
 )
 
 data class UpdatePss5Event(
-    @Id val pss5Id: UUID? = null,
-    val ctw2: String,
-    val deadband: String,
-    val isfreq: String,
-    val kf: String,
-    val kpe: String,
-    val kpss: String,
-    val pmm: String,
-    val tl1: String,
-    val tl2: String,
-    val tl3: String,
-    val tl4: String,
-    val tpe: String,
-    val tw1: String,
-    val tw2: String,
-    val vadat: String,
-    val vsmn: String,
-    val vsmx: String
+    @Id var pss5Id: UUID? = null,
+    var ctw2: String,
+    var deadband: String,
+    var isfreq: String,
+    var kf: String,
+    var kpe: String,
+    var kpss: String,
+    var pmm: String,
+    var tl1: String,
+    var tl2: String,
+    var tl3: String,
+    var tl4: String,
+    var tpe: String,
+    var tw1: String,
+    var tw2: String,
+    var vadat: String,
+    var vsmn: String,
+    var vsmx: String
 )
 
-data class DeletePss5Event(@Id val pss5Id: UUID? = null)
+data class DeletePss5Event(@Id var pss5Id: UUID? = null)
 
 // single association events
 
@@ -10128,36 +10128,36 @@ data class DeletePss5Event(@Id val pss5Id: UUID? = null)
 // PssELIN2 Events
 
 data class CreatePssELIN2Event(
-    @Id val pssELIN2Id: UUID? = null,
-    val apss: String,
-    val ks1: String,
-    val ks2: String,
-    val ppss: String,
-    val psslim: String,
-    val ts1: String,
-    val ts2: String,
-    val ts3: String,
-    val ts4: String,
-    val ts5: String,
-    val ts6: String
+    @Id var pssELIN2Id: UUID? = null,
+    var apss: String,
+    var ks1: String,
+    var ks2: String,
+    var ppss: String,
+    var psslim: String,
+    var ts1: String,
+    var ts2: String,
+    var ts3: String,
+    var ts4: String,
+    var ts5: String,
+    var ts6: String
 )
 
 data class UpdatePssELIN2Event(
-    @Id val pssELIN2Id: UUID? = null,
-    val apss: String,
-    val ks1: String,
-    val ks2: String,
-    val ppss: String,
-    val psslim: String,
-    val ts1: String,
-    val ts2: String,
-    val ts3: String,
-    val ts4: String,
-    val ts5: String,
-    val ts6: String
+    @Id var pssELIN2Id: UUID? = null,
+    var apss: String,
+    var ks1: String,
+    var ks2: String,
+    var ppss: String,
+    var psslim: String,
+    var ts1: String,
+    var ts2: String,
+    var ts3: String,
+    var ts4: String,
+    var ts5: String,
+    var ts6: String
 )
 
-data class DeletePssELIN2Event(@Id val pssELIN2Id: UUID? = null)
+data class DeletePssELIN2Event(@Id var pssELIN2Id: UUID? = null)
 
 // single association events
 
@@ -10167,38 +10167,38 @@ data class DeletePssELIN2Event(@Id val pssELIN2Id: UUID? = null)
 // PssIEEE1A Events
 
 data class CreatePssIEEE1AEvent(
-    @Id val pssIEEE1AId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val inputSignalType: String,
-    val ks: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var pssIEEE1AId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var inputSignalType: String,
+    var ks: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
 data class UpdatePssIEEE1AEvent(
-    @Id val pssIEEE1AId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val inputSignalType: String,
-    val ks: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vrmax: String,
-    val vrmin: String
+    @Id var pssIEEE1AId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var inputSignalType: String,
+    var ks: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vrmax: String,
+    var vrmin: String
 )
 
-data class DeletePssIEEE1AEvent(@Id val pssIEEE1AId: UUID? = null)
+data class DeletePssIEEE1AEvent(@Id var pssIEEE1AId: UUID? = null)
 
 // single association events
 
@@ -10208,68 +10208,68 @@ data class DeletePssIEEE1AEvent(@Id val pssIEEE1AId: UUID? = null)
 // PssIEEE2B Events
 
 data class CreatePssIEEE2BEvent(
-    @Id val pssIEEE2BId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val ks3: String,
-    val m: String,
-    val n: String,
-    val t1: String,
-    val t10: String,
-    val t11: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val tw4: String,
-    val vsi1max: String,
-    val vsi1min: String,
-    val vsi2max: String,
-    val vsi2min: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE2BId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var ks3: String,
+    var m: String,
+    var n: String,
+    var t1: String,
+    var t10: String,
+    var t11: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var tw4: String,
+    var vsi1max: String,
+    var vsi1min: String,
+    var vsi2max: String,
+    var vsi2min: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
 data class UpdatePssIEEE2BEvent(
-    @Id val pssIEEE2BId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val ks3: String,
-    val m: String,
-    val n: String,
-    val t1: String,
-    val t10: String,
-    val t11: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val tw4: String,
-    val vsi1max: String,
-    val vsi1min: String,
-    val vsi2max: String,
-    val vsi2min: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE2BId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var ks3: String,
+    var m: String,
+    var n: String,
+    var t1: String,
+    var t10: String,
+    var t11: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var tw4: String,
+    var vsi1max: String,
+    var vsi1min: String,
+    var vsi2max: String,
+    var vsi2min: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
-data class DeletePssIEEE2BEvent(@Id val pssIEEE2BId: UUID? = null)
+data class DeletePssIEEE2BEvent(@Id var pssIEEE2BId: UUID? = null)
 
 // single association events
 
@@ -10279,52 +10279,52 @@ data class DeletePssIEEE2BEvent(@Id val pssIEEE2BId: UUID? = null)
 // PssIEEE3B Events
 
 data class CreatePssIEEE3BEvent(
-    @Id val pssIEEE3BId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val a7: String,
-    val a8: String,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val t1: String,
-    val t2: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE3BId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var a7: String,
+    var a8: String,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var t1: String,
+    var t2: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
 data class UpdatePssIEEE3BEvent(
-    @Id val pssIEEE3BId: UUID? = null,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val a6: String,
-    val a7: String,
-    val a8: String,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val ks1: String,
-    val ks2: String,
-    val t1: String,
-    val t2: String,
-    val tw1: String,
-    val tw2: String,
-    val tw3: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE3BId: UUID? = null,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var a6: String,
+    var a7: String,
+    var a8: String,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var ks1: String,
+    var ks2: String,
+    var t1: String,
+    var t2: String,
+    var tw1: String,
+    var tw2: String,
+    var tw3: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
-data class DeletePssIEEE3BEvent(@Id val pssIEEE3BId: UUID? = null)
+data class DeletePssIEEE3BEvent(@Id var pssIEEE3BId: UUID? = null)
 
 // single association events
 
@@ -10334,148 +10334,148 @@ data class DeletePssIEEE3BEvent(@Id val pssIEEE3BId: UUID? = null)
 // PssIEEE4B Events
 
 data class CreatePssIEEE4BEvent(
-    @Id val pssIEEE4BId: UUID? = null,
-    val bwh1: String,
-    val bwh2: String,
-    val bwl1: String,
-    val bwl2: String,
-    val kh: String,
-    val kh1: String,
-    val kh11: String,
-    val kh17: String,
-    val kh2: String,
-    val ki: String,
-    val ki1: String,
-    val ki11: String,
-    val ki17: String,
-    val ki2: String,
-    val kl: String,
-    val kl1: String,
-    val kl11: String,
-    val kl17: String,
-    val kl2: String,
-    val omeganh1: String,
-    val omeganh2: String,
-    val omeganl1: String,
-    val omeganl2: String,
-    val th1: String,
-    val th10: String,
-    val th11: String,
-    val th12: String,
-    val th2: String,
-    val th3: String,
-    val th4: String,
-    val th5: String,
-    val th6: String,
-    val th7: String,
-    val th8: String,
-    val th9: String,
-    val ti1: String,
-    val ti10: String,
-    val ti11: String,
-    val ti12: String,
-    val ti2: String,
-    val ti3: String,
-    val ti4: String,
-    val ti5: String,
-    val ti6: String,
-    val ti7: String,
-    val ti8: String,
-    val ti9: String,
-    val tl1: String,
-    val tl10: String,
-    val tl11: String,
-    val tl12: String,
-    val tl2: String,
-    val tl3: String,
-    val tl4: String,
-    val tl5: String,
-    val tl6: String,
-    val tl7: String,
-    val tl8: String,
-    val tl9: String,
-    val vhmax: String,
-    val vhmin: String,
-    val vimax: String,
-    val vimin: String,
-    val vlmax: String,
-    val vlmin: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE4BId: UUID? = null,
+    var bwh1: String,
+    var bwh2: String,
+    var bwl1: String,
+    var bwl2: String,
+    var kh: String,
+    var kh1: String,
+    var kh11: String,
+    var kh17: String,
+    var kh2: String,
+    var ki: String,
+    var ki1: String,
+    var ki11: String,
+    var ki17: String,
+    var ki2: String,
+    var kl: String,
+    var kl1: String,
+    var kl11: String,
+    var kl17: String,
+    var kl2: String,
+    var omeganh1: String,
+    var omeganh2: String,
+    var omeganl1: String,
+    var omeganl2: String,
+    var th1: String,
+    var th10: String,
+    var th11: String,
+    var th12: String,
+    var th2: String,
+    var th3: String,
+    var th4: String,
+    var th5: String,
+    var th6: String,
+    var th7: String,
+    var th8: String,
+    var th9: String,
+    var ti1: String,
+    var ti10: String,
+    var ti11: String,
+    var ti12: String,
+    var ti2: String,
+    var ti3: String,
+    var ti4: String,
+    var ti5: String,
+    var ti6: String,
+    var ti7: String,
+    var ti8: String,
+    var ti9: String,
+    var tl1: String,
+    var tl10: String,
+    var tl11: String,
+    var tl12: String,
+    var tl2: String,
+    var tl3: String,
+    var tl4: String,
+    var tl5: String,
+    var tl6: String,
+    var tl7: String,
+    var tl8: String,
+    var tl9: String,
+    var vhmax: String,
+    var vhmin: String,
+    var vimax: String,
+    var vimin: String,
+    var vlmax: String,
+    var vlmin: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
 data class UpdatePssIEEE4BEvent(
-    @Id val pssIEEE4BId: UUID? = null,
-    val bwh1: String,
-    val bwh2: String,
-    val bwl1: String,
-    val bwl2: String,
-    val kh: String,
-    val kh1: String,
-    val kh11: String,
-    val kh17: String,
-    val kh2: String,
-    val ki: String,
-    val ki1: String,
-    val ki11: String,
-    val ki17: String,
-    val ki2: String,
-    val kl: String,
-    val kl1: String,
-    val kl11: String,
-    val kl17: String,
-    val kl2: String,
-    val omeganh1: String,
-    val omeganh2: String,
-    val omeganl1: String,
-    val omeganl2: String,
-    val th1: String,
-    val th10: String,
-    val th11: String,
-    val th12: String,
-    val th2: String,
-    val th3: String,
-    val th4: String,
-    val th5: String,
-    val th6: String,
-    val th7: String,
-    val th8: String,
-    val th9: String,
-    val ti1: String,
-    val ti10: String,
-    val ti11: String,
-    val ti12: String,
-    val ti2: String,
-    val ti3: String,
-    val ti4: String,
-    val ti5: String,
-    val ti6: String,
-    val ti7: String,
-    val ti8: String,
-    val ti9: String,
-    val tl1: String,
-    val tl10: String,
-    val tl11: String,
-    val tl12: String,
-    val tl2: String,
-    val tl3: String,
-    val tl4: String,
-    val tl5: String,
-    val tl6: String,
-    val tl7: String,
-    val tl8: String,
-    val tl9: String,
-    val vhmax: String,
-    val vhmin: String,
-    val vimax: String,
-    val vimin: String,
-    val vlmax: String,
-    val vlmin: String,
-    val vstmax: String,
-    val vstmin: String
+    @Id var pssIEEE4BId: UUID? = null,
+    var bwh1: String,
+    var bwh2: String,
+    var bwl1: String,
+    var bwl2: String,
+    var kh: String,
+    var kh1: String,
+    var kh11: String,
+    var kh17: String,
+    var kh2: String,
+    var ki: String,
+    var ki1: String,
+    var ki11: String,
+    var ki17: String,
+    var ki2: String,
+    var kl: String,
+    var kl1: String,
+    var kl11: String,
+    var kl17: String,
+    var kl2: String,
+    var omeganh1: String,
+    var omeganh2: String,
+    var omeganl1: String,
+    var omeganl2: String,
+    var th1: String,
+    var th10: String,
+    var th11: String,
+    var th12: String,
+    var th2: String,
+    var th3: String,
+    var th4: String,
+    var th5: String,
+    var th6: String,
+    var th7: String,
+    var th8: String,
+    var th9: String,
+    var ti1: String,
+    var ti10: String,
+    var ti11: String,
+    var ti12: String,
+    var ti2: String,
+    var ti3: String,
+    var ti4: String,
+    var ti5: String,
+    var ti6: String,
+    var ti7: String,
+    var ti8: String,
+    var ti9: String,
+    var tl1: String,
+    var tl10: String,
+    var tl11: String,
+    var tl12: String,
+    var tl2: String,
+    var tl3: String,
+    var tl4: String,
+    var tl5: String,
+    var tl6: String,
+    var tl7: String,
+    var tl8: String,
+    var tl9: String,
+    var vhmax: String,
+    var vhmin: String,
+    var vimax: String,
+    var vimin: String,
+    var vlmax: String,
+    var vlmin: String,
+    var vstmax: String,
+    var vstmin: String
 )
 
-data class DeletePssIEEE4BEvent(@Id val pssIEEE4BId: UUID? = null)
+data class DeletePssIEEE4BEvent(@Id var pssIEEE4BId: UUID? = null)
 
 // single association events
 
@@ -10485,36 +10485,36 @@ data class DeletePssIEEE4BEvent(@Id val pssIEEE4BId: UUID? = null)
 // PssPTIST1 Events
 
 data class CreatePssPTIST1Event(
-    @Id val pssPTIST1Id: UUID? = null,
-    val dtc: String,
-    val dtf: String,
-    val dtp: String,
-    val k: String,
-    val m: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val tf: String,
-    val tp: String
+    @Id var pssPTIST1Id: UUID? = null,
+    var dtc: String,
+    var dtf: String,
+    var dtp: String,
+    var k: String,
+    var m: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var tf: String,
+    var tp: String
 )
 
 data class UpdatePssPTIST1Event(
-    @Id val pssPTIST1Id: UUID? = null,
-    val dtc: String,
-    val dtf: String,
-    val dtp: String,
-    val k: String,
-    val m: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val tf: String,
-    val tp: String
+    @Id var pssPTIST1Id: UUID? = null,
+    var dtc: String,
+    var dtf: String,
+    var dtp: String,
+    var k: String,
+    var m: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var tf: String,
+    var tp: String
 )
 
-data class DeletePssPTIST1Event(@Id val pssPTIST1Id: UUID? = null)
+data class DeletePssPTIST1Event(@Id var pssPTIST1Id: UUID? = null)
 
 // single association events
 
@@ -10524,82 +10524,82 @@ data class DeletePssPTIST1Event(@Id val pssPTIST1Id: UUID? = null)
 // PssPTIST3 Events
 
 data class CreatePssPTIST3Event(
-    @Id val pssPTIST3Id: UUID? = null,
-    val a0: String,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val al: String,
-    val athres: String,
-    val b0: String,
-    val b1: String,
-    val b2: String,
-    val b3: String,
-    val b4: String,
-    val b5: String,
-    val dl: String,
-    val dtc: String,
-    val dtf: String,
-    val dtp: String,
-    val isw: String,
-    val k: String,
-    val lthres: String,
-    val m: String,
-    val nav: String,
-    val ncl: String,
-    val ncr: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val tf: String,
-    val tp: String
+    @Id var pssPTIST3Id: UUID? = null,
+    var a0: String,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var al: String,
+    var athres: String,
+    var b0: String,
+    var b1: String,
+    var b2: String,
+    var b3: String,
+    var b4: String,
+    var b5: String,
+    var dl: String,
+    var dtc: String,
+    var dtf: String,
+    var dtp: String,
+    var isw: String,
+    var k: String,
+    var lthres: String,
+    var m: String,
+    var nav: String,
+    var ncl: String,
+    var ncr: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var tf: String,
+    var tp: String
 )
 
 data class UpdatePssPTIST3Event(
-    @Id val pssPTIST3Id: UUID? = null,
-    val a0: String,
-    val a1: String,
-    val a2: String,
-    val a3: String,
-    val a4: String,
-    val a5: String,
-    val al: String,
-    val athres: String,
-    val b0: String,
-    val b1: String,
-    val b2: String,
-    val b3: String,
-    val b4: String,
-    val b5: String,
-    val dl: String,
-    val dtc: String,
-    val dtf: String,
-    val dtp: String,
-    val isw: String,
-    val k: String,
-    val lthres: String,
-    val m: String,
-    val nav: String,
-    val ncl: String,
-    val ncr: String,
-    val pmin: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val tf: String,
-    val tp: String
+    @Id var pssPTIST3Id: UUID? = null,
+    var a0: String,
+    var a1: String,
+    var a2: String,
+    var a3: String,
+    var a4: String,
+    var a5: String,
+    var al: String,
+    var athres: String,
+    var b0: String,
+    var b1: String,
+    var b2: String,
+    var b3: String,
+    var b4: String,
+    var b5: String,
+    var dl: String,
+    var dtc: String,
+    var dtf: String,
+    var dtp: String,
+    var isw: String,
+    var k: String,
+    var lthres: String,
+    var m: String,
+    var nav: String,
+    var ncl: String,
+    var ncr: String,
+    var pmin: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var tf: String,
+    var tp: String
 )
 
-data class DeletePssPTIST3Event(@Id val pssPTIST3Id: UUID? = null)
+data class DeletePssPTIST3Event(@Id var pssPTIST3Id: UUID? = null)
 
 // single association events
 
@@ -10609,36 +10609,36 @@ data class DeletePssPTIST3Event(@Id val pssPTIST3Id: UUID? = null)
 // PssSB4 Events
 
 data class CreatePssSB4Event(
-    @Id val pssSB4Id: UUID? = null,
-    val kx: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val td: String,
-    val te: String,
-    val tt: String,
-    val tx1: String,
-    val tx2: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSB4Id: UUID? = null,
+    var kx: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var td: String,
+    var te: String,
+    var tt: String,
+    var tx1: String,
+    var tx2: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
 data class UpdatePssSB4Event(
-    @Id val pssSB4Id: UUID? = null,
-    val kx: String,
-    val ta: String,
-    val tb: String,
-    val tc: String,
-    val td: String,
-    val te: String,
-    val tt: String,
-    val tx1: String,
-    val tx2: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSB4Id: UUID? = null,
+    var kx: String,
+    var ta: String,
+    var tb: String,
+    var tc: String,
+    var td: String,
+    var te: String,
+    var tt: String,
+    var tx1: String,
+    var tx2: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
-data class DeletePssSB4Event(@Id val pssSB4Id: UUID? = null)
+data class DeletePssSB4Event(@Id var pssSB4Id: UUID? = null)
 
 // single association events
 
@@ -10648,40 +10648,40 @@ data class DeletePssSB4Event(@Id val pssSB4Id: UUID? = null)
 // PssSH Events
 
 data class CreatePssSHEvent(
-    @Id val pssSHId: UUID? = null,
-    val k: String,
-    val k0: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val td: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSHId: UUID? = null,
+    var k: String,
+    var k0: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var td: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
 data class UpdatePssSHEvent(
-    @Id val pssSHId: UUID? = null,
-    val k: String,
-    val k0: String,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val k4: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val td: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSHId: UUID? = null,
+    var k: String,
+    var k0: String,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var k4: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var td: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
-data class DeletePssSHEvent(@Id val pssSHId: UUID? = null)
+data class DeletePssSHEvent(@Id var pssSHId: UUID? = null)
 
 // single association events
 
@@ -10691,36 +10691,36 @@ data class DeletePssSHEvent(@Id val pssSHId: UUID? = null)
 // PssSK Events
 
 data class CreatePssSKEvent(
-    @Id val pssSKId: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSKId: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
 data class UpdatePssSKEvent(
-    @Id val pssSKId: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val k3: String,
-    val t1: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssSKId: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var k3: String,
+    var t1: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
-data class DeletePssSKEvent(@Id val pssSKId: UUID? = null)
+data class DeletePssSKEvent(@Id var pssSKId: UUID? = null)
 
 // single association events
 
@@ -10730,50 +10730,50 @@ data class DeletePssSKEvent(@Id val pssSKId: UUID? = null)
 // PssWECC Events
 
 data class CreatePssWECCEvent(
-    @Id val pssWECCId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val k1: String,
-    val k2: String,
-    val t1: String,
-    val t10: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val vcl: String,
-    val vcu: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssWECCId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var k1: String,
+    var k2: String,
+    var t1: String,
+    var t10: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var vcl: String,
+    var vcu: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
 data class UpdatePssWECCEvent(
-    @Id val pssWECCId: UUID? = null,
-    val inputSignal1Type: String,
-    val inputSignal2Type: String,
-    val k1: String,
-    val k2: String,
-    val t1: String,
-    val t10: String,
-    val t2: String,
-    val t3: String,
-    val t4: String,
-    val t5: String,
-    val t6: String,
-    val t7: String,
-    val t8: String,
-    val t9: String,
-    val vcl: String,
-    val vcu: String,
-    val vsmax: String,
-    val vsmin: String
+    @Id var pssWECCId: UUID? = null,
+    var inputSignal1Type: String,
+    var inputSignal2Type: String,
+    var k1: String,
+    var k2: String,
+    var t1: String,
+    var t10: String,
+    var t2: String,
+    var t3: String,
+    var t4: String,
+    var t5: String,
+    var t6: String,
+    var t7: String,
+    var t8: String,
+    var t9: String,
+    var vcl: String,
+    var vcu: String,
+    var vsmax: String,
+    var vsmin: String
 )
 
-data class DeletePssWECCEvent(@Id val pssWECCId: UUID? = null)
+data class DeletePssWECCEvent(@Id var pssWECCId: UUID? = null)
 
 // single association events
 
@@ -10783,38 +10783,38 @@ data class DeletePssWECCEvent(@Id val pssWECCId: UUID? = null)
 // Quality61850 Events
 
 data class CreateQuality61850Event(
-    @Id val quality61850Id: UUID? = null,
-    val badReference: String,
-    val estimatorReplaced: String,
-    val failure: String,
-    val oldData: String,
-    val operatorBlocked: String,
-    val oscillatory: String,
-    val outOfRange: String,
-    val overFlow: String,
-    val source: String,
-    val suspect: String,
-    val test: String,
-    val validity: String
+    @Id var quality61850Id: UUID? = null,
+    var badReference: String,
+    var estimatorReplaced: String,
+    var failure: String,
+    var oldData: String,
+    var operatorBlocked: String,
+    var oscillatory: String,
+    var outOfRange: String,
+    var overFlow: String,
+    var source: String,
+    var suspect: String,
+    var test: String,
+    var validity: String
 )
 
 data class UpdateQuality61850Event(
-    @Id val quality61850Id: UUID? = null,
-    val badReference: String,
-    val estimatorReplaced: String,
-    val failure: String,
-    val oldData: String,
-    val operatorBlocked: String,
-    val oscillatory: String,
-    val outOfRange: String,
-    val overFlow: String,
-    val source: String,
-    val suspect: String,
-    val test: String,
-    val validity: String
+    @Id var quality61850Id: UUID? = null,
+    var badReference: String,
+    var estimatorReplaced: String,
+    var failure: String,
+    var oldData: String,
+    var operatorBlocked: String,
+    var oscillatory: String,
+    var outOfRange: String,
+    var overFlow: String,
+    var source: String,
+    var suspect: String,
+    var test: String,
+    var validity: String
 )
 
-data class DeleteQuality61850Event(@Id val quality61850Id: UUID? = null)
+data class DeleteQuality61850Event(@Id var quality61850Id: UUID? = null)
 
 // single association events
 
@@ -10824,14 +10824,14 @@ data class DeleteQuality61850Event(@Id val quality61850Id: UUID? = null)
 // RaiseLowerCommand Events
 
 data class CreateRaiseLowerCommandEvent(
-     val raiseLowerCommandId: UUID? = null
+     var raiseLowerCommandId: UUID? = null
 )
 
 data class UpdateRaiseLowerCommandEvent(
-     val raiseLowerCommandId: UUID? = null
+     var raiseLowerCommandId: UUID? = null
 )
 
-data class DeleteRaiseLowerCommandEvent(@Id val raiseLowerCommandId: UUID? = null)
+data class DeleteRaiseLowerCommandEvent(@Id var raiseLowerCommandId: UUID? = null)
 
 // single association events
 
@@ -10841,18 +10841,18 @@ data class DeleteRaiseLowerCommandEvent(@Id val raiseLowerCommandId: UUID? = nul
 // RatioTapChanger Events
 
 data class CreateRatioTapChangerEvent(
-    @Id val ratioTapChangerId: UUID? = null,
-    val stepVoltageIncrement: String,
-    val tculControlMode: String
+    @Id var ratioTapChangerId: UUID? = null,
+    var stepVoltageIncrement: String,
+    var tculControlMode: String
 )
 
 data class UpdateRatioTapChangerEvent(
-    @Id val ratioTapChangerId: UUID? = null,
-    val stepVoltageIncrement: String,
-    val tculControlMode: String
+    @Id var ratioTapChangerId: UUID? = null,
+    var stepVoltageIncrement: String,
+    var tculControlMode: String
 )
 
-data class DeleteRatioTapChangerEvent(@Id val ratioTapChangerId: UUID? = null)
+data class DeleteRatioTapChangerEvent(@Id var ratioTapChangerId: UUID? = null)
 
 // single association events
 
@@ -10862,14 +10862,14 @@ data class DeleteRatioTapChangerEvent(@Id val ratioTapChangerId: UUID? = null)
 // RatioTapChangerTable Events
 
 data class CreateRatioTapChangerTableEvent(
-     val ratioTapChangerTableId: UUID? = null
+     var ratioTapChangerTableId: UUID? = null
 )
 
 data class UpdateRatioTapChangerTableEvent(
-     val ratioTapChangerTableId: UUID? = null
+     var ratioTapChangerTableId: UUID? = null
 )
 
-data class DeleteRatioTapChangerTableEvent(@Id val ratioTapChangerTableId: UUID? = null)
+data class DeleteRatioTapChangerTableEvent(@Id var ratioTapChangerTableId: UUID? = null)
 
 // single association events
 
@@ -10879,14 +10879,14 @@ data class DeleteRatioTapChangerTableEvent(@Id val ratioTapChangerTableId: UUID?
 // RatioTapChangerTablePoint Events
 
 data class CreateRatioTapChangerTablePointEvent(
-     val ratioTapChangerTablePointId: UUID? = null
+     var ratioTapChangerTablePointId: UUID? = null
 )
 
 data class UpdateRatioTapChangerTablePointEvent(
-     val ratioTapChangerTablePointId: UUID? = null
+     var ratioTapChangerTablePointId: UUID? = null
 )
 
-data class DeleteRatioTapChangerTablePointEvent(@Id val ratioTapChangerTablePointId: UUID? = null)
+data class DeleteRatioTapChangerTablePointEvent(@Id var ratioTapChangerTablePointId: UUID? = null)
 
 // single association events
 
@@ -10896,20 +10896,20 @@ data class DeleteRatioTapChangerTablePointEvent(@Id val ratioTapChangerTablePoin
 // Reactance Events
 
 data class CreateReactanceEvent(
-    @Id val reactanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var reactanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateReactanceEvent(
-    @Id val reactanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var reactanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteReactanceEvent(@Id val reactanceId: UUID? = null)
+data class DeleteReactanceEvent(@Id var reactanceId: UUID? = null)
 
 // single association events
 
@@ -10919,14 +10919,14 @@ data class DeleteReactanceEvent(@Id val reactanceId: UUID? = null)
 // ReactiveCapabilityCurve Events
 
 data class CreateReactiveCapabilityCurveEvent(
-     val reactiveCapabilityCurveId: UUID? = null
+     var reactiveCapabilityCurveId: UUID? = null
 )
 
 data class UpdateReactiveCapabilityCurveEvent(
-     val reactiveCapabilityCurveId: UUID? = null
+     var reactiveCapabilityCurveId: UUID? = null
 )
 
-data class DeleteReactiveCapabilityCurveEvent(@Id val reactiveCapabilityCurveId: UUID? = null)
+data class DeleteReactiveCapabilityCurveEvent(@Id var reactiveCapabilityCurveId: UUID? = null)
 
 // single association events
 
@@ -10936,20 +10936,20 @@ data class DeleteReactiveCapabilityCurveEvent(@Id val reactiveCapabilityCurveId:
 // ReactivePower Events
 
 data class CreateReactivePowerEvent(
-    @Id val reactivePowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var reactivePowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateReactivePowerEvent(
-    @Id val reactivePowerId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var reactivePowerId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteReactivePowerEvent(@Id val reactivePowerId: UUID? = null)
+data class DeleteReactivePowerEvent(@Id var reactivePowerId: UUID? = null)
 
 // single association events
 
@@ -10959,18 +10959,18 @@ data class DeleteReactivePowerEvent(@Id val reactivePowerId: UUID? = null)
 // RegularIntervalSchedule Events
 
 data class CreateRegularIntervalScheduleEvent(
-    @Id val regularIntervalScheduleId: UUID? = null,
-    val endTime: String,
-    val timeStep: String
+    @Id var regularIntervalScheduleId: UUID? = null,
+    var endTime: String,
+    var timeStep: String
 )
 
 data class UpdateRegularIntervalScheduleEvent(
-    @Id val regularIntervalScheduleId: UUID? = null,
-    val endTime: String,
-    val timeStep: String
+    @Id var regularIntervalScheduleId: UUID? = null,
+    var endTime: String,
+    var timeStep: String
 )
 
-data class DeleteRegularIntervalScheduleEvent(@Id val regularIntervalScheduleId: UUID? = null)
+data class DeleteRegularIntervalScheduleEvent(@Id var regularIntervalScheduleId: UUID? = null)
 
 // single association events
 
@@ -10980,20 +10980,20 @@ data class DeleteRegularIntervalScheduleEvent(@Id val regularIntervalScheduleId:
 // RegularTimePoint Events
 
 data class CreateRegularTimePointEvent(
-    @Id val regularTimePointId: UUID? = null,
-    val sequenceNumber: String,
-    val value1: String,
-    val value2: String
+    @Id var regularTimePointId: UUID? = null,
+    var sequenceNumber: String,
+    var value1: String,
+    var value2: String
 )
 
 data class UpdateRegularTimePointEvent(
-    @Id val regularTimePointId: UUID? = null,
-    val sequenceNumber: String,
-    val value1: String,
-    val value2: String
+    @Id var regularTimePointId: UUID? = null,
+    var sequenceNumber: String,
+    var value1: String,
+    var value2: String
 )
 
-data class DeleteRegularTimePointEvent(@Id val regularTimePointId: UUID? = null)
+data class DeleteRegularTimePointEvent(@Id var regularTimePointId: UUID? = null)
 
 // single association events
 
@@ -11003,14 +11003,14 @@ data class DeleteRegularTimePointEvent(@Id val regularTimePointId: UUID? = null)
 // RegulatingCondEq Events
 
 data class CreateRegulatingCondEqEvent(
-     val regulatingCondEqId: UUID? = null
+     var regulatingCondEqId: UUID? = null
 )
 
 data class UpdateRegulatingCondEqEvent(
-     val regulatingCondEqId: UUID? = null
+     var regulatingCondEqId: UUID? = null
 )
 
-data class DeleteRegulatingCondEqEvent(@Id val regulatingCondEqId: UUID? = null)
+data class DeleteRegulatingCondEqEvent(@Id var regulatingCondEqId: UUID? = null)
 
 // single association events
 
@@ -11020,16 +11020,16 @@ data class DeleteRegulatingCondEqEvent(@Id val regulatingCondEqId: UUID? = null)
 // RegulatingControl Events
 
 data class CreateRegulatingControlEvent(
-    @Id val regulatingControlId: UUID? = null,
-    val mode: String
+    @Id var regulatingControlId: UUID? = null,
+    var mode: String
 )
 
 data class UpdateRegulatingControlEvent(
-    @Id val regulatingControlId: UUID? = null,
-    val mode: String
+    @Id var regulatingControlId: UUID? = null,
+    var mode: String
 )
 
-data class DeleteRegulatingControlEvent(@Id val regulatingControlId: UUID? = null)
+data class DeleteRegulatingControlEvent(@Id var regulatingControlId: UUID? = null)
 
 // single association events
 
@@ -11039,14 +11039,14 @@ data class DeleteRegulatingControlEvent(@Id val regulatingControlId: UUID? = nul
 // RegulationSchedule Events
 
 data class CreateRegulationScheduleEvent(
-     val regulationScheduleId: UUID? = null
+     var regulationScheduleId: UUID? = null
 )
 
 data class UpdateRegulationScheduleEvent(
-     val regulationScheduleId: UUID? = null
+     var regulationScheduleId: UUID? = null
 )
 
-data class DeleteRegulationScheduleEvent(@Id val regulationScheduleId: UUID? = null)
+data class DeleteRegulationScheduleEvent(@Id var regulationScheduleId: UUID? = null)
 
 // single association events
 
@@ -11056,16 +11056,16 @@ data class DeleteRegulationScheduleEvent(@Id val regulationScheduleId: UUID? = n
 // RemoteInputSignal Events
 
 data class CreateRemoteInputSignalEvent(
-    @Id val remoteInputSignalId: UUID? = null,
-    val remoteSignalType: String
+    @Id var remoteInputSignalId: UUID? = null,
+    var remoteSignalType: String
 )
 
 data class UpdateRemoteInputSignalEvent(
-    @Id val remoteInputSignalId: UUID? = null,
-    val remoteSignalType: String
+    @Id var remoteInputSignalId: UUID? = null,
+    var remoteSignalType: String
 )
 
-data class DeleteRemoteInputSignalEvent(@Id val remoteInputSignalId: UUID? = null)
+data class DeleteRemoteInputSignalEvent(@Id var remoteInputSignalId: UUID? = null)
 
 // single association events
 
@@ -11075,14 +11075,14 @@ data class DeleteRemoteInputSignalEvent(@Id val remoteInputSignalId: UUID? = nul
 // ReportingGroup Events
 
 data class CreateReportingGroupEvent(
-     val reportingGroupId: UUID? = null
+     var reportingGroupId: UUID? = null
 )
 
 data class UpdateReportingGroupEvent(
-     val reportingGroupId: UUID? = null
+     var reportingGroupId: UUID? = null
 )
 
-data class DeleteReportingGroupEvent(@Id val reportingGroupId: UUID? = null)
+data class DeleteReportingGroupEvent(@Id var reportingGroupId: UUID? = null)
 
 // single association events
 
@@ -11092,20 +11092,20 @@ data class DeleteReportingGroupEvent(@Id val reportingGroupId: UUID? = null)
 // Resistance Events
 
 data class CreateResistanceEvent(
-    @Id val resistanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var resistanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateResistanceEvent(
-    @Id val resistanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var resistanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteResistanceEvent(@Id val resistanceId: UUID? = null)
+data class DeleteResistanceEvent(@Id var resistanceId: UUID? = null)
 
 // single association events
 
@@ -11115,24 +11115,24 @@ data class DeleteResistanceEvent(@Id val resistanceId: UUID? = null)
 // ResistancePerLength Events
 
 data class CreateResistancePerLengthEvent(
-    @Id val resistancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var resistancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateResistancePerLengthEvent(
-    @Id val resistancePerLengthId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var resistancePerLengthId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteResistancePerLengthEvent(@Id val resistancePerLengthId: UUID? = null)
+data class DeleteResistancePerLengthEvent(@Id var resistancePerLengthId: UUID? = null)
 
 // single association events
 
@@ -11142,20 +11142,20 @@ data class DeleteResistancePerLengthEvent(@Id val resistancePerLengthId: UUID? =
 // RotatingMachine Events
 
 data class CreateRotatingMachineEvent(
-    @Id val rotatingMachineId: UUID? = null,
-    val ratedPowerFactor: String,
-    val ratedS: String,
-    val ratedU: String
+    @Id var rotatingMachineId: UUID? = null,
+    var ratedPowerFactor: String,
+    var ratedS: String,
+    var ratedU: String
 )
 
 data class UpdateRotatingMachineEvent(
-    @Id val rotatingMachineId: UUID? = null,
-    val ratedPowerFactor: String,
-    val ratedS: String,
-    val ratedU: String
+    @Id var rotatingMachineId: UUID? = null,
+    var ratedPowerFactor: String,
+    var ratedS: String,
+    var ratedU: String
 )
 
-data class DeleteRotatingMachineEvent(@Id val rotatingMachineId: UUID? = null)
+data class DeleteRotatingMachineEvent(@Id var rotatingMachineId: UUID? = null)
 
 // single association events
 
@@ -11165,26 +11165,26 @@ data class DeleteRotatingMachineEvent(@Id val rotatingMachineId: UUID? = null)
 // RotatingMachineDynamics Events
 
 data class CreateRotatingMachineDynamicsEvent(
-    @Id val rotatingMachineDynamicsId: UUID? = null,
-    val damping: String,
-    val inertia: String,
-    val saturationFactor: String,
-    val saturationFactor120: String,
-    val statorLeakageReactance: String,
-    val statorResistance: String
+    @Id var rotatingMachineDynamicsId: UUID? = null,
+    var damping: String,
+    var inertia: String,
+    var saturationFactor: String,
+    var saturationFactor120: String,
+    var statorLeakageReactance: String,
+    var statorResistance: String
 )
 
 data class UpdateRotatingMachineDynamicsEvent(
-    @Id val rotatingMachineDynamicsId: UUID? = null,
-    val damping: String,
-    val inertia: String,
-    val saturationFactor: String,
-    val saturationFactor120: String,
-    val statorLeakageReactance: String,
-    val statorResistance: String
+    @Id var rotatingMachineDynamicsId: UUID? = null,
+    var damping: String,
+    var inertia: String,
+    var saturationFactor: String,
+    var saturationFactor120: String,
+    var statorLeakageReactance: String,
+    var statorResistance: String
 )
 
-data class DeleteRotatingMachineDynamicsEvent(@Id val rotatingMachineDynamicsId: UUID? = null)
+data class DeleteRotatingMachineDynamicsEvent(@Id var rotatingMachineDynamicsId: UUID? = null)
 
 // single association events
 
@@ -11194,24 +11194,24 @@ data class DeleteRotatingMachineDynamicsEvent(@Id val rotatingMachineDynamicsId:
 // RotationSpeed Events
 
 data class CreateRotationSpeedEvent(
-    @Id val rotationSpeedId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var rotationSpeedId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateRotationSpeedEvent(
-    @Id val rotationSpeedId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var rotationSpeedId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteRotationSpeedEvent(@Id val rotationSpeedId: UUID? = null)
+data class DeleteRotationSpeedEvent(@Id var rotationSpeedId: UUID? = null)
 
 // single association events
 
@@ -11221,18 +11221,18 @@ data class DeleteRotationSpeedEvent(@Id val rotationSpeedId: UUID? = null)
 // Season Events
 
 data class CreateSeasonEvent(
-    @Id val seasonId: UUID? = null,
-    val endDate: String,
-    val startDate: String
+    @Id var seasonId: UUID? = null,
+    var endDate: String,
+    var startDate: String
 )
 
 data class UpdateSeasonEvent(
-    @Id val seasonId: UUID? = null,
-    val endDate: String,
-    val startDate: String
+    @Id var seasonId: UUID? = null,
+    var endDate: String,
+    var startDate: String
 )
 
-data class DeleteSeasonEvent(@Id val seasonId: UUID? = null)
+data class DeleteSeasonEvent(@Id var seasonId: UUID? = null)
 
 // single association events
 
@@ -11242,14 +11242,14 @@ data class DeleteSeasonEvent(@Id val seasonId: UUID? = null)
 // SeasonDayTypeSchedule Events
 
 data class CreateSeasonDayTypeScheduleEvent(
-     val seasonDayTypeScheduleId: UUID? = null
+     var seasonDayTypeScheduleId: UUID? = null
 )
 
 data class UpdateSeasonDayTypeScheduleEvent(
-     val seasonDayTypeScheduleId: UUID? = null
+     var seasonDayTypeScheduleId: UUID? = null
 )
 
-data class DeleteSeasonDayTypeScheduleEvent(@Id val seasonDayTypeScheduleId: UUID? = null)
+data class DeleteSeasonDayTypeScheduleEvent(@Id var seasonDayTypeScheduleId: UUID? = null)
 
 // single association events
 
@@ -11259,20 +11259,20 @@ data class DeleteSeasonDayTypeScheduleEvent(@Id val seasonDayTypeScheduleId: UUI
 // Seconds Events
 
 data class CreateSecondsEvent(
-    @Id val secondsId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var secondsId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateSecondsEvent(
-    @Id val secondsId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var secondsId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteSecondsEvent(@Id val secondsId: UUID? = null)
+data class DeleteSecondsEvent(@Id var secondsId: UUID? = null)
 
 // single association events
 
@@ -11282,28 +11282,28 @@ data class DeleteSecondsEvent(@Id val secondsId: UUID? = null)
 // SeriesCompensator Events
 
 data class CreateSeriesCompensatorEvent(
-    @Id val seriesCompensatorId: UUID? = null,
-    val r: String,
-    val r0: String,
-    val varistorPresent: String,
-    val varistorRatedCurrent: String,
-    val varistorVoltageThreshold: String,
-    val x: String,
-    val x0: String
+    @Id var seriesCompensatorId: UUID? = null,
+    var r: String,
+    var r0: String,
+    var varistorPresent: String,
+    var varistorRatedCurrent: String,
+    var varistorVoltageThreshold: String,
+    var x: String,
+    var x0: String
 )
 
 data class UpdateSeriesCompensatorEvent(
-    @Id val seriesCompensatorId: UUID? = null,
-    val r: String,
-    val r0: String,
-    val varistorPresent: String,
-    val varistorRatedCurrent: String,
-    val varistorVoltageThreshold: String,
-    val x: String,
-    val x0: String
+    @Id var seriesCompensatorId: UUID? = null,
+    var r: String,
+    var r0: String,
+    var varistorPresent: String,
+    var varistorRatedCurrent: String,
+    var varistorVoltageThreshold: String,
+    var x: String,
+    var x0: String
 )
 
-data class DeleteSeriesCompensatorEvent(@Id val seriesCompensatorId: UUID? = null)
+data class DeleteSeriesCompensatorEvent(@Id var seriesCompensatorId: UUID? = null)
 
 // single association events
 
@@ -11313,18 +11313,18 @@ data class DeleteSeriesCompensatorEvent(@Id val seriesCompensatorId: UUID? = nul
 // SetPoint Events
 
 data class CreateSetPointEvent(
-    @Id val setPointId: UUID? = null,
-    val normalValue: String,
-    val value: String
+    @Id var setPointId: UUID? = null,
+    var normalValue: String,
+    var value: String
 )
 
 data class UpdateSetPointEvent(
-    @Id val setPointId: UUID? = null,
-    val normalValue: String,
-    val value: String
+    @Id var setPointId: UUID? = null,
+    var normalValue: String,
+    var value: String
 )
 
-data class DeleteSetPointEvent(@Id val setPointId: UUID? = null)
+data class DeleteSetPointEvent(@Id var setPointId: UUID? = null)
 
 // single association events
 
@@ -11334,30 +11334,30 @@ data class DeleteSetPointEvent(@Id val setPointId: UUID? = null)
 // ShuntCompensator Events
 
 data class CreateShuntCompensatorEvent(
-    @Id val shuntCompensatorId: UUID? = null,
-    val aVRDelay: String,
-    val grounded: String,
-    val maximumSections: String,
-    val nomU: String,
-    val normalSections: String,
-    val switchOnCount: String,
-    val switchOnDate: String,
-    val voltageSensitivity: String
+    @Id var shuntCompensatorId: UUID? = null,
+    var aVRDelay: String,
+    var grounded: String,
+    var maximumSections: String,
+    var nomU: String,
+    var normalSections: String,
+    var switchOnCount: String,
+    var switchOnDate: String,
+    var voltageSensitivity: String
 )
 
 data class UpdateShuntCompensatorEvent(
-    @Id val shuntCompensatorId: UUID? = null,
-    val aVRDelay: String,
-    val grounded: String,
-    val maximumSections: String,
-    val nomU: String,
-    val normalSections: String,
-    val switchOnCount: String,
-    val switchOnDate: String,
-    val voltageSensitivity: String
+    @Id var shuntCompensatorId: UUID? = null,
+    var aVRDelay: String,
+    var grounded: String,
+    var maximumSections: String,
+    var nomU: String,
+    var normalSections: String,
+    var switchOnCount: String,
+    var switchOnDate: String,
+    var voltageSensitivity: String
 )
 
-data class DeleteShuntCompensatorEvent(@Id val shuntCompensatorId: UUID? = null)
+data class DeleteShuntCompensatorEvent(@Id var shuntCompensatorId: UUID? = null)
 
 // single association events
 
@@ -11367,16 +11367,16 @@ data class DeleteShuntCompensatorEvent(@Id val shuntCompensatorId: UUID? = null)
 // Simple_Float Events
 
 data class CreateSimple_FloatEvent(
-    @Id val simple_FloatId: UUID? = null,
-    val value: String
+    @Id var simple_FloatId: UUID? = null,
+    var value: String
 )
 
 data class UpdateSimple_FloatEvent(
-    @Id val simple_FloatId: UUID? = null,
-    val value: String
+    @Id var simple_FloatId: UUID? = null,
+    var value: String
 )
 
-data class DeleteSimple_FloatEvent(@Id val simple_FloatId: UUID? = null)
+data class DeleteSimple_FloatEvent(@Id var simple_FloatId: UUID? = null)
 
 // single association events
 
@@ -11386,14 +11386,14 @@ data class DeleteSimple_FloatEvent(@Id val simple_FloatId: UUID? = null)
 // SolarGeneratingUnit Events
 
 data class CreateSolarGeneratingUnitEvent(
-     val solarGeneratingUnitId: UUID? = null
+     var solarGeneratingUnitId: UUID? = null
 )
 
 data class UpdateSolarGeneratingUnitEvent(
-     val solarGeneratingUnitId: UUID? = null
+     var solarGeneratingUnitId: UUID? = null
 )
 
-data class DeleteSolarGeneratingUnitEvent(@Id val solarGeneratingUnitId: UUID? = null)
+data class DeleteSolarGeneratingUnitEvent(@Id var solarGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -11403,34 +11403,34 @@ data class DeleteSolarGeneratingUnitEvent(@Id val solarGeneratingUnitId: UUID? =
 // StateVariablesVersion Events
 
 data class CreateStateVariablesVersionEvent(
-    @Id val stateVariablesVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var stateVariablesVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateStateVariablesVersionEvent(
-    @Id val stateVariablesVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var stateVariablesVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteStateVariablesVersionEvent(@Id val stateVariablesVersionId: UUID? = null)
+data class DeleteStateVariablesVersionEvent(@Id var stateVariablesVersionId: UUID? = null)
 
 // single association events
 
@@ -11440,24 +11440,24 @@ data class DeleteStateVariablesVersionEvent(@Id val stateVariablesVersionId: UUI
 // StaticVarCompensator Events
 
 data class CreateStaticVarCompensatorEvent(
-    @Id val staticVarCompensatorId: UUID? = null,
-    val capacitiveRating: String,
-    val inductiveRating: String,
-    val slope: String,
-    val sVCControlMode: String,
-    val voltageSetPoint: String
+    @Id var staticVarCompensatorId: UUID? = null,
+    var capacitiveRating: String,
+    var inductiveRating: String,
+    var slope: String,
+    var sVCControlMode: String,
+    var voltageSetPoint: String
 )
 
 data class UpdateStaticVarCompensatorEvent(
-    @Id val staticVarCompensatorId: UUID? = null,
-    val capacitiveRating: String,
-    val inductiveRating: String,
-    val slope: String,
-    val sVCControlMode: String,
-    val voltageSetPoint: String
+    @Id var staticVarCompensatorId: UUID? = null,
+    var capacitiveRating: String,
+    var inductiveRating: String,
+    var slope: String,
+    var sVCControlMode: String,
+    var voltageSetPoint: String
 )
 
-data class DeleteStaticVarCompensatorEvent(@Id val staticVarCompensatorId: UUID? = null)
+data class DeleteStaticVarCompensatorEvent(@Id var staticVarCompensatorId: UUID? = null)
 
 // single association events
 
@@ -11467,14 +11467,14 @@ data class DeleteStaticVarCompensatorEvent(@Id val staticVarCompensatorId: UUID?
 // Staticpowersystemmodel Events
 
 data class CreateStaticpowersystemmodelEvent(
-     val staticpowersystemmodelId: UUID? = null
+     var staticpowersystemmodelId: UUID? = null
 )
 
 data class UpdateStaticpowersystemmodelEvent(
-     val staticpowersystemmodelId: UUID? = null
+     var staticpowersystemmodelId: UUID? = null
 )
 
-data class DeleteStaticpowersystemmodelEvent(@Id val staticpowersystemmodelId: UUID? = null)
+data class DeleteStaticpowersystemmodelEvent(@Id var staticpowersystemmodelId: UUID? = null)
 
 // single association events
 
@@ -11484,14 +11484,14 @@ data class DeleteStaticpowersystemmodelEvent(@Id val staticpowersystemmodelId: U
 // StationSupply Events
 
 data class CreateStationSupplyEvent(
-     val stationSupplyId: UUID? = null
+     var stationSupplyId: UUID? = null
 )
 
 data class UpdateStationSupplyEvent(
-     val stationSupplyId: UUID? = null
+     var stationSupplyId: UUID? = null
 )
 
-data class DeleteStationSupplyEvent(@Id val stationSupplyId: UUID? = null)
+data class DeleteStationSupplyEvent(@Id var stationSupplyId: UUID? = null)
 
 // single association events
 
@@ -11501,34 +11501,34 @@ data class DeleteStationSupplyEvent(@Id val stationSupplyId: UUID? = null)
 // SteadyStateHypothesisVersion Events
 
 data class CreateSteadyStateHypothesisVersionEvent(
-    @Id val steadyStateHypothesisVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var steadyStateHypothesisVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateSteadyStateHypothesisVersionEvent(
-    @Id val steadyStateHypothesisVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var steadyStateHypothesisVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteSteadyStateHypothesisVersionEvent(@Id val steadyStateHypothesisVersionId: UUID? = null)
+data class DeleteSteadyStateHypothesisVersionEvent(@Id var steadyStateHypothesisVersionId: UUID? = null)
 
 // single association events
 
@@ -11538,14 +11538,14 @@ data class DeleteSteadyStateHypothesisVersionEvent(@Id val steadyStateHypothesis
 // StringMeasurement Events
 
 data class CreateStringMeasurementEvent(
-     val stringMeasurementId: UUID? = null
+     var stringMeasurementId: UUID? = null
 )
 
 data class UpdateStringMeasurementEvent(
-     val stringMeasurementId: UUID? = null
+     var stringMeasurementId: UUID? = null
 )
 
-data class DeleteStringMeasurementEvent(@Id val stringMeasurementId: UUID? = null)
+data class DeleteStringMeasurementEvent(@Id var stringMeasurementId: UUID? = null)
 
 // single association events
 
@@ -11555,16 +11555,16 @@ data class DeleteStringMeasurementEvent(@Id val stringMeasurementId: UUID? = nul
 // StringMeasurementValue Events
 
 data class CreateStringMeasurementValueEvent(
-    @Id val stringMeasurementValueId: UUID? = null,
-    val value: String
+    @Id var stringMeasurementValueId: UUID? = null,
+    var value: String
 )
 
 data class UpdateStringMeasurementValueEvent(
-    @Id val stringMeasurementValueId: UUID? = null,
-    val value: String
+    @Id var stringMeasurementValueId: UUID? = null,
+    var value: String
 )
 
-data class DeleteStringMeasurementValueEvent(@Id val stringMeasurementValueId: UUID? = null)
+data class DeleteStringMeasurementValueEvent(@Id var stringMeasurementValueId: UUID? = null)
 
 // single association events
 
@@ -11574,14 +11574,14 @@ data class DeleteStringMeasurementValueEvent(@Id val stringMeasurementValueId: U
 // StringProxy Events
 
 data class CreateStringProxyEvent(
-     val stringProxyId: UUID? = null
+     var stringProxyId: UUID? = null
 )
 
 data class UpdateStringProxyEvent(
-     val stringProxyId: UUID? = null
+     var stringProxyId: UUID? = null
 )
 
-data class DeleteStringProxyEvent(@Id val stringProxyId: UUID? = null)
+data class DeleteStringProxyEvent(@Id var stringProxyId: UUID? = null)
 
 // single association events
 
@@ -11591,14 +11591,14 @@ data class DeleteStringProxyEvent(@Id val stringProxyId: UUID? = null)
 // SubGeographicalRegion Events
 
 data class CreateSubGeographicalRegionEvent(
-     val subGeographicalRegionId: UUID? = null
+     var subGeographicalRegionId: UUID? = null
 )
 
 data class UpdateSubGeographicalRegionEvent(
-     val subGeographicalRegionId: UUID? = null
+     var subGeographicalRegionId: UUID? = null
 )
 
-data class DeleteSubGeographicalRegionEvent(@Id val subGeographicalRegionId: UUID? = null)
+data class DeleteSubGeographicalRegionEvent(@Id var subGeographicalRegionId: UUID? = null)
 
 // single association events
 
@@ -11608,14 +11608,14 @@ data class DeleteSubGeographicalRegionEvent(@Id val subGeographicalRegionId: UUI
 // SubLoadArea Events
 
 data class CreateSubLoadAreaEvent(
-     val subLoadAreaId: UUID? = null
+     var subLoadAreaId: UUID? = null
 )
 
 data class UpdateSubLoadAreaEvent(
-     val subLoadAreaId: UUID? = null
+     var subLoadAreaId: UUID? = null
 )
 
-data class DeleteSubLoadAreaEvent(@Id val subLoadAreaId: UUID? = null)
+data class DeleteSubLoadAreaEvent(@Id var subLoadAreaId: UUID? = null)
 
 // single association events
 
@@ -11625,14 +11625,14 @@ data class DeleteSubLoadAreaEvent(@Id val subLoadAreaId: UUID? = null)
 // Substation Events
 
 data class CreateSubstationEvent(
-     val substationId: UUID? = null
+     var substationId: UUID? = null
 )
 
 data class UpdateSubstationEvent(
-     val substationId: UUID? = null
+     var substationId: UUID? = null
 )
 
-data class DeleteSubstationEvent(@Id val substationId: UUID? = null)
+data class DeleteSubstationEvent(@Id var substationId: UUID? = null)
 
 // single association events
 
@@ -11642,20 +11642,20 @@ data class DeleteSubstationEvent(@Id val substationId: UUID? = null)
 // Susceptance Events
 
 data class CreateSusceptanceEvent(
-    @Id val susceptanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var susceptanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateSusceptanceEvent(
-    @Id val susceptanceId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var susceptanceId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteSusceptanceEvent(@Id val susceptanceId: UUID? = null)
+data class DeleteSusceptanceEvent(@Id var susceptanceId: UUID? = null)
 
 // single association events
 
@@ -11665,18 +11665,18 @@ data class DeleteSusceptanceEvent(@Id val susceptanceId: UUID? = null)
 // SvInjection Events
 
 data class CreateSvInjectionEvent(
-    @Id val svInjectionId: UUID? = null,
-    val pInjection: String,
-    val qInjection: String
+    @Id var svInjectionId: UUID? = null,
+    var pInjection: String,
+    var qInjection: String
 )
 
 data class UpdateSvInjectionEvent(
-    @Id val svInjectionId: UUID? = null,
-    val pInjection: String,
-    val qInjection: String
+    @Id var svInjectionId: UUID? = null,
+    var pInjection: String,
+    var qInjection: String
 )
 
-data class DeleteSvInjectionEvent(@Id val svInjectionId: UUID? = null)
+data class DeleteSvInjectionEvent(@Id var svInjectionId: UUID? = null)
 
 // single association events
 
@@ -11686,18 +11686,18 @@ data class DeleteSvInjectionEvent(@Id val svInjectionId: UUID? = null)
 // SvPowerFlow Events
 
 data class CreateSvPowerFlowEvent(
-    @Id val svPowerFlowId: UUID? = null,
-    val p: String,
-    val q: String
+    @Id var svPowerFlowId: UUID? = null,
+    var p: String,
+    var q: String
 )
 
 data class UpdateSvPowerFlowEvent(
-    @Id val svPowerFlowId: UUID? = null,
-    val p: String,
-    val q: String
+    @Id var svPowerFlowId: UUID? = null,
+    var p: String,
+    var q: String
 )
 
-data class DeleteSvPowerFlowEvent(@Id val svPowerFlowId: UUID? = null)
+data class DeleteSvPowerFlowEvent(@Id var svPowerFlowId: UUID? = null)
 
 // single association events
 
@@ -11707,16 +11707,16 @@ data class DeleteSvPowerFlowEvent(@Id val svPowerFlowId: UUID? = null)
 // SvShuntCompensatorSections Events
 
 data class CreateSvShuntCompensatorSectionsEvent(
-    @Id val svShuntCompensatorSectionsId: UUID? = null,
-    val sections: String
+    @Id var svShuntCompensatorSectionsId: UUID? = null,
+    var sections: String
 )
 
 data class UpdateSvShuntCompensatorSectionsEvent(
-    @Id val svShuntCompensatorSectionsId: UUID? = null,
-    val sections: String
+    @Id var svShuntCompensatorSectionsId: UUID? = null,
+    var sections: String
 )
 
-data class DeleteSvShuntCompensatorSectionsEvent(@Id val svShuntCompensatorSectionsId: UUID? = null)
+data class DeleteSvShuntCompensatorSectionsEvent(@Id var svShuntCompensatorSectionsId: UUID? = null)
 
 // single association events
 
@@ -11726,16 +11726,16 @@ data class DeleteSvShuntCompensatorSectionsEvent(@Id val svShuntCompensatorSecti
 // SvStatus Events
 
 data class CreateSvStatusEvent(
-    @Id val svStatusId: UUID? = null,
-    val inService: String
+    @Id var svStatusId: UUID? = null,
+    var inService: String
 )
 
 data class UpdateSvStatusEvent(
-    @Id val svStatusId: UUID? = null,
-    val inService: String
+    @Id var svStatusId: UUID? = null,
+    var inService: String
 )
 
-data class DeleteSvStatusEvent(@Id val svStatusId: UUID? = null)
+data class DeleteSvStatusEvent(@Id var svStatusId: UUID? = null)
 
 // single association events
 
@@ -11745,16 +11745,16 @@ data class DeleteSvStatusEvent(@Id val svStatusId: UUID? = null)
 // SvTapStep Events
 
 data class CreateSvTapStepEvent(
-    @Id val svTapStepId: UUID? = null,
-    val position: String
+    @Id var svTapStepId: UUID? = null,
+    var position: String
 )
 
 data class UpdateSvTapStepEvent(
-    @Id val svTapStepId: UUID? = null,
-    val position: String
+    @Id var svTapStepId: UUID? = null,
+    var position: String
 )
 
-data class DeleteSvTapStepEvent(@Id val svTapStepId: UUID? = null)
+data class DeleteSvTapStepEvent(@Id var svTapStepId: UUID? = null)
 
 // single association events
 
@@ -11764,18 +11764,18 @@ data class DeleteSvTapStepEvent(@Id val svTapStepId: UUID? = null)
 // SvVoltage Events
 
 data class CreateSvVoltageEvent(
-    @Id val svVoltageId: UUID? = null,
-    val angle: String,
-    val v: String
+    @Id var svVoltageId: UUID? = null,
+    var angle: String,
+    var v: String
 )
 
 data class UpdateSvVoltageEvent(
-    @Id val svVoltageId: UUID? = null,
-    val angle: String,
-    val v: String
+    @Id var svVoltageId: UUID? = null,
+    var angle: String,
+    var v: String
 )
 
-data class DeleteSvVoltageEvent(@Id val svVoltageId: UUID? = null)
+data class DeleteSvVoltageEvent(@Id var svVoltageId: UUID? = null)
 
 // single association events
 
@@ -11785,16 +11785,16 @@ data class DeleteSvVoltageEvent(@Id val svVoltageId: UUID? = null)
 // SwitchIt Events
 
 data class CreateSwitchItEvent(
-    @Id val switchItId: UUID? = null,
-    val open: String
+    @Id var switchItId: UUID? = null,
+    var open: String
 )
 
 data class UpdateSwitchItEvent(
-    @Id val switchItId: UUID? = null,
-    val open: String
+    @Id var switchItId: UUID? = null,
+    var open: String
 )
 
-data class DeleteSwitchItEvent(@Id val switchItId: UUID? = null)
+data class DeleteSwitchItEvent(@Id var switchItId: UUID? = null)
 
 // single association events
 
@@ -11804,20 +11804,20 @@ data class DeleteSwitchItEvent(@Id val switchItId: UUID? = null)
 // SwitchProxy Events
 
 data class CreateSwitchProxyEvent(
-    @Id val switchProxyId: UUID? = null,
-    val normalOpen: String,
-    val ratedCurrent: String,
-    val retained: String
+    @Id var switchProxyId: UUID? = null,
+    var normalOpen: String,
+    var ratedCurrent: String,
+    var retained: String
 )
 
 data class UpdateSwitchProxyEvent(
-    @Id val switchProxyId: UUID? = null,
-    val normalOpen: String,
-    val ratedCurrent: String,
-    val retained: String
+    @Id var switchProxyId: UUID? = null,
+    var normalOpen: String,
+    var ratedCurrent: String,
+    var retained: String
 )
 
-data class DeleteSwitchProxyEvent(@Id val switchProxyId: UUID? = null)
+data class DeleteSwitchProxyEvent(@Id var switchProxyId: UUID? = null)
 
 // single association events
 
@@ -11827,14 +11827,14 @@ data class DeleteSwitchProxyEvent(@Id val switchProxyId: UUID? = null)
 // SwitchSchedule Events
 
 data class CreateSwitchScheduleEvent(
-     val switchScheduleId: UUID? = null
+     var switchScheduleId: UUID? = null
 )
 
 data class UpdateSwitchScheduleEvent(
-     val switchScheduleId: UUID? = null
+     var switchScheduleId: UUID? = null
 )
 
-data class DeleteSwitchScheduleEvent(@Id val switchScheduleId: UUID? = null)
+data class DeleteSwitchScheduleEvent(@Id var switchScheduleId: UUID? = null)
 
 // single association events
 
@@ -11844,52 +11844,52 @@ data class DeleteSwitchScheduleEvent(@Id val switchScheduleId: UUID? = null)
 // SynchronousMachine Events
 
 data class CreateSynchronousMachineEvent(
-    @Id val synchronousMachineId: UUID? = null,
-    val earthing: String,
-    val earthingStarPointR: String,
-    val earthingStarPointX: String,
-    val ikk: String,
-    val maxQ: String,
-    val minQ: String,
-    val mu: String,
-    val qPercent: String,
-    val r: String,
-    val r0: String,
-    val r2: String,
-    val satDirectSubtransX: String,
-    val satDirectSyncX: String,
-    val satDirectTransX: String,
-    val shortCircuitRotorType: String,
-    val type: String,
-    val voltageRegulationRange: String,
-    val x0: String,
-    val x2: String
+    @Id var synchronousMachineId: UUID? = null,
+    var earthing: String,
+    var earthingStarPointR: String,
+    var earthingStarPointX: String,
+    var ikk: String,
+    var maxQ: String,
+    var minQ: String,
+    var mu: String,
+    var qPercent: String,
+    var r: String,
+    var r0: String,
+    var r2: String,
+    var satDirectSubtransX: String,
+    var satDirectSyncX: String,
+    var satDirectTransX: String,
+    var shortCircuitRotorType: String,
+    var type: String,
+    var voltageRegulationRange: String,
+    var x0: String,
+    var x2: String
 )
 
 data class UpdateSynchronousMachineEvent(
-    @Id val synchronousMachineId: UUID? = null,
-    val earthing: String,
-    val earthingStarPointR: String,
-    val earthingStarPointX: String,
-    val ikk: String,
-    val maxQ: String,
-    val minQ: String,
-    val mu: String,
-    val qPercent: String,
-    val r: String,
-    val r0: String,
-    val r2: String,
-    val satDirectSubtransX: String,
-    val satDirectSyncX: String,
-    val satDirectTransX: String,
-    val shortCircuitRotorType: String,
-    val type: String,
-    val voltageRegulationRange: String,
-    val x0: String,
-    val x2: String
+    @Id var synchronousMachineId: UUID? = null,
+    var earthing: String,
+    var earthingStarPointR: String,
+    var earthingStarPointX: String,
+    var ikk: String,
+    var maxQ: String,
+    var minQ: String,
+    var mu: String,
+    var qPercent: String,
+    var r: String,
+    var r0: String,
+    var r2: String,
+    var satDirectSubtransX: String,
+    var satDirectSyncX: String,
+    var satDirectTransX: String,
+    var shortCircuitRotorType: String,
+    var type: String,
+    var voltageRegulationRange: String,
+    var x0: String,
+    var x2: String
 )
 
-data class DeleteSynchronousMachineEvent(@Id val synchronousMachineId: UUID? = null)
+data class DeleteSynchronousMachineEvent(@Id var synchronousMachineId: UUID? = null)
 
 // single association events
 
@@ -11899,24 +11899,24 @@ data class DeleteSynchronousMachineEvent(@Id val synchronousMachineId: UUID? = n
 // SynchronousMachineDetailed Events
 
 data class CreateSynchronousMachineDetailedEvent(
-    @Id val synchronousMachineDetailedId: UUID? = null,
-    val efdBaseRatio: String,
-    val ifdBaseType: String,
-    val ifdBaseValue: String,
-    val saturationFactor120QAxis: String,
-    val saturationFactorQAxis: String
+    @Id var synchronousMachineDetailedId: UUID? = null,
+    var efdBaseRatio: String,
+    var ifdBaseType: String,
+    var ifdBaseValue: String,
+    var saturationFactor120QAxis: String,
+    var saturationFactorQAxis: String
 )
 
 data class UpdateSynchronousMachineDetailedEvent(
-    @Id val synchronousMachineDetailedId: UUID? = null,
-    val efdBaseRatio: String,
-    val ifdBaseType: String,
-    val ifdBaseValue: String,
-    val saturationFactor120QAxis: String,
-    val saturationFactorQAxis: String
+    @Id var synchronousMachineDetailedId: UUID? = null,
+    var efdBaseRatio: String,
+    var ifdBaseType: String,
+    var ifdBaseValue: String,
+    var saturationFactor120QAxis: String,
+    var saturationFactorQAxis: String
 )
 
-data class DeleteSynchronousMachineDetailedEvent(@Id val synchronousMachineDetailedId: UUID? = null)
+data class DeleteSynchronousMachineDetailedEvent(@Id var synchronousMachineDetailedId: UUID? = null)
 
 // single association events
 
@@ -11926,14 +11926,14 @@ data class DeleteSynchronousMachineDetailedEvent(@Id val synchronousMachineDetai
 // SynchronousMachineDynamics Events
 
 data class CreateSynchronousMachineDynamicsEvent(
-     val synchronousMachineDynamicsId: UUID? = null
+     var synchronousMachineDynamicsId: UUID? = null
 )
 
 data class UpdateSynchronousMachineDynamicsEvent(
-     val synchronousMachineDynamicsId: UUID? = null
+     var synchronousMachineDynamicsId: UUID? = null
 )
 
-data class DeleteSynchronousMachineDynamicsEvent(@Id val synchronousMachineDynamicsId: UUID? = null)
+data class DeleteSynchronousMachineDynamicsEvent(@Id var synchronousMachineDynamicsId: UUID? = null)
 
 // single association events
 
@@ -11943,36 +11943,36 @@ data class DeleteSynchronousMachineDynamicsEvent(@Id val synchronousMachineDynam
 // SynchronousMachineEquivalentCircuit Events
 
 data class CreateSynchronousMachineEquivalentCircuitEvent(
-    @Id val synchronousMachineEquivalentCircuitId: UUID? = null,
-    val r1d: String,
-    val r1q: String,
-    val r2q: String,
-    val rfd: String,
-    val x1d: String,
-    val x1q: String,
-    val x2q: String,
-    val xad: String,
-    val xaq: String,
-    val xf1d: String,
-    val xfd: String
+    @Id var synchronousMachineEquivalentCircuitId: UUID? = null,
+    var r1d: String,
+    var r1q: String,
+    var r2q: String,
+    var rfd: String,
+    var x1d: String,
+    var x1q: String,
+    var x2q: String,
+    var xad: String,
+    var xaq: String,
+    var xf1d: String,
+    var xfd: String
 )
 
 data class UpdateSynchronousMachineEquivalentCircuitEvent(
-    @Id val synchronousMachineEquivalentCircuitId: UUID? = null,
-    val r1d: String,
-    val r1q: String,
-    val r2q: String,
-    val rfd: String,
-    val x1d: String,
-    val x1q: String,
-    val x2q: String,
-    val xad: String,
-    val xaq: String,
-    val xf1d: String,
-    val xfd: String
+    @Id var synchronousMachineEquivalentCircuitId: UUID? = null,
+    var r1d: String,
+    var r1q: String,
+    var r2q: String,
+    var rfd: String,
+    var x1d: String,
+    var x1q: String,
+    var x2q: String,
+    var xad: String,
+    var xaq: String,
+    var xf1d: String,
+    var xfd: String
 )
 
-data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id val synchronousMachineEquivalentCircuitId: UUID? = null)
+data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id var synchronousMachineEquivalentCircuitId: UUID? = null)
 
 // single association events
 
@@ -11982,14 +11982,14 @@ data class DeleteSynchronousMachineEquivalentCircuitEvent(@Id val synchronousMac
 // SynchronousMachineSimplified Events
 
 data class CreateSynchronousMachineSimplifiedEvent(
-     val synchronousMachineSimplifiedId: UUID? = null
+     var synchronousMachineSimplifiedId: UUID? = null
 )
 
 data class UpdateSynchronousMachineSimplifiedEvent(
-     val synchronousMachineSimplifiedId: UUID? = null
+     var synchronousMachineSimplifiedId: UUID? = null
 )
 
-data class DeleteSynchronousMachineSimplifiedEvent(@Id val synchronousMachineSimplifiedId: UUID? = null)
+data class DeleteSynchronousMachineSimplifiedEvent(@Id var synchronousMachineSimplifiedId: UUID? = null)
 
 // single association events
 
@@ -11999,42 +11999,42 @@ data class DeleteSynchronousMachineSimplifiedEvent(@Id val synchronousMachineSim
 // SynchronousMachineTimeConstantReactance Events
 
 data class CreateSynchronousMachineTimeConstantReactanceEvent(
-    @Id val synchronousMachineTimeConstantReactanceId: UUID? = null,
-    val ks: String,
-    val modelType: String,
-    val rotorType: String,
-    val tc: String,
-    val tpdo: String,
-    val tppdo: String,
-    val tppqo: String,
-    val tpqo: String,
-    val xDirectSubtrans: String,
-    val xDirectSync: String,
-    val xDirectTrans: String,
-    val xQuadSubtrans: String,
-    val xQuadSync: String,
-    val xQuadTrans: String
+    @Id var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    var ks: String,
+    var modelType: String,
+    var rotorType: String,
+    var tc: String,
+    var tpdo: String,
+    var tppdo: String,
+    var tppqo: String,
+    var tpqo: String,
+    var xDirectSubtrans: String,
+    var xDirectSync: String,
+    var xDirectTrans: String,
+    var xQuadSubtrans: String,
+    var xQuadSync: String,
+    var xQuadTrans: String
 )
 
 data class UpdateSynchronousMachineTimeConstantReactanceEvent(
-    @Id val synchronousMachineTimeConstantReactanceId: UUID? = null,
-    val ks: String,
-    val modelType: String,
-    val rotorType: String,
-    val tc: String,
-    val tpdo: String,
-    val tppdo: String,
-    val tppqo: String,
-    val tpqo: String,
-    val xDirectSubtrans: String,
-    val xDirectSync: String,
-    val xDirectTrans: String,
-    val xQuadSubtrans: String,
-    val xQuadSync: String,
-    val xQuadTrans: String
+    @Id var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    var ks: String,
+    var modelType: String,
+    var rotorType: String,
+    var tc: String,
+    var tpdo: String,
+    var tppdo: String,
+    var tppqo: String,
+    var tpqo: String,
+    var xDirectSubtrans: String,
+    var xDirectSync: String,
+    var xDirectTrans: String,
+    var xQuadSubtrans: String,
+    var xQuadSync: String,
+    var xQuadTrans: String
 )
 
-data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id val synchronousMachineTimeConstantReactanceId: UUID? = null)
+data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id var synchronousMachineTimeConstantReactanceId: UUID? = null)
 
 // single association events
 
@@ -12044,16 +12044,16 @@ data class DeleteSynchronousMachineTimeConstantReactanceEvent(@Id val synchronou
 // SynchronousMachineUserDefined Events
 
 data class CreateSynchronousMachineUserDefinedEvent(
-    @Id val synchronousMachineUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var synchronousMachineUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateSynchronousMachineUserDefinedEvent(
-    @Id val synchronousMachineUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var synchronousMachineUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteSynchronousMachineUserDefinedEvent(@Id val synchronousMachineUserDefinedId: UUID? = null)
+data class DeleteSynchronousMachineUserDefinedEvent(@Id var synchronousMachineUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -12063,26 +12063,26 @@ data class DeleteSynchronousMachineUserDefinedEvent(@Id val synchronousMachineUs
 // TapChanger Events
 
 data class CreateTapChangerEvent(
-    @Id val tapChangerId: UUID? = null,
-    val highStep: String,
-    val lowStep: String,
-    val ltcFlag: String,
-    val neutralStep: String,
-    val neutralU: String,
-    val normalStep: String
+    @Id var tapChangerId: UUID? = null,
+    var highStep: String,
+    var lowStep: String,
+    var ltcFlag: String,
+    var neutralStep: String,
+    var neutralU: String,
+    var normalStep: String
 )
 
 data class UpdateTapChangerEvent(
-    @Id val tapChangerId: UUID? = null,
-    val highStep: String,
-    val lowStep: String,
-    val ltcFlag: String,
-    val neutralStep: String,
-    val neutralU: String,
-    val normalStep: String
+    @Id var tapChangerId: UUID? = null,
+    var highStep: String,
+    var lowStep: String,
+    var ltcFlag: String,
+    var neutralStep: String,
+    var neutralU: String,
+    var normalStep: String
 )
 
-data class DeleteTapChangerEvent(@Id val tapChangerId: UUID? = null)
+data class DeleteTapChangerEvent(@Id var tapChangerId: UUID? = null)
 
 // single association events
 
@@ -12092,14 +12092,14 @@ data class DeleteTapChangerEvent(@Id val tapChangerId: UUID? = null)
 // TapChangerControl Events
 
 data class CreateTapChangerControlEvent(
-     val tapChangerControlId: UUID? = null
+     var tapChangerControlId: UUID? = null
 )
 
 data class UpdateTapChangerControlEvent(
-     val tapChangerControlId: UUID? = null
+     var tapChangerControlId: UUID? = null
 )
 
-data class DeleteTapChangerControlEvent(@Id val tapChangerControlId: UUID? = null)
+data class DeleteTapChangerControlEvent(@Id var tapChangerControlId: UUID? = null)
 
 // single association events
 
@@ -12109,26 +12109,26 @@ data class DeleteTapChangerControlEvent(@Id val tapChangerControlId: UUID? = nul
 // TapChangerTablePoint Events
 
 data class CreateTapChangerTablePointEvent(
-    @Id val tapChangerTablePointId: UUID? = null,
-    val b: String,
-    val g: String,
-    val r: String,
-    val ratio: String,
-    val step: String,
-    val x: String
+    @Id var tapChangerTablePointId: UUID? = null,
+    var b: String,
+    var g: String,
+    var r: String,
+    var ratio: String,
+    var step: String,
+    var x: String
 )
 
 data class UpdateTapChangerTablePointEvent(
-    @Id val tapChangerTablePointId: UUID? = null,
-    val b: String,
-    val g: String,
-    val r: String,
-    val ratio: String,
-    val step: String,
-    val x: String
+    @Id var tapChangerTablePointId: UUID? = null,
+    var b: String,
+    var g: String,
+    var r: String,
+    var ratio: String,
+    var step: String,
+    var x: String
 )
 
-data class DeleteTapChangerTablePointEvent(@Id val tapChangerTablePointId: UUID? = null)
+data class DeleteTapChangerTablePointEvent(@Id var tapChangerTablePointId: UUID? = null)
 
 // single association events
 
@@ -12138,14 +12138,14 @@ data class DeleteTapChangerTablePointEvent(@Id val tapChangerTablePointId: UUID?
 // TapSchedule Events
 
 data class CreateTapScheduleEvent(
-     val tapScheduleId: UUID? = null
+     var tapScheduleId: UUID? = null
 )
 
 data class UpdateTapScheduleEvent(
-     val tapScheduleId: UUID? = null
+     var tapScheduleId: UUID? = null
 )
 
-data class DeleteTapScheduleEvent(@Id val tapScheduleId: UUID? = null)
+data class DeleteTapScheduleEvent(@Id var tapScheduleId: UUID? = null)
 
 // single association events
 
@@ -12155,20 +12155,20 @@ data class DeleteTapScheduleEvent(@Id val tapScheduleId: UUID? = null)
 // Temperature Events
 
 data class CreateTemperatureEvent(
-    @Id val temperatureId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var temperatureId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateTemperatureEvent(
-    @Id val temperatureId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var temperatureId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteTemperatureEvent(@Id val temperatureId: UUID? = null)
+data class DeleteTemperatureEvent(@Id var temperatureId: UUID? = null)
 
 // single association events
 
@@ -12178,14 +12178,14 @@ data class DeleteTemperatureEvent(@Id val temperatureId: UUID? = null)
 // Terminal Events
 
 data class CreateTerminalEvent(
-     val terminalId: UUID? = null
+     var terminalId: UUID? = null
 )
 
 data class UpdateTerminalEvent(
-     val terminalId: UUID? = null
+     var terminalId: UUID? = null
 )
 
-data class DeleteTerminalEvent(@Id val terminalId: UUID? = null)
+data class DeleteTerminalEvent(@Id var terminalId: UUID? = null)
 
 // single association events
 
@@ -12195,16 +12195,16 @@ data class DeleteTerminalEvent(@Id val terminalId: UUID? = null)
 // TextDiagramObject Events
 
 data class CreateTextDiagramObjectEvent(
-    @Id val textDiagramObjectId: UUID? = null,
-    val text: String
+    @Id var textDiagramObjectId: UUID? = null,
+    var text: String
 )
 
 data class UpdateTextDiagramObjectEvent(
-    @Id val textDiagramObjectId: UUID? = null,
-    val text: String
+    @Id var textDiagramObjectId: UUID? = null,
+    var text: String
 )
 
-data class DeleteTextDiagramObjectEvent(@Id val textDiagramObjectId: UUID? = null)
+data class DeleteTextDiagramObjectEvent(@Id var textDiagramObjectId: UUID? = null)
 
 // single association events
 
@@ -12214,14 +12214,14 @@ data class DeleteTextDiagramObjectEvent(@Id val textDiagramObjectId: UUID? = nul
 // ThermalGeneratingUnit Events
 
 data class CreateThermalGeneratingUnitEvent(
-     val thermalGeneratingUnitId: UUID? = null
+     var thermalGeneratingUnitId: UUID? = null
 )
 
 data class UpdateThermalGeneratingUnitEvent(
-     val thermalGeneratingUnitId: UUID? = null
+     var thermalGeneratingUnitId: UUID? = null
 )
 
-data class DeleteThermalGeneratingUnitEvent(@Id val thermalGeneratingUnitId: UUID? = null)
+data class DeleteThermalGeneratingUnitEvent(@Id var thermalGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -12231,16 +12231,16 @@ data class DeleteThermalGeneratingUnitEvent(@Id val thermalGeneratingUnitId: UUI
 // TieFlow Events
 
 data class CreateTieFlowEvent(
-    @Id val tieFlowId: UUID? = null,
-    val positiveFlowIn: String
+    @Id var tieFlowId: UUID? = null,
+    var positiveFlowIn: String
 )
 
 data class UpdateTieFlowEvent(
-    @Id val tieFlowId: UUID? = null,
-    val positiveFlowIn: String
+    @Id var tieFlowId: UUID? = null,
+    var positiveFlowIn: String
 )
 
-data class DeleteTieFlowEvent(@Id val tieFlowId: UUID? = null)
+data class DeleteTieFlowEvent(@Id var tieFlowId: UUID? = null)
 
 // single association events
 
@@ -12250,14 +12250,14 @@ data class DeleteTieFlowEvent(@Id val tieFlowId: UUID? = null)
 // TopologicalIsland Events
 
 data class CreateTopologicalIslandEvent(
-     val topologicalIslandId: UUID? = null
+     var topologicalIslandId: UUID? = null
 )
 
 data class UpdateTopologicalIslandEvent(
-     val topologicalIslandId: UUID? = null
+     var topologicalIslandId: UUID? = null
 )
 
-data class DeleteTopologicalIslandEvent(@Id val topologicalIslandId: UUID? = null)
+data class DeleteTopologicalIslandEvent(@Id var topologicalIslandId: UUID? = null)
 
 // single association events
 
@@ -12267,28 +12267,28 @@ data class DeleteTopologicalIslandEvent(@Id val topologicalIslandId: UUID? = nul
 // TopologicalNode Events
 
 data class CreateTopologicalNodeEvent(
-    @Id val topologicalNodeId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var topologicalNodeId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
 data class UpdateTopologicalNodeEvent(
-    @Id val topologicalNodeId: UUID? = null,
-    val boundaryPoint: String,
-    val fromEndIsoCode: String,
-    val fromEndName: String,
-    val fromEndNameTso: String,
-    val toEndIsoCode: String,
-    val toEndName: String,
-    val toEndNameTso: String
+    @Id var topologicalNodeId: UUID? = null,
+    var boundaryPoint: String,
+    var fromEndIsoCode: String,
+    var fromEndName: String,
+    var fromEndNameTso: String,
+    var toEndIsoCode: String,
+    var toEndName: String,
+    var toEndNameTso: String
 )
 
-data class DeleteTopologicalNodeEvent(@Id val topologicalNodeId: UUID? = null)
+data class DeleteTopologicalNodeEvent(@Id var topologicalNodeId: UUID? = null)
 
 // single association events
 
@@ -12298,34 +12298,34 @@ data class DeleteTopologicalNodeEvent(@Id val topologicalNodeId: UUID? = null)
 // TopologyBoundaryVersion Events
 
 data class CreateTopologyBoundaryVersionEvent(
-    @Id val topologyBoundaryVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var topologyBoundaryVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateTopologyBoundaryVersionEvent(
-    @Id val topologyBoundaryVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var topologyBoundaryVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteTopologyBoundaryVersionEvent(@Id val topologyBoundaryVersionId: UUID? = null)
+data class DeleteTopologyBoundaryVersionEvent(@Id var topologyBoundaryVersionId: UUID? = null)
 
 // single association events
 
@@ -12335,34 +12335,34 @@ data class DeleteTopologyBoundaryVersionEvent(@Id val topologyBoundaryVersionId:
 // TopologyVersion Events
 
 data class CreateTopologyVersionEvent(
-    @Id val topologyVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var topologyVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
 data class UpdateTopologyVersionEvent(
-    @Id val topologyVersionId: UUID? = null,
-    val baseUML: String,
-    val baseURI: String,
-    val date: String,
-    val differenceModelURI: String,
-    val entsoeUML: String,
-    val entsoeURI: String,
-    val modelDescriptionURI: String,
-    val namespaceRDF: String,
-    val namespaceUML: String,
-    val shortName: String
+    @Id var topologyVersionId: UUID? = null,
+    var baseUML: String,
+    var baseURI: String,
+    var date: String,
+    var differenceModelURI: String,
+    var entsoeUML: String,
+    var entsoeURI: String,
+    var modelDescriptionURI: String,
+    var namespaceRDF: String,
+    var namespaceUML: String,
+    var shortName: String
 )
 
-data class DeleteTopologyVersionEvent(@Id val topologyVersionId: UUID? = null)
+data class DeleteTopologyVersionEvent(@Id var topologyVersionId: UUID? = null)
 
 // single association events
 
@@ -12372,22 +12372,22 @@ data class DeleteTopologyVersionEvent(@Id val topologyVersionId: UUID? = null)
 // TransformerEnd Events
 
 data class CreateTransformerEndEvent(
-    @Id val transformerEndId: UUID? = null,
-    val endNumber: String,
-    val grounded: String,
-    val rground: String,
-    val xground: String
+    @Id var transformerEndId: UUID? = null,
+    var endNumber: String,
+    var grounded: String,
+    var rground: String,
+    var xground: String
 )
 
 data class UpdateTransformerEndEvent(
-    @Id val transformerEndId: UUID? = null,
-    val endNumber: String,
-    val grounded: String,
-    val rground: String,
-    val xground: String
+    @Id var transformerEndId: UUID? = null,
+    var endNumber: String,
+    var grounded: String,
+    var rground: String,
+    var xground: String
 )
 
-data class DeleteTransformerEndEvent(@Id val transformerEndId: UUID? = null)
+data class DeleteTransformerEndEvent(@Id var transformerEndId: UUID? = null)
 
 // single association events
 
@@ -12397,38 +12397,38 @@ data class DeleteTransformerEndEvent(@Id val transformerEndId: UUID? = null)
 // TurbLCFB1 Events
 
 data class CreateTurbLCFB1Event(
-    @Id val turbLCFB1Id: UUID? = null,
-    val db: String,
-    val emax: String,
-    val fb: String,
-    val fbf: String,
-    val irmax: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pbf: String,
-    val pmwset: String,
-    val speedReferenceGovernor: String,
-    val tpelec: String
+    @Id var turbLCFB1Id: UUID? = null,
+    var db: String,
+    var emax: String,
+    var fb: String,
+    var fbf: String,
+    var irmax: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pbf: String,
+    var pmwset: String,
+    var speedReferenceGovernor: String,
+    var tpelec: String
 )
 
 data class UpdateTurbLCFB1Event(
-    @Id val turbLCFB1Id: UUID? = null,
-    val db: String,
-    val emax: String,
-    val fb: String,
-    val fbf: String,
-    val irmax: String,
-    val ki: String,
-    val kp: String,
-    val mwbase: String,
-    val pbf: String,
-    val pmwset: String,
-    val speedReferenceGovernor: String,
-    val tpelec: String
+    @Id var turbLCFB1Id: UUID? = null,
+    var db: String,
+    var emax: String,
+    var fb: String,
+    var fbf: String,
+    var irmax: String,
+    var ki: String,
+    var kp: String,
+    var mwbase: String,
+    var pbf: String,
+    var pmwset: String,
+    var speedReferenceGovernor: String,
+    var tpelec: String
 )
 
-data class DeleteTurbLCFB1Event(@Id val turbLCFB1Id: UUID? = null)
+data class DeleteTurbLCFB1Event(@Id var turbLCFB1Id: UUID? = null)
 
 // single association events
 
@@ -12438,14 +12438,14 @@ data class DeleteTurbLCFB1Event(@Id val turbLCFB1Id: UUID? = null)
 // TurbineGovernorDynamics Events
 
 data class CreateTurbineGovernorDynamicsEvent(
-     val turbineGovernorDynamicsId: UUID? = null
+     var turbineGovernorDynamicsId: UUID? = null
 )
 
 data class UpdateTurbineGovernorDynamicsEvent(
-     val turbineGovernorDynamicsId: UUID? = null
+     var turbineGovernorDynamicsId: UUID? = null
 )
 
-data class DeleteTurbineGovernorDynamicsEvent(@Id val turbineGovernorDynamicsId: UUID? = null)
+data class DeleteTurbineGovernorDynamicsEvent(@Id var turbineGovernorDynamicsId: UUID? = null)
 
 // single association events
 
@@ -12455,16 +12455,16 @@ data class DeleteTurbineGovernorDynamicsEvent(@Id val turbineGovernorDynamicsId:
 // TurbineGovernorUserDefined Events
 
 data class CreateTurbineGovernorUserDefinedEvent(
-    @Id val turbineGovernorUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var turbineGovernorUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateTurbineGovernorUserDefinedEvent(
-    @Id val turbineGovernorUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var turbineGovernorUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteTurbineGovernorUserDefinedEvent(@Id val turbineGovernorUserDefinedId: UUID? = null)
+data class DeleteTurbineGovernorUserDefinedEvent(@Id var turbineGovernorUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -12474,14 +12474,14 @@ data class DeleteTurbineGovernorUserDefinedEvent(@Id val turbineGovernorUserDefi
 // TurbineLoadControllerDynamics Events
 
 data class CreateTurbineLoadControllerDynamicsEvent(
-     val turbineLoadControllerDynamicsId: UUID? = null
+     var turbineLoadControllerDynamicsId: UUID? = null
 )
 
 data class UpdateTurbineLoadControllerDynamicsEvent(
-     val turbineLoadControllerDynamicsId: UUID? = null
+     var turbineLoadControllerDynamicsId: UUID? = null
 )
 
-data class DeleteTurbineLoadControllerDynamicsEvent(@Id val turbineLoadControllerDynamicsId: UUID? = null)
+data class DeleteTurbineLoadControllerDynamicsEvent(@Id var turbineLoadControllerDynamicsId: UUID? = null)
 
 // single association events
 
@@ -12491,16 +12491,16 @@ data class DeleteTurbineLoadControllerDynamicsEvent(@Id val turbineLoadControlle
 // TurbineLoadControllerUserDefined Events
 
 data class CreateTurbineLoadControllerUserDefinedEvent(
-    @Id val turbineLoadControllerUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var turbineLoadControllerUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateTurbineLoadControllerUserDefinedEvent(
-    @Id val turbineLoadControllerUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var turbineLoadControllerUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteTurbineLoadControllerUserDefinedEvent(@Id val turbineLoadControllerUserDefinedId: UUID? = null)
+data class DeleteTurbineLoadControllerUserDefinedEvent(@Id var turbineLoadControllerUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -12510,28 +12510,28 @@ data class DeleteTurbineLoadControllerUserDefinedEvent(@Id val turbineLoadContro
 // UnderexcLim2Simplified Events
 
 data class CreateUnderexcLim2SimplifiedEvent(
-    @Id val underexcLim2SimplifiedId: UUID? = null,
-    val kui: String,
-    val p0: String,
-    val p1: String,
-    val q0: String,
-    val q1: String,
-    val vuimax: String,
-    val vuimin: String
+    @Id var underexcLim2SimplifiedId: UUID? = null,
+    var kui: String,
+    var p0: String,
+    var p1: String,
+    var q0: String,
+    var q1: String,
+    var vuimax: String,
+    var vuimin: String
 )
 
 data class UpdateUnderexcLim2SimplifiedEvent(
-    @Id val underexcLim2SimplifiedId: UUID? = null,
-    val kui: String,
-    val p0: String,
-    val p1: String,
-    val q0: String,
-    val q1: String,
-    val vuimax: String,
-    val vuimin: String
+    @Id var underexcLim2SimplifiedId: UUID? = null,
+    var kui: String,
+    var p0: String,
+    var p1: String,
+    var q0: String,
+    var q1: String,
+    var vuimax: String,
+    var vuimin: String
 )
 
-data class DeleteUnderexcLim2SimplifiedEvent(@Id val underexcLim2SimplifiedId: UUID? = null)
+data class DeleteUnderexcLim2SimplifiedEvent(@Id var underexcLim2SimplifiedId: UUID? = null)
 
 // single association events
 
@@ -12541,44 +12541,44 @@ data class DeleteUnderexcLim2SimplifiedEvent(@Id val underexcLim2SimplifiedId: U
 // UnderexcLimIEEE1 Events
 
 data class CreateUnderexcLimIEEE1Event(
-    @Id val underexcLimIEEE1Id: UUID? = null,
-    val kuc: String,
-    val kuf: String,
-    val kui: String,
-    val kul: String,
-    val kur: String,
-    val tu1: String,
-    val tu2: String,
-    val tu3: String,
-    val tu4: String,
-    val vucmax: String,
-    val vuimax: String,
-    val vuimin: String,
-    val vulmax: String,
-    val vulmin: String,
-    val vurmax: String
+    @Id var underexcLimIEEE1Id: UUID? = null,
+    var kuc: String,
+    var kuf: String,
+    var kui: String,
+    var kul: String,
+    var kur: String,
+    var tu1: String,
+    var tu2: String,
+    var tu3: String,
+    var tu4: String,
+    var vucmax: String,
+    var vuimax: String,
+    var vuimin: String,
+    var vulmax: String,
+    var vulmin: String,
+    var vurmax: String
 )
 
 data class UpdateUnderexcLimIEEE1Event(
-    @Id val underexcLimIEEE1Id: UUID? = null,
-    val kuc: String,
-    val kuf: String,
-    val kui: String,
-    val kul: String,
-    val kur: String,
-    val tu1: String,
-    val tu2: String,
-    val tu3: String,
-    val tu4: String,
-    val vucmax: String,
-    val vuimax: String,
-    val vuimin: String,
-    val vulmax: String,
-    val vulmin: String,
-    val vurmax: String
+    @Id var underexcLimIEEE1Id: UUID? = null,
+    var kuc: String,
+    var kuf: String,
+    var kui: String,
+    var kul: String,
+    var kur: String,
+    var tu1: String,
+    var tu2: String,
+    var tu3: String,
+    var tu4: String,
+    var vucmax: String,
+    var vuimax: String,
+    var vuimin: String,
+    var vulmax: String,
+    var vulmin: String,
+    var vurmax: String
 )
 
-data class DeleteUnderexcLimIEEE1Event(@Id val underexcLimIEEE1Id: UUID? = null)
+data class DeleteUnderexcLimIEEE1Event(@Id var underexcLimIEEE1Id: UUID? = null)
 
 // single association events
 
@@ -12588,94 +12588,94 @@ data class DeleteUnderexcLimIEEE1Event(@Id val underexcLimIEEE1Id: UUID? = null)
 // UnderexcLimIEEE2 Events
 
 data class CreateUnderexcLimIEEE2Event(
-    @Id val underexcLimIEEE2Id: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val kfb: String,
-    val kuf: String,
-    val kui: String,
-    val kul: String,
-    val p0: String,
-    val p1: String,
-    val p10: String,
-    val p2: String,
-    val p3: String,
-    val p4: String,
-    val p5: String,
-    val p6: String,
-    val p7: String,
-    val p8: String,
-    val p9: String,
-    val q0: String,
-    val q1: String,
-    val q10: String,
-    val q2: String,
-    val q3: String,
-    val q4: String,
-    val q5: String,
-    val q6: String,
-    val q7: String,
-    val q8: String,
-    val q9: String,
-    val tu1: String,
-    val tu2: String,
-    val tu3: String,
-    val tu4: String,
-    val tul: String,
-    val tup: String,
-    val tuq: String,
-    val tuv: String,
-    val vuimax: String,
-    val vuimin: String,
-    val vulmax: String,
-    val vulmin: String
+    @Id var underexcLimIEEE2Id: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var kfb: String,
+    var kuf: String,
+    var kui: String,
+    var kul: String,
+    var p0: String,
+    var p1: String,
+    var p10: String,
+    var p2: String,
+    var p3: String,
+    var p4: String,
+    var p5: String,
+    var p6: String,
+    var p7: String,
+    var p8: String,
+    var p9: String,
+    var q0: String,
+    var q1: String,
+    var q10: String,
+    var q2: String,
+    var q3: String,
+    var q4: String,
+    var q5: String,
+    var q6: String,
+    var q7: String,
+    var q8: String,
+    var q9: String,
+    var tu1: String,
+    var tu2: String,
+    var tu3: String,
+    var tu4: String,
+    var tul: String,
+    var tup: String,
+    var tuq: String,
+    var tuv: String,
+    var vuimax: String,
+    var vuimin: String,
+    var vulmax: String,
+    var vulmin: String
 )
 
 data class UpdateUnderexcLimIEEE2Event(
-    @Id val underexcLimIEEE2Id: UUID? = null,
-    val k1: String,
-    val k2: String,
-    val kfb: String,
-    val kuf: String,
-    val kui: String,
-    val kul: String,
-    val p0: String,
-    val p1: String,
-    val p10: String,
-    val p2: String,
-    val p3: String,
-    val p4: String,
-    val p5: String,
-    val p6: String,
-    val p7: String,
-    val p8: String,
-    val p9: String,
-    val q0: String,
-    val q1: String,
-    val q10: String,
-    val q2: String,
-    val q3: String,
-    val q4: String,
-    val q5: String,
-    val q6: String,
-    val q7: String,
-    val q8: String,
-    val q9: String,
-    val tu1: String,
-    val tu2: String,
-    val tu3: String,
-    val tu4: String,
-    val tul: String,
-    val tup: String,
-    val tuq: String,
-    val tuv: String,
-    val vuimax: String,
-    val vuimin: String,
-    val vulmax: String,
-    val vulmin: String
+    @Id var underexcLimIEEE2Id: UUID? = null,
+    var k1: String,
+    var k2: String,
+    var kfb: String,
+    var kuf: String,
+    var kui: String,
+    var kul: String,
+    var p0: String,
+    var p1: String,
+    var p10: String,
+    var p2: String,
+    var p3: String,
+    var p4: String,
+    var p5: String,
+    var p6: String,
+    var p7: String,
+    var p8: String,
+    var p9: String,
+    var q0: String,
+    var q1: String,
+    var q10: String,
+    var q2: String,
+    var q3: String,
+    var q4: String,
+    var q5: String,
+    var q6: String,
+    var q7: String,
+    var q8: String,
+    var q9: String,
+    var tu1: String,
+    var tu2: String,
+    var tu3: String,
+    var tu4: String,
+    var tul: String,
+    var tup: String,
+    var tuq: String,
+    var tuv: String,
+    var vuimax: String,
+    var vuimin: String,
+    var vulmax: String,
+    var vulmin: String
 )
 
-data class DeleteUnderexcLimIEEE2Event(@Id val underexcLimIEEE2Id: UUID? = null)
+data class DeleteUnderexcLimIEEE2Event(@Id var underexcLimIEEE2Id: UUID? = null)
 
 // single association events
 
@@ -12685,26 +12685,26 @@ data class DeleteUnderexcLimIEEE2Event(@Id val underexcLimIEEE2Id: UUID? = null)
 // UnderexcLimX1 Events
 
 data class CreateUnderexcLimX1Event(
-    @Id val underexcLimX1Id: UUID? = null,
-    val k: String,
-    val kf2: String,
-    val km: String,
-    val melmax: String,
-    val tf2: String,
-    val tm: String
+    @Id var underexcLimX1Id: UUID? = null,
+    var k: String,
+    var kf2: String,
+    var km: String,
+    var melmax: String,
+    var tf2: String,
+    var tm: String
 )
 
 data class UpdateUnderexcLimX1Event(
-    @Id val underexcLimX1Id: UUID? = null,
-    val k: String,
-    val kf2: String,
-    val km: String,
-    val melmax: String,
-    val tf2: String,
-    val tm: String
+    @Id var underexcLimX1Id: UUID? = null,
+    var k: String,
+    var kf2: String,
+    var km: String,
+    var melmax: String,
+    var tf2: String,
+    var tm: String
 )
 
-data class DeleteUnderexcLimX1Event(@Id val underexcLimX1Id: UUID? = null)
+data class DeleteUnderexcLimX1Event(@Id var underexcLimX1Id: UUID? = null)
 
 // single association events
 
@@ -12714,28 +12714,28 @@ data class DeleteUnderexcLimX1Event(@Id val underexcLimX1Id: UUID? = null)
 // UnderexcLimX2 Events
 
 data class CreateUnderexcLimX2Event(
-    @Id val underexcLimX2Id: UUID? = null,
-    val kf2: String,
-    val km: String,
-    val melmax: String,
-    val qo: String,
-    val r: String,
-    val tf2: String,
-    val tm: String
+    @Id var underexcLimX2Id: UUID? = null,
+    var kf2: String,
+    var km: String,
+    var melmax: String,
+    var qo: String,
+    var r: String,
+    var tf2: String,
+    var tm: String
 )
 
 data class UpdateUnderexcLimX2Event(
-    @Id val underexcLimX2Id: UUID? = null,
-    val kf2: String,
-    val km: String,
-    val melmax: String,
-    val qo: String,
-    val r: String,
-    val tf2: String,
-    val tm: String
+    @Id var underexcLimX2Id: UUID? = null,
+    var kf2: String,
+    var km: String,
+    var melmax: String,
+    var qo: String,
+    var r: String,
+    var tf2: String,
+    var tm: String
 )
 
-data class DeleteUnderexcLimX2Event(@Id val underexcLimX2Id: UUID? = null)
+data class DeleteUnderexcLimX2Event(@Id var underexcLimX2Id: UUID? = null)
 
 // single association events
 
@@ -12745,14 +12745,14 @@ data class DeleteUnderexcLimX2Event(@Id val underexcLimX2Id: UUID? = null)
 // UnderexcitationLimiterDynamics Events
 
 data class CreateUnderexcitationLimiterDynamicsEvent(
-     val underexcitationLimiterDynamicsId: UUID? = null
+     var underexcitationLimiterDynamicsId: UUID? = null
 )
 
 data class UpdateUnderexcitationLimiterDynamicsEvent(
-     val underexcitationLimiterDynamicsId: UUID? = null
+     var underexcitationLimiterDynamicsId: UUID? = null
 )
 
-data class DeleteUnderexcitationLimiterDynamicsEvent(@Id val underexcitationLimiterDynamicsId: UUID? = null)
+data class DeleteUnderexcitationLimiterDynamicsEvent(@Id var underexcitationLimiterDynamicsId: UUID? = null)
 
 // single association events
 
@@ -12762,16 +12762,16 @@ data class DeleteUnderexcitationLimiterDynamicsEvent(@Id val underexcitationLimi
 // UnderexcitationLimiterUserDefined Events
 
 data class CreateUnderexcitationLimiterUserDefinedEvent(
-    @Id val underexcitationLimiterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var underexcitationLimiterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateUnderexcitationLimiterUserDefinedEvent(
-    @Id val underexcitationLimiterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var underexcitationLimiterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id val underexcitationLimiterUserDefinedId: UUID? = null)
+data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id var underexcitationLimiterUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -12781,14 +12781,14 @@ data class DeleteUnderexcitationLimiterUserDefinedEvent(@Id val underexcitationL
 // Unresolvedname Events
 
 data class CreateUnresolvednameEvent(
-     val unresolvednameId: UUID? = null
+     var unresolvednameId: UUID? = null
 )
 
 data class UpdateUnresolvednameEvent(
-     val unresolvednameId: UUID? = null
+     var unresolvednameId: UUID? = null
 )
 
-data class DeleteUnresolvednameEvent(@Id val unresolvednameId: UUID? = null)
+data class DeleteUnresolvednameEvent(@Id var unresolvednameId: UUID? = null)
 
 // single association events
 
@@ -12798,26 +12798,26 @@ data class DeleteUnresolvednameEvent(@Id val unresolvednameId: UUID? = null)
 // VAdjIEEE Events
 
 data class CreateVAdjIEEEEvent(
-    @Id val vAdjIEEEId: UUID? = null,
-    val adjslew: String,
-    val taoff: String,
-    val taon: String,
-    val vadjf: String,
-    val vadjmax: String,
-    val vadjmin: String
+    @Id var vAdjIEEEId: UUID? = null,
+    var adjslew: String,
+    var taoff: String,
+    var taon: String,
+    var vadjf: String,
+    var vadjmax: String,
+    var vadjmin: String
 )
 
 data class UpdateVAdjIEEEEvent(
-    @Id val vAdjIEEEId: UUID? = null,
-    val adjslew: String,
-    val taoff: String,
-    val taon: String,
-    val vadjf: String,
-    val vadjmax: String,
-    val vadjmin: String
+    @Id var vAdjIEEEId: UUID? = null,
+    var adjslew: String,
+    var taoff: String,
+    var taon: String,
+    var vadjf: String,
+    var vadjmax: String,
+    var vadjmin: String
 )
 
-data class DeleteVAdjIEEEEvent(@Id val vAdjIEEEId: UUID? = null)
+data class DeleteVAdjIEEEEvent(@Id var vAdjIEEEId: UUID? = null)
 
 // single association events
 
@@ -12827,20 +12827,20 @@ data class DeleteVAdjIEEEEvent(@Id val vAdjIEEEId: UUID? = null)
 // VCompIEEEType1 Events
 
 data class CreateVCompIEEEType1Event(
-    @Id val vCompIEEEType1Id: UUID? = null,
-    val rc: String,
-    val tr: String,
-    val xc: String
+    @Id var vCompIEEEType1Id: UUID? = null,
+    var rc: String,
+    var tr: String,
+    var xc: String
 )
 
 data class UpdateVCompIEEEType1Event(
-    @Id val vCompIEEEType1Id: UUID? = null,
-    val rc: String,
-    val tr: String,
-    val xc: String
+    @Id var vCompIEEEType1Id: UUID? = null,
+    var rc: String,
+    var tr: String,
+    var xc: String
 )
 
-data class DeleteVCompIEEEType1Event(@Id val vCompIEEEType1Id: UUID? = null)
+data class DeleteVCompIEEEType1Event(@Id var vCompIEEEType1Id: UUID? = null)
 
 // single association events
 
@@ -12850,16 +12850,16 @@ data class DeleteVCompIEEEType1Event(@Id val vCompIEEEType1Id: UUID? = null)
 // VCompIEEEType2 Events
 
 data class CreateVCompIEEEType2Event(
-    @Id val vCompIEEEType2Id: UUID? = null,
-    val tr: String
+    @Id var vCompIEEEType2Id: UUID? = null,
+    var tr: String
 )
 
 data class UpdateVCompIEEEType2Event(
-    @Id val vCompIEEEType2Id: UUID? = null,
-    val tr: String
+    @Id var vCompIEEEType2Id: UUID? = null,
+    var tr: String
 )
 
-data class DeleteVCompIEEEType2Event(@Id val vCompIEEEType2Id: UUID? = null)
+data class DeleteVCompIEEEType2Event(@Id var vCompIEEEType2Id: UUID? = null)
 
 // single association events
 
@@ -12869,14 +12869,14 @@ data class DeleteVCompIEEEType2Event(@Id val vCompIEEEType2Id: UUID? = null)
 // ValueAliasSet Events
 
 data class CreateValueAliasSetEvent(
-     val valueAliasSetId: UUID? = null
+     var valueAliasSetId: UUID? = null
 )
 
 data class UpdateValueAliasSetEvent(
-     val valueAliasSetId: UUID? = null
+     var valueAliasSetId: UUID? = null
 )
 
-data class DeleteValueAliasSetEvent(@Id val valueAliasSetId: UUID? = null)
+data class DeleteValueAliasSetEvent(@Id var valueAliasSetId: UUID? = null)
 
 // single association events
 
@@ -12886,16 +12886,16 @@ data class DeleteValueAliasSetEvent(@Id val valueAliasSetId: UUID? = null)
 // ValueToAlias Events
 
 data class CreateValueToAliasEvent(
-    @Id val valueToAliasId: UUID? = null,
-    val value: String
+    @Id var valueToAliasId: UUID? = null,
+    var value: String
 )
 
 data class UpdateValueToAliasEvent(
-    @Id val valueToAliasId: UUID? = null,
-    val value: String
+    @Id var valueToAliasId: UUID? = null,
+    var value: String
 )
 
-data class DeleteValueToAliasEvent(@Id val valueToAliasId: UUID? = null)
+data class DeleteValueToAliasEvent(@Id var valueToAliasId: UUID? = null)
 
 // single association events
 
@@ -12905,16 +12905,16 @@ data class DeleteValueToAliasEvent(@Id val valueToAliasId: UUID? = null)
 // VisibilityLayer Events
 
 data class CreateVisibilityLayerEvent(
-    @Id val visibilityLayerId: UUID? = null,
-    val drawingOrder: String
+    @Id var visibilityLayerId: UUID? = null,
+    var drawingOrder: String
 )
 
 data class UpdateVisibilityLayerEvent(
-    @Id val visibilityLayerId: UUID? = null,
-    val drawingOrder: String
+    @Id var visibilityLayerId: UUID? = null,
+    var drawingOrder: String
 )
 
-data class DeleteVisibilityLayerEvent(@Id val visibilityLayerId: UUID? = null)
+data class DeleteVisibilityLayerEvent(@Id var visibilityLayerId: UUID? = null)
 
 // single association events
 
@@ -12924,20 +12924,20 @@ data class DeleteVisibilityLayerEvent(@Id val visibilityLayerId: UUID? = null)
 // Voltage Events
 
 data class CreateVoltageEvent(
-    @Id val voltageId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var voltageId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateVoltageEvent(
-    @Id val voltageId: UUID? = null,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var voltageId: UUID? = null,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteVoltageEvent(@Id val voltageId: UUID? = null)
+data class DeleteVoltageEvent(@Id var voltageId: UUID? = null)
 
 // single association events
 
@@ -12947,14 +12947,14 @@ data class DeleteVoltageEvent(@Id val voltageId: UUID? = null)
 // VoltageAdjusterDynamics Events
 
 data class CreateVoltageAdjusterDynamicsEvent(
-     val voltageAdjusterDynamicsId: UUID? = null
+     var voltageAdjusterDynamicsId: UUID? = null
 )
 
 data class UpdateVoltageAdjusterDynamicsEvent(
-     val voltageAdjusterDynamicsId: UUID? = null
+     var voltageAdjusterDynamicsId: UUID? = null
 )
 
-data class DeleteVoltageAdjusterDynamicsEvent(@Id val voltageAdjusterDynamicsId: UUID? = null)
+data class DeleteVoltageAdjusterDynamicsEvent(@Id var voltageAdjusterDynamicsId: UUID? = null)
 
 // single association events
 
@@ -12964,16 +12964,16 @@ data class DeleteVoltageAdjusterDynamicsEvent(@Id val voltageAdjusterDynamicsId:
 // VoltageAdjusterUserDefined Events
 
 data class CreateVoltageAdjusterUserDefinedEvent(
-    @Id val voltageAdjusterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var voltageAdjusterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateVoltageAdjusterUserDefinedEvent(
-    @Id val voltageAdjusterUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var voltageAdjusterUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteVoltageAdjusterUserDefinedEvent(@Id val voltageAdjusterUserDefinedId: UUID? = null)
+data class DeleteVoltageAdjusterUserDefinedEvent(@Id var voltageAdjusterUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -12983,14 +12983,14 @@ data class DeleteVoltageAdjusterUserDefinedEvent(@Id val voltageAdjusterUserDefi
 // VoltageCompensatorDynamics Events
 
 data class CreateVoltageCompensatorDynamicsEvent(
-     val voltageCompensatorDynamicsId: UUID? = null
+     var voltageCompensatorDynamicsId: UUID? = null
 )
 
 data class UpdateVoltageCompensatorDynamicsEvent(
-     val voltageCompensatorDynamicsId: UUID? = null
+     var voltageCompensatorDynamicsId: UUID? = null
 )
 
-data class DeleteVoltageCompensatorDynamicsEvent(@Id val voltageCompensatorDynamicsId: UUID? = null)
+data class DeleteVoltageCompensatorDynamicsEvent(@Id var voltageCompensatorDynamicsId: UUID? = null)
 
 // single association events
 
@@ -13000,16 +13000,16 @@ data class DeleteVoltageCompensatorDynamicsEvent(@Id val voltageCompensatorDynam
 // VoltageCompensatorUserDefined Events
 
 data class CreateVoltageCompensatorUserDefinedEvent(
-    @Id val voltageCompensatorUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var voltageCompensatorUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateVoltageCompensatorUserDefinedEvent(
-    @Id val voltageCompensatorUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var voltageCompensatorUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteVoltageCompensatorUserDefinedEvent(@Id val voltageCompensatorUserDefinedId: UUID? = null)
+data class DeleteVoltageCompensatorUserDefinedEvent(@Id var voltageCompensatorUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -13019,18 +13019,18 @@ data class DeleteVoltageCompensatorUserDefinedEvent(@Id val voltageCompensatorUs
 // VoltageLevel Events
 
 data class CreateVoltageLevelEvent(
-    @Id val voltageLevelId: UUID? = null,
-    val highVoltageLimit: String,
-    val lowVoltageLimit: String
+    @Id var voltageLevelId: UUID? = null,
+    var highVoltageLimit: String,
+    var lowVoltageLimit: String
 )
 
 data class UpdateVoltageLevelEvent(
-    @Id val voltageLevelId: UUID? = null,
-    val highVoltageLimit: String,
-    val lowVoltageLimit: String
+    @Id var voltageLevelId: UUID? = null,
+    var highVoltageLimit: String,
+    var lowVoltageLimit: String
 )
 
-data class DeleteVoltageLevelEvent(@Id val voltageLevelId: UUID? = null)
+data class DeleteVoltageLevelEvent(@Id var voltageLevelId: UUID? = null)
 
 // single association events
 
@@ -13040,16 +13040,16 @@ data class DeleteVoltageLevelEvent(@Id val voltageLevelId: UUID? = null)
 // VoltageLimit Events
 
 data class CreateVoltageLimitEvent(
-    @Id val voltageLimitId: UUID? = null,
-    val value: String
+    @Id var voltageLimitId: UUID? = null,
+    var value: String
 )
 
 data class UpdateVoltageLimitEvent(
-    @Id val voltageLimitId: UUID? = null,
-    val value: String
+    @Id var voltageLimitId: UUID? = null,
+    var value: String
 )
 
-data class DeleteVoltageLimitEvent(@Id val voltageLimitId: UUID? = null)
+data class DeleteVoltageLimitEvent(@Id var voltageLimitId: UUID? = null)
 
 // single association events
 
@@ -13059,24 +13059,24 @@ data class DeleteVoltageLimitEvent(@Id val voltageLimitId: UUID? = null)
 // VoltagePerReactivePower Events
 
 data class CreateVoltagePerReactivePowerEvent(
-    @Id val voltagePerReactivePowerId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var voltagePerReactivePowerId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateVoltagePerReactivePowerEvent(
-    @Id val voltagePerReactivePowerId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var voltagePerReactivePowerId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteVoltagePerReactivePowerEvent(@Id val voltagePerReactivePowerId: UUID? = null)
+data class DeleteVoltagePerReactivePowerEvent(@Id var voltagePerReactivePowerId: UUID? = null)
 
 // single association events
 
@@ -13086,24 +13086,24 @@ data class DeleteVoltagePerReactivePowerEvent(@Id val voltagePerReactivePowerId:
 // VolumeFlowRate Events
 
 data class CreateVolumeFlowRateEvent(
-    @Id val volumeFlowRateId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var volumeFlowRateId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
 data class UpdateVolumeFlowRateEvent(
-    @Id val volumeFlowRateId: UUID? = null,
-    val denominatorMultiplier: String,
-    val denominatorUnit: String,
-    val multiplier: String,
-    val unit: String,
-    val value: String
+    @Id var volumeFlowRateId: UUID? = null,
+    var denominatorMultiplier: String,
+    var denominatorUnit: String,
+    var multiplier: String,
+    var unit: String,
+    var value: String
 )
 
-data class DeleteVolumeFlowRateEvent(@Id val volumeFlowRateId: UUID? = null)
+data class DeleteVolumeFlowRateEvent(@Id var volumeFlowRateId: UUID? = null)
 
 // single association events
 
@@ -13113,14 +13113,14 @@ data class DeleteVolumeFlowRateEvent(@Id val volumeFlowRateId: UUID? = null)
 // VsCapabilityCurve Events
 
 data class CreateVsCapabilityCurveEvent(
-     val vsCapabilityCurveId: UUID? = null
+     var vsCapabilityCurveId: UUID? = null
 )
 
 data class UpdateVsCapabilityCurveEvent(
-     val vsCapabilityCurveId: UUID? = null
+     var vsCapabilityCurveId: UUID? = null
 )
 
-data class DeleteVsCapabilityCurveEvent(@Id val vsCapabilityCurveId: UUID? = null)
+data class DeleteVsCapabilityCurveEvent(@Id var vsCapabilityCurveId: UUID? = null)
 
 // single association events
 
@@ -13130,18 +13130,18 @@ data class DeleteVsCapabilityCurveEvent(@Id val vsCapabilityCurveId: UUID? = nul
 // VsConverter Events
 
 data class CreateVsConverterEvent(
-    @Id val vsConverterId: UUID? = null,
-    val maxModulationIndex: String,
-    val maxValveCurrent: String
+    @Id var vsConverterId: UUID? = null,
+    var maxModulationIndex: String,
+    var maxValveCurrent: String
 )
 
 data class UpdateVsConverterEvent(
-    @Id val vsConverterId: UUID? = null,
-    val maxModulationIndex: String,
-    val maxValveCurrent: String
+    @Id var vsConverterId: UUID? = null,
+    var maxModulationIndex: String,
+    var maxValveCurrent: String
 )
 
-data class DeleteVsConverterEvent(@Id val vsConverterId: UUID? = null)
+data class DeleteVsConverterEvent(@Id var vsConverterId: UUID? = null)
 
 // single association events
 
@@ -13151,14 +13151,14 @@ data class DeleteVsConverterEvent(@Id val vsConverterId: UUID? = null)
 // WindAeroConstIEC Events
 
 data class CreateWindAeroConstIECEvent(
-     val windAeroConstIECId: UUID? = null
+     var windAeroConstIECId: UUID? = null
 )
 
 data class UpdateWindAeroConstIECEvent(
-     val windAeroConstIECId: UUID? = null
+     var windAeroConstIECId: UUID? = null
 )
 
-data class DeleteWindAeroConstIECEvent(@Id val windAeroConstIECId: UUID? = null)
+data class DeleteWindAeroConstIECEvent(@Id var windAeroConstIECId: UUID? = null)
 
 // single association events
 
@@ -13168,24 +13168,24 @@ data class DeleteWindAeroConstIECEvent(@Id val windAeroConstIECId: UUID? = null)
 // WindAeroLinearIEC Events
 
 data class CreateWindAeroLinearIECEvent(
-    @Id val windAeroLinearIECId: UUID? = null,
-    val dpomega: String,
-    val dptheta: String,
-    val omegazero: String,
-    val pavail: String,
-    val thetazero: String
+    @Id var windAeroLinearIECId: UUID? = null,
+    var dpomega: String,
+    var dptheta: String,
+    var omegazero: String,
+    var pavail: String,
+    var thetazero: String
 )
 
 data class UpdateWindAeroLinearIECEvent(
-    @Id val windAeroLinearIECId: UUID? = null,
-    val dpomega: String,
-    val dptheta: String,
-    val omegazero: String,
-    val pavail: String,
-    val thetazero: String
+    @Id var windAeroLinearIECId: UUID? = null,
+    var dpomega: String,
+    var dptheta: String,
+    var omegazero: String,
+    var pavail: String,
+    var thetazero: String
 )
 
-data class DeleteWindAeroLinearIECEvent(@Id val windAeroLinearIECId: UUID? = null)
+data class DeleteWindAeroLinearIECEvent(@Id var windAeroLinearIECId: UUID? = null)
 
 // single association events
 
@@ -13195,24 +13195,24 @@ data class DeleteWindAeroLinearIECEvent(@Id val windAeroLinearIECId: UUID? = nul
 // WindContCurrLimIEC Events
 
 data class CreateWindContCurrLimIECEvent(
-    @Id val windContCurrLimIECId: UUID? = null,
-    val imax: String,
-    val imaxdip: String,
-    val mdfslim: String,
-    val mqpri: String,
-    val tufilt: String
+    @Id var windContCurrLimIECId: UUID? = null,
+    var imax: String,
+    var imaxdip: String,
+    var mdfslim: String,
+    var mqpri: String,
+    var tufilt: String
 )
 
 data class UpdateWindContCurrLimIECEvent(
-    @Id val windContCurrLimIECId: UUID? = null,
-    val imax: String,
-    val imaxdip: String,
-    val mdfslim: String,
-    val mqpri: String,
-    val tufilt: String
+    @Id var windContCurrLimIECId: UUID? = null,
+    var imax: String,
+    var imaxdip: String,
+    var mdfslim: String,
+    var mqpri: String,
+    var tufilt: String
 )
 
-data class DeleteWindContCurrLimIECEvent(@Id val windContCurrLimIECId: UUID? = null)
+data class DeleteWindContCurrLimIECEvent(@Id var windContCurrLimIECId: UUID? = null)
 
 // single association events
 
@@ -13222,56 +13222,56 @@ data class DeleteWindContCurrLimIECEvent(@Id val windContCurrLimIECId: UUID? = n
 // WindContPType3IEC Events
 
 data class CreateWindContPType3IECEvent(
-    @Id val windContPType3IECId: UUID? = null,
-    val dpmax: String,
-    val dtrisemaxlvrt: String,
-    val kdtd: String,
-    val kip: String,
-    val kpp: String,
-    val mplvrt: String,
-    val omegaoffset: String,
-    val pdtdmax: String,
-    val rramp: String,
-    val tdvs: String,
-    val temin: String,
-    val tomegafilt: String,
-    val tpfilt: String,
-    val tpord: String,
-    val tufilt: String,
-    val tuscale: String,
-    val twref: String,
-    val udvs: String,
-    val updip: String,
-    val wdtd: String,
-    val zeta: String
+    @Id var windContPType3IECId: UUID? = null,
+    var dpmax: String,
+    var dtrisemaxlvrt: String,
+    var kdtd: String,
+    var kip: String,
+    var kpp: String,
+    var mplvrt: String,
+    var omegaoffset: String,
+    var pdtdmax: String,
+    var rramp: String,
+    var tdvs: String,
+    var temin: String,
+    var tomegafilt: String,
+    var tpfilt: String,
+    var tpord: String,
+    var tufilt: String,
+    var tuscale: String,
+    var twref: String,
+    var udvs: String,
+    var updip: String,
+    var wdtd: String,
+    var zeta: String
 )
 
 data class UpdateWindContPType3IECEvent(
-    @Id val windContPType3IECId: UUID? = null,
-    val dpmax: String,
-    val dtrisemaxlvrt: String,
-    val kdtd: String,
-    val kip: String,
-    val kpp: String,
-    val mplvrt: String,
-    val omegaoffset: String,
-    val pdtdmax: String,
-    val rramp: String,
-    val tdvs: String,
-    val temin: String,
-    val tomegafilt: String,
-    val tpfilt: String,
-    val tpord: String,
-    val tufilt: String,
-    val tuscale: String,
-    val twref: String,
-    val udvs: String,
-    val updip: String,
-    val wdtd: String,
-    val zeta: String
+    @Id var windContPType3IECId: UUID? = null,
+    var dpmax: String,
+    var dtrisemaxlvrt: String,
+    var kdtd: String,
+    var kip: String,
+    var kpp: String,
+    var mplvrt: String,
+    var omegaoffset: String,
+    var pdtdmax: String,
+    var rramp: String,
+    var tdvs: String,
+    var temin: String,
+    var tomegafilt: String,
+    var tpfilt: String,
+    var tpord: String,
+    var tufilt: String,
+    var tuscale: String,
+    var twref: String,
+    var udvs: String,
+    var updip: String,
+    var wdtd: String,
+    var zeta: String
 )
 
-data class DeleteWindContPType3IECEvent(@Id val windContPType3IECId: UUID? = null)
+data class DeleteWindContPType3IECEvent(@Id var windContPType3IECId: UUID? = null)
 
 // single association events
 
@@ -13281,20 +13281,20 @@ data class DeleteWindContPType3IECEvent(@Id val windContPType3IECId: UUID? = nul
 // WindContPType4aIEC Events
 
 data class CreateWindContPType4aIECEvent(
-    @Id val windContPType4aIECId: UUID? = null,
-    val dpmax: String,
-    val tpord: String,
-    val tufilt: String
+    @Id var windContPType4aIECId: UUID? = null,
+    var dpmax: String,
+    var tpord: String,
+    var tufilt: String
 )
 
 data class UpdateWindContPType4aIECEvent(
-    @Id val windContPType4aIECId: UUID? = null,
-    val dpmax: String,
-    val tpord: String,
-    val tufilt: String
+    @Id var windContPType4aIECId: UUID? = null,
+    var dpmax: String,
+    var tpord: String,
+    var tufilt: String
 )
 
-data class DeleteWindContPType4aIECEvent(@Id val windContPType4aIECId: UUID? = null)
+data class DeleteWindContPType4aIECEvent(@Id var windContPType4aIECId: UUID? = null)
 
 // single association events
 
@@ -13304,22 +13304,22 @@ data class DeleteWindContPType4aIECEvent(@Id val windContPType4aIECId: UUID? = n
 // WindContPType4bIEC Events
 
 data class CreateWindContPType4bIECEvent(
-    @Id val windContPType4bIECId: UUID? = null,
-    val dpmax: String,
-    val tpaero: String,
-    val tpord: String,
-    val tufilt: String
+    @Id var windContPType4bIECId: UUID? = null,
+    var dpmax: String,
+    var tpaero: String,
+    var tpord: String,
+    var tufilt: String
 )
 
 data class UpdateWindContPType4bIECEvent(
-    @Id val windContPType4bIECId: UUID? = null,
-    val dpmax: String,
-    val tpaero: String,
-    val tpord: String,
-    val tufilt: String
+    @Id var windContPType4bIECId: UUID? = null,
+    var dpmax: String,
+    var tpaero: String,
+    var tpord: String,
+    var tufilt: String
 )
 
-data class DeleteWindContPType4bIECEvent(@Id val windContPType4bIECId: UUID? = null)
+data class DeleteWindContPType4bIECEvent(@Id var windContPType4bIECId: UUID? = null)
 
 // single association events
 
@@ -13329,34 +13329,34 @@ data class DeleteWindContPType4bIECEvent(@Id val windContPType4bIECId: UUID? = n
 // WindContPitchAngleIEC Events
 
 data class CreateWindContPitchAngleIECEvent(
-    @Id val windContPitchAngleIECId: UUID? = null,
-    val dthetamax: String,
-    val dthetamin: String,
-    val kic: String,
-    val kiomega: String,
-    val kpc: String,
-    val kpomega: String,
-    val kpx: String,
-    val thetamax: String,
-    val thetamin: String,
-    val ttheta: String
+    @Id var windContPitchAngleIECId: UUID? = null,
+    var dthetamax: String,
+    var dthetamin: String,
+    var kic: String,
+    var kiomega: String,
+    var kpc: String,
+    var kpomega: String,
+    var kpx: String,
+    var thetamax: String,
+    var thetamin: String,
+    var ttheta: String
 )
 
 data class UpdateWindContPitchAngleIECEvent(
-    @Id val windContPitchAngleIECId: UUID? = null,
-    val dthetamax: String,
-    val dthetamin: String,
-    val kic: String,
-    val kiomega: String,
-    val kpc: String,
-    val kpomega: String,
-    val kpx: String,
-    val thetamax: String,
-    val thetamin: String,
-    val ttheta: String
+    @Id var windContPitchAngleIECId: UUID? = null,
+    var dthetamax: String,
+    var dthetamin: String,
+    var kic: String,
+    var kiomega: String,
+    var kpc: String,
+    var kpomega: String,
+    var kpx: String,
+    var thetamax: String,
+    var thetamin: String,
+    var ttheta: String
 )
 
-data class DeleteWindContPitchAngleIECEvent(@Id val windContPitchAngleIECId: UUID? = null)
+data class DeleteWindContPitchAngleIECEvent(@Id var windContPitchAngleIECId: UUID? = null)
 
 // single association events
 
@@ -13366,66 +13366,66 @@ data class DeleteWindContPitchAngleIECEvent(@Id val windContPitchAngleIECId: UUI
 // WindContQIEC Events
 
 data class CreateWindContQIECEvent(
-    @Id val windContQIECId: UUID? = null,
-    val iqh1: String,
-    val iqmax: String,
-    val iqmin: String,
-    val iqpost: String,
-    val kiq: String,
-    val kiu: String,
-    val kpq: String,
-    val kpu: String,
-    val kqv: String,
-    val qmax: String,
-    val qmin: String,
-    val rdroop: String,
-    val tiq: String,
-    val tpfilt: String,
-    val tpost: String,
-    val tqord: String,
-    val tufilt: String,
-    val udb1: String,
-    val udb2: String,
-    val umax: String,
-    val umin: String,
-    val uqdip: String,
-    val uref0: String,
-    val windLVRTQcontrolModesType: String,
-    val windQcontrolModesType: String,
-    val xdroop: String
+    @Id var windContQIECId: UUID? = null,
+    var iqh1: String,
+    var iqmax: String,
+    var iqmin: String,
+    var iqpost: String,
+    var kiq: String,
+    var kiu: String,
+    var kpq: String,
+    var kpu: String,
+    var kqv: String,
+    var qmax: String,
+    var qmin: String,
+    var rdroop: String,
+    var tiq: String,
+    var tpfilt: String,
+    var tpost: String,
+    var tqord: String,
+    var tufilt: String,
+    var udb1: String,
+    var udb2: String,
+    var umax: String,
+    var umin: String,
+    var uqdip: String,
+    var uref0: String,
+    var windLVRTQcontrolModesType: String,
+    var windQcontrolModesType: String,
+    var xdroop: String
 )
 
 data class UpdateWindContQIECEvent(
-    @Id val windContQIECId: UUID? = null,
-    val iqh1: String,
-    val iqmax: String,
-    val iqmin: String,
-    val iqpost: String,
-    val kiq: String,
-    val kiu: String,
-    val kpq: String,
-    val kpu: String,
-    val kqv: String,
-    val qmax: String,
-    val qmin: String,
-    val rdroop: String,
-    val tiq: String,
-    val tpfilt: String,
-    val tpost: String,
-    val tqord: String,
-    val tufilt: String,
-    val udb1: String,
-    val udb2: String,
-    val umax: String,
-    val umin: String,
-    val uqdip: String,
-    val uref0: String,
-    val windLVRTQcontrolModesType: String,
-    val windQcontrolModesType: String,
-    val xdroop: String
+    @Id var windContQIECId: UUID? = null,
+    var iqh1: String,
+    var iqmax: String,
+    var iqmin: String,
+    var iqpost: String,
+    var kiq: String,
+    var kiu: String,
+    var kpq: String,
+    var kpu: String,
+    var kqv: String,
+    var qmax: String,
+    var qmin: String,
+    var rdroop: String,
+    var tiq: String,
+    var tpfilt: String,
+    var tpost: String,
+    var tqord: String,
+    var tufilt: String,
+    var udb1: String,
+    var udb2: String,
+    var umax: String,
+    var umin: String,
+    var uqdip: String,
+    var uref0: String,
+    var windLVRTQcontrolModesType: String,
+    var windQcontrolModesType: String,
+    var xdroop: String
 )
 
-data class DeleteWindContQIECEvent(@Id val windContQIECId: UUID? = null)
+data class DeleteWindContQIECEvent(@Id var windContQIECId: UUID? = null)
 
 // single association events
 
@@ -13435,30 +13435,30 @@ data class DeleteWindContQIECEvent(@Id val windContQIECId: UUID? = null)
 // WindContRotorRIEC Events
 
 data class CreateWindContRotorRIECEvent(
-    @Id val windContRotorRIECId: UUID? = null,
-    val kirr: String,
-    val komegafilt: String,
-    val kpfilt: String,
-    val kprr: String,
-    val rmax: String,
-    val rmin: String,
-    val tomegafilt: String,
-    val tpfilt: String
+    @Id var windContRotorRIECId: UUID? = null,
+    var kirr: String,
+    var komegafilt: String,
+    var kpfilt: String,
+    var kprr: String,
+    var rmax: String,
+    var rmin: String,
+    var tomegafilt: String,
+    var tpfilt: String
 )
 
 data class UpdateWindContRotorRIECEvent(
-    @Id val windContRotorRIECId: UUID? = null,
-    val kirr: String,
-    val komegafilt: String,
-    val kpfilt: String,
-    val kprr: String,
-    val rmax: String,
-    val rmin: String,
-    val tomegafilt: String,
-    val tpfilt: String
+    @Id var windContRotorRIECId: UUID? = null,
+    var kirr: String,
+    var komegafilt: String,
+    var kpfilt: String,
+    var kprr: String,
+    var rmax: String,
+    var rmin: String,
+    var tomegafilt: String,
+    var tpfilt: String
 )
 
-data class DeleteWindContRotorRIECEvent(@Id val windContRotorRIECId: UUID? = null)
+data class DeleteWindContRotorRIECEvent(@Id var windContRotorRIECId: UUID? = null)
 
 // single association events
 
@@ -13468,22 +13468,22 @@ data class DeleteWindContRotorRIECEvent(@Id val windContRotorRIECId: UUID? = nul
 // WindDynamicsLookupTable Events
 
 data class CreateWindDynamicsLookupTableEvent(
-    @Id val windDynamicsLookupTableId: UUID? = null,
-    val input: String,
-    val lookupTableFunctionType: String,
-    val output: String,
-    val sequence: String
+    @Id var windDynamicsLookupTableId: UUID? = null,
+    var input: String,
+    var lookupTableFunctionType: String,
+    var output: String,
+    var sequence: String
 )
 
 data class UpdateWindDynamicsLookupTableEvent(
-    @Id val windDynamicsLookupTableId: UUID? = null,
-    val input: String,
-    val lookupTableFunctionType: String,
-    val output: String,
-    val sequence: String
+    @Id var windDynamicsLookupTableId: UUID? = null,
+    var input: String,
+    var lookupTableFunctionType: String,
+    var output: String,
+    var sequence: String
 )
 
-data class DeleteWindDynamicsLookupTableEvent(@Id val windDynamicsLookupTableId: UUID? = null)
+data class DeleteWindDynamicsLookupTableEvent(@Id var windDynamicsLookupTableId: UUID? = null)
 
 // single association events
 
@@ -13493,14 +13493,14 @@ data class DeleteWindDynamicsLookupTableEvent(@Id val windDynamicsLookupTableId:
 // WindGenTurbineType1IEC Events
 
 data class CreateWindGenTurbineType1IECEvent(
-     val windGenTurbineType1IECId: UUID? = null
+     var windGenTurbineType1IECId: UUID? = null
 )
 
 data class UpdateWindGenTurbineType1IECEvent(
-     val windGenTurbineType1IECId: UUID? = null
+     var windGenTurbineType1IECId: UUID? = null
 )
 
-data class DeleteWindGenTurbineType1IECEvent(@Id val windGenTurbineType1IECId: UUID? = null)
+data class DeleteWindGenTurbineType1IECEvent(@Id var windGenTurbineType1IECId: UUID? = null)
 
 // single association events
 
@@ -13510,14 +13510,14 @@ data class DeleteWindGenTurbineType1IECEvent(@Id val windGenTurbineType1IECId: U
 // WindGenTurbineType2IEC Events
 
 data class CreateWindGenTurbineType2IECEvent(
-     val windGenTurbineType2IECId: UUID? = null
+     var windGenTurbineType2IECId: UUID? = null
 )
 
 data class UpdateWindGenTurbineType2IECEvent(
-     val windGenTurbineType2IECId: UUID? = null
+     var windGenTurbineType2IECId: UUID? = null
 )
 
-data class DeleteWindGenTurbineType2IECEvent(@Id val windGenTurbineType2IECId: UUID? = null)
+data class DeleteWindGenTurbineType2IECEvent(@Id var windGenTurbineType2IECId: UUID? = null)
 
 // single association events
 
@@ -13527,18 +13527,18 @@ data class DeleteWindGenTurbineType2IECEvent(@Id val windGenTurbineType2IECId: U
 // WindGenTurbineType3IEC Events
 
 data class CreateWindGenTurbineType3IECEvent(
-    @Id val windGenTurbineType3IECId: UUID? = null,
-    val dipmax: String,
-    val diqmax: String
+    @Id var windGenTurbineType3IECId: UUID? = null,
+    var dipmax: String,
+    var diqmax: String
 )
 
 data class UpdateWindGenTurbineType3IECEvent(
-    @Id val windGenTurbineType3IECId: UUID? = null,
-    val dipmax: String,
-    val diqmax: String
+    @Id var windGenTurbineType3IECId: UUID? = null,
+    var dipmax: String,
+    var diqmax: String
 )
 
-data class DeleteWindGenTurbineType3IECEvent(@Id val windGenTurbineType3IECId: UUID? = null)
+data class DeleteWindGenTurbineType3IECEvent(@Id var windGenTurbineType3IECId: UUID? = null)
 
 // single association events
 
@@ -13548,20 +13548,20 @@ data class DeleteWindGenTurbineType3IECEvent(@Id val windGenTurbineType3IECId: U
 // WindGenTurbineType3aIEC Events
 
 data class CreateWindGenTurbineType3aIECEvent(
-    @Id val windGenTurbineType3aIECId: UUID? = null,
-    val kpc: String,
-    val tic: String,
-    val xs: String
+    @Id var windGenTurbineType3aIECId: UUID? = null,
+    var kpc: String,
+    var tic: String,
+    var xs: String
 )
 
 data class UpdateWindGenTurbineType3aIECEvent(
-    @Id val windGenTurbineType3aIECId: UUID? = null,
-    val kpc: String,
-    val tic: String,
-    val xs: String
+    @Id var windGenTurbineType3aIECId: UUID? = null,
+    var kpc: String,
+    var tic: String,
+    var xs: String
 )
 
-data class DeleteWindGenTurbineType3aIECEvent(@Id val windGenTurbineType3aIECId: UUID? = null)
+data class DeleteWindGenTurbineType3aIECEvent(@Id var windGenTurbineType3aIECId: UUID? = null)
 
 // single association events
 
@@ -13571,24 +13571,24 @@ data class DeleteWindGenTurbineType3aIECEvent(@Id val windGenTurbineType3aIECId:
 // WindGenTurbineType3bIEC Events
 
 data class CreateWindGenTurbineType3bIECEvent(
-    @Id val windGenTurbineType3bIECId: UUID? = null,
-    val fducw: String,
-    val mwtcwp: String,
-    val tg: String,
-    val two: String,
-    val xs: String
+    @Id var windGenTurbineType3bIECId: UUID? = null,
+    var fducw: String,
+    var mwtcwp: String,
+    var tg: String,
+    var two: String,
+    var xs: String
 )
 
 data class UpdateWindGenTurbineType3bIECEvent(
-    @Id val windGenTurbineType3bIECId: UUID? = null,
-    val fducw: String,
-    val mwtcwp: String,
-    val tg: String,
-    val two: String,
-    val xs: String
+    @Id var windGenTurbineType3bIECId: UUID? = null,
+    var fducw: String,
+    var mwtcwp: String,
+    var tg: String,
+    var two: String,
+    var xs: String
 )
 
-data class DeleteWindGenTurbineType3bIECEvent(@Id val windGenTurbineType3bIECId: UUID? = null)
+data class DeleteWindGenTurbineType3bIECEvent(@Id var windGenTurbineType3bIECId: UUID? = null)
 
 // single association events
 
@@ -13598,22 +13598,22 @@ data class DeleteWindGenTurbineType3bIECEvent(@Id val windGenTurbineType3bIECId:
 // WindGenType4IEC Events
 
 data class CreateWindGenType4IECEvent(
-    @Id val windGenType4IECId: UUID? = null,
-    val dipmax: String,
-    val diqmax: String,
-    val diqmin: String,
-    val tg: String
+    @Id var windGenType4IECId: UUID? = null,
+    var dipmax: String,
+    var diqmax: String,
+    var diqmin: String,
+    var tg: String
 )
 
 data class UpdateWindGenType4IECEvent(
-    @Id val windGenType4IECId: UUID? = null,
-    val dipmax: String,
-    val diqmax: String,
-    val diqmin: String,
-    val tg: String
+    @Id var windGenType4IECId: UUID? = null,
+    var dipmax: String,
+    var diqmax: String,
+    var diqmin: String,
+    var tg: String
 )
 
-data class DeleteWindGenType4IECEvent(@Id val windGenType4IECId: UUID? = null)
+data class DeleteWindGenType4IECEvent(@Id var windGenType4IECId: UUID? = null)
 
 // single association events
 
@@ -13623,16 +13623,16 @@ data class DeleteWindGenType4IECEvent(@Id val windGenType4IECId: UUID? = null)
 // WindGeneratingUnit Events
 
 data class CreateWindGeneratingUnitEvent(
-    @Id val windGeneratingUnitId: UUID? = null,
-    val windGenUnitType: String
+    @Id var windGeneratingUnitId: UUID? = null,
+    var windGenUnitType: String
 )
 
 data class UpdateWindGeneratingUnitEvent(
-    @Id val windGeneratingUnitId: UUID? = null,
-    val windGenUnitType: String
+    @Id var windGeneratingUnitId: UUID? = null,
+    var windGenUnitType: String
 )
 
-data class DeleteWindGeneratingUnitEvent(@Id val windGeneratingUnitId: UUID? = null)
+data class DeleteWindGeneratingUnitEvent(@Id var windGeneratingUnitId: UUID? = null)
 
 // single association events
 
@@ -13642,22 +13642,22 @@ data class DeleteWindGeneratingUnitEvent(@Id val windGeneratingUnitId: UUID? = n
 // WindMechIEC Events
 
 data class CreateWindMechIECEvent(
-    @Id val windMechIECId: UUID? = null,
-    val cdrt: String,
-    val hgen: String,
-    val hwtr: String,
-    val kdrt: String
+    @Id var windMechIECId: UUID? = null,
+    var cdrt: String,
+    var hgen: String,
+    var hwtr: String,
+    var kdrt: String
 )
 
 data class UpdateWindMechIECEvent(
-    @Id val windMechIECId: UUID? = null,
-    val cdrt: String,
-    val hgen: String,
-    val hwtr: String,
-    val kdrt: String
+    @Id var windMechIECId: UUID? = null,
+    var cdrt: String,
+    var hgen: String,
+    var hwtr: String,
+    var kdrt: String
 )
 
-data class DeleteWindMechIECEvent(@Id val windMechIECId: UUID? = null)
+data class DeleteWindMechIECEvent(@Id var windMechIECId: UUID? = null)
 
 // single association events
 
@@ -13667,34 +13667,34 @@ data class DeleteWindMechIECEvent(@Id val windMechIECId: UUID? = null)
 // WindPitchContEmulIEC Events
 
 data class CreateWindPitchContEmulIECEvent(
-    @Id val windPitchContEmulIECId: UUID? = null,
-    val kdroop: String,
-    val kipce: String,
-    val komegaaero: String,
-    val kppce: String,
-    val omegaref: String,
-    val pimax: String,
-    val pimin: String,
-    val t1: String,
-    val t2: String,
-    val tpe: String
+    @Id var windPitchContEmulIECId: UUID? = null,
+    var kdroop: String,
+    var kipce: String,
+    var komegaaero: String,
+    var kppce: String,
+    var omegaref: String,
+    var pimax: String,
+    var pimin: String,
+    var t1: String,
+    var t2: String,
+    var tpe: String
 )
 
 data class UpdateWindPitchContEmulIECEvent(
-    @Id val windPitchContEmulIECId: UUID? = null,
-    val kdroop: String,
-    val kipce: String,
-    val komegaaero: String,
-    val kppce: String,
-    val omegaref: String,
-    val pimax: String,
-    val pimin: String,
-    val t1: String,
-    val t2: String,
-    val tpe: String
+    @Id var windPitchContEmulIECId: UUID? = null,
+    var kdroop: String,
+    var kipce: String,
+    var komegaaero: String,
+    var kppce: String,
+    var omegaref: String,
+    var pimax: String,
+    var pimin: String,
+    var t1: String,
+    var t2: String,
+    var tpe: String
 )
 
-data class DeleteWindPitchContEmulIECEvent(@Id val windPitchContEmulIECId: UUID? = null)
+data class DeleteWindPitchContEmulIECEvent(@Id var windPitchContEmulIECId: UUID? = null)
 
 // single association events
 
@@ -13704,14 +13704,14 @@ data class DeleteWindPitchContEmulIECEvent(@Id val windPitchContEmulIECId: UUID?
 // WindPlantDynamics Events
 
 data class CreateWindPlantDynamicsEvent(
-     val windPlantDynamicsId: UUID? = null
+     var windPlantDynamicsId: UUID? = null
 )
 
 data class UpdateWindPlantDynamicsEvent(
-     val windPlantDynamicsId: UUID? = null
+     var windPlantDynamicsId: UUID? = null
 )
 
-data class DeleteWindPlantDynamicsEvent(@Id val windPlantDynamicsId: UUID? = null)
+data class DeleteWindPlantDynamicsEvent(@Id var windPlantDynamicsId: UUID? = null)
 
 // single association events
 
@@ -13721,34 +13721,34 @@ data class DeleteWindPlantDynamicsEvent(@Id val windPlantDynamicsId: UUID? = nul
 // WindPlantFreqPcontrolIEC Events
 
 data class CreateWindPlantFreqPcontrolIECEvent(
-    @Id val windPlantFreqPcontrolIECId: UUID? = null,
-    val dprefmax: String,
-    val dprefmin: String,
-    val kiwpp: String,
-    val kpwpp: String,
-    val prefmax: String,
-    val prefmin: String,
-    val tpft: String,
-    val tpfv: String,
-    val twpffilt: String,
-    val twppfilt: String
+    @Id var windPlantFreqPcontrolIECId: UUID? = null,
+    var dprefmax: String,
+    var dprefmin: String,
+    var kiwpp: String,
+    var kpwpp: String,
+    var prefmax: String,
+    var prefmin: String,
+    var tpft: String,
+    var tpfv: String,
+    var twpffilt: String,
+    var twppfilt: String
 )
 
 data class UpdateWindPlantFreqPcontrolIECEvent(
-    @Id val windPlantFreqPcontrolIECId: UUID? = null,
-    val dprefmax: String,
-    val dprefmin: String,
-    val kiwpp: String,
-    val kpwpp: String,
-    val prefmax: String,
-    val prefmin: String,
-    val tpft: String,
-    val tpfv: String,
-    val twpffilt: String,
-    val twppfilt: String
+    @Id var windPlantFreqPcontrolIECId: UUID? = null,
+    var dprefmax: String,
+    var dprefmin: String,
+    var kiwpp: String,
+    var kpwpp: String,
+    var prefmax: String,
+    var prefmin: String,
+    var tpft: String,
+    var tpfv: String,
+    var twpffilt: String,
+    var twppfilt: String
 )
 
-data class DeleteWindPlantFreqPcontrolIECEvent(@Id val windPlantFreqPcontrolIECId: UUID? = null)
+data class DeleteWindPlantFreqPcontrolIECEvent(@Id var windPlantFreqPcontrolIECId: UUID? = null)
 
 // single association events
 
@@ -13758,14 +13758,14 @@ data class DeleteWindPlantFreqPcontrolIECEvent(@Id val windPlantFreqPcontrolIECI
 // WindPlantIEC Events
 
 data class CreateWindPlantIECEvent(
-     val windPlantIECId: UUID? = null
+     var windPlantIECId: UUID? = null
 )
 
 data class UpdateWindPlantIECEvent(
-     val windPlantIECId: UUID? = null
+     var windPlantIECId: UUID? = null
 )
 
-data class DeleteWindPlantIECEvent(@Id val windPlantIECId: UUID? = null)
+data class DeleteWindPlantIECEvent(@Id var windPlantIECId: UUID? = null)
 
 // single association events
 
@@ -13775,40 +13775,40 @@ data class DeleteWindPlantIECEvent(@Id val windPlantIECId: UUID? = null)
 // WindPlantReactiveControlIEC Events
 
 data class CreateWindPlantReactiveControlIECEvent(
-    @Id val windPlantReactiveControlIECId: UUID? = null,
-    val kiwpx: String,
-    val kpwpx: String,
-    val kwpqu: String,
-    val mwppf: String,
-    val mwpu: String,
-    val twppfilt: String,
-    val twpqfilt: String,
-    val twpufilt: String,
-    val txft: String,
-    val txfv: String,
-    val uwpqdip: String,
-    val xrefmax: String,
-    val xrefmin: String
+    @Id var windPlantReactiveControlIECId: UUID? = null,
+    var kiwpx: String,
+    var kpwpx: String,
+    var kwpqu: String,
+    var mwppf: String,
+    var mwpu: String,
+    var twppfilt: String,
+    var twpqfilt: String,
+    var twpufilt: String,
+    var txft: String,
+    var txfv: String,
+    var uwpqdip: String,
+    var xrefmax: String,
+    var xrefmin: String
 )
 
 data class UpdateWindPlantReactiveControlIECEvent(
-    @Id val windPlantReactiveControlIECId: UUID? = null,
-    val kiwpx: String,
-    val kpwpx: String,
-    val kwpqu: String,
-    val mwppf: String,
-    val mwpu: String,
-    val twppfilt: String,
-    val twpqfilt: String,
-    val twpufilt: String,
-    val txft: String,
-    val txfv: String,
-    val uwpqdip: String,
-    val xrefmax: String,
-    val xrefmin: String
+    @Id var windPlantReactiveControlIECId: UUID? = null,
+    var kiwpx: String,
+    var kpwpx: String,
+    var kwpqu: String,
+    var mwppf: String,
+    var mwpu: String,
+    var twppfilt: String,
+    var twpqfilt: String,
+    var twpufilt: String,
+    var txft: String,
+    var txfv: String,
+    var uwpqdip: String,
+    var xrefmax: String,
+    var xrefmin: String
 )
 
-data class DeleteWindPlantReactiveControlIECEvent(@Id val windPlantReactiveControlIECId: UUID? = null)
+data class DeleteWindPlantReactiveControlIECEvent(@Id var windPlantReactiveControlIECId: UUID? = null)
 
 // single association events
 
@@ -13818,16 +13818,16 @@ data class DeleteWindPlantReactiveControlIECEvent(@Id val windPlantReactiveContr
 // WindPlantUserDefined Events
 
 data class CreateWindPlantUserDefinedEvent(
-    @Id val windPlantUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windPlantUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateWindPlantUserDefinedEvent(
-    @Id val windPlantUserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windPlantUserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteWindPlantUserDefinedEvent(@Id val windPlantUserDefinedId: UUID? = null)
+data class DeleteWindPlantUserDefinedEvent(@Id var windPlantUserDefinedId: UUID? = null)
 
 // single association events
 
@@ -13837,30 +13837,30 @@ data class DeleteWindPlantUserDefinedEvent(@Id val windPlantUserDefinedId: UUID?
 // WindProtectionIEC Events
 
 data class CreateWindProtectionIECEvent(
-    @Id val windProtectionIECId: UUID? = null,
-    val fover: String,
-    val funder: String,
-    val tfover: String,
-    val tfunder: String,
-    val tuover: String,
-    val tuunder: String,
-    val uover: String,
-    val uunder: String
+    @Id var windProtectionIECId: UUID? = null,
+    var fover: String,
+    var funder: String,
+    var tfover: String,
+    var tfunder: String,
+    var tuover: String,
+    var tuunder: String,
+    var uover: String,
+    var uunder: String
 )
 
 data class UpdateWindProtectionIECEvent(
-    @Id val windProtectionIECId: UUID? = null,
-    val fover: String,
-    val funder: String,
-    val tfover: String,
-    val tfunder: String,
-    val tuover: String,
-    val tuunder: String,
-    val uover: String,
-    val uunder: String
+    @Id var windProtectionIECId: UUID? = null,
+    var fover: String,
+    var funder: String,
+    var tfover: String,
+    var tfunder: String,
+    var tuover: String,
+    var tuunder: String,
+    var uover: String,
+    var uunder: String
 )
 
-data class DeleteWindProtectionIECEvent(@Id val windProtectionIECId: UUID? = null)
+data class DeleteWindProtectionIECEvent(@Id var windProtectionIECId: UUID? = null)
 
 // single association events
 
@@ -13870,14 +13870,14 @@ data class DeleteWindProtectionIECEvent(@Id val windProtectionIECId: UUID? = nul
 // WindTurbineType1or2Dynamics Events
 
 data class CreateWindTurbineType1or2DynamicsEvent(
-     val windTurbineType1or2DynamicsId: UUID? = null
+     var windTurbineType1or2DynamicsId: UUID? = null
 )
 
 data class UpdateWindTurbineType1or2DynamicsEvent(
-     val windTurbineType1or2DynamicsId: UUID? = null
+     var windTurbineType1or2DynamicsId: UUID? = null
 )
 
-data class DeleteWindTurbineType1or2DynamicsEvent(@Id val windTurbineType1or2DynamicsId: UUID? = null)
+data class DeleteWindTurbineType1or2DynamicsEvent(@Id var windTurbineType1or2DynamicsId: UUID? = null)
 
 // single association events
 
@@ -13887,14 +13887,14 @@ data class DeleteWindTurbineType1or2DynamicsEvent(@Id val windTurbineType1or2Dyn
 // WindTurbineType1or2IEC Events
 
 data class CreateWindTurbineType1or2IECEvent(
-     val windTurbineType1or2IECId: UUID? = null
+     var windTurbineType1or2IECId: UUID? = null
 )
 
 data class UpdateWindTurbineType1or2IECEvent(
-     val windTurbineType1or2IECId: UUID? = null
+     var windTurbineType1or2IECId: UUID? = null
 )
 
-data class DeleteWindTurbineType1or2IECEvent(@Id val windTurbineType1or2IECId: UUID? = null)
+data class DeleteWindTurbineType1or2IECEvent(@Id var windTurbineType1or2IECId: UUID? = null)
 
 // single association events
 
@@ -13904,14 +13904,14 @@ data class DeleteWindTurbineType1or2IECEvent(@Id val windTurbineType1or2IECId: U
 // WindTurbineType3or4Dynamics Events
 
 data class CreateWindTurbineType3or4DynamicsEvent(
-     val windTurbineType3or4DynamicsId: UUID? = null
+     var windTurbineType3or4DynamicsId: UUID? = null
 )
 
 data class UpdateWindTurbineType3or4DynamicsEvent(
-     val windTurbineType3or4DynamicsId: UUID? = null
+     var windTurbineType3or4DynamicsId: UUID? = null
 )
 
-data class DeleteWindTurbineType3or4DynamicsEvent(@Id val windTurbineType3or4DynamicsId: UUID? = null)
+data class DeleteWindTurbineType3or4DynamicsEvent(@Id var windTurbineType3or4DynamicsId: UUID? = null)
 
 // single association events
 
@@ -13921,14 +13921,14 @@ data class DeleteWindTurbineType3or4DynamicsEvent(@Id val windTurbineType3or4Dyn
 // WindTurbineType3or4IEC Events
 
 data class CreateWindTurbineType3or4IECEvent(
-     val windTurbineType3or4IECId: UUID? = null
+     var windTurbineType3or4IECId: UUID? = null
 )
 
 data class UpdateWindTurbineType3or4IECEvent(
-     val windTurbineType3or4IECId: UUID? = null
+     var windTurbineType3or4IECId: UUID? = null
 )
 
-data class DeleteWindTurbineType3or4IECEvent(@Id val windTurbineType3or4IECId: UUID? = null)
+data class DeleteWindTurbineType3or4IECEvent(@Id var windTurbineType3or4IECId: UUID? = null)
 
 // single association events
 
@@ -13938,14 +13938,14 @@ data class DeleteWindTurbineType3or4IECEvent(@Id val windTurbineType3or4IECId: U
 // WindTurbineType4aIEC Events
 
 data class CreateWindTurbineType4aIECEvent(
-     val windTurbineType4aIECId: UUID? = null
+     var windTurbineType4aIECId: UUID? = null
 )
 
 data class UpdateWindTurbineType4aIECEvent(
-     val windTurbineType4aIECId: UUID? = null
+     var windTurbineType4aIECId: UUID? = null
 )
 
-data class DeleteWindTurbineType4aIECEvent(@Id val windTurbineType4aIECId: UUID? = null)
+data class DeleteWindTurbineType4aIECEvent(@Id var windTurbineType4aIECId: UUID? = null)
 
 // single association events
 
@@ -13955,14 +13955,14 @@ data class DeleteWindTurbineType4aIECEvent(@Id val windTurbineType4aIECId: UUID?
 // WindTurbineType4bIEC Events
 
 data class CreateWindTurbineType4bIECEvent(
-     val windTurbineType4bIECId: UUID? = null
+     var windTurbineType4bIECId: UUID? = null
 )
 
 data class UpdateWindTurbineType4bIECEvent(
-     val windTurbineType4bIECId: UUID? = null
+     var windTurbineType4bIECId: UUID? = null
 )
 
-data class DeleteWindTurbineType4bIECEvent(@Id val windTurbineType4bIECId: UUID? = null)
+data class DeleteWindTurbineType4bIECEvent(@Id var windTurbineType4bIECId: UUID? = null)
 
 // single association events
 
@@ -13972,16 +13972,16 @@ data class DeleteWindTurbineType4bIECEvent(@Id val windTurbineType4bIECId: UUID?
 // WindType1or2UserDefined Events
 
 data class CreateWindType1or2UserDefinedEvent(
-    @Id val windType1or2UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windType1or2UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateWindType1or2UserDefinedEvent(
-    @Id val windType1or2UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windType1or2UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteWindType1or2UserDefinedEvent(@Id val windType1or2UserDefinedId: UUID? = null)
+data class DeleteWindType1or2UserDefinedEvent(@Id var windType1or2UserDefinedId: UUID? = null)
 
 // single association events
 
@@ -13991,16 +13991,16 @@ data class DeleteWindType1or2UserDefinedEvent(@Id val windType1or2UserDefinedId:
 // WindType3or4UserDefined Events
 
 data class CreateWindType3or4UserDefinedEvent(
-    @Id val windType3or4UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windType3or4UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
 data class UpdateWindType3or4UserDefinedEvent(
-    @Id val windType3or4UserDefinedId: UUID? = null,
-    val proprietary: String
+    @Id var windType3or4UserDefinedId: UUID? = null,
+    var proprietary: String
 )
 
-data class DeleteWindType3or4UserDefinedEvent(@Id val windType3or4UserDefinedId: UUID? = null)
+data class DeleteWindType3or4UserDefinedEvent(@Id var windType3or4UserDefinedId: UUID? = null)
 
 // single association events
 
