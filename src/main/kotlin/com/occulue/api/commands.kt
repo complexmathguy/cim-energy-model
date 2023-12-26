@@ -26,7 +26,7 @@ import com.occulue.entity.*;
 
 // ACDCConverter Commands
 data class CreateACDCConverterCommand(
-    @TargetAggregateIdentifier var aCDCConverterId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterId: UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -39,7 +39,7 @@ data class CreateACDCConverterCommand(
 )
 
 data class UpdateACDCConverterCommand(
-    @TargetAggregateIdentifier var aCDCConverterId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterId: UUID? = null,
     val baseS: String,
     val idleLoss: String,
     val maxUdc: String,
@@ -60,12 +60,12 @@ data class DeleteACDCConverterCommand(@TargetAggregateIdentifier  var aCDCConver
 
 // ACDCConverterDCTerminal Commands
 data class CreateACDCConverterDCTerminalCommand(
-    @TargetAggregateIdentifier var aCDCConverterDCTerminalId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: UUID? = null,
     val polarity: String
 )
 
 data class UpdateACDCConverterDCTerminalCommand(
-    @TargetAggregateIdentifier var aCDCConverterDCTerminalId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCConverterDCTerminalId: UUID? = null,
     val polarity: String
 )
 
@@ -78,12 +78,12 @@ data class DeleteACDCConverterDCTerminalCommand(@TargetAggregateIdentifier  var 
 
 // ACDCTerminal Commands
 data class CreateACDCTerminalCommand(
-    @TargetAggregateIdentifier var aCDCTerminalId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCTerminalId: UUID? = null,
     val sequenceNumber: String
 )
 
 data class UpdateACDCTerminalCommand(
-    @TargetAggregateIdentifier var aCDCTerminalId: UUID? = null,
+    @TargetAggregateIdentifier val aCDCTerminalId: UUID? = null,
     val sequenceNumber: String
 )
 
@@ -96,7 +96,7 @@ data class DeleteACDCTerminalCommand(@TargetAggregateIdentifier  var aCDCTermina
 
 // ACLineSegment Commands
 data class CreateACLineSegmentCommand(
-    @TargetAggregateIdentifier var aCLineSegmentId: UUID? = null,
+    @TargetAggregateIdentifier val aCLineSegmentId: UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -109,7 +109,7 @@ data class CreateACLineSegmentCommand(
 )
 
 data class UpdateACLineSegmentCommand(
-    @TargetAggregateIdentifier var aCLineSegmentId: UUID? = null,
+    @TargetAggregateIdentifier val aCLineSegmentId: UUID? = null,
     val b0ch: String,
     val bch: String,
     val g0ch: String,
@@ -146,12 +146,12 @@ data class DeleteAccumulatorCommand(@TargetAggregateIdentifier  var accumulatorI
 
 // AccumulatorLimit Commands
 data class CreateAccumulatorLimitCommand(
-    @TargetAggregateIdentifier var accumulatorLimitId: UUID? = null,
+    @TargetAggregateIdentifier val accumulatorLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorLimitCommand(
-    @TargetAggregateIdentifier var accumulatorLimitId: UUID? = null,
+    @TargetAggregateIdentifier val accumulatorLimitId: UUID? = null,
     val value: String
 )
 
@@ -196,12 +196,12 @@ data class DeleteAccumulatorResetCommand(@TargetAggregateIdentifier  var accumul
 
 // AccumulatorValue Commands
 data class CreateAccumulatorValueCommand(
-    @TargetAggregateIdentifier var accumulatorValueId: UUID? = null,
+    @TargetAggregateIdentifier val accumulatorValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateAccumulatorValueCommand(
-    @TargetAggregateIdentifier var accumulatorValueId: UUID? = null,
+    @TargetAggregateIdentifier val accumulatorValueId: UUID? = null,
     val value: String
 )
 
@@ -214,14 +214,14 @@ data class DeleteAccumulatorValueCommand(@TargetAggregateIdentifier  var accumul
 
 // ActivePower Commands
 data class CreateActivePowerCommand(
-    @TargetAggregateIdentifier var activePowerId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateActivePowerCommand(
-    @TargetAggregateIdentifier var activePowerId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -236,12 +236,12 @@ data class DeleteActivePowerCommand(@TargetAggregateIdentifier  var activePowerI
 
 // ActivePowerLimit Commands
 data class CreateActivePowerLimitCommand(
-    @TargetAggregateIdentifier var activePowerLimitId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateActivePowerLimitCommand(
-    @TargetAggregateIdentifier var activePowerLimitId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerLimitId: UUID? = null,
     val value: String
 )
 
@@ -254,7 +254,7 @@ data class DeleteActivePowerLimitCommand(@TargetAggregateIdentifier  var activeP
 
 // ActivePowerPerCurrentFlow Commands
 data class CreateActivePowerPerCurrentFlowCommand(
-    @TargetAggregateIdentifier var activePowerPerCurrentFlowId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -263,7 +263,7 @@ data class CreateActivePowerPerCurrentFlowCommand(
 )
 
 data class UpdateActivePowerPerCurrentFlowCommand(
-    @TargetAggregateIdentifier var activePowerPerCurrentFlowId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerCurrentFlowId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -280,7 +280,7 @@ data class DeleteActivePowerPerCurrentFlowCommand(@TargetAggregateIdentifier  va
 
 // ActivePowerPerFrequency Commands
 data class CreateActivePowerPerFrequencyCommand(
-    @TargetAggregateIdentifier var activePowerPerFrequencyId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerFrequencyId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -289,7 +289,7 @@ data class CreateActivePowerPerFrequencyCommand(
 )
 
 data class UpdateActivePowerPerFrequencyCommand(
-    @TargetAggregateIdentifier var activePowerPerFrequencyId: UUID? = null,
+    @TargetAggregateIdentifier val activePowerPerFrequencyId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -306,12 +306,12 @@ data class DeleteActivePowerPerFrequencyCommand(@TargetAggregateIdentifier  var 
 
 // Analog Commands
 data class CreateAnalogCommand(
-    @TargetAggregateIdentifier var analogId: UUID? = null,
+    @TargetAggregateIdentifier val analogId: UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateAnalogCommand(
-    @TargetAggregateIdentifier var analogId: UUID? = null,
+    @TargetAggregateIdentifier val analogId: UUID? = null,
     val positiveFlowIn: String
 )
 
@@ -324,13 +324,13 @@ data class DeleteAnalogCommand(@TargetAggregateIdentifier  var analogId: UUID? =
 
 // AnalogControl Commands
 data class CreateAnalogControlCommand(
-    @TargetAggregateIdentifier var analogControlId: UUID? = null,
+    @TargetAggregateIdentifier val analogControlId: UUID? = null,
     val maxValue: String,
     val minValue: String
 )
 
 data class UpdateAnalogControlCommand(
-    @TargetAggregateIdentifier var analogControlId: UUID? = null,
+    @TargetAggregateIdentifier val analogControlId: UUID? = null,
     val maxValue: String,
     val minValue: String
 )
@@ -344,12 +344,12 @@ data class DeleteAnalogControlCommand(@TargetAggregateIdentifier  var analogCont
 
 // AnalogLimit Commands
 data class CreateAnalogLimitCommand(
-    @TargetAggregateIdentifier var analogLimitId: UUID? = null,
+    @TargetAggregateIdentifier val analogLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogLimitCommand(
-    @TargetAggregateIdentifier var analogLimitId: UUID? = null,
+    @TargetAggregateIdentifier val analogLimitId: UUID? = null,
     val value: String
 )
 
@@ -378,12 +378,12 @@ data class DeleteAnalogLimitSetCommand(@TargetAggregateIdentifier  var analogLim
 
 // AnalogValue Commands
 data class CreateAnalogValueCommand(
-    @TargetAggregateIdentifier var analogValueId: UUID? = null,
+    @TargetAggregateIdentifier val analogValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateAnalogValueCommand(
-    @TargetAggregateIdentifier var analogValueId: UUID? = null,
+    @TargetAggregateIdentifier val analogValueId: UUID? = null,
     val value: String
 )
 
@@ -396,14 +396,14 @@ data class DeleteAnalogValueCommand(@TargetAggregateIdentifier  var analogValueI
 
 // AngleDegrees Commands
 data class CreateAngleDegreesCommand(
-    @TargetAggregateIdentifier var angleDegreesId: UUID? = null,
+    @TargetAggregateIdentifier val angleDegreesId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleDegreesCommand(
-    @TargetAggregateIdentifier var angleDegreesId: UUID? = null,
+    @TargetAggregateIdentifier val angleDegreesId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -418,14 +418,14 @@ data class DeleteAngleDegreesCommand(@TargetAggregateIdentifier  var angleDegree
 
 // AngleRadians Commands
 data class CreateAngleRadiansCommand(
-    @TargetAggregateIdentifier var angleRadiansId: UUID? = null,
+    @TargetAggregateIdentifier val angleRadiansId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAngleRadiansCommand(
-    @TargetAggregateIdentifier var angleRadiansId: UUID? = null,
+    @TargetAggregateIdentifier val angleRadiansId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -440,14 +440,14 @@ data class DeleteAngleRadiansCommand(@TargetAggregateIdentifier  var angleRadian
 
 // ApparentPower Commands
 data class CreateApparentPowerCommand(
-    @TargetAggregateIdentifier var apparentPowerId: UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateApparentPowerCommand(
-    @TargetAggregateIdentifier var apparentPowerId: UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -462,12 +462,12 @@ data class DeleteApparentPowerCommand(@TargetAggregateIdentifier  var apparentPo
 
 // ApparentPowerLimit Commands
 data class CreateApparentPowerLimitCommand(
-    @TargetAggregateIdentifier var apparentPowerLimitId: UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateApparentPowerLimitCommand(
-    @TargetAggregateIdentifier var apparentPowerLimitId: UUID? = null,
+    @TargetAggregateIdentifier val apparentPowerLimitId: UUID? = null,
     val value: String
 )
 
@@ -480,14 +480,14 @@ data class DeleteApparentPowerLimitCommand(@TargetAggregateIdentifier  var appar
 
 // Area Commands
 data class CreateAreaCommand(
-    @TargetAggregateIdentifier var areaId: UUID? = null,
+    @TargetAggregateIdentifier val areaId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateAreaCommand(
-    @TargetAggregateIdentifier var areaId: UUID? = null,
+    @TargetAggregateIdentifier val areaId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -502,7 +502,7 @@ data class DeleteAreaCommand(@TargetAggregateIdentifier  var areaId: UUID? = nul
 
 // AsynchronousMachine Commands
 data class CreateAsynchronousMachineCommand(
-    @TargetAggregateIdentifier var asynchronousMachineId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineId: UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -515,7 +515,7 @@ data class CreateAsynchronousMachineCommand(
 )
 
 data class UpdateAsynchronousMachineCommand(
-    @TargetAggregateIdentifier var asynchronousMachineId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineId: UUID? = null,
     val converterFedDrive: String,
     val efficiency: String,
     val iaIrRatio: String,
@@ -552,7 +552,7 @@ data class DeleteAsynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  
 
 // AsynchronousMachineEquivalentCircuit Commands
 data class CreateAsynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -561,7 +561,7 @@ data class CreateAsynchronousMachineEquivalentCircuitCommand(
 )
 
 data class UpdateAsynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier var asynchronousMachineEquivalentCircuitId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineEquivalentCircuitId: UUID? = null,
     val rr1: String,
     val rr2: String,
     val xlr1: String,
@@ -578,7 +578,7 @@ data class DeleteAsynchronousMachineEquivalentCircuitCommand(@TargetAggregateIde
 
 // AsynchronousMachineTimeConstantReactance Commands
 data class CreateAsynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -587,7 +587,7 @@ data class CreateAsynchronousMachineTimeConstantReactanceCommand(
 )
 
 data class UpdateAsynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier var asynchronousMachineTimeConstantReactanceId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineTimeConstantReactanceId: UUID? = null,
     val tpo: String,
     val tppo: String,
     val xp: String,
@@ -604,12 +604,12 @@ data class DeleteAsynchronousMachineTimeConstantReactanceCommand(@TargetAggregat
 
 // AsynchronousMachineUserDefined Commands
 data class CreateAsynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier var asynchronousMachineUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateAsynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier var asynchronousMachineUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val asynchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -622,12 +622,12 @@ data class DeleteAsynchronousMachineUserDefinedCommand(@TargetAggregateIdentifie
 
 // BaseVoltage Commands
 data class CreateBaseVoltageCommand(
-    @TargetAggregateIdentifier var baseVoltageId: UUID? = null,
+    @TargetAggregateIdentifier val baseVoltageId: UUID? = null,
     val nominalVoltage: String
 )
 
 data class UpdateBaseVoltageCommand(
-    @TargetAggregateIdentifier var baseVoltageId: UUID? = null,
+    @TargetAggregateIdentifier val baseVoltageId: UUID? = null,
     val nominalVoltage: String
 )
 
@@ -640,14 +640,14 @@ data class DeleteBaseVoltageCommand(@TargetAggregateIdentifier  var baseVoltageI
 
 // BasicIntervalSchedule Commands
 data class CreateBasicIntervalScheduleCommand(
-    @TargetAggregateIdentifier var basicIntervalScheduleId: UUID? = null,
+    @TargetAggregateIdentifier val basicIntervalScheduleId: UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
 )
 
 data class UpdateBasicIntervalScheduleCommand(
-    @TargetAggregateIdentifier var basicIntervalScheduleId: UUID? = null,
+    @TargetAggregateIdentifier val basicIntervalScheduleId: UUID? = null,
     val startTime: String,
     val value1Unit: String,
     val value2Unit: String
@@ -694,7 +694,7 @@ data class DeleteBooleanProxyCommand(@TargetAggregateIdentifier  var booleanProx
 
 // BoundaryExtensions Commands
 data class CreateBoundaryExtensionsCommand(
-    @TargetAggregateIdentifier var boundaryExtensionsId: UUID? = null,
+    @TargetAggregateIdentifier val boundaryExtensionsId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -705,7 +705,7 @@ data class CreateBoundaryExtensionsCommand(
 )
 
 data class UpdateBoundaryExtensionsCommand(
-    @TargetAggregateIdentifier var boundaryExtensionsId: UUID? = null,
+    @TargetAggregateIdentifier val boundaryExtensionsId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -740,12 +740,12 @@ data class DeleteBreakerCommand(@TargetAggregateIdentifier  var breakerId: UUID?
 
 // BusNameMarker Commands
 data class CreateBusNameMarkerCommand(
-    @TargetAggregateIdentifier var busNameMarkerId: UUID? = null,
+    @TargetAggregateIdentifier val busNameMarkerId: UUID? = null,
     val priority: String
 )
 
 data class UpdateBusNameMarkerCommand(
-    @TargetAggregateIdentifier var busNameMarkerId: UUID? = null,
+    @TargetAggregateIdentifier val busNameMarkerId: UUID? = null,
     val priority: String
 )
 
@@ -758,12 +758,12 @@ data class DeleteBusNameMarkerCommand(@TargetAggregateIdentifier  var busNameMar
 
 // BusbarSection Commands
 data class CreateBusbarSectionCommand(
-    @TargetAggregateIdentifier var busbarSectionId: UUID? = null,
+    @TargetAggregateIdentifier val busbarSectionId: UUID? = null,
     val ipMax: String
 )
 
 data class UpdateBusbarSectionCommand(
-    @TargetAggregateIdentifier var busbarSectionId: UUID? = null,
+    @TargetAggregateIdentifier val busbarSectionId: UUID? = null,
     val ipMax: String
 )
 
@@ -776,14 +776,14 @@ data class DeleteBusbarSectionCommand(@TargetAggregateIdentifier  var busbarSect
 
 // Capacitance Commands
 data class CreateCapacitanceCommand(
-    @TargetAggregateIdentifier var capacitanceId: UUID? = null,
+    @TargetAggregateIdentifier val capacitanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCapacitanceCommand(
-    @TargetAggregateIdentifier var capacitanceId: UUID? = null,
+    @TargetAggregateIdentifier val capacitanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -798,7 +798,7 @@ data class DeleteCapacitanceCommand(@TargetAggregateIdentifier  var capacitanceI
 
 // CapacitancePerLength Commands
 data class CreateCapacitancePerLengthCommand(
-    @TargetAggregateIdentifier var capacitancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val capacitancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -807,7 +807,7 @@ data class CreateCapacitancePerLengthCommand(
 )
 
 data class UpdateCapacitancePerLengthCommand(
-    @TargetAggregateIdentifier var capacitancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val capacitancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -824,13 +824,13 @@ data class DeleteCapacitancePerLengthCommand(@TargetAggregateIdentifier  var cap
 
 // Command Commands
 data class CreateCommandCommand(
-    @TargetAggregateIdentifier var commandId: UUID? = null,
+    @TargetAggregateIdentifier val commandId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateCommandCommand(
-    @TargetAggregateIdentifier var commandId: UUID? = null,
+    @TargetAggregateIdentifier val commandId: UUID? = null,
     val normalValue: String,
     val value: String
 )
@@ -844,14 +844,14 @@ data class DeleteCommandCommand(@TargetAggregateIdentifier  var commandId: UUID?
 
 // Conductance Commands
 data class CreateConductanceCommand(
-    @TargetAggregateIdentifier var conductanceId: UUID? = null,
+    @TargetAggregateIdentifier val conductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateConductanceCommand(
-    @TargetAggregateIdentifier var conductanceId: UUID? = null,
+    @TargetAggregateIdentifier val conductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -882,12 +882,12 @@ data class DeleteConductingEquipmentCommand(@TargetAggregateIdentifier  var cond
 
 // Conductor Commands
 data class CreateConductorCommand(
-    @TargetAggregateIdentifier var conductorId: UUID? = null,
+    @TargetAggregateIdentifier val conductorId: UUID? = null,
     val length: String
 )
 
 data class UpdateConductorCommand(
-    @TargetAggregateIdentifier var conductorId: UUID? = null,
+    @TargetAggregateIdentifier val conductorId: UUID? = null,
     val length: String
 )
 
@@ -948,7 +948,7 @@ data class DeleteConformLoadScheduleCommand(@TargetAggregateIdentifier  var conf
 
 // ConnectivityNode Commands
 data class CreateConnectivityNodeCommand(
-    @TargetAggregateIdentifier var connectivityNodeId: UUID? = null,
+    @TargetAggregateIdentifier val connectivityNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -959,7 +959,7 @@ data class CreateConnectivityNodeCommand(
 )
 
 data class UpdateConnectivityNodeCommand(
-    @TargetAggregateIdentifier var connectivityNodeId: UUID? = null,
+    @TargetAggregateIdentifier val connectivityNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -1010,7 +1010,7 @@ data class DeleteConnectorCommand(@TargetAggregateIdentifier  var connectorId: U
 
 // Control Commands
 data class CreateControlCommand(
-    @TargetAggregateIdentifier var controlId: UUID? = null,
+    @TargetAggregateIdentifier val controlId: UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1019,7 +1019,7 @@ data class CreateControlCommand(
 )
 
 data class UpdateControlCommand(
-    @TargetAggregateIdentifier var controlId: UUID? = null,
+    @TargetAggregateIdentifier val controlId: UUID? = null,
     val controlType: String,
     val operationInProgress: String,
     val timeStamp: String,
@@ -1036,12 +1036,12 @@ data class DeleteControlCommand(@TargetAggregateIdentifier  var controlId: UUID?
 
 // ControlArea Commands
 data class CreateControlAreaCommand(
-    @TargetAggregateIdentifier var controlAreaId: UUID? = null,
+    @TargetAggregateIdentifier val controlAreaId: UUID? = null,
     val type: String
 )
 
 data class UpdateControlAreaCommand(
-    @TargetAggregateIdentifier var controlAreaId: UUID? = null,
+    @TargetAggregateIdentifier val controlAreaId: UUID? = null,
     val type: String
 )
 
@@ -1070,12 +1070,12 @@ data class DeleteControlAreaGeneratingUnitCommand(@TargetAggregateIdentifier  va
 
 // CoordinateSystem Commands
 data class CreateCoordinateSystemCommand(
-    @TargetAggregateIdentifier var coordinateSystemId: UUID? = null,
+    @TargetAggregateIdentifier val coordinateSystemId: UUID? = null,
     val crsUrn: String
 )
 
 data class UpdateCoordinateSystemCommand(
-    @TargetAggregateIdentifier var coordinateSystemId: UUID? = null,
+    @TargetAggregateIdentifier val coordinateSystemId: UUID? = null,
     val crsUrn: String
 )
 
@@ -1088,7 +1088,7 @@ data class DeleteCoordinateSystemCommand(@TargetAggregateIdentifier  var coordin
 
 // CsConverter Commands
 data class CreateCsConverterCommand(
-    @TargetAggregateIdentifier var csConverterId: UUID? = null,
+    @TargetAggregateIdentifier val csConverterId: UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1099,7 +1099,7 @@ data class CreateCsConverterCommand(
 )
 
 data class UpdateCsConverterCommand(
-    @TargetAggregateIdentifier var csConverterId: UUID? = null,
+    @TargetAggregateIdentifier val csConverterId: UUID? = null,
     val maxAlpha: String,
     val maxGamma: String,
     val maxIdc: String,
@@ -1118,14 +1118,14 @@ data class DeleteCsConverterCommand(@TargetAggregateIdentifier  var csConverterI
 
 // CurrentFlow Commands
 data class CreateCurrentFlowCommand(
-    @TargetAggregateIdentifier var currentFlowId: UUID? = null,
+    @TargetAggregateIdentifier val currentFlowId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateCurrentFlowCommand(
-    @TargetAggregateIdentifier var currentFlowId: UUID? = null,
+    @TargetAggregateIdentifier val currentFlowId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -1140,12 +1140,12 @@ data class DeleteCurrentFlowCommand(@TargetAggregateIdentifier  var currentFlowI
 
 // CurrentLimit Commands
 data class CreateCurrentLimitCommand(
-    @TargetAggregateIdentifier var currentLimitId: UUID? = null,
+    @TargetAggregateIdentifier val currentLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateCurrentLimitCommand(
-    @TargetAggregateIdentifier var currentLimitId: UUID? = null,
+    @TargetAggregateIdentifier val currentLimitId: UUID? = null,
     val value: String
 )
 
@@ -1158,7 +1158,7 @@ data class DeleteCurrentLimitCommand(@TargetAggregateIdentifier  var currentLimi
 
 // Curve Commands
 data class CreateCurveCommand(
-    @TargetAggregateIdentifier var curveId: UUID? = null,
+    @TargetAggregateIdentifier val curveId: UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
@@ -1166,7 +1166,7 @@ data class CreateCurveCommand(
 )
 
 data class UpdateCurveCommand(
-    @TargetAggregateIdentifier var curveId: UUID? = null,
+    @TargetAggregateIdentifier val curveId: UUID? = null,
     val curveStyle: String,
     val xUnit: String,
     val y1Unit: String,
@@ -1182,14 +1182,14 @@ data class DeleteCurveCommand(@TargetAggregateIdentifier  var curveId: UUID? = n
 
 // CurveData Commands
 data class CreateCurveDataCommand(
-    @TargetAggregateIdentifier var curveDataId: UUID? = null,
+    @TargetAggregateIdentifier val curveDataId: UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
 )
 
 data class UpdateCurveDataCommand(
-    @TargetAggregateIdentifier var curveDataId: UUID? = null,
+    @TargetAggregateIdentifier val curveDataId: UUID? = null,
     val xvalue: String,
     val y1value: String,
     val y2value: String
@@ -1284,12 +1284,12 @@ data class DeleteDCConductingEquipmentCommand(@TargetAggregateIdentifier  var dC
 
 // DCConverterUnit Commands
 data class CreateDCConverterUnitCommand(
-    @TargetAggregateIdentifier var dCConverterUnitId: UUID? = null,
+    @TargetAggregateIdentifier val dCConverterUnitId: UUID? = null,
     val operationMode: String
 )
 
 data class UpdateDCConverterUnitCommand(
-    @TargetAggregateIdentifier var dCConverterUnitId: UUID? = null,
+    @TargetAggregateIdentifier val dCConverterUnitId: UUID? = null,
     val operationMode: String
 )
 
@@ -1334,13 +1334,13 @@ data class DeleteDCEquipmentContainerCommand(@TargetAggregateIdentifier  var dCE
 
 // DCGround Commands
 data class CreateDCGroundCommand(
-    @TargetAggregateIdentifier var dCGroundId: UUID? = null,
+    @TargetAggregateIdentifier val dCGroundId: UUID? = null,
     val inductance: String,
     val r: String
 )
 
 data class UpdateDCGroundCommand(
-    @TargetAggregateIdentifier var dCGroundId: UUID? = null,
+    @TargetAggregateIdentifier val dCGroundId: UUID? = null,
     val inductance: String,
     val r: String
 )
@@ -1370,7 +1370,7 @@ data class DeleteDCLineCommand(@TargetAggregateIdentifier  var dCLineId: UUID? =
 
 // DCLineSegment Commands
 data class CreateDCLineSegmentCommand(
-    @TargetAggregateIdentifier var dCLineSegmentId: UUID? = null,
+    @TargetAggregateIdentifier val dCLineSegmentId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
@@ -1378,7 +1378,7 @@ data class CreateDCLineSegmentCommand(
 )
 
 data class UpdateDCLineSegmentCommand(
-    @TargetAggregateIdentifier var dCLineSegmentId: UUID? = null,
+    @TargetAggregateIdentifier val dCLineSegmentId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val length: String,
@@ -1410,14 +1410,14 @@ data class DeleteDCNodeCommand(@TargetAggregateIdentifier  var dCNodeId: UUID? =
 
 // DCSeriesDevice Commands
 data class CreateDCSeriesDeviceCommand(
-    @TargetAggregateIdentifier var dCSeriesDeviceId: UUID? = null,
+    @TargetAggregateIdentifier val dCSeriesDeviceId: UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCSeriesDeviceCommand(
-    @TargetAggregateIdentifier var dCSeriesDeviceId: UUID? = null,
+    @TargetAggregateIdentifier val dCSeriesDeviceId: UUID? = null,
     val inductance: String,
     val ratedUdc: String,
     val resistance: String
@@ -1432,14 +1432,14 @@ data class DeleteDCSeriesDeviceCommand(@TargetAggregateIdentifier  var dCSeriesD
 
 // DCShunt Commands
 data class CreateDCShuntCommand(
-    @TargetAggregateIdentifier var dCShuntId: UUID? = null,
+    @TargetAggregateIdentifier val dCShuntId: UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
 )
 
 data class UpdateDCShuntCommand(
-    @TargetAggregateIdentifier var dCShuntId: UUID? = null,
+    @TargetAggregateIdentifier val dCShuntId: UUID? = null,
     val capacitance: String,
     val ratedUdc: String,
     val resistance: String
@@ -1582,7 +1582,7 @@ data class DeleteDecimalProxyCommand(@TargetAggregateIdentifier  var decimalProx
 
 // Diagram Commands
 data class CreateDiagramCommand(
-    @TargetAggregateIdentifier var diagramId: UUID? = null,
+    @TargetAggregateIdentifier val diagramId: UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1591,7 +1591,7 @@ data class CreateDiagramCommand(
 )
 
 data class UpdateDiagramCommand(
-    @TargetAggregateIdentifier var diagramId: UUID? = null,
+    @TargetAggregateIdentifier val diagramId: UUID? = null,
     val orientation: String,
     val x1InitialView: String,
     val x2InitialView: String,
@@ -1608,7 +1608,7 @@ data class DeleteDiagramCommand(@TargetAggregateIdentifier  var diagramId: UUID?
 
 // DiagramLayoutVersion Commands
 data class CreateDiagramLayoutVersionCommand(
-    @TargetAggregateIdentifier var diagramLayoutVersionId: UUID? = null,
+    @TargetAggregateIdentifier val diagramLayoutVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1622,7 +1622,7 @@ data class CreateDiagramLayoutVersionCommand(
 )
 
 data class UpdateDiagramLayoutVersionCommand(
-    @TargetAggregateIdentifier var diagramLayoutVersionId: UUID? = null,
+    @TargetAggregateIdentifier val diagramLayoutVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1644,7 +1644,7 @@ data class DeleteDiagramLayoutVersionCommand(@TargetAggregateIdentifier  var dia
 
 // DiagramObject Commands
 data class CreateDiagramObjectCommand(
-    @TargetAggregateIdentifier var diagramObjectId: UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectId: UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1653,7 +1653,7 @@ data class CreateDiagramObjectCommand(
 )
 
 data class UpdateDiagramObjectCommand(
-    @TargetAggregateIdentifier var diagramObjectId: UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectId: UUID? = null,
     val drawingOrder: String,
     val isPolygon: String,
     val offsetX: String,
@@ -1686,7 +1686,7 @@ data class DeleteDiagramObjectGluePointCommand(@TargetAggregateIdentifier  var d
 
 // DiagramObjectPoint Commands
 data class CreateDiagramObjectPointCommand(
-    @TargetAggregateIdentifier var diagramObjectPointId: UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -1694,7 +1694,7 @@ data class CreateDiagramObjectPointCommand(
 )
 
 data class UpdateDiagramObjectPointCommand(
-    @TargetAggregateIdentifier var diagramObjectPointId: UUID? = null,
+    @TargetAggregateIdentifier val diagramObjectPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -1742,7 +1742,7 @@ data class DeleteDiagramStyleCommand(@TargetAggregateIdentifier  var diagramStyl
 
 // DiscExcContIEEEDEC1A Commands
 data class CreateDiscExcContIEEEDEC1ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC1AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1764,7 +1764,7 @@ data class CreateDiscExcContIEEEDEC1ACommand(
 )
 
 data class UpdateDiscExcContIEEEDEC1ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC1AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC1AId: UUID? = null,
     val esc: String,
     val kan: String,
     val ketl: String,
@@ -1794,7 +1794,7 @@ data class DeleteDiscExcContIEEEDEC1ACommand(@TargetAggregateIdentifier  var dis
 
 // DiscExcContIEEEDEC2A Commands
 data class CreateDiscExcContIEEEDEC2ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC2AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1803,7 +1803,7 @@ data class CreateDiscExcContIEEEDEC2ACommand(
 )
 
 data class UpdateDiscExcContIEEEDEC2ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC2AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC2AId: UUID? = null,
     val td1: String,
     val td2: String,
     val vdmax: String,
@@ -1820,13 +1820,13 @@ data class DeleteDiscExcContIEEEDEC2ACommand(@TargetAggregateIdentifier  var dis
 
 // DiscExcContIEEEDEC3A Commands
 data class CreateDiscExcContIEEEDEC3ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC3AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: UUID? = null,
     val tdr: String,
     val vtmin: String
 )
 
 data class UpdateDiscExcContIEEEDEC3ACommand(
-    @TargetAggregateIdentifier var discExcContIEEEDEC3AId: UUID? = null,
+    @TargetAggregateIdentifier val discExcContIEEEDEC3AId: UUID? = null,
     val tdr: String,
     val vtmin: String
 )
@@ -1872,12 +1872,12 @@ data class DeleteDiscontinuousExcitationControlDynamicsCommand(@TargetAggregateI
 
 // DiscontinuousExcitationControlUserDefined Commands
 data class CreateDiscontinuousExcitationControlUserDefinedCommand(
-    @TargetAggregateIdentifier var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateDiscontinuousExcitationControlUserDefinedCommand(
-    @TargetAggregateIdentifier var discontinuousExcitationControlUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val discontinuousExcitationControlUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -1906,12 +1906,12 @@ data class DeleteDiscreteCommand(@TargetAggregateIdentifier  var discreteId: UUI
 
 // DiscreteValue Commands
 data class CreateDiscreteValueCommand(
-    @TargetAggregateIdentifier var discreteValueId: UUID? = null,
+    @TargetAggregateIdentifier val discreteValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateDiscreteValueCommand(
-    @TargetAggregateIdentifier var discreteValueId: UUID? = null,
+    @TargetAggregateIdentifier val discreteValueId: UUID? = null,
     val value: String
 )
 
@@ -1924,7 +1924,7 @@ data class DeleteDiscreteValueCommand(@TargetAggregateIdentifier  var discreteVa
 
 // DomainVersion Commands
 data class CreateDomainVersionCommand(
-    @TargetAggregateIdentifier var domainVersionId: UUID? = null,
+    @TargetAggregateIdentifier val domainVersionId: UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
@@ -1932,7 +1932,7 @@ data class CreateDomainVersionCommand(
 )
 
 data class UpdateDomainVersionCommand(
-    @TargetAggregateIdentifier var domainVersionId: UUID? = null,
+    @TargetAggregateIdentifier val domainVersionId: UUID? = null,
     val baseUML: String,
     val date: String,
     val entsoeUML: String,
@@ -1948,12 +1948,12 @@ data class DeleteDomainVersionCommand(@TargetAggregateIdentifier  var domainVers
 
 // DynamicsFunctionBlock Commands
 data class CreateDynamicsFunctionBlockCommand(
-    @TargetAggregateIdentifier var dynamicsFunctionBlockId: UUID? = null,
+    @TargetAggregateIdentifier val dynamicsFunctionBlockId: UUID? = null,
     val enabled: String
 )
 
 data class UpdateDynamicsFunctionBlockCommand(
-    @TargetAggregateIdentifier var dynamicsFunctionBlockId: UUID? = null,
+    @TargetAggregateIdentifier val dynamicsFunctionBlockId: UUID? = null,
     val enabled: String
 )
 
@@ -1966,7 +1966,7 @@ data class DeleteDynamicsFunctionBlockCommand(@TargetAggregateIdentifier  var dy
 
 // DynamicsVersion Commands
 data class CreateDynamicsVersionCommand(
-    @TargetAggregateIdentifier var dynamicsVersionId: UUID? = null,
+    @TargetAggregateIdentifier val dynamicsVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -1980,7 +1980,7 @@ data class CreateDynamicsVersionCommand(
 )
 
 data class UpdateDynamicsVersionCommand(
-    @TargetAggregateIdentifier var dynamicsVersionId: UUID? = null,
+    @TargetAggregateIdentifier val dynamicsVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2034,13 +2034,13 @@ data class DeleteENTSOEConnectivityNodeCommand(@TargetAggregateIdentifier  var e
 
 // ENTSOEIdentifiedObject Commands
 data class CreateENTSOEIdentifiedObjectCommand(
-    @TargetAggregateIdentifier var eNTSOEIdentifiedObjectId: UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
 
 data class UpdateENTSOEIdentifiedObjectCommand(
-    @TargetAggregateIdentifier var eNTSOEIdentifiedObjectId: UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEIdentifiedObjectId: UUID? = null,
     val energyIdentCodeEic: String,
     val shortName: String
 )
@@ -2070,12 +2070,12 @@ data class DeleteENTSOEJunctionCommand(@TargetAggregateIdentifier  var eNTSOEJun
 
 // ENTSOEOperationalLimitType Commands
 data class CreateENTSOEOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier var eNTSOEOperationalLimitTypeId: UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: UUID? = null,
     val limitType: String
 )
 
 data class UpdateENTSOEOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier var eNTSOEOperationalLimitTypeId: UUID? = null,
+    @TargetAggregateIdentifier val eNTSOEOperationalLimitTypeId: UUID? = null,
     val limitType: String
 )
 
@@ -2104,12 +2104,12 @@ data class DeleteENTSOETopologicalNodeCommand(@TargetAggregateIdentifier  var eN
 
 // EarthFaultCompensator Commands
 data class CreateEarthFaultCompensatorCommand(
-    @TargetAggregateIdentifier var earthFaultCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val earthFaultCompensatorId: UUID? = null,
     val r: String
 )
 
 data class UpdateEarthFaultCompensatorCommand(
-    @TargetAggregateIdentifier var earthFaultCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val earthFaultCompensatorId: UUID? = null,
     val r: String
 )
 
@@ -2138,7 +2138,7 @@ data class DeleteEnergyAreaCommand(@TargetAggregateIdentifier  var energyAreaId:
 
 // EnergyConsumer Commands
 data class CreateEnergyConsumerCommand(
-    @TargetAggregateIdentifier var energyConsumerId: UUID? = null,
+    @TargetAggregateIdentifier val energyConsumerId: UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
@@ -2146,7 +2146,7 @@ data class CreateEnergyConsumerCommand(
 )
 
 data class UpdateEnergyConsumerCommand(
-    @TargetAggregateIdentifier var energyConsumerId: UUID? = null,
+    @TargetAggregateIdentifier val energyConsumerId: UUID? = null,
     val pfixed: String,
     val pfixedPct: String,
     val qfixed: String,
@@ -2210,7 +2210,7 @@ data class DeleteEquipmentCommand(@TargetAggregateIdentifier  var equipmentId: U
 
 // EquipmentBoundaryVersion Commands
 data class CreateEquipmentBoundaryVersionCommand(
-    @TargetAggregateIdentifier var equipmentBoundaryVersionId: UUID? = null,
+    @TargetAggregateIdentifier val equipmentBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2225,7 +2225,7 @@ data class CreateEquipmentBoundaryVersionCommand(
 )
 
 data class UpdateEquipmentBoundaryVersionCommand(
-    @TargetAggregateIdentifier var equipmentBoundaryVersionId: UUID? = null,
+    @TargetAggregateIdentifier val equipmentBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -2264,7 +2264,7 @@ data class DeleteEquipmentContainerCommand(@TargetAggregateIdentifier  var equip
 
 // EquipmentVersion Commands
 data class CreateEquipmentVersionCommand(
-    @TargetAggregateIdentifier var equipmentVersionId: UUID? = null,
+    @TargetAggregateIdentifier val equipmentVersionId: UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2282,7 +2282,7 @@ data class CreateEquipmentVersionCommand(
 )
 
 data class UpdateEquipmentVersionCommand(
-    @TargetAggregateIdentifier var equipmentVersionId: UUID? = null,
+    @TargetAggregateIdentifier val equipmentVersionId: UUID? = null,
     val baseUML: String,
     val baseURIcore: String,
     val baseURIoperation: String,
@@ -2308,7 +2308,7 @@ data class DeleteEquipmentVersionCommand(@TargetAggregateIdentifier  var equipme
 
 // EquivalentBranch Commands
 data class CreateEquivalentBranchCommand(
-    @TargetAggregateIdentifier var equivalentBranchId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentBranchId: UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2328,7 +2328,7 @@ data class CreateEquivalentBranchCommand(
 )
 
 data class UpdateEquivalentBranchCommand(
-    @TargetAggregateIdentifier var equivalentBranchId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentBranchId: UUID? = null,
     val negativeR12: String,
     val negativeR21: String,
     val negativeX12: String,
@@ -2372,7 +2372,7 @@ data class DeleteEquivalentEquipmentCommand(@TargetAggregateIdentifier  var equi
 
 // EquivalentInjection Commands
 data class CreateEquivalentInjectionCommand(
-    @TargetAggregateIdentifier var equivalentInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentInjectionId: UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2387,7 +2387,7 @@ data class CreateEquivalentInjectionCommand(
 )
 
 data class UpdateEquivalentInjectionCommand(
-    @TargetAggregateIdentifier var equivalentInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentInjectionId: UUID? = null,
     val maxP: String,
     val maxQ: String,
     val minP: String,
@@ -2426,13 +2426,13 @@ data class DeleteEquivalentNetworkCommand(@TargetAggregateIdentifier  var equiva
 
 // EquivalentShunt Commands
 data class CreateEquivalentShuntCommand(
-    @TargetAggregateIdentifier var equivalentShuntId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentShuntId: UUID? = null,
     val b: String,
     val g: String
 )
 
 data class UpdateEquivalentShuntCommand(
-    @TargetAggregateIdentifier var equivalentShuntId: UUID? = null,
+    @TargetAggregateIdentifier val equivalentShuntId: UUID? = null,
     val b: String,
     val g: String
 )
@@ -2446,7 +2446,7 @@ data class DeleteEquivalentShuntCommand(@TargetAggregateIdentifier  var equivale
 
 // ExcAC1A Commands
 data class CreateExcAC1ACommand(
-    @TargetAggregateIdentifier var excAC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC1AId: UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2472,7 +2472,7 @@ data class CreateExcAC1ACommand(
 )
 
 data class UpdateExcAC1ACommand(
-    @TargetAggregateIdentifier var excAC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC1AId: UUID? = null,
     val hvlvgates: String,
     val ka: String,
     val kc: String,
@@ -2506,7 +2506,7 @@ data class DeleteExcAC1ACommand(@TargetAggregateIdentifier  var excAC1AId: UUID?
 
 // ExcAC2A Commands
 data class CreateExcAC2ACommand(
-    @TargetAggregateIdentifier var excAC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC2AId: UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2538,7 +2538,7 @@ data class CreateExcAC2ACommand(
 )
 
 data class UpdateExcAC2ACommand(
-    @TargetAggregateIdentifier var excAC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC2AId: UUID? = null,
     val hvgate: String,
     val ka: String,
     val kb: String,
@@ -2578,7 +2578,7 @@ data class DeleteExcAC2ACommand(@TargetAggregateIdentifier  var excAC2AId: UUID?
 
 // ExcAC3A Commands
 data class CreateExcAC3ACommand(
-    @TargetAggregateIdentifier var excAC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2608,7 +2608,7 @@ data class CreateExcAC3ACommand(
 )
 
 data class UpdateExcAC3ACommand(
-    @TargetAggregateIdentifier var excAC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -2646,7 +2646,7 @@ data class DeleteExcAC3ACommand(@TargetAggregateIdentifier  var excAC3AId: UUID?
 
 // ExcAC4A Commands
 data class CreateExcAC4ACommand(
-    @TargetAggregateIdentifier var excAC4AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2659,7 +2659,7 @@ data class CreateExcAC4ACommand(
 )
 
 data class UpdateExcAC4ACommand(
-    @TargetAggregateIdentifier var excAC4AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -2680,7 +2680,7 @@ data class DeleteExcAC4ACommand(@TargetAggregateIdentifier  var excAC4AId: UUID?
 
 // ExcAC5A Commands
 data class CreateExcAC5ACommand(
-    @TargetAggregateIdentifier var excAC5AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC5AId: UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2702,7 +2702,7 @@ data class CreateExcAC5ACommand(
 )
 
 data class UpdateExcAC5ACommand(
-    @TargetAggregateIdentifier var excAC5AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC5AId: UUID? = null,
     val a: String,
     val efd1: String,
     val efd2: String,
@@ -2732,7 +2732,7 @@ data class DeleteExcAC5ACommand(@TargetAggregateIdentifier  var excAC5AId: UUID?
 
 // ExcAC6A Commands
 data class CreateExcAC6ACommand(
-    @TargetAggregateIdentifier var excAC6AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2759,7 +2759,7 @@ data class CreateExcAC6ACommand(
 )
 
 data class UpdateExcAC6ACommand(
-    @TargetAggregateIdentifier var excAC6AId: UUID? = null,
+    @TargetAggregateIdentifier val excAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -2794,7 +2794,7 @@ data class DeleteExcAC6ACommand(@TargetAggregateIdentifier  var excAC6AId: UUID?
 
 // ExcAC8B Commands
 data class CreateExcAC8BCommand(
-    @TargetAggregateIdentifier var excAC8BId: UUID? = null,
+    @TargetAggregateIdentifier val excAC8BId: UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2825,7 +2825,7 @@ data class CreateExcAC8BCommand(
 )
 
 data class UpdateExcAC8BCommand(
-    @TargetAggregateIdentifier var excAC8BId: UUID? = null,
+    @TargetAggregateIdentifier val excAC8BId: UUID? = null,
     val inlim: String,
     val ka: String,
     val kc: String,
@@ -2864,7 +2864,7 @@ data class DeleteExcAC8BCommand(@TargetAggregateIdentifier  var excAC8BId: UUID?
 
 // ExcANS Commands
 data class CreateExcANSCommand(
-    @TargetAggregateIdentifier var excANSId: UUID? = null,
+    @TargetAggregateIdentifier val excANSId: UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -2882,7 +2882,7 @@ data class CreateExcANSCommand(
 )
 
 data class UpdateExcANSCommand(
-    @TargetAggregateIdentifier var excANSId: UUID? = null,
+    @TargetAggregateIdentifier val excANSId: UUID? = null,
     val blint: String,
     val ifmn: String,
     val ifmx: String,
@@ -2908,7 +2908,7 @@ data class DeleteExcANSCommand(@TargetAggregateIdentifier  var excANSId: UUID? =
 
 // ExcAVR1 Commands
 data class CreateExcAVR1Command(
-    @TargetAggregateIdentifier var excAVR1Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR1Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2924,7 +2924,7 @@ data class CreateExcAVR1Command(
 )
 
 data class UpdateExcAVR1Command(
-    @TargetAggregateIdentifier var excAVR1Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR1Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2948,7 +2948,7 @@ data class DeleteExcAVR1Command(@TargetAggregateIdentifier  var excAVR1Id: UUID?
 
 // ExcAVR2 Commands
 data class CreateExcAVR2Command(
-    @TargetAggregateIdentifier var excAVR2Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR2Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2965,7 +2965,7 @@ data class CreateExcAVR2Command(
 )
 
 data class UpdateExcAVR2Command(
-    @TargetAggregateIdentifier var excAVR2Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR2Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -2990,7 +2990,7 @@ data class DeleteExcAVR2Command(@TargetAggregateIdentifier  var excAVR2Id: UUID?
 
 // ExcAVR3 Commands
 data class CreateExcAVR3Command(
-    @TargetAggregateIdentifier var excAVR3Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR3Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3006,7 +3006,7 @@ data class CreateExcAVR3Command(
 )
 
 data class UpdateExcAVR3Command(
-    @TargetAggregateIdentifier var excAVR3Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR3Id: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -3030,7 +3030,7 @@ data class DeleteExcAVR3Command(@TargetAggregateIdentifier  var excAVR3Id: UUID?
 
 // ExcAVR4 Commands
 data class CreateExcAVR4Command(
-    @TargetAggregateIdentifier var excAVR4Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR4Id: UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3048,7 +3048,7 @@ data class CreateExcAVR4Command(
 )
 
 data class UpdateExcAVR4Command(
-    @TargetAggregateIdentifier var excAVR4Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR4Id: UUID? = null,
     val imul: String,
     val ka: String,
     val ke: String,
@@ -3074,14 +3074,14 @@ data class DeleteExcAVR4Command(@TargetAggregateIdentifier  var excAVR4Id: UUID?
 
 // ExcAVR5 Commands
 data class CreateExcAVR5Command(
-    @TargetAggregateIdentifier var excAVR5Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR5Id: UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
 )
 
 data class UpdateExcAVR5Command(
-    @TargetAggregateIdentifier var excAVR5Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR5Id: UUID? = null,
     val ka: String,
     val rex: String,
     val ta: String
@@ -3096,7 +3096,7 @@ data class DeleteExcAVR5Command(@TargetAggregateIdentifier  var excAVR5Id: UUID?
 
 // ExcAVR7 Commands
 data class CreateExcAVR7Command(
-    @TargetAggregateIdentifier var excAVR7Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR7Id: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3121,7 +3121,7 @@ data class CreateExcAVR7Command(
 )
 
 data class UpdateExcAVR7Command(
-    @TargetAggregateIdentifier var excAVR7Id: UUID? = null,
+    @TargetAggregateIdentifier val excAVR7Id: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -3154,7 +3154,7 @@ data class DeleteExcAVR7Command(@TargetAggregateIdentifier  var excAVR7Id: UUID?
 
 // ExcBBC Commands
 data class CreateExcBBCCommand(
-    @TargetAggregateIdentifier var excBBCId: UUID? = null,
+    @TargetAggregateIdentifier val excBBCId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
@@ -3169,7 +3169,7 @@ data class CreateExcBBCCommand(
 )
 
 data class UpdateExcBBCCommand(
-    @TargetAggregateIdentifier var excBBCId: UUID? = null,
+    @TargetAggregateIdentifier val excBBCId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val k: String,
@@ -3192,7 +3192,7 @@ data class DeleteExcBBCCommand(@TargetAggregateIdentifier  var excBBCId: UUID? =
 
 // ExcCZ Commands
 data class CreateExcCZCommand(
-    @TargetAggregateIdentifier var excCZId: UUID? = null,
+    @TargetAggregateIdentifier val excCZId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3206,7 +3206,7 @@ data class CreateExcCZCommand(
 )
 
 data class UpdateExcCZCommand(
-    @TargetAggregateIdentifier var excCZId: UUID? = null,
+    @TargetAggregateIdentifier val excCZId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val ka: String,
@@ -3228,7 +3228,7 @@ data class DeleteExcCZCommand(@TargetAggregateIdentifier  var excCZId: UUID? = n
 
 // ExcDC1A Commands
 data class CreateExcDC1ACommand(
-    @TargetAggregateIdentifier var excDC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC1AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3250,7 +3250,7 @@ data class CreateExcDC1ACommand(
 )
 
 data class UpdateExcDC1ACommand(
-    @TargetAggregateIdentifier var excDC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC1AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3280,7 +3280,7 @@ data class DeleteExcDC1ACommand(@TargetAggregateIdentifier  var excDC1AId: UUID?
 
 // ExcDC2A Commands
 data class CreateExcDC2ACommand(
-    @TargetAggregateIdentifier var excDC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3302,7 +3302,7 @@ data class CreateExcDC2ACommand(
 )
 
 data class UpdateExcDC2ACommand(
-    @TargetAggregateIdentifier var excDC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -3332,7 +3332,7 @@ data class DeleteExcDC2ACommand(@TargetAggregateIdentifier  var excDC2AId: UUID?
 
 // ExcDC3A Commands
 data class CreateExcDC3ACommand(
-    @TargetAggregateIdentifier var excDC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC3AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3352,7 +3352,7 @@ data class CreateExcDC3ACommand(
 )
 
 data class UpdateExcDC3ACommand(
-    @TargetAggregateIdentifier var excDC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excDC3AId: UUID? = null,
     val edfmax: String,
     val efd1: String,
     val efd2: String,
@@ -3380,7 +3380,7 @@ data class DeleteExcDC3ACommand(@TargetAggregateIdentifier  var excDC3AId: UUID?
 
 // ExcDC3A1 Commands
 data class CreateExcDC3A1Command(
-    @TargetAggregateIdentifier var excDC3A1Id: UUID? = null,
+    @TargetAggregateIdentifier val excDC3A1Id: UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3398,7 +3398,7 @@ data class CreateExcDC3A1Command(
 )
 
 data class UpdateExcDC3A1Command(
-    @TargetAggregateIdentifier var excDC3A1Id: UUID? = null,
+    @TargetAggregateIdentifier val excDC3A1Id: UUID? = null,
     val exclim: String,
     val ka: String,
     val ke: String,
@@ -3424,7 +3424,7 @@ data class DeleteExcDC3A1Command(@TargetAggregateIdentifier  var excDC3A1Id: UUI
 
 // ExcELIN1 Commands
 data class CreateExcELIN1Command(
-    @TargetAggregateIdentifier var excELIN1Id: UUID? = null,
+    @TargetAggregateIdentifier val excELIN1Id: UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3443,7 +3443,7 @@ data class CreateExcELIN1Command(
 )
 
 data class UpdateExcELIN1Command(
-    @TargetAggregateIdentifier var excELIN1Id: UUID? = null,
+    @TargetAggregateIdentifier val excELIN1Id: UUID? = null,
     val dpnf: String,
     val efmax: String,
     val efmin: String,
@@ -3470,7 +3470,7 @@ data class DeleteExcELIN1Command(@TargetAggregateIdentifier  var excELIN1Id: UUI
 
 // ExcELIN2 Commands
 data class CreateExcELIN2Command(
-    @TargetAggregateIdentifier var excELIN2Id: UUID? = null,
+    @TargetAggregateIdentifier val excELIN2Id: UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3501,7 +3501,7 @@ data class CreateExcELIN2Command(
 )
 
 data class UpdateExcELIN2Command(
-    @TargetAggregateIdentifier var excELIN2Id: UUID? = null,
+    @TargetAggregateIdentifier val excELIN2Id: UUID? = null,
     val efdbas: String,
     val iefmax: String,
     val iefmax2: String,
@@ -3540,7 +3540,7 @@ data class DeleteExcELIN2Command(@TargetAggregateIdentifier  var excELIN2Id: UUI
 
 // ExcHU Commands
 data class CreateExcHUCommand(
-    @TargetAggregateIdentifier var excHUId: UUID? = null,
+    @TargetAggregateIdentifier val excHUId: UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3556,7 +3556,7 @@ data class CreateExcHUCommand(
 )
 
 data class UpdateExcHUCommand(
-    @TargetAggregateIdentifier var excHUId: UUID? = null,
+    @TargetAggregateIdentifier val excHUId: UUID? = null,
     val ae: String,
     val ai: String,
     val atr: String,
@@ -3580,7 +3580,7 @@ data class DeleteExcHUCommand(@TargetAggregateIdentifier  var excHUId: UUID? = n
 
 // ExcIEEEAC1A Commands
 data class CreateExcIEEEAC1ACommand(
-    @TargetAggregateIdentifier var excIEEEAC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC1AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3602,7 +3602,7 @@ data class CreateExcIEEEAC1ACommand(
 )
 
 data class UpdateExcIEEEAC1ACommand(
-    @TargetAggregateIdentifier var excIEEEAC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC1AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3632,7 +3632,7 @@ data class DeleteExcIEEEAC1ACommand(@TargetAggregateIdentifier  var excIEEEAC1AI
 
 // ExcIEEEAC2A Commands
 data class CreateExcIEEEAC2ACommand(
-    @TargetAggregateIdentifier var excIEEEAC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC2AId: UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3657,7 +3657,7 @@ data class CreateExcIEEEAC2ACommand(
 )
 
 data class UpdateExcIEEEAC2ACommand(
-    @TargetAggregateIdentifier var excIEEEAC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC2AId: UUID? = null,
     val ka: String,
     val kb: String,
     val kc: String,
@@ -3690,7 +3690,7 @@ data class DeleteExcIEEEAC2ACommand(@TargetAggregateIdentifier  var excIEEEAC2AI
 
 // ExcIEEEAC3A Commands
 data class CreateExcIEEEAC3ACommand(
-    @TargetAggregateIdentifier var excIEEEAC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3715,7 +3715,7 @@ data class CreateExcIEEEAC3ACommand(
 )
 
 data class UpdateExcIEEEAC3ACommand(
-    @TargetAggregateIdentifier var excIEEEAC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC3AId: UUID? = null,
     val efdn: String,
     val ka: String,
     val kc: String,
@@ -3748,7 +3748,7 @@ data class DeleteExcIEEEAC3ACommand(@TargetAggregateIdentifier  var excIEEEAC3AI
 
 // ExcIEEEAC4A Commands
 data class CreateExcIEEEAC4ACommand(
-    @TargetAggregateIdentifier var excIEEEAC4AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3761,7 +3761,7 @@ data class CreateExcIEEEAC4ACommand(
 )
 
 data class UpdateExcIEEEAC4ACommand(
-    @TargetAggregateIdentifier var excIEEEAC4AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC4AId: UUID? = null,
     val ka: String,
     val kc: String,
     val ta: String,
@@ -3782,7 +3782,7 @@ data class DeleteExcIEEEAC4ACommand(@TargetAggregateIdentifier  var excIEEEAC4AI
 
 // ExcIEEEAC5A Commands
 data class CreateExcIEEEAC5ACommand(
-    @TargetAggregateIdentifier var excIEEEAC5AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC5AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3800,7 +3800,7 @@ data class CreateExcIEEEAC5ACommand(
 )
 
 data class UpdateExcIEEEAC5ACommand(
-    @TargetAggregateIdentifier var excIEEEAC5AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC5AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -3826,7 +3826,7 @@ data class DeleteExcIEEEAC5ACommand(@TargetAggregateIdentifier  var excIEEEAC5AI
 
 // ExcIEEEAC6A Commands
 data class CreateExcIEEEAC6ACommand(
-    @TargetAggregateIdentifier var excIEEEAC6AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3852,7 +3852,7 @@ data class CreateExcIEEEAC6ACommand(
 )
 
 data class UpdateExcIEEEAC6ACommand(
-    @TargetAggregateIdentifier var excIEEEAC6AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC6AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3886,7 +3886,7 @@ data class DeleteExcIEEEAC6ACommand(@TargetAggregateIdentifier  var excIEEEAC6AI
 
 // ExcIEEEAC7B Commands
 data class CreateExcIEEEAC7BCommand(
-    @TargetAggregateIdentifier var excIEEEAC7BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC7BId: UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -3916,7 +3916,7 @@ data class CreateExcIEEEAC7BCommand(
 )
 
 data class UpdateExcIEEEAC7BCommand(
-    @TargetAggregateIdentifier var excIEEEAC7BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC7BId: UUID? = null,
     val kc: String,
     val kd: String,
     val kdr: String,
@@ -3954,7 +3954,7 @@ data class DeleteExcIEEEAC7BCommand(@TargetAggregateIdentifier  var excIEEEAC7BI
 
 // ExcIEEEAC8B Commands
 data class CreateExcIEEEAC8BCommand(
-    @TargetAggregateIdentifier var excIEEEAC8BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC8BId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -3976,7 +3976,7 @@ data class CreateExcIEEEAC8BCommand(
 )
 
 data class UpdateExcIEEEAC8BCommand(
-    @TargetAggregateIdentifier var excIEEEAC8BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEAC8BId: UUID? = null,
     val ka: String,
     val kc: String,
     val kd: String,
@@ -4006,7 +4006,7 @@ data class DeleteExcIEEEAC8BCommand(@TargetAggregateIdentifier  var excIEEEAC8BI
 
 // ExcIEEEDC1A Commands
 data class CreateExcIEEEDC1ACommand(
-    @TargetAggregateIdentifier var excIEEEDC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC1AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4026,7 +4026,7 @@ data class CreateExcIEEEDC1ACommand(
 )
 
 data class UpdateExcIEEEDC1ACommand(
-    @TargetAggregateIdentifier var excIEEEDC1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC1AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4054,7 +4054,7 @@ data class DeleteExcIEEEDC1ACommand(@TargetAggregateIdentifier  var excIEEEDC1AI
 
 // ExcIEEEDC2A Commands
 data class CreateExcIEEEDC2ACommand(
-    @TargetAggregateIdentifier var excIEEEDC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4074,7 +4074,7 @@ data class CreateExcIEEEDC2ACommand(
 )
 
 data class UpdateExcIEEEDC2ACommand(
-    @TargetAggregateIdentifier var excIEEEDC2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC2AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4102,7 +4102,7 @@ data class DeleteExcIEEEDC2ACommand(@TargetAggregateIdentifier  var excIEEEDC2AI
 
 // ExcIEEEDC3A Commands
 data class CreateExcIEEEDC3ACommand(
-    @TargetAggregateIdentifier var excIEEEDC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC3AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4117,7 +4117,7 @@ data class CreateExcIEEEDC3ACommand(
 )
 
 data class UpdateExcIEEEDC3ACommand(
-    @TargetAggregateIdentifier var excIEEEDC3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC3AId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val exclim: String,
@@ -4140,7 +4140,7 @@ data class DeleteExcIEEEDC3ACommand(@TargetAggregateIdentifier  var excIEEEDC3AI
 
 // ExcIEEEDC4B Commands
 data class CreateExcIEEEDC4BCommand(
-    @TargetAggregateIdentifier var excIEEEDC4BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC4BId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4163,7 +4163,7 @@ data class CreateExcIEEEDC4BCommand(
 )
 
 data class UpdateExcIEEEDC4BCommand(
-    @TargetAggregateIdentifier var excIEEEDC4BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEDC4BId: UUID? = null,
     val efd1: String,
     val efd2: String,
     val ka: String,
@@ -4194,7 +4194,7 @@ data class DeleteExcIEEEDC4BCommand(@TargetAggregateIdentifier  var excIEEEDC4BI
 
 // ExcIEEEST1A Commands
 data class CreateExcIEEEST1ACommand(
-    @TargetAggregateIdentifier var excIEEEST1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4217,7 +4217,7 @@ data class CreateExcIEEEST1ACommand(
 )
 
 data class UpdateExcIEEEST1ACommand(
-    @TargetAggregateIdentifier var excIEEEST1AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4248,7 +4248,7 @@ data class DeleteExcIEEEST1ACommand(@TargetAggregateIdentifier  var excIEEEST1AI
 
 // ExcIEEEST2A Commands
 data class CreateExcIEEEST2ACommand(
-    @TargetAggregateIdentifier var excIEEEST2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4265,7 +4265,7 @@ data class CreateExcIEEEST2ACommand(
 )
 
 data class UpdateExcIEEEST2ACommand(
-    @TargetAggregateIdentifier var excIEEEST2AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4290,7 +4290,7 @@ data class DeleteExcIEEEST2ACommand(@TargetAggregateIdentifier  var excIEEEST2AI
 
 // ExcIEEEST3A Commands
 data class CreateExcIEEEST3ACommand(
-    @TargetAggregateIdentifier var excIEEEST3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST3AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4314,7 +4314,7 @@ data class CreateExcIEEEST3ACommand(
 )
 
 data class UpdateExcIEEEST3ACommand(
-    @TargetAggregateIdentifier var excIEEEST3AId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST3AId: UUID? = null,
     val ka: String,
     val kc: String,
     val kg: String,
@@ -4346,7 +4346,7 @@ data class DeleteExcIEEEST3ACommand(@TargetAggregateIdentifier  var excIEEEST3AI
 
 // ExcIEEEST4B Commands
 data class CreateExcIEEEST4BCommand(
-    @TargetAggregateIdentifier var excIEEEST4BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4366,7 +4366,7 @@ data class CreateExcIEEEST4BCommand(
 )
 
 data class UpdateExcIEEEST4BCommand(
-    @TargetAggregateIdentifier var excIEEEST4BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -4394,7 +4394,7 @@ data class DeleteExcIEEEST4BCommand(@TargetAggregateIdentifier  var excIEEEST4BI
 
 // ExcIEEEST5B Commands
 data class CreateExcIEEEST5BCommand(
-    @TargetAggregateIdentifier var excIEEEST5BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST5BId: UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4415,7 +4415,7 @@ data class CreateExcIEEEST5BCommand(
 )
 
 data class UpdateExcIEEEST5BCommand(
-    @TargetAggregateIdentifier var excIEEEST5BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST5BId: UUID? = null,
     val kc: String,
     val kr: String,
     val t1: String,
@@ -4444,7 +4444,7 @@ data class DeleteExcIEEEST5BCommand(@TargetAggregateIdentifier  var excIEEEST5BI
 
 // ExcIEEEST6B Commands
 data class CreateExcIEEEST6BCommand(
-    @TargetAggregateIdentifier var excIEEEST6BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST6BId: UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4462,7 +4462,7 @@ data class CreateExcIEEEST6BCommand(
 )
 
 data class UpdateExcIEEEST6BCommand(
-    @TargetAggregateIdentifier var excIEEEST6BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST6BId: UUID? = null,
     val ilr: String,
     val kci: String,
     val kff: String,
@@ -4488,7 +4488,7 @@ data class DeleteExcIEEEST6BCommand(@TargetAggregateIdentifier  var excIEEEST6BI
 
 // ExcIEEEST7B Commands
 data class CreateExcIEEEST7BCommand(
-    @TargetAggregateIdentifier var excIEEEST7BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4507,7 +4507,7 @@ data class CreateExcIEEEST7BCommand(
 )
 
 data class UpdateExcIEEEST7BCommand(
-    @TargetAggregateIdentifier var excIEEEST7BId: UUID? = null,
+    @TargetAggregateIdentifier val excIEEEST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -4534,7 +4534,7 @@ data class DeleteExcIEEEST7BCommand(@TargetAggregateIdentifier  var excIEEEST7BI
 
 // ExcOEX3T Commands
 data class CreateExcOEX3TCommand(
-    @TargetAggregateIdentifier var excOEX3TId: UUID? = null,
+    @TargetAggregateIdentifier val excOEX3TId: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4557,7 +4557,7 @@ data class CreateExcOEX3TCommand(
 )
 
 data class UpdateExcOEX3TCommand(
-    @TargetAggregateIdentifier var excOEX3TId: UUID? = null,
+    @TargetAggregateIdentifier val excOEX3TId: UUID? = null,
     val e1: String,
     val e2: String,
     val ka: String,
@@ -4588,7 +4588,7 @@ data class DeleteExcOEX3TCommand(@TargetAggregateIdentifier  var excOEX3TId: UUI
 
 // ExcPIC Commands
 data class CreateExcPICCommand(
-    @TargetAggregateIdentifier var excPICId: UUID? = null,
+    @TargetAggregateIdentifier val excPICId: UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4615,7 +4615,7 @@ data class CreateExcPICCommand(
 )
 
 data class UpdateExcPICCommand(
-    @TargetAggregateIdentifier var excPICId: UUID? = null,
+    @TargetAggregateIdentifier val excPICId: UUID? = null,
     val e1: String,
     val e2: String,
     val efdmax: String,
@@ -4650,7 +4650,7 @@ data class DeleteExcPICCommand(@TargetAggregateIdentifier  var excPICId: UUID? =
 
 // ExcREXS Commands
 data class CreateExcREXSCommand(
-    @TargetAggregateIdentifier var excREXSId: UUID? = null,
+    @TargetAggregateIdentifier val excREXSId: UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4690,7 +4690,7 @@ data class CreateExcREXSCommand(
 )
 
 data class UpdateExcREXSCommand(
-    @TargetAggregateIdentifier var excREXSId: UUID? = null,
+    @TargetAggregateIdentifier val excREXSId: UUID? = null,
     val e1: String,
     val e2: String,
     val fbf: String,
@@ -4738,7 +4738,7 @@ data class DeleteExcREXSCommand(@TargetAggregateIdentifier  var excREXSId: UUID?
 
 // ExcSCRX Commands
 data class CreateExcSCRXCommand(
-    @TargetAggregateIdentifier var excSCRXId: UUID? = null,
+    @TargetAggregateIdentifier val excSCRXId: UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4750,7 +4750,7 @@ data class CreateExcSCRXCommand(
 )
 
 data class UpdateExcSCRXCommand(
-    @TargetAggregateIdentifier var excSCRXId: UUID? = null,
+    @TargetAggregateIdentifier val excSCRXId: UUID? = null,
     val cswitch: String,
     val emax: String,
     val emin: String,
@@ -4770,7 +4770,7 @@ data class DeleteExcSCRXCommand(@TargetAggregateIdentifier  var excSCRXId: UUID?
 
 // ExcSEXS Commands
 data class CreateExcSEXSCommand(
-    @TargetAggregateIdentifier var excSEXSId: UUID? = null,
+    @TargetAggregateIdentifier val excSEXSId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4784,7 +4784,7 @@ data class CreateExcSEXSCommand(
 )
 
 data class UpdateExcSEXSCommand(
-    @TargetAggregateIdentifier var excSEXSId: UUID? = null,
+    @TargetAggregateIdentifier val excSEXSId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4806,7 +4806,7 @@ data class DeleteExcSEXSCommand(@TargetAggregateIdentifier  var excSEXSId: UUID?
 
 // ExcSK Commands
 data class CreateExcSKCommand(
-    @TargetAggregateIdentifier var excSKId: UUID? = null,
+    @TargetAggregateIdentifier val excSKId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4842,7 +4842,7 @@ data class CreateExcSKCommand(
 )
 
 data class UpdateExcSKCommand(
-    @TargetAggregateIdentifier var excSKId: UUID? = null,
+    @TargetAggregateIdentifier val excSKId: UUID? = null,
     val efdmax: String,
     val efdmin: String,
     val emax: String,
@@ -4886,7 +4886,7 @@ data class DeleteExcSKCommand(@TargetAggregateIdentifier  var excSKId: UUID? = n
 
 // ExcST1A Commands
 data class CreateExcST1ACommand(
-    @TargetAggregateIdentifier var excST1AId: UUID? = null,
+    @TargetAggregateIdentifier val excST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4908,7 +4908,7 @@ data class CreateExcST1ACommand(
 )
 
 data class UpdateExcST1ACommand(
-    @TargetAggregateIdentifier var excST1AId: UUID? = null,
+    @TargetAggregateIdentifier val excST1AId: UUID? = null,
     val ilr: String,
     val ka: String,
     val kc: String,
@@ -4938,7 +4938,7 @@ data class DeleteExcST1ACommand(@TargetAggregateIdentifier  var excST1AId: UUID?
 
 // ExcST2A Commands
 data class CreateExcST2ACommand(
-    @TargetAggregateIdentifier var excST2AId: UUID? = null,
+    @TargetAggregateIdentifier val excST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4957,7 +4957,7 @@ data class CreateExcST2ACommand(
 )
 
 data class UpdateExcST2ACommand(
-    @TargetAggregateIdentifier var excST2AId: UUID? = null,
+    @TargetAggregateIdentifier val excST2AId: UUID? = null,
     val efdmax: String,
     val ka: String,
     val kc: String,
@@ -4984,7 +4984,7 @@ data class DeleteExcST2ACommand(@TargetAggregateIdentifier  var excST2AId: UUID?
 
 // ExcST3A Commands
 data class CreateExcST3ACommand(
-    @TargetAggregateIdentifier var excST3AId: UUID? = null,
+    @TargetAggregateIdentifier val excST3AId: UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5008,7 +5008,7 @@ data class CreateExcST3ACommand(
 )
 
 data class UpdateExcST3ACommand(
-    @TargetAggregateIdentifier var excST3AId: UUID? = null,
+    @TargetAggregateIdentifier val excST3AId: UUID? = null,
     val efdmax: String,
     val kc: String,
     val kg: String,
@@ -5040,7 +5040,7 @@ data class DeleteExcST3ACommand(@TargetAggregateIdentifier  var excST3AId: UUID?
 
 // ExcST4B Commands
 data class CreateExcST4BCommand(
-    @TargetAggregateIdentifier var excST4BId: UUID? = null,
+    @TargetAggregateIdentifier val excST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5063,7 +5063,7 @@ data class CreateExcST4BCommand(
 )
 
 data class UpdateExcST4BCommand(
-    @TargetAggregateIdentifier var excST4BId: UUID? = null,
+    @TargetAggregateIdentifier val excST4BId: UUID? = null,
     val kc: String,
     val kg: String,
     val ki: String,
@@ -5094,7 +5094,7 @@ data class DeleteExcST4BCommand(@TargetAggregateIdentifier  var excST4BId: UUID?
 
 // ExcST6B Commands
 data class CreateExcST6BCommand(
-    @TargetAggregateIdentifier var excST6BId: UUID? = null,
+    @TargetAggregateIdentifier val excST6BId: UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5121,7 +5121,7 @@ data class CreateExcST6BCommand(
 )
 
 data class UpdateExcST6BCommand(
-    @TargetAggregateIdentifier var excST6BId: UUID? = null,
+    @TargetAggregateIdentifier val excST6BId: UUID? = null,
     val ilr: String,
     val k1: String,
     val kcl: String,
@@ -5156,7 +5156,7 @@ data class DeleteExcST6BCommand(@TargetAggregateIdentifier  var excST6BId: UUID?
 
 // ExcST7B Commands
 data class CreateExcST7BCommand(
-    @TargetAggregateIdentifier var excST7BId: UUID? = null,
+    @TargetAggregateIdentifier val excST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5176,7 +5176,7 @@ data class CreateExcST7BCommand(
 )
 
 data class UpdateExcST7BCommand(
-    @TargetAggregateIdentifier var excST7BId: UUID? = null,
+    @TargetAggregateIdentifier val excST7BId: UUID? = null,
     val kh: String,
     val kia: String,
     val kl: String,
@@ -5220,12 +5220,12 @@ data class DeleteExcitationSystemDynamicsCommand(@TargetAggregateIdentifier  var
 
 // ExcitationSystemUserDefined Commands
 data class CreateExcitationSystemUserDefinedCommand(
-    @TargetAggregateIdentifier var excitationSystemUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val excitationSystemUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateExcitationSystemUserDefinedCommand(
-    @TargetAggregateIdentifier var excitationSystemUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val excitationSystemUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -5238,13 +5238,13 @@ data class DeleteExcitationSystemUserDefinedCommand(@TargetAggregateIdentifier  
 
 // ExtensionVersion Commands
 data class CreateExtensionVersionCommand(
-    @TargetAggregateIdentifier var extensionVersionId: UUID? = null,
+    @TargetAggregateIdentifier val extensionVersionId: UUID? = null,
     val date: String,
     val namespaceURI: String
 )
 
 data class UpdateExtensionVersionCommand(
-    @TargetAggregateIdentifier var extensionVersionId: UUID? = null,
+    @TargetAggregateIdentifier val extensionVersionId: UUID? = null,
     val date: String,
     val namespaceURI: String
 )
@@ -5258,7 +5258,7 @@ data class DeleteExtensionVersionCommand(@TargetAggregateIdentifier  var extensi
 
 // ExternalNetworkInjection Commands
 data class CreateExternalNetworkInjectionCommand(
-    @TargetAggregateIdentifier var externalNetworkInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val externalNetworkInjectionId: UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5277,7 +5277,7 @@ data class CreateExternalNetworkInjectionCommand(
 )
 
 data class UpdateExternalNetworkInjectionCommand(
-    @TargetAggregateIdentifier var externalNetworkInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val externalNetworkInjectionId: UUID? = null,
     val governorSCD: String,
     val ikSecond: String,
     val maxInitialSymShCCurrent: String,
@@ -5320,12 +5320,12 @@ data class DeleteFloatProxyCommand(@TargetAggregateIdentifier  var floatProxyId:
 
 // FossilFuel Commands
 data class CreateFossilFuelCommand(
-    @TargetAggregateIdentifier var fossilFuelId: UUID? = null,
+    @TargetAggregateIdentifier val fossilFuelId: UUID? = null,
     val fossilFuelType: String
 )
 
 data class UpdateFossilFuelCommand(
-    @TargetAggregateIdentifier var fossilFuelId: UUID? = null,
+    @TargetAggregateIdentifier val fossilFuelId: UUID? = null,
     val fossilFuelType: String
 )
 
@@ -5338,14 +5338,14 @@ data class DeleteFossilFuelCommand(@TargetAggregateIdentifier  var fossilFuelId:
 
 // Frequency Commands
 data class CreateFrequencyCommand(
-    @TargetAggregateIdentifier var frequencyId: UUID? = null,
+    @TargetAggregateIdentifier val frequencyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateFrequencyCommand(
-    @TargetAggregateIdentifier var frequencyId: UUID? = null,
+    @TargetAggregateIdentifier val frequencyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -5360,13 +5360,13 @@ data class DeleteFrequencyCommand(@TargetAggregateIdentifier  var frequencyId: U
 
 // GenICompensationForGenJ Commands
 data class CreateGenICompensationForGenJCommand(
-    @TargetAggregateIdentifier var genICompensationForGenJId: UUID? = null,
+    @TargetAggregateIdentifier val genICompensationForGenJId: UUID? = null,
     val rcij: String,
     val xcij: String
 )
 
 data class UpdateGenICompensationForGenJCommand(
-    @TargetAggregateIdentifier var genICompensationForGenJId: UUID? = null,
+    @TargetAggregateIdentifier val genICompensationForGenJId: UUID? = null,
     val rcij: String,
     val xcij: String
 )
@@ -5380,7 +5380,7 @@ data class DeleteGenICompensationForGenJCommand(@TargetAggregateIdentifier  var 
 
 // GeneratingUnit Commands
 data class CreateGeneratingUnitCommand(
-    @TargetAggregateIdentifier var generatingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val generatingUnitId: UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5399,7 +5399,7 @@ data class CreateGeneratingUnitCommand(
 )
 
 data class UpdateGeneratingUnitCommand(
-    @TargetAggregateIdentifier var generatingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val generatingUnitId: UUID? = null,
     val genControlSource: String,
     val governorSCD: String,
     val initialP: String,
@@ -5426,7 +5426,7 @@ data class DeleteGeneratingUnitCommand(@TargetAggregateIdentifier  var generatin
 
 // GeographicalLocationVersion Commands
 data class CreateGeographicalLocationVersionCommand(
-    @TargetAggregateIdentifier var geographicalLocationVersionId: UUID? = null,
+    @TargetAggregateIdentifier val geographicalLocationVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5440,7 +5440,7 @@ data class CreateGeographicalLocationVersionCommand(
 )
 
 data class UpdateGeographicalLocationVersionCommand(
-    @TargetAggregateIdentifier var geographicalLocationVersionId: UUID? = null,
+    @TargetAggregateIdentifier val geographicalLocationVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -5478,7 +5478,7 @@ data class DeleteGeographicalRegionCommand(@TargetAggregateIdentifier  var geogr
 
 // GovCT1 Commands
 data class CreateGovCT1Command(
-    @TargetAggregateIdentifier var govCT1Id: UUID? = null,
+    @TargetAggregateIdentifier val govCT1Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5517,7 +5517,7 @@ data class CreateGovCT1Command(
 )
 
 data class UpdateGovCT1Command(
-    @TargetAggregateIdentifier var govCT1Id: UUID? = null,
+    @TargetAggregateIdentifier val govCT1Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5564,7 +5564,7 @@ data class DeleteGovCT1Command(@TargetAggregateIdentifier  var govCT1Id: UUID? =
 
 // GovCT2 Commands
 data class CreateGovCT2Command(
-    @TargetAggregateIdentifier var govCT2Id: UUID? = null,
+    @TargetAggregateIdentifier val govCT2Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5624,7 +5624,7 @@ data class CreateGovCT2Command(
 )
 
 data class UpdateGovCT2Command(
-    @TargetAggregateIdentifier var govCT2Id: UUID? = null,
+    @TargetAggregateIdentifier val govCT2Id: UUID? = null,
     val aset: String,
     val db: String,
     val dm: String,
@@ -5692,7 +5692,7 @@ data class DeleteGovCT2Command(@TargetAggregateIdentifier  var govCT2Id: UUID? =
 
 // GovGAST Commands
 data class CreateGovGASTCommand(
-    @TargetAggregateIdentifier var govGASTId: UUID? = null,
+    @TargetAggregateIdentifier val govGASTId: UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5706,7 +5706,7 @@ data class CreateGovGASTCommand(
 )
 
 data class UpdateGovGASTCommand(
-    @TargetAggregateIdentifier var govGASTId: UUID? = null,
+    @TargetAggregateIdentifier val govGASTId: UUID? = null,
     val at: String,
     val dturb: String,
     val kt: String,
@@ -5728,7 +5728,7 @@ data class DeleteGovGASTCommand(@TargetAggregateIdentifier  var govGASTId: UUID?
 
 // GovGAST1 Commands
 data class CreateGovGAST1Command(
-    @TargetAggregateIdentifier var govGAST1Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST1Id: UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5766,7 +5766,7 @@ data class CreateGovGAST1Command(
 )
 
 data class UpdateGovGAST1Command(
-    @TargetAggregateIdentifier var govGAST1Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST1Id: UUID? = null,
     val a: String,
     val b: String,
     val db1: String,
@@ -5812,7 +5812,7 @@ data class DeleteGovGAST1Command(@TargetAggregateIdentifier  var govGAST1Id: UUI
 
 // GovGAST2 Commands
 data class CreateGovGAST2Command(
-    @TargetAggregateIdentifier var govGAST2Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST2Id: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -5848,7 +5848,7 @@ data class CreateGovGAST2Command(
 )
 
 data class UpdateGovGAST2Command(
-    @TargetAggregateIdentifier var govGAST2Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST2Id: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -5892,7 +5892,7 @@ data class DeleteGovGAST2Command(@TargetAggregateIdentifier  var govGAST2Id: UUI
 
 // GovGAST3 Commands
 data class CreateGovGAST3Command(
-    @TargetAggregateIdentifier var govGAST3Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST3Id: UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -5917,7 +5917,7 @@ data class CreateGovGAST3Command(
 )
 
 data class UpdateGovGAST3Command(
-    @TargetAggregateIdentifier var govGAST3Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST3Id: UUID? = null,
     val bca: String,
     val bp: String,
     val dtc: String,
@@ -5950,7 +5950,7 @@ data class DeleteGovGAST3Command(@TargetAggregateIdentifier  var govGAST3Id: UUI
 
 // GovGAST4 Commands
 data class CreateGovGAST4Command(
-    @TargetAggregateIdentifier var govGAST4Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST4Id: UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -5965,7 +5965,7 @@ data class CreateGovGAST4Command(
 )
 
 data class UpdateGovGAST4Command(
-    @TargetAggregateIdentifier var govGAST4Id: UUID? = null,
+    @TargetAggregateIdentifier val govGAST4Id: UUID? = null,
     val bp: String,
     val ktm: String,
     val mnef: String,
@@ -5988,7 +5988,7 @@ data class DeleteGovGAST4Command(@TargetAggregateIdentifier  var govGAST4Id: UUI
 
 // GovGASTWD Commands
 data class CreateGovGASTWDCommand(
-    @TargetAggregateIdentifier var govGASTWDId: UUID? = null,
+    @TargetAggregateIdentifier val govGASTWDId: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6025,7 +6025,7 @@ data class CreateGovGASTWDCommand(
 )
 
 data class UpdateGovGASTWDCommand(
-    @TargetAggregateIdentifier var govGASTWDId: UUID? = null,
+    @TargetAggregateIdentifier val govGASTWDId: UUID? = null,
     val a: String,
     val af1: String,
     val af2: String,
@@ -6070,7 +6070,7 @@ data class DeleteGovGASTWDCommand(@TargetAggregateIdentifier  var govGASTWDId: U
 
 // GovHydro1 Commands
 data class CreateGovHydro1Command(
-    @TargetAggregateIdentifier var govHydro1Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro1Id: UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6088,7 +6088,7 @@ data class CreateGovHydro1Command(
 )
 
 data class UpdateGovHydro1Command(
-    @TargetAggregateIdentifier var govHydro1Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro1Id: UUID? = null,
     val at: String,
     val dturb: String,
     val gmax: String,
@@ -6114,7 +6114,7 @@ data class DeleteGovHydro1Command(@TargetAggregateIdentifier  var govHydro1Id: U
 
 // GovHydro2 Commands
 data class CreateGovHydro2Command(
-    @TargetAggregateIdentifier var govHydro2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6147,7 +6147,7 @@ data class CreateGovHydro2Command(
 )
 
 data class UpdateGovHydro2Command(
-    @TargetAggregateIdentifier var govHydro2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6188,7 +6188,7 @@ data class DeleteGovHydro2Command(@TargetAggregateIdentifier  var govHydro2Id: U
 
 // GovHydro3 Commands
 data class CreateGovHydro3Command(
-    @TargetAggregateIdentifier var govHydro3Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro3Id: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6228,7 +6228,7 @@ data class CreateGovHydro3Command(
 )
 
 data class UpdateGovHydro3Command(
-    @TargetAggregateIdentifier var govHydro3Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro3Id: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6276,7 +6276,7 @@ data class DeleteGovHydro3Command(@TargetAggregateIdentifier  var govHydro3Id: U
 
 // GovHydro4 Commands
 data class CreateGovHydro4Command(
-    @TargetAggregateIdentifier var govHydro4Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro4Id: UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6318,7 +6318,7 @@ data class CreateGovHydro4Command(
 )
 
 data class UpdateGovHydro4Command(
-    @TargetAggregateIdentifier var govHydro4Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydro4Id: UUID? = null,
     val at: String,
     val bgv0: String,
     val bgv1: String,
@@ -6368,7 +6368,7 @@ data class DeleteGovHydro4Command(@TargetAggregateIdentifier  var govHydro4Id: U
 
 // GovHydroDD Commands
 data class CreateGovHydroDDCommand(
-    @TargetAggregateIdentifier var govHydroDDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroDDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6407,7 +6407,7 @@ data class CreateGovHydroDDCommand(
 )
 
 data class UpdateGovHydroDDCommand(
-    @TargetAggregateIdentifier var govHydroDDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroDDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6454,7 +6454,7 @@ data class DeleteGovHydroDDCommand(@TargetAggregateIdentifier  var govHydroDDId:
 
 // GovHydroFrancis Commands
 data class CreateGovHydroFrancisCommand(
-    @TargetAggregateIdentifier var govHydroFrancisId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroFrancisId: UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6485,7 +6485,7 @@ data class CreateGovHydroFrancisCommand(
 )
 
 data class UpdateGovHydroFrancisCommand(
-    @TargetAggregateIdentifier var govHydroFrancisId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroFrancisId: UUID? = null,
     val am: String,
     val av0: String,
     val av1: String,
@@ -6524,7 +6524,7 @@ data class DeleteGovHydroFrancisCommand(@TargetAggregateIdentifier  var govHydro
 
 // GovHydroIEEE0 Commands
 data class CreateGovHydroIEEE0Command(
-    @TargetAggregateIdentifier var govHydroIEEE0Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE0Id: UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6536,7 +6536,7 @@ data class CreateGovHydroIEEE0Command(
 )
 
 data class UpdateGovHydroIEEE0Command(
-    @TargetAggregateIdentifier var govHydroIEEE0Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE0Id: UUID? = null,
     val k: String,
     val mwbase: String,
     val pmax: String,
@@ -6556,7 +6556,7 @@ data class DeleteGovHydroIEEE0Command(@TargetAggregateIdentifier  var govHydroIE
 
 // GovHydroIEEE2 Commands
 data class CreateGovHydroIEEE2Command(
-    @TargetAggregateIdentifier var govHydroIEEE2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6586,7 +6586,7 @@ data class CreateGovHydroIEEE2Command(
 )
 
 data class UpdateGovHydroIEEE2Command(
-    @TargetAggregateIdentifier var govHydroIEEE2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroIEEE2Id: UUID? = null,
     val aturb: String,
     val bturb: String,
     val gv1: String,
@@ -6624,7 +6624,7 @@ data class DeleteGovHydroIEEE2Command(@TargetAggregateIdentifier  var govHydroIE
 
 // GovHydroPID Commands
 data class CreateGovHydroPIDCommand(
-    @TargetAggregateIdentifier var govHydroPIDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPIDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6661,7 +6661,7 @@ data class CreateGovHydroPIDCommand(
 )
 
 data class UpdateGovHydroPIDCommand(
-    @TargetAggregateIdentifier var govHydroPIDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPIDId: UUID? = null,
     val aturb: String,
     val bturb: String,
     val db1: String,
@@ -6706,7 +6706,7 @@ data class DeleteGovHydroPIDCommand(@TargetAggregateIdentifier  var govHydroPIDI
 
 // GovHydroPID2 Commands
 data class CreateGovHydroPID2Command(
-    @TargetAggregateIdentifier var govHydroPID2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPID2Id: UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6732,7 +6732,7 @@ data class CreateGovHydroPID2Command(
 )
 
 data class UpdateGovHydroPID2Command(
-    @TargetAggregateIdentifier var govHydroPID2Id: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPID2Id: UUID? = null,
     val atw: String,
     val d: String,
     val feedbackSignal: String,
@@ -6766,7 +6766,7 @@ data class DeleteGovHydroPID2Command(@TargetAggregateIdentifier  var govHydroPID
 
 // GovHydroPelton Commands
 data class CreateGovHydroPeltonCommand(
-    @TargetAggregateIdentifier var govHydroPeltonId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPeltonId: UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -6798,7 +6798,7 @@ data class CreateGovHydroPeltonCommand(
 )
 
 data class UpdateGovHydroPeltonCommand(
-    @TargetAggregateIdentifier var govHydroPeltonId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroPeltonId: UUID? = null,
     val av0: String,
     val av1: String,
     val bp: String,
@@ -6838,7 +6838,7 @@ data class DeleteGovHydroPeltonCommand(@TargetAggregateIdentifier  var govHydroP
 
 // GovHydroR Commands
 data class CreateGovHydroRCommand(
-    @TargetAggregateIdentifier var govHydroRId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroRId: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6884,7 +6884,7 @@ data class CreateGovHydroRCommand(
 )
 
 data class UpdateGovHydroRCommand(
-    @TargetAggregateIdentifier var govHydroRId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroRId: UUID? = null,
     val at: String,
     val db1: String,
     val db2: String,
@@ -6938,7 +6938,7 @@ data class DeleteGovHydroRCommand(@TargetAggregateIdentifier  var govHydroRId: U
 
 // GovHydroWEH Commands
 data class CreateGovHydroWEHCommand(
-    @TargetAggregateIdentifier var govHydroWEHId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroWEHId: UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -6993,7 +6993,7 @@ data class CreateGovHydroWEHCommand(
 )
 
 data class UpdateGovHydroWEHCommand(
-    @TargetAggregateIdentifier var govHydroWEHId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroWEHId: UUID? = null,
     val db: String,
     val dicn: String,
     val dpv: String,
@@ -7056,7 +7056,7 @@ data class DeleteGovHydroWEHCommand(@TargetAggregateIdentifier  var govHydroWEHI
 
 // GovHydroWPID Commands
 data class CreateGovHydroWPIDCommand(
-    @TargetAggregateIdentifier var govHydroWPIDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroWPIDId: UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7082,7 +7082,7 @@ data class CreateGovHydroWPIDCommand(
 )
 
 data class UpdateGovHydroWPIDCommand(
-    @TargetAggregateIdentifier var govHydroWPIDId: UUID? = null,
+    @TargetAggregateIdentifier val govHydroWPIDId: UUID? = null,
     val d: String,
     val gatmax: String,
     val gatmin: String,
@@ -7116,7 +7116,7 @@ data class DeleteGovHydroWPIDCommand(@TargetAggregateIdentifier  var govHydroWPI
 
 // GovSteam0 Commands
 data class CreateGovSteam0Command(
-    @TargetAggregateIdentifier var govSteam0Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam0Id: UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7128,7 +7128,7 @@ data class CreateGovSteam0Command(
 )
 
 data class UpdateGovSteam0Command(
-    @TargetAggregateIdentifier var govSteam0Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam0Id: UUID? = null,
     val dt: String,
     val mwbase: String,
     val r: String,
@@ -7148,7 +7148,7 @@ data class DeleteGovSteam0Command(@TargetAggregateIdentifier  var govSteam0Id: U
 
 // GovSteam1 Commands
 data class CreateGovSteam1Command(
-    @TargetAggregateIdentifier var govSteam1Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam1Id: UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7191,7 +7191,7 @@ data class CreateGovSteam1Command(
 )
 
 data class UpdateGovSteam1Command(
-    @TargetAggregateIdentifier var govSteam1Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam1Id: UUID? = null,
     val db1: String,
     val db2: String,
     val eps: String,
@@ -7242,7 +7242,7 @@ data class DeleteGovSteam1Command(@TargetAggregateIdentifier  var govSteam1Id: U
 
 // GovSteam2 Commands
 data class CreateGovSteam2Command(
-    @TargetAggregateIdentifier var govSteam2Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam2Id: UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7254,7 +7254,7 @@ data class CreateGovSteam2Command(
 )
 
 data class UpdateGovSteam2Command(
-    @TargetAggregateIdentifier var govSteam2Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteam2Id: UUID? = null,
     val dbf: String,
     val k: String,
     val mnef: String,
@@ -7274,7 +7274,7 @@ data class DeleteGovSteam2Command(@TargetAggregateIdentifier  var govSteam2Id: U
 
 // GovSteamCC Commands
 data class CreateGovSteamCCCommand(
-    @TargetAggregateIdentifier var govSteamCCId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamCCId: UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7295,7 +7295,7 @@ data class CreateGovSteamCCCommand(
 )
 
 data class UpdateGovSteamCCCommand(
-    @TargetAggregateIdentifier var govSteamCCId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamCCId: UUID? = null,
     val dhp: String,
     val dlp: String,
     val fhp: String,
@@ -7324,7 +7324,7 @@ data class DeleteGovSteamCCCommand(@TargetAggregateIdentifier  var govSteamCCId:
 
 // GovSteamEU Commands
 data class CreateGovSteamEUCommand(
-    @TargetAggregateIdentifier var govSteamEUId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamEUId: UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7363,7 +7363,7 @@ data class CreateGovSteamEUCommand(
 )
 
 data class UpdateGovSteamEUCommand(
-    @TargetAggregateIdentifier var govSteamEUId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamEUId: UUID? = null,
     val chc: String,
     val cho: String,
     val cic: String,
@@ -7410,7 +7410,7 @@ data class DeleteGovSteamEUCommand(@TargetAggregateIdentifier  var govSteamEUId:
 
 // GovSteamFV2 Commands
 data class CreateGovSteamFV2Command(
-    @TargetAggregateIdentifier var govSteamFV2Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV2Id: UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7427,7 +7427,7 @@ data class CreateGovSteamFV2Command(
 )
 
 data class UpdateGovSteamFV2Command(
-    @TargetAggregateIdentifier var govSteamFV2Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV2Id: UUID? = null,
     val dt: String,
     val k: String,
     val mwbase: String,
@@ -7452,7 +7452,7 @@ data class DeleteGovSteamFV2Command(@TargetAggregateIdentifier  var govSteamFV2I
 
 // GovSteamFV3 Commands
 data class CreateGovSteamFV3Command(
-    @TargetAggregateIdentifier var govSteamFV3Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV3Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7475,7 +7475,7 @@ data class CreateGovSteamFV3Command(
 )
 
 data class UpdateGovSteamFV3Command(
-    @TargetAggregateIdentifier var govSteamFV3Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV3Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7506,7 +7506,7 @@ data class DeleteGovSteamFV3Command(@TargetAggregateIdentifier  var govSteamFV3I
 
 // GovSteamFV4 Commands
 data class CreateGovSteamFV4Command(
-    @TargetAggregateIdentifier var govSteamFV4Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV4Id: UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7561,7 +7561,7 @@ data class CreateGovSteamFV4Command(
 )
 
 data class UpdateGovSteamFV4Command(
-    @TargetAggregateIdentifier var govSteamFV4Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamFV4Id: UUID? = null,
     val cpsmn: String,
     val cpsmx: String,
     val crmn: String,
@@ -7624,7 +7624,7 @@ data class DeleteGovSteamFV4Command(@TargetAggregateIdentifier  var govSteamFV4I
 
 // GovSteamIEEE1 Commands
 data class CreateGovSteamIEEE1Command(
-    @TargetAggregateIdentifier var govSteamIEEE1Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamIEEE1Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7649,7 +7649,7 @@ data class CreateGovSteamIEEE1Command(
 )
 
 data class UpdateGovSteamIEEE1Command(
-    @TargetAggregateIdentifier var govSteamIEEE1Id: UUID? = null,
+    @TargetAggregateIdentifier val govSteamIEEE1Id: UUID? = null,
     val k: String,
     val k1: String,
     val k2: String,
@@ -7682,7 +7682,7 @@ data class DeleteGovSteamIEEE1Command(@TargetAggregateIdentifier  var govSteamIE
 
 // GovSteamSGO Commands
 data class CreateGovSteamSGOCommand(
-    @TargetAggregateIdentifier var govSteamSGOId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamSGOId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7698,7 +7698,7 @@ data class CreateGovSteamSGOCommand(
 )
 
 data class UpdateGovSteamSGOCommand(
-    @TargetAggregateIdentifier var govSteamSGOId: UUID? = null,
+    @TargetAggregateIdentifier val govSteamSGOId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -7770,12 +7770,12 @@ data class DeleteGroundDisconnectorCommand(@TargetAggregateIdentifier  var groun
 
 // GroundingImpedance Commands
 data class CreateGroundingImpedanceCommand(
-    @TargetAggregateIdentifier var groundingImpedanceId: UUID? = null,
+    @TargetAggregateIdentifier val groundingImpedanceId: UUID? = null,
     val x: String
 )
 
 data class UpdateGroundingImpedanceCommand(
-    @TargetAggregateIdentifier var groundingImpedanceId: UUID? = null,
+    @TargetAggregateIdentifier val groundingImpedanceId: UUID? = null,
     val x: String
 )
 
@@ -7788,12 +7788,12 @@ data class DeleteGroundingImpedanceCommand(@TargetAggregateIdentifier  var groun
 
 // HydroGeneratingUnit Commands
 data class CreateHydroGeneratingUnitCommand(
-    @TargetAggregateIdentifier var hydroGeneratingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val hydroGeneratingUnitId: UUID? = null,
     val energyConversionCapability: String
 )
 
 data class UpdateHydroGeneratingUnitCommand(
-    @TargetAggregateIdentifier var hydroGeneratingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val hydroGeneratingUnitId: UUID? = null,
     val energyConversionCapability: String
 )
 
@@ -7806,12 +7806,12 @@ data class DeleteHydroGeneratingUnitCommand(@TargetAggregateIdentifier  var hydr
 
 // HydroPowerPlant Commands
 data class CreateHydroPowerPlantCommand(
-    @TargetAggregateIdentifier var hydroPowerPlantId: UUID? = null,
+    @TargetAggregateIdentifier val hydroPowerPlantId: UUID? = null,
     val hydroPlantStorageType: String
 )
 
 data class UpdateHydroPowerPlantCommand(
-    @TargetAggregateIdentifier var hydroPowerPlantId: UUID? = null,
+    @TargetAggregateIdentifier val hydroPowerPlantId: UUID? = null,
     val hydroPlantStorageType: String
 )
 
@@ -7840,7 +7840,7 @@ data class DeleteHydroPumpCommand(@TargetAggregateIdentifier  var hydroPumpId: U
 
 // IdentifiedObject Commands
 data class CreateIdentifiedObjectCommand(
-    @TargetAggregateIdentifier var identifiedObjectId: UUID? = null,
+    @TargetAggregateIdentifier val identifiedObjectId: UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -7849,7 +7849,7 @@ data class CreateIdentifiedObjectCommand(
 )
 
 data class UpdateIdentifiedObjectCommand(
-    @TargetAggregateIdentifier var identifiedObjectId: UUID? = null,
+    @TargetAggregateIdentifier val identifiedObjectId: UUID? = null,
     val description: String,
     val energyIdentCodeEic: String,
     val mRID: String,
@@ -7866,14 +7866,14 @@ data class DeleteIdentifiedObjectCommand(@TargetAggregateIdentifier  var identif
 
 // Inductance Commands
 data class CreateInductanceCommand(
-    @TargetAggregateIdentifier var inductanceId: UUID? = null,
+    @TargetAggregateIdentifier val inductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateInductanceCommand(
-    @TargetAggregateIdentifier var inductanceId: UUID? = null,
+    @TargetAggregateIdentifier val inductanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -7888,7 +7888,7 @@ data class DeleteInductanceCommand(@TargetAggregateIdentifier  var inductanceId:
 
 // InductancePerLength Commands
 data class CreateInductancePerLengthCommand(
-    @TargetAggregateIdentifier var inductancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val inductancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -7897,7 +7897,7 @@ data class CreateInductancePerLengthCommand(
 )
 
 data class UpdateInductancePerLengthCommand(
-    @TargetAggregateIdentifier var inductancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val inductancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -7946,14 +7946,14 @@ data class DeleteJunctionCommand(@TargetAggregateIdentifier  var junctionId: UUI
 
 // Length Commands
 data class CreateLengthCommand(
-    @TargetAggregateIdentifier var lengthId: UUID? = null,
+    @TargetAggregateIdentifier val lengthId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateLengthCommand(
-    @TargetAggregateIdentifier var lengthId: UUID? = null,
+    @TargetAggregateIdentifier val lengthId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -7984,12 +7984,12 @@ data class DeleteLimitCommand(@TargetAggregateIdentifier  var limitId: UUID? = n
 
 // LimitSet Commands
 data class CreateLimitSetCommand(
-    @TargetAggregateIdentifier var limitSetId: UUID? = null,
+    @TargetAggregateIdentifier val limitSetId: UUID? = null,
     val isPercentageLimits: String
 )
 
 data class UpdateLimitSetCommand(
-    @TargetAggregateIdentifier var limitSetId: UUID? = null,
+    @TargetAggregateIdentifier val limitSetId: UUID? = null,
     val isPercentageLimits: String
 )
 
@@ -8018,7 +8018,7 @@ data class DeleteLineCommand(@TargetAggregateIdentifier  var lineId: UUID? = nul
 
 // LinearShuntCompensator Commands
 data class CreateLinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier var linearShuntCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val linearShuntCompensatorId: UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
@@ -8026,7 +8026,7 @@ data class CreateLinearShuntCompensatorCommand(
 )
 
 data class UpdateLinearShuntCompensatorCommand(
-    @TargetAggregateIdentifier var linearShuntCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val linearShuntCompensatorId: UUID? = null,
     val b0PerSection: String,
     val bPerSection: String,
     val g0PerSection: String,
@@ -8090,7 +8090,7 @@ data class DeleteLoadBreakSwitchCommand(@TargetAggregateIdentifier  var loadBrea
 
 // LoadComposite Commands
 data class CreateLoadCompositeCommand(
-    @TargetAggregateIdentifier var loadCompositeId: UUID? = null,
+    @TargetAggregateIdentifier val loadCompositeId: UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8105,7 +8105,7 @@ data class CreateLoadCompositeCommand(
 )
 
 data class UpdateLoadCompositeCommand(
-    @TargetAggregateIdentifier var loadCompositeId: UUID? = null,
+    @TargetAggregateIdentifier val loadCompositeId: UUID? = null,
     val epfd: String,
     val epfs: String,
     val epvd: String,
@@ -8144,7 +8144,7 @@ data class DeleteLoadDynamicsCommand(@TargetAggregateIdentifier  var loadDynamic
 
 // LoadGenericNonLinear Commands
 data class CreateLoadGenericNonLinearCommand(
-    @TargetAggregateIdentifier var loadGenericNonLinearId: UUID? = null,
+    @TargetAggregateIdentifier val loadGenericNonLinearId: UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8157,7 +8157,7 @@ data class CreateLoadGenericNonLinearCommand(
 )
 
 data class UpdateLoadGenericNonLinearCommand(
-    @TargetAggregateIdentifier var loadGenericNonLinearId: UUID? = null,
+    @TargetAggregateIdentifier val loadGenericNonLinearId: UUID? = null,
     val bs: String,
     val bt: String,
     val genericNonLinearLoadModelType: String,
@@ -8194,7 +8194,7 @@ data class DeleteLoadGroupCommand(@TargetAggregateIdentifier  var loadGroupId: U
 
 // LoadMotor Commands
 data class CreateLoadMotorCommand(
-    @TargetAggregateIdentifier var loadMotorId: UUID? = null,
+    @TargetAggregateIdentifier val loadMotorId: UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8211,7 +8211,7 @@ data class CreateLoadMotorCommand(
 )
 
 data class UpdateLoadMotorCommand(
-    @TargetAggregateIdentifier var loadMotorId: UUID? = null,
+    @TargetAggregateIdentifier val loadMotorId: UUID? = null,
     val d: String,
     val h: String,
     val lfac: String,
@@ -8236,7 +8236,7 @@ data class DeleteLoadMotorCommand(@TargetAggregateIdentifier  var loadMotorId: U
 
 // LoadResponseCharacteristic Commands
 data class CreateLoadResponseCharacteristicCommand(
-    @TargetAggregateIdentifier var loadResponseCharacteristicId: UUID? = null,
+    @TargetAggregateIdentifier val loadResponseCharacteristicId: UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8251,7 +8251,7 @@ data class CreateLoadResponseCharacteristicCommand(
 )
 
 data class UpdateLoadResponseCharacteristicCommand(
-    @TargetAggregateIdentifier var loadResponseCharacteristicId: UUID? = null,
+    @TargetAggregateIdentifier val loadResponseCharacteristicId: UUID? = null,
     val exponentModel: String,
     val pConstantCurrent: String,
     val pConstantImpedance: String,
@@ -8274,7 +8274,7 @@ data class DeleteLoadResponseCharacteristicCommand(@TargetAggregateIdentifier  v
 
 // LoadStatic Commands
 data class CreateLoadStaticCommand(
-    @TargetAggregateIdentifier var loadStaticId: UUID? = null,
+    @TargetAggregateIdentifier val loadStaticId: UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8295,7 +8295,7 @@ data class CreateLoadStaticCommand(
 )
 
 data class UpdateLoadStaticCommand(
-    @TargetAggregateIdentifier var loadStaticId: UUID? = null,
+    @TargetAggregateIdentifier val loadStaticId: UUID? = null,
     val ep1: String,
     val ep2: String,
     val ep3: String,
@@ -8324,12 +8324,12 @@ data class DeleteLoadStaticCommand(@TargetAggregateIdentifier  var loadStaticId:
 
 // LoadUserDefined Commands
 data class CreateLoadUserDefinedCommand(
-    @TargetAggregateIdentifier var loadUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val loadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateLoadUserDefinedCommand(
-    @TargetAggregateIdentifier var loadUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val loadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -8358,7 +8358,7 @@ data class DeleteLocationCommand(@TargetAggregateIdentifier  var locationId: UUI
 
 // Measurement Commands
 data class CreateMeasurementCommand(
-    @TargetAggregateIdentifier var measurementId: UUID? = null,
+    @TargetAggregateIdentifier val measurementId: UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
@@ -8366,7 +8366,7 @@ data class CreateMeasurementCommand(
 )
 
 data class UpdateMeasurementCommand(
-    @TargetAggregateIdentifier var measurementId: UUID? = null,
+    @TargetAggregateIdentifier val measurementId: UUID? = null,
     val measurementType: String,
     val phases: String,
     val unitMultiplier: String,
@@ -8382,13 +8382,13 @@ data class DeleteMeasurementCommand(@TargetAggregateIdentifier  var measurementI
 
 // MeasurementValue Commands
 data class CreateMeasurementValueCommand(
-    @TargetAggregateIdentifier var measurementValueId: UUID? = null,
+    @TargetAggregateIdentifier val measurementValueId: UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
 
 data class UpdateMeasurementValueCommand(
-    @TargetAggregateIdentifier var measurementValueId: UUID? = null,
+    @TargetAggregateIdentifier val measurementValueId: UUID? = null,
     val sensorAccuracy: String,
     val timeStamp: String
 )
@@ -8434,7 +8434,7 @@ data class DeleteMeasurementValueSourceCommand(@TargetAggregateIdentifier  var m
 
 // MechLoad1 Commands
 data class CreateMechLoad1Command(
-    @TargetAggregateIdentifier var mechLoad1Id: UUID? = null,
+    @TargetAggregateIdentifier val mechLoad1Id: UUID? = null,
     val a: String,
     val b: String,
     val d: String,
@@ -8442,7 +8442,7 @@ data class CreateMechLoad1Command(
 )
 
 data class UpdateMechLoad1Command(
-    @TargetAggregateIdentifier var mechLoad1Id: UUID? = null,
+    @TargetAggregateIdentifier val mechLoad1Id: UUID? = null,
     val a: String,
     val b: String,
     val d: String,
@@ -8474,12 +8474,12 @@ data class DeleteMechanicalLoadDynamicsCommand(@TargetAggregateIdentifier  var m
 
 // MechanicalLoadUserDefined Commands
 data class CreateMechanicalLoadUserDefinedCommand(
-    @TargetAggregateIdentifier var mechanicalLoadUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateMechanicalLoadUserDefinedCommand(
-    @TargetAggregateIdentifier var mechanicalLoadUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val mechanicalLoadUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -8492,14 +8492,14 @@ data class DeleteMechanicalLoadUserDefinedCommand(@TargetAggregateIdentifier  va
 
 // Money Commands
 data class CreateMoneyCommand(
-    @TargetAggregateIdentifier var moneyId: UUID? = null,
+    @TargetAggregateIdentifier val moneyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateMoneyCommand(
-    @TargetAggregateIdentifier var moneyId: UUID? = null,
+    @TargetAggregateIdentifier val moneyId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -8530,13 +8530,13 @@ data class DeleteMonthDayCommand(@TargetAggregateIdentifier  var monthDayId: UUI
 
 // MonthDayInterval Commands
 data class CreateMonthDayIntervalCommand(
-    @TargetAggregateIdentifier var monthDayIntervalId: UUID? = null,
+    @TargetAggregateIdentifier val monthDayIntervalId: UUID? = null,
     val end: String,
     val start: String
 )
 
 data class UpdateMonthDayIntervalCommand(
-    @TargetAggregateIdentifier var monthDayIntervalId: UUID? = null,
+    @TargetAggregateIdentifier val monthDayIntervalId: UUID? = null,
     val end: String,
     val start: String
 )
@@ -8550,7 +8550,7 @@ data class DeleteMonthDayIntervalCommand(@TargetAggregateIdentifier  var monthDa
 
 // MutualCoupling Commands
 data class CreateMutualCouplingCommand(
-    @TargetAggregateIdentifier var mutualCouplingId: UUID? = null,
+    @TargetAggregateIdentifier val mutualCouplingId: UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8562,7 +8562,7 @@ data class CreateMutualCouplingCommand(
 )
 
 data class UpdateMutualCouplingCommand(
-    @TargetAggregateIdentifier var mutualCouplingId: UUID? = null,
+    @TargetAggregateIdentifier val mutualCouplingId: UUID? = null,
     val b0ch: String,
     val distance11: String,
     val distance12: String,
@@ -8646,7 +8646,7 @@ data class DeleteNonlinearShuntCompensatorCommand(@TargetAggregateIdentifier  va
 
 // NonlinearShuntCompensatorPoint Commands
 data class CreateNonlinearShuntCompensatorPointCommand(
-    @TargetAggregateIdentifier var nonlinearShuntCompensatorPointId: UUID? = null,
+    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8655,7 +8655,7 @@ data class CreateNonlinearShuntCompensatorPointCommand(
 )
 
 data class UpdateNonlinearShuntCompensatorPointCommand(
-    @TargetAggregateIdentifier var nonlinearShuntCompensatorPointId: UUID? = null,
+    @TargetAggregateIdentifier val nonlinearShuntCompensatorPointId: UUID? = null,
     val b: String,
     val b0: String,
     val g: String,
@@ -8720,14 +8720,14 @@ data class DeleteOperationalLimitSetCommand(@TargetAggregateIdentifier  var oper
 
 // OperationalLimitType Commands
 data class CreateOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier var operationalLimitTypeId: UUID? = null,
+    @TargetAggregateIdentifier val operationalLimitTypeId: UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
 )
 
 data class UpdateOperationalLimitTypeCommand(
-    @TargetAggregateIdentifier var operationalLimitTypeId: UUID? = null,
+    @TargetAggregateIdentifier val operationalLimitTypeId: UUID? = null,
     val acceptableDuration: String,
     val direction: String,
     val limitType: String
@@ -8742,7 +8742,7 @@ data class DeleteOperationalLimitTypeCommand(@TargetAggregateIdentifier  var ope
 
 // OverexcLim2 Commands
 data class CreateOverexcLim2Command(
-    @TargetAggregateIdentifier var overexcLim2Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLim2Id: UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
@@ -8750,7 +8750,7 @@ data class CreateOverexcLim2Command(
 )
 
 data class UpdateOverexcLim2Command(
-    @TargetAggregateIdentifier var overexcLim2Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLim2Id: UUID? = null,
     val ifdlim: String,
     val koi: String,
     val voimax: String,
@@ -8766,7 +8766,7 @@ data class DeleteOverexcLim2Command(@TargetAggregateIdentifier  var overexcLim2I
 
 // OverexcLimIEEE Commands
 data class CreateOverexcLimIEEECommand(
-    @TargetAggregateIdentifier var overexcLimIEEEId: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimIEEEId: UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -8776,7 +8776,7 @@ data class CreateOverexcLimIEEECommand(
 )
 
 data class UpdateOverexcLimIEEECommand(
-    @TargetAggregateIdentifier var overexcLimIEEEId: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimIEEEId: UUID? = null,
     val hyst: String,
     val ifdlim: String,
     val ifdmax: String,
@@ -8794,7 +8794,7 @@ data class DeleteOverexcLimIEEECommand(@TargetAggregateIdentifier  var overexcLi
 
 // OverexcLimX1 Commands
 data class CreateOverexcLimX1Command(
-    @TargetAggregateIdentifier var overexcLimX1Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX1Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8808,7 +8808,7 @@ data class CreateOverexcLimX1Command(
 )
 
 data class UpdateOverexcLimX1Command(
-    @TargetAggregateIdentifier var overexcLimX1Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX1Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8830,7 +8830,7 @@ data class DeleteOverexcLimX1Command(@TargetAggregateIdentifier  var overexcLimX
 
 // OverexcLimX2 Commands
 data class CreateOverexcLimX2Command(
-    @TargetAggregateIdentifier var overexcLimX2Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX2Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8845,7 +8845,7 @@ data class CreateOverexcLimX2Command(
 )
 
 data class UpdateOverexcLimX2Command(
-    @TargetAggregateIdentifier var overexcLimX2Id: UUID? = null,
+    @TargetAggregateIdentifier val overexcLimX2Id: UUID? = null,
     val efd1: String,
     val efd2: String,
     val efd3: String,
@@ -8884,12 +8884,12 @@ data class DeleteOverexcitationLimiterDynamicsCommand(@TargetAggregateIdentifier
 
 // OverexcitationLimiterUserDefined Commands
 data class CreateOverexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier var overexcitationLimiterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateOverexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier var overexcitationLimiterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val overexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -8918,12 +8918,12 @@ data class DeletePFVArControllerType1DynamicsCommand(@TargetAggregateIdentifier 
 
 // PFVArControllerType1UserDefined Commands
 data class CreatePFVArControllerType1UserDefinedCommand(
-    @TargetAggregateIdentifier var pFVArControllerType1UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArControllerType1UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFVArControllerType1UserDefinedCommand(
-    @TargetAggregateIdentifier var pFVArControllerType1UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArControllerType1UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -8952,12 +8952,12 @@ data class DeletePFVArControllerType2DynamicsCommand(@TargetAggregateIdentifier 
 
 // PFVArControllerType2UserDefined Commands
 data class CreatePFVArControllerType2UserDefinedCommand(
-    @TargetAggregateIdentifier var pFVArControllerType2UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArControllerType2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePFVArControllerType2UserDefinedCommand(
-    @TargetAggregateIdentifier var pFVArControllerType2UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArControllerType2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -8970,7 +8970,7 @@ data class DeletePFVArControllerType2UserDefinedCommand(@TargetAggregateIdentifi
 
 // PFVArType1IEEEPFController Commands
 data class CreatePFVArType1IEEEPFControllerCommand(
-    @TargetAggregateIdentifier var pFVArType1IEEEPFControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType1IEEEPFControllerId: UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -8982,7 +8982,7 @@ data class CreatePFVArType1IEEEPFControllerCommand(
 )
 
 data class UpdatePFVArType1IEEEPFControllerCommand(
-    @TargetAggregateIdentifier var pFVArType1IEEEPFControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType1IEEEPFControllerId: UUID? = null,
     val ovex: String,
     val tpfc: String,
     val vitmin: String,
@@ -9002,7 +9002,7 @@ data class DeletePFVArType1IEEEPFControllerCommand(@TargetAggregateIdentifier  v
 
 // PFVArType1IEEEVArController Commands
 data class CreatePFVArType1IEEEVArControllerCommand(
-    @TargetAggregateIdentifier var pFVArType1IEEEVArControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType1IEEEVArControllerId: UUID? = null,
     val tvarc: String,
     val vvar: String,
     val vvarcbw: String,
@@ -9012,7 +9012,7 @@ data class CreatePFVArType1IEEEVArControllerCommand(
 )
 
 data class UpdatePFVArType1IEEEVArControllerCommand(
-    @TargetAggregateIdentifier var pFVArType1IEEEVArControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType1IEEEVArControllerId: UUID? = null,
     val tvarc: String,
     val vvar: String,
     val vvarcbw: String,
@@ -9030,7 +9030,7 @@ data class DeletePFVArType1IEEEVArControllerCommand(@TargetAggregateIdentifier  
 
 // PFVArType2Common1 Commands
 data class CreatePFVArType2Common1Command(
-    @TargetAggregateIdentifier var pFVArType2Common1Id: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2Common1Id: UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9039,7 +9039,7 @@ data class CreatePFVArType2Common1Command(
 )
 
 data class UpdatePFVArType2Common1Command(
-    @TargetAggregateIdentifier var pFVArType2Common1Id: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2Common1Id: UUID? = null,
     val j: String,
     val ki: String,
     val kp: String,
@@ -9056,7 +9056,7 @@ data class DeletePFVArType2Common1Command(@TargetAggregateIdentifier  var pFVArT
 
 // PFVArType2IEEEPFController Commands
 data class CreatePFVArType2IEEEPFControllerCommand(
-    @TargetAggregateIdentifier var pFVArType2IEEEPFControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2IEEEPFControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9067,7 +9067,7 @@ data class CreatePFVArType2IEEEPFControllerCommand(
 )
 
 data class UpdatePFVArType2IEEEPFControllerCommand(
-    @TargetAggregateIdentifier var pFVArType2IEEEPFControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2IEEEPFControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9086,7 +9086,7 @@ data class DeletePFVArType2IEEEPFControllerCommand(@TargetAggregateIdentifier  v
 
 // PFVArType2IEEEVArController Commands
 data class CreatePFVArType2IEEEVArControllerCommand(
-    @TargetAggregateIdentifier var pFVArType2IEEEVArControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2IEEEVArControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9097,7 +9097,7 @@ data class CreatePFVArType2IEEEVArControllerCommand(
 )
 
 data class UpdatePFVArType2IEEEVArControllerCommand(
-    @TargetAggregateIdentifier var pFVArType2IEEEVArControllerId: UUID? = null,
+    @TargetAggregateIdentifier val pFVArType2IEEEVArControllerId: UUID? = null,
     val exlon: String,
     val ki: String,
     val kp: String,
@@ -9116,14 +9116,14 @@ data class DeletePFVArType2IEEEVArControllerCommand(@TargetAggregateIdentifier  
 
 // PU Commands
 data class CreatePUCommand(
-    @TargetAggregateIdentifier var pUId: UUID? = null,
+    @TargetAggregateIdentifier val pUId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePUCommand(
-    @TargetAggregateIdentifier var pUId: UUID? = null,
+    @TargetAggregateIdentifier val pUId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -9138,14 +9138,14 @@ data class DeletePUCommand(@TargetAggregateIdentifier  var pUId: UUID? = null)
 
 // PerCent Commands
 data class CreatePerCentCommand(
-    @TargetAggregateIdentifier var perCentId: UUID? = null,
+    @TargetAggregateIdentifier val perCentId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdatePerCentCommand(
-    @TargetAggregateIdentifier var perCentId: UUID? = null,
+    @TargetAggregateIdentifier val perCentId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -9160,14 +9160,14 @@ data class DeletePerCentCommand(@TargetAggregateIdentifier  var perCentId: UUID?
 
 // PerLengthDCLineParameter Commands
 data class CreatePerLengthDCLineParameterCommand(
-    @TargetAggregateIdentifier var perLengthDCLineParameterId: UUID? = null,
+    @TargetAggregateIdentifier val perLengthDCLineParameterId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
 )
 
 data class UpdatePerLengthDCLineParameterCommand(
-    @TargetAggregateIdentifier var perLengthDCLineParameterId: UUID? = null,
+    @TargetAggregateIdentifier val perLengthDCLineParameterId: UUID? = null,
     val capacitance: String,
     val inductance: String,
     val resistance: String
@@ -9182,7 +9182,7 @@ data class DeletePerLengthDCLineParameterCommand(@TargetAggregateIdentifier  var
 
 // PetersenCoil Commands
 data class CreatePetersenCoilCommand(
-    @TargetAggregateIdentifier var petersenCoilId: UUID? = null,
+    @TargetAggregateIdentifier val petersenCoilId: UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9193,7 +9193,7 @@ data class CreatePetersenCoilCommand(
 )
 
 data class UpdatePetersenCoilCommand(
-    @TargetAggregateIdentifier var petersenCoilId: UUID? = null,
+    @TargetAggregateIdentifier val petersenCoilId: UUID? = null,
     val mode: String,
     val nominalU: String,
     val offsetCurrent: String,
@@ -9228,12 +9228,12 @@ data class DeletePhaseTapChangerCommand(@TargetAggregateIdentifier  var phaseTap
 
 // PhaseTapChangerAsymmetrical Commands
 data class CreatePhaseTapChangerAsymmetricalCommand(
-    @TargetAggregateIdentifier var phaseTapChangerAsymmetricalId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: UUID? = null,
     val windingConnectionAngle: String
 )
 
 data class UpdatePhaseTapChangerAsymmetricalCommand(
-    @TargetAggregateIdentifier var phaseTapChangerAsymmetricalId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerAsymmetricalId: UUID? = null,
     val windingConnectionAngle: String
 )
 
@@ -9246,14 +9246,14 @@ data class DeletePhaseTapChangerAsymmetricalCommand(@TargetAggregateIdentifier  
 
 // PhaseTapChangerLinear Commands
 data class CreatePhaseTapChangerLinearCommand(
-    @TargetAggregateIdentifier var phaseTapChangerLinearId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerLinearId: UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerLinearCommand(
-    @TargetAggregateIdentifier var phaseTapChangerLinearId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerLinearId: UUID? = null,
     val stepPhaseShiftIncrement: String,
     val xMax: String,
     val xMin: String
@@ -9268,14 +9268,14 @@ data class DeletePhaseTapChangerLinearCommand(@TargetAggregateIdentifier  var ph
 
 // PhaseTapChangerNonLinear Commands
 data class CreatePhaseTapChangerNonLinearCommand(
-    @TargetAggregateIdentifier var phaseTapChangerNonLinearId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
 )
 
 data class UpdatePhaseTapChangerNonLinearCommand(
-    @TargetAggregateIdentifier var phaseTapChangerNonLinearId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerNonLinearId: UUID? = null,
     val voltageStepIncrement: String,
     val xMax: String,
     val xMin: String
@@ -9322,12 +9322,12 @@ data class DeletePhaseTapChangerTableCommand(@TargetAggregateIdentifier  var pha
 
 // PhaseTapChangerTablePoint Commands
 data class CreatePhaseTapChangerTablePointCommand(
-    @TargetAggregateIdentifier var phaseTapChangerTablePointId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerTablePointId: UUID? = null,
     val angle: String
 )
 
 data class UpdatePhaseTapChangerTablePointCommand(
-    @TargetAggregateIdentifier var phaseTapChangerTablePointId: UUID? = null,
+    @TargetAggregateIdentifier val phaseTapChangerTablePointId: UUID? = null,
     val angle: String
 )
 
@@ -9356,7 +9356,7 @@ data class DeletePhaseTapChangerTabularCommand(@TargetAggregateIdentifier  var p
 
 // PositionPoint Commands
 data class CreatePositionPointCommand(
-    @TargetAggregateIdentifier var positionPointId: UUID? = null,
+    @TargetAggregateIdentifier val positionPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -9364,7 +9364,7 @@ data class CreatePositionPointCommand(
 )
 
 data class UpdatePositionPointCommand(
-    @TargetAggregateIdentifier var positionPointId: UUID? = null,
+    @TargetAggregateIdentifier val positionPointId: UUID? = null,
     val sequenceNumber: String,
     val xPosition: String,
     val yPosition: String,
@@ -9412,12 +9412,12 @@ data class DeletePowerSystemStabilizerDynamicsCommand(@TargetAggregateIdentifier
 
 // PowerSystemStabilizerUserDefined Commands
 data class CreatePowerSystemStabilizerUserDefinedCommand(
-    @TargetAggregateIdentifier var powerSystemStabilizerUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdatePowerSystemStabilizerUserDefinedCommand(
-    @TargetAggregateIdentifier var powerSystemStabilizerUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val powerSystemStabilizerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -9430,7 +9430,7 @@ data class DeletePowerSystemStabilizerUserDefinedCommand(@TargetAggregateIdentif
 
 // PowerTransformer Commands
 data class CreatePowerTransformerCommand(
-    @TargetAggregateIdentifier var powerTransformerId: UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerId: UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9440,7 +9440,7 @@ data class CreatePowerTransformerCommand(
 )
 
 data class UpdatePowerTransformerCommand(
-    @TargetAggregateIdentifier var powerTransformerId: UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerId: UUID? = null,
     val beforeShCircuitHighestOperatingCurrent: String,
     val beforeShCircuitHighestOperatingVoltage: String,
     val beforeShortCircuitAnglePf: String,
@@ -9458,7 +9458,7 @@ data class DeletePowerTransformerCommand(@TargetAggregateIdentifier  var powerTr
 
 // PowerTransformerEnd Commands
 data class CreatePowerTransformerEndCommand(
-    @TargetAggregateIdentifier var powerTransformerEndId: UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerEndId: UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9474,7 +9474,7 @@ data class CreatePowerTransformerEndCommand(
 )
 
 data class UpdatePowerTransformerEndCommand(
-    @TargetAggregateIdentifier var powerTransformerEndId: UUID? = null,
+    @TargetAggregateIdentifier val powerTransformerEndId: UUID? = null,
     val b: String,
     val b0: String,
     val connectionKind: String,
@@ -9498,7 +9498,7 @@ data class DeletePowerTransformerEndCommand(@TargetAggregateIdentifier  var powe
 
 // ProprietaryParameterDynamics Commands
 data class CreateProprietaryParameterDynamicsCommand(
-    @TargetAggregateIdentifier var proprietaryParameterDynamicsId: UUID? = null,
+    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
@@ -9506,7 +9506,7 @@ data class CreateProprietaryParameterDynamicsCommand(
 )
 
 data class UpdateProprietaryParameterDynamicsCommand(
-    @TargetAggregateIdentifier var proprietaryParameterDynamicsId: UUID? = null,
+    @TargetAggregateIdentifier val proprietaryParameterDynamicsId: UUID? = null,
     val booleanParameterValue: String,
     val floatParameterValue: String,
     val integerParameterValue: String,
@@ -9538,7 +9538,7 @@ data class DeleteProtectedSwitchCommand(@TargetAggregateIdentifier  var protecte
 
 // Pss1 Commands
 data class CreatePss1Command(
-    @TargetAggregateIdentifier var pss1Id: UUID? = null,
+    @TargetAggregateIdentifier val pss1Id: UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9557,7 +9557,7 @@ data class CreatePss1Command(
 )
 
 data class UpdatePss1Command(
-    @TargetAggregateIdentifier var pss1Id: UUID? = null,
+    @TargetAggregateIdentifier val pss1Id: UUID? = null,
     val kf: String,
     val kpe: String,
     val ks: String,
@@ -9584,7 +9584,7 @@ data class DeletePss1Command(@TargetAggregateIdentifier  var pss1Id: UUID? = nul
 
 // Pss1A Commands
 data class CreatePss1ACommand(
-    @TargetAggregateIdentifier var pss1AId: UUID? = null,
+    @TargetAggregateIdentifier val pss1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9610,7 +9610,7 @@ data class CreatePss1ACommand(
 )
 
 data class UpdatePss1ACommand(
-    @TargetAggregateIdentifier var pss1AId: UUID? = null,
+    @TargetAggregateIdentifier val pss1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9644,7 +9644,7 @@ data class DeletePss1ACommand(@TargetAggregateIdentifier  var pss1AId: UUID? = n
 
 // Pss2B Commands
 data class CreatePss2BCommand(
-    @TargetAggregateIdentifier var pss2BId: UUID? = null,
+    @TargetAggregateIdentifier val pss2BId: UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -9679,7 +9679,7 @@ data class CreatePss2BCommand(
 )
 
 data class UpdatePss2BCommand(
-    @TargetAggregateIdentifier var pss2BId: UUID? = null,
+    @TargetAggregateIdentifier val pss2BId: UUID? = null,
     val a: String,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
@@ -9722,7 +9722,7 @@ data class DeletePss2BCommand(@TargetAggregateIdentifier  var pss2BId: UUID? = n
 
 // Pss2ST Commands
 data class CreatePss2STCommand(
-    @TargetAggregateIdentifier var pss2STId: UUID? = null,
+    @TargetAggregateIdentifier val pss2STId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -9744,7 +9744,7 @@ data class CreatePss2STCommand(
 )
 
 data class UpdatePss2STCommand(
-    @TargetAggregateIdentifier var pss2STId: UUID? = null,
+    @TargetAggregateIdentifier val pss2STId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -9774,7 +9774,7 @@ data class DeletePss2STCommand(@TargetAggregateIdentifier  var pss2STId: UUID? =
 
 // Pss5 Commands
 data class CreatePss5Command(
-    @TargetAggregateIdentifier var pss5Id: UUID? = null,
+    @TargetAggregateIdentifier val pss5Id: UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -9795,7 +9795,7 @@ data class CreatePss5Command(
 )
 
 data class UpdatePss5Command(
-    @TargetAggregateIdentifier var pss5Id: UUID? = null,
+    @TargetAggregateIdentifier val pss5Id: UUID? = null,
     val ctw2: String,
     val deadband: String,
     val isfreq: String,
@@ -9824,7 +9824,7 @@ data class DeletePss5Command(@TargetAggregateIdentifier  var pss5Id: UUID? = nul
 
 // PssELIN2 Commands
 data class CreatePssELIN2Command(
-    @TargetAggregateIdentifier var pssELIN2Id: UUID? = null,
+    @TargetAggregateIdentifier val pssELIN2Id: UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -9839,7 +9839,7 @@ data class CreatePssELIN2Command(
 )
 
 data class UpdatePssELIN2Command(
-    @TargetAggregateIdentifier var pssELIN2Id: UUID? = null,
+    @TargetAggregateIdentifier val pssELIN2Id: UUID? = null,
     val apss: String,
     val ks1: String,
     val ks2: String,
@@ -9862,7 +9862,7 @@ data class DeletePssELIN2Command(@TargetAggregateIdentifier  var pssELIN2Id: UUI
 
 // PssIEEE1A Commands
 data class CreatePssIEEE1ACommand(
-    @TargetAggregateIdentifier var pssIEEE1AId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -9878,7 +9878,7 @@ data class CreatePssIEEE1ACommand(
 )
 
 data class UpdatePssIEEE1ACommand(
-    @TargetAggregateIdentifier var pssIEEE1AId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE1AId: UUID? = null,
     val a1: String,
     val a2: String,
     val inputSignalType: String,
@@ -9902,7 +9902,7 @@ data class DeletePssIEEE1ACommand(@TargetAggregateIdentifier  var pssIEEE1AId: U
 
 // PssIEEE2B Commands
 data class CreatePssIEEE2BCommand(
-    @TargetAggregateIdentifier var pssIEEE2BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE2BId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -9933,7 +9933,7 @@ data class CreatePssIEEE2BCommand(
 )
 
 data class UpdatePssIEEE2BCommand(
-    @TargetAggregateIdentifier var pssIEEE2BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE2BId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val ks1: String,
@@ -9972,7 +9972,7 @@ data class DeletePssIEEE2BCommand(@TargetAggregateIdentifier  var pssIEEE2BId: U
 
 // PssIEEE3B Commands
 data class CreatePssIEEE3BCommand(
-    @TargetAggregateIdentifier var pssIEEE3BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE3BId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -9995,7 +9995,7 @@ data class CreatePssIEEE3BCommand(
 )
 
 data class UpdatePssIEEE3BCommand(
-    @TargetAggregateIdentifier var pssIEEE3BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE3BId: UUID? = null,
     val a1: String,
     val a2: String,
     val a3: String,
@@ -10026,7 +10026,7 @@ data class DeletePssIEEE3BCommand(@TargetAggregateIdentifier  var pssIEEE3BId: U
 
 // PssIEEE4B Commands
 data class CreatePssIEEE4BCommand(
-    @TargetAggregateIdentifier var pssIEEE4BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE4BId: UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10097,7 +10097,7 @@ data class CreatePssIEEE4BCommand(
 )
 
 data class UpdatePssIEEE4BCommand(
-    @TargetAggregateIdentifier var pssIEEE4BId: UUID? = null,
+    @TargetAggregateIdentifier val pssIEEE4BId: UUID? = null,
     val bwh1: String,
     val bwh2: String,
     val bwl1: String,
@@ -10176,7 +10176,7 @@ data class DeletePssIEEE4BCommand(@TargetAggregateIdentifier  var pssIEEE4BId: U
 
 // PssPTIST1 Commands
 data class CreatePssPTIST1Command(
-    @TargetAggregateIdentifier var pssPTIST1Id: UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST1Id: UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10191,7 +10191,7 @@ data class CreatePssPTIST1Command(
 )
 
 data class UpdatePssPTIST1Command(
-    @TargetAggregateIdentifier var pssPTIST1Id: UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST1Id: UUID? = null,
     val dtc: String,
     val dtf: String,
     val dtp: String,
@@ -10214,7 +10214,7 @@ data class DeletePssPTIST1Command(@TargetAggregateIdentifier  var pssPTIST1Id: U
 
 // PssPTIST3 Commands
 data class CreatePssPTIST3Command(
-    @TargetAggregateIdentifier var pssPTIST3Id: UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST3Id: UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10252,7 +10252,7 @@ data class CreatePssPTIST3Command(
 )
 
 data class UpdatePssPTIST3Command(
-    @TargetAggregateIdentifier var pssPTIST3Id: UUID? = null,
+    @TargetAggregateIdentifier val pssPTIST3Id: UUID? = null,
     val a0: String,
     val a1: String,
     val a2: String,
@@ -10298,7 +10298,7 @@ data class DeletePssPTIST3Command(@TargetAggregateIdentifier  var pssPTIST3Id: U
 
 // PssSB4 Commands
 data class CreatePssSB4Command(
-    @TargetAggregateIdentifier var pssSB4Id: UUID? = null,
+    @TargetAggregateIdentifier val pssSB4Id: UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10313,7 +10313,7 @@ data class CreatePssSB4Command(
 )
 
 data class UpdatePssSB4Command(
-    @TargetAggregateIdentifier var pssSB4Id: UUID? = null,
+    @TargetAggregateIdentifier val pssSB4Id: UUID? = null,
     val kx: String,
     val ta: String,
     val tb: String,
@@ -10336,7 +10336,7 @@ data class DeletePssSB4Command(@TargetAggregateIdentifier  var pssSB4Id: UUID? =
 
 // PssSH Commands
 data class CreatePssSHCommand(
-    @TargetAggregateIdentifier var pssSHId: UUID? = null,
+    @TargetAggregateIdentifier val pssSHId: UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10353,7 +10353,7 @@ data class CreatePssSHCommand(
 )
 
 data class UpdatePssSHCommand(
-    @TargetAggregateIdentifier var pssSHId: UUID? = null,
+    @TargetAggregateIdentifier val pssSHId: UUID? = null,
     val k: String,
     val k0: String,
     val k1: String,
@@ -10378,7 +10378,7 @@ data class DeletePssSHCommand(@TargetAggregateIdentifier  var pssSHId: UUID? = n
 
 // PssSK Commands
 data class CreatePssSKCommand(
-    @TargetAggregateIdentifier var pssSKId: UUID? = null,
+    @TargetAggregateIdentifier val pssSKId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10393,7 +10393,7 @@ data class CreatePssSKCommand(
 )
 
 data class UpdatePssSKCommand(
-    @TargetAggregateIdentifier var pssSKId: UUID? = null,
+    @TargetAggregateIdentifier val pssSKId: UUID? = null,
     val k1: String,
     val k2: String,
     val k3: String,
@@ -10416,7 +10416,7 @@ data class DeletePssSKCommand(@TargetAggregateIdentifier  var pssSKId: UUID? = n
 
 // PssWECC Commands
 data class CreatePssWECCCommand(
-    @TargetAggregateIdentifier var pssWECCId: UUID? = null,
+    @TargetAggregateIdentifier val pssWECCId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10438,7 +10438,7 @@ data class CreatePssWECCCommand(
 )
 
 data class UpdatePssWECCCommand(
-    @TargetAggregateIdentifier var pssWECCId: UUID? = null,
+    @TargetAggregateIdentifier val pssWECCId: UUID? = null,
     val inputSignal1Type: String,
     val inputSignal2Type: String,
     val k1: String,
@@ -10468,7 +10468,7 @@ data class DeletePssWECCCommand(@TargetAggregateIdentifier  var pssWECCId: UUID?
 
 // Quality61850 Commands
 data class CreateQuality61850Command(
-    @TargetAggregateIdentifier var quality61850Id: UUID? = null,
+    @TargetAggregateIdentifier val quality61850Id: UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10484,7 +10484,7 @@ data class CreateQuality61850Command(
 )
 
 data class UpdateQuality61850Command(
-    @TargetAggregateIdentifier var quality61850Id: UUID? = null,
+    @TargetAggregateIdentifier val quality61850Id: UUID? = null,
     val badReference: String,
     val estimatorReplaced: String,
     val failure: String,
@@ -10524,13 +10524,13 @@ data class DeleteRaiseLowerCommandCommand(@TargetAggregateIdentifier  var raiseL
 
 // RatioTapChanger Commands
 data class CreateRatioTapChangerCommand(
-    @TargetAggregateIdentifier var ratioTapChangerId: UUID? = null,
+    @TargetAggregateIdentifier val ratioTapChangerId: UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
 
 data class UpdateRatioTapChangerCommand(
-    @TargetAggregateIdentifier var ratioTapChangerId: UUID? = null,
+    @TargetAggregateIdentifier val ratioTapChangerId: UUID? = null,
     val stepVoltageIncrement: String,
     val tculControlMode: String
 )
@@ -10576,14 +10576,14 @@ data class DeleteRatioTapChangerTablePointCommand(@TargetAggregateIdentifier  va
 
 // Reactance Commands
 data class CreateReactanceCommand(
-    @TargetAggregateIdentifier var reactanceId: UUID? = null,
+    @TargetAggregateIdentifier val reactanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactanceCommand(
-    @TargetAggregateIdentifier var reactanceId: UUID? = null,
+    @TargetAggregateIdentifier val reactanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -10614,14 +10614,14 @@ data class DeleteReactiveCapabilityCurveCommand(@TargetAggregateIdentifier  var 
 
 // ReactivePower Commands
 data class CreateReactivePowerCommand(
-    @TargetAggregateIdentifier var reactivePowerId: UUID? = null,
+    @TargetAggregateIdentifier val reactivePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateReactivePowerCommand(
-    @TargetAggregateIdentifier var reactivePowerId: UUID? = null,
+    @TargetAggregateIdentifier val reactivePowerId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -10636,13 +10636,13 @@ data class DeleteReactivePowerCommand(@TargetAggregateIdentifier  var reactivePo
 
 // RegularIntervalSchedule Commands
 data class CreateRegularIntervalScheduleCommand(
-    @TargetAggregateIdentifier var regularIntervalScheduleId: UUID? = null,
+    @TargetAggregateIdentifier val regularIntervalScheduleId: UUID? = null,
     val endTime: String,
     val timeStep: String
 )
 
 data class UpdateRegularIntervalScheduleCommand(
-    @TargetAggregateIdentifier var regularIntervalScheduleId: UUID? = null,
+    @TargetAggregateIdentifier val regularIntervalScheduleId: UUID? = null,
     val endTime: String,
     val timeStep: String
 )
@@ -10656,14 +10656,14 @@ data class DeleteRegularIntervalScheduleCommand(@TargetAggregateIdentifier  var 
 
 // RegularTimePoint Commands
 data class CreateRegularTimePointCommand(
-    @TargetAggregateIdentifier var regularTimePointId: UUID? = null,
+    @TargetAggregateIdentifier val regularTimePointId: UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
 )
 
 data class UpdateRegularTimePointCommand(
-    @TargetAggregateIdentifier var regularTimePointId: UUID? = null,
+    @TargetAggregateIdentifier val regularTimePointId: UUID? = null,
     val sequenceNumber: String,
     val value1: String,
     val value2: String
@@ -10694,12 +10694,12 @@ data class DeleteRegulatingCondEqCommand(@TargetAggregateIdentifier  var regulat
 
 // RegulatingControl Commands
 data class CreateRegulatingControlCommand(
-    @TargetAggregateIdentifier var regulatingControlId: UUID? = null,
+    @TargetAggregateIdentifier val regulatingControlId: UUID? = null,
     val mode: String
 )
 
 data class UpdateRegulatingControlCommand(
-    @TargetAggregateIdentifier var regulatingControlId: UUID? = null,
+    @TargetAggregateIdentifier val regulatingControlId: UUID? = null,
     val mode: String
 )
 
@@ -10728,12 +10728,12 @@ data class DeleteRegulationScheduleCommand(@TargetAggregateIdentifier  var regul
 
 // RemoteInputSignal Commands
 data class CreateRemoteInputSignalCommand(
-    @TargetAggregateIdentifier var remoteInputSignalId: UUID? = null,
+    @TargetAggregateIdentifier val remoteInputSignalId: UUID? = null,
     val remoteSignalType: String
 )
 
 data class UpdateRemoteInputSignalCommand(
-    @TargetAggregateIdentifier var remoteInputSignalId: UUID? = null,
+    @TargetAggregateIdentifier val remoteInputSignalId: UUID? = null,
     val remoteSignalType: String
 )
 
@@ -10762,14 +10762,14 @@ data class DeleteReportingGroupCommand(@TargetAggregateIdentifier  var reporting
 
 // Resistance Commands
 data class CreateResistanceCommand(
-    @TargetAggregateIdentifier var resistanceId: UUID? = null,
+    @TargetAggregateIdentifier val resistanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateResistanceCommand(
-    @TargetAggregateIdentifier var resistanceId: UUID? = null,
+    @TargetAggregateIdentifier val resistanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -10784,7 +10784,7 @@ data class DeleteResistanceCommand(@TargetAggregateIdentifier  var resistanceId:
 
 // ResistancePerLength Commands
 data class CreateResistancePerLengthCommand(
-    @TargetAggregateIdentifier var resistancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val resistancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10793,7 +10793,7 @@ data class CreateResistancePerLengthCommand(
 )
 
 data class UpdateResistancePerLengthCommand(
-    @TargetAggregateIdentifier var resistancePerLengthId: UUID? = null,
+    @TargetAggregateIdentifier val resistancePerLengthId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10810,14 +10810,14 @@ data class DeleteResistancePerLengthCommand(@TargetAggregateIdentifier  var resi
 
 // RotatingMachine Commands
 data class CreateRotatingMachineCommand(
-    @TargetAggregateIdentifier var rotatingMachineId: UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineId: UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
 )
 
 data class UpdateRotatingMachineCommand(
-    @TargetAggregateIdentifier var rotatingMachineId: UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineId: UUID? = null,
     val ratedPowerFactor: String,
     val ratedS: String,
     val ratedU: String
@@ -10832,7 +10832,7 @@ data class DeleteRotatingMachineCommand(@TargetAggregateIdentifier  var rotating
 
 // RotatingMachineDynamics Commands
 data class CreateRotatingMachineDynamicsCommand(
-    @TargetAggregateIdentifier var rotatingMachineDynamicsId: UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineDynamicsId: UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -10842,7 +10842,7 @@ data class CreateRotatingMachineDynamicsCommand(
 )
 
 data class UpdateRotatingMachineDynamicsCommand(
-    @TargetAggregateIdentifier var rotatingMachineDynamicsId: UUID? = null,
+    @TargetAggregateIdentifier val rotatingMachineDynamicsId: UUID? = null,
     val damping: String,
     val inertia: String,
     val saturationFactor: String,
@@ -10860,7 +10860,7 @@ data class DeleteRotatingMachineDynamicsCommand(@TargetAggregateIdentifier  var 
 
 // RotationSpeed Commands
 data class CreateRotationSpeedCommand(
-    @TargetAggregateIdentifier var rotationSpeedId: UUID? = null,
+    @TargetAggregateIdentifier val rotationSpeedId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10869,7 +10869,7 @@ data class CreateRotationSpeedCommand(
 )
 
 data class UpdateRotationSpeedCommand(
-    @TargetAggregateIdentifier var rotationSpeedId: UUID? = null,
+    @TargetAggregateIdentifier val rotationSpeedId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -10886,13 +10886,13 @@ data class DeleteRotationSpeedCommand(@TargetAggregateIdentifier  var rotationSp
 
 // Season Commands
 data class CreateSeasonCommand(
-    @TargetAggregateIdentifier var seasonId: UUID? = null,
+    @TargetAggregateIdentifier val seasonId: UUID? = null,
     val endDate: String,
     val startDate: String
 )
 
 data class UpdateSeasonCommand(
-    @TargetAggregateIdentifier var seasonId: UUID? = null,
+    @TargetAggregateIdentifier val seasonId: UUID? = null,
     val endDate: String,
     val startDate: String
 )
@@ -10922,14 +10922,14 @@ data class DeleteSeasonDayTypeScheduleCommand(@TargetAggregateIdentifier  var se
 
 // Seconds Commands
 data class CreateSecondsCommand(
-    @TargetAggregateIdentifier var secondsId: UUID? = null,
+    @TargetAggregateIdentifier val secondsId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSecondsCommand(
-    @TargetAggregateIdentifier var secondsId: UUID? = null,
+    @TargetAggregateIdentifier val secondsId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -10944,7 +10944,7 @@ data class DeleteSecondsCommand(@TargetAggregateIdentifier  var secondsId: UUID?
 
 // SeriesCompensator Commands
 data class CreateSeriesCompensatorCommand(
-    @TargetAggregateIdentifier var seriesCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val seriesCompensatorId: UUID? = null,
     val r: String,
     val r0: String,
     val varistorPresent: String,
@@ -10955,7 +10955,7 @@ data class CreateSeriesCompensatorCommand(
 )
 
 data class UpdateSeriesCompensatorCommand(
-    @TargetAggregateIdentifier var seriesCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val seriesCompensatorId: UUID? = null,
     val r: String,
     val r0: String,
     val varistorPresent: String,
@@ -10974,13 +10974,13 @@ data class DeleteSeriesCompensatorCommand(@TargetAggregateIdentifier  var series
 
 // SetPoint Commands
 data class CreateSetPointCommand(
-    @TargetAggregateIdentifier var setPointId: UUID? = null,
+    @TargetAggregateIdentifier val setPointId: UUID? = null,
     val normalValue: String,
     val value: String
 )
 
 data class UpdateSetPointCommand(
-    @TargetAggregateIdentifier var setPointId: UUID? = null,
+    @TargetAggregateIdentifier val setPointId: UUID? = null,
     val normalValue: String,
     val value: String
 )
@@ -10994,7 +10994,7 @@ data class DeleteSetPointCommand(@TargetAggregateIdentifier  var setPointId: UUI
 
 // ShuntCompensator Commands
 data class CreateShuntCompensatorCommand(
-    @TargetAggregateIdentifier var shuntCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val shuntCompensatorId: UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11006,7 +11006,7 @@ data class CreateShuntCompensatorCommand(
 )
 
 data class UpdateShuntCompensatorCommand(
-    @TargetAggregateIdentifier var shuntCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val shuntCompensatorId: UUID? = null,
     val aVRDelay: String,
     val grounded: String,
     val maximumSections: String,
@@ -11026,12 +11026,12 @@ data class DeleteShuntCompensatorCommand(@TargetAggregateIdentifier  var shuntCo
 
 // Simple_Float Commands
 data class CreateSimple_FloatCommand(
-    @TargetAggregateIdentifier var simple_FloatId: UUID? = null,
+    @TargetAggregateIdentifier val simple_FloatId: UUID? = null,
     val value: String
 )
 
 data class UpdateSimple_FloatCommand(
-    @TargetAggregateIdentifier var simple_FloatId: UUID? = null,
+    @TargetAggregateIdentifier val simple_FloatId: UUID? = null,
     val value: String
 )
 
@@ -11060,7 +11060,7 @@ data class DeleteSolarGeneratingUnitCommand(@TargetAggregateIdentifier  var sola
 
 // StateVariablesVersion Commands
 data class CreateStateVariablesVersionCommand(
-    @TargetAggregateIdentifier var stateVariablesVersionId: UUID? = null,
+    @TargetAggregateIdentifier val stateVariablesVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11074,7 +11074,7 @@ data class CreateStateVariablesVersionCommand(
 )
 
 data class UpdateStateVariablesVersionCommand(
-    @TargetAggregateIdentifier var stateVariablesVersionId: UUID? = null,
+    @TargetAggregateIdentifier val stateVariablesVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11096,7 +11096,7 @@ data class DeleteStateVariablesVersionCommand(@TargetAggregateIdentifier  var st
 
 // StaticVarCompensator Commands
 data class CreateStaticVarCompensatorCommand(
-    @TargetAggregateIdentifier var staticVarCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val staticVarCompensatorId: UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11105,7 +11105,7 @@ data class CreateStaticVarCompensatorCommand(
 )
 
 data class UpdateStaticVarCompensatorCommand(
-    @TargetAggregateIdentifier var staticVarCompensatorId: UUID? = null,
+    @TargetAggregateIdentifier val staticVarCompensatorId: UUID? = null,
     val capacitiveRating: String,
     val inductiveRating: String,
     val slope: String,
@@ -11154,7 +11154,7 @@ data class DeleteStationSupplyCommand(@TargetAggregateIdentifier  var stationSup
 
 // SteadyStateHypothesisVersion Commands
 data class CreateSteadyStateHypothesisVersionCommand(
-    @TargetAggregateIdentifier var steadyStateHypothesisVersionId: UUID? = null,
+    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11168,7 +11168,7 @@ data class CreateSteadyStateHypothesisVersionCommand(
 )
 
 data class UpdateSteadyStateHypothesisVersionCommand(
-    @TargetAggregateIdentifier var steadyStateHypothesisVersionId: UUID? = null,
+    @TargetAggregateIdentifier val steadyStateHypothesisVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11206,12 +11206,12 @@ data class DeleteStringMeasurementCommand(@TargetAggregateIdentifier  var string
 
 // StringMeasurementValue Commands
 data class CreateStringMeasurementValueCommand(
-    @TargetAggregateIdentifier var stringMeasurementValueId: UUID? = null,
+    @TargetAggregateIdentifier val stringMeasurementValueId: UUID? = null,
     val value: String
 )
 
 data class UpdateStringMeasurementValueCommand(
-    @TargetAggregateIdentifier var stringMeasurementValueId: UUID? = null,
+    @TargetAggregateIdentifier val stringMeasurementValueId: UUID? = null,
     val value: String
 )
 
@@ -11288,14 +11288,14 @@ data class DeleteSubstationCommand(@TargetAggregateIdentifier  var substationId:
 
 // Susceptance Commands
 data class CreateSusceptanceCommand(
-    @TargetAggregateIdentifier var susceptanceId: UUID? = null,
+    @TargetAggregateIdentifier val susceptanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateSusceptanceCommand(
-    @TargetAggregateIdentifier var susceptanceId: UUID? = null,
+    @TargetAggregateIdentifier val susceptanceId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -11310,13 +11310,13 @@ data class DeleteSusceptanceCommand(@TargetAggregateIdentifier  var susceptanceI
 
 // SvInjection Commands
 data class CreateSvInjectionCommand(
-    @TargetAggregateIdentifier var svInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val svInjectionId: UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
 
 data class UpdateSvInjectionCommand(
-    @TargetAggregateIdentifier var svInjectionId: UUID? = null,
+    @TargetAggregateIdentifier val svInjectionId: UUID? = null,
     val pInjection: String,
     val qInjection: String
 )
@@ -11330,13 +11330,13 @@ data class DeleteSvInjectionCommand(@TargetAggregateIdentifier  var svInjectionI
 
 // SvPowerFlow Commands
 data class CreateSvPowerFlowCommand(
-    @TargetAggregateIdentifier var svPowerFlowId: UUID? = null,
+    @TargetAggregateIdentifier val svPowerFlowId: UUID? = null,
     val p: String,
     val q: String
 )
 
 data class UpdateSvPowerFlowCommand(
-    @TargetAggregateIdentifier var svPowerFlowId: UUID? = null,
+    @TargetAggregateIdentifier val svPowerFlowId: UUID? = null,
     val p: String,
     val q: String
 )
@@ -11350,12 +11350,12 @@ data class DeleteSvPowerFlowCommand(@TargetAggregateIdentifier  var svPowerFlowI
 
 // SvShuntCompensatorSections Commands
 data class CreateSvShuntCompensatorSectionsCommand(
-    @TargetAggregateIdentifier var svShuntCompensatorSectionsId: UUID? = null,
+    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: UUID? = null,
     val sections: String
 )
 
 data class UpdateSvShuntCompensatorSectionsCommand(
-    @TargetAggregateIdentifier var svShuntCompensatorSectionsId: UUID? = null,
+    @TargetAggregateIdentifier val svShuntCompensatorSectionsId: UUID? = null,
     val sections: String
 )
 
@@ -11368,12 +11368,12 @@ data class DeleteSvShuntCompensatorSectionsCommand(@TargetAggregateIdentifier  v
 
 // SvStatus Commands
 data class CreateSvStatusCommand(
-    @TargetAggregateIdentifier var svStatusId: UUID? = null,
+    @TargetAggregateIdentifier val svStatusId: UUID? = null,
     val inService: String
 )
 
 data class UpdateSvStatusCommand(
-    @TargetAggregateIdentifier var svStatusId: UUID? = null,
+    @TargetAggregateIdentifier val svStatusId: UUID? = null,
     val inService: String
 )
 
@@ -11386,12 +11386,12 @@ data class DeleteSvStatusCommand(@TargetAggregateIdentifier  var svStatusId: UUI
 
 // SvTapStep Commands
 data class CreateSvTapStepCommand(
-    @TargetAggregateIdentifier var svTapStepId: UUID? = null,
+    @TargetAggregateIdentifier val svTapStepId: UUID? = null,
     val position: String
 )
 
 data class UpdateSvTapStepCommand(
-    @TargetAggregateIdentifier var svTapStepId: UUID? = null,
+    @TargetAggregateIdentifier val svTapStepId: UUID? = null,
     val position: String
 )
 
@@ -11404,13 +11404,13 @@ data class DeleteSvTapStepCommand(@TargetAggregateIdentifier  var svTapStepId: U
 
 // SvVoltage Commands
 data class CreateSvVoltageCommand(
-    @TargetAggregateIdentifier var svVoltageId: UUID? = null,
+    @TargetAggregateIdentifier val svVoltageId: UUID? = null,
     val angle: String,
     val v: String
 )
 
 data class UpdateSvVoltageCommand(
-    @TargetAggregateIdentifier var svVoltageId: UUID? = null,
+    @TargetAggregateIdentifier val svVoltageId: UUID? = null,
     val angle: String,
     val v: String
 )
@@ -11424,12 +11424,12 @@ data class DeleteSvVoltageCommand(@TargetAggregateIdentifier  var svVoltageId: U
 
 // SwitchIt Commands
 data class CreateSwitchItCommand(
-    @TargetAggregateIdentifier var switchItId: UUID? = null,
+    @TargetAggregateIdentifier val switchItId: UUID? = null,
     val open: String
 )
 
 data class UpdateSwitchItCommand(
-    @TargetAggregateIdentifier var switchItId: UUID? = null,
+    @TargetAggregateIdentifier val switchItId: UUID? = null,
     val open: String
 )
 
@@ -11442,14 +11442,14 @@ data class DeleteSwitchItCommand(@TargetAggregateIdentifier  var switchItId: UUI
 
 // SwitchProxy Commands
 data class CreateSwitchProxyCommand(
-    @TargetAggregateIdentifier var switchProxyId: UUID? = null,
+    @TargetAggregateIdentifier val switchProxyId: UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
 )
 
 data class UpdateSwitchProxyCommand(
-    @TargetAggregateIdentifier var switchProxyId: UUID? = null,
+    @TargetAggregateIdentifier val switchProxyId: UUID? = null,
     val normalOpen: String,
     val ratedCurrent: String,
     val retained: String
@@ -11480,7 +11480,7 @@ data class DeleteSwitchScheduleCommand(@TargetAggregateIdentifier  var switchSch
 
 // SynchronousMachine Commands
 data class CreateSynchronousMachineCommand(
-    @TargetAggregateIdentifier var synchronousMachineId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineId: UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11503,7 +11503,7 @@ data class CreateSynchronousMachineCommand(
 )
 
 data class UpdateSynchronousMachineCommand(
-    @TargetAggregateIdentifier var synchronousMachineId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineId: UUID? = null,
     val earthing: String,
     val earthingStarPointR: String,
     val earthingStarPointX: String,
@@ -11534,7 +11534,7 @@ data class DeleteSynchronousMachineCommand(@TargetAggregateIdentifier  var synch
 
 // SynchronousMachineDetailed Commands
 data class CreateSynchronousMachineDetailedCommand(
-    @TargetAggregateIdentifier var synchronousMachineDetailedId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineDetailedId: UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11543,7 +11543,7 @@ data class CreateSynchronousMachineDetailedCommand(
 )
 
 data class UpdateSynchronousMachineDetailedCommand(
-    @TargetAggregateIdentifier var synchronousMachineDetailedId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineDetailedId: UUID? = null,
     val efdBaseRatio: String,
     val ifdBaseType: String,
     val ifdBaseValue: String,
@@ -11576,7 +11576,7 @@ data class DeleteSynchronousMachineDynamicsCommand(@TargetAggregateIdentifier  v
 
 // SynchronousMachineEquivalentCircuit Commands
 data class CreateSynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier var synchronousMachineEquivalentCircuitId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11591,7 +11591,7 @@ data class CreateSynchronousMachineEquivalentCircuitCommand(
 )
 
 data class UpdateSynchronousMachineEquivalentCircuitCommand(
-    @TargetAggregateIdentifier var synchronousMachineEquivalentCircuitId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineEquivalentCircuitId: UUID? = null,
     val r1d: String,
     val r1q: String,
     val r2q: String,
@@ -11630,7 +11630,7 @@ data class DeleteSynchronousMachineSimplifiedCommand(@TargetAggregateIdentifier 
 
 // SynchronousMachineTimeConstantReactance Commands
 data class CreateSynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -11648,7 +11648,7 @@ data class CreateSynchronousMachineTimeConstantReactanceCommand(
 )
 
 data class UpdateSynchronousMachineTimeConstantReactanceCommand(
-    @TargetAggregateIdentifier var synchronousMachineTimeConstantReactanceId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineTimeConstantReactanceId: UUID? = null,
     val ks: String,
     val modelType: String,
     val rotorType: String,
@@ -11674,12 +11674,12 @@ data class DeleteSynchronousMachineTimeConstantReactanceCommand(@TargetAggregate
 
 // SynchronousMachineUserDefined Commands
 data class CreateSynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier var synchronousMachineUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateSynchronousMachineUserDefinedCommand(
-    @TargetAggregateIdentifier var synchronousMachineUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val synchronousMachineUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -11692,7 +11692,7 @@ data class DeleteSynchronousMachineUserDefinedCommand(@TargetAggregateIdentifier
 
 // TapChanger Commands
 data class CreateTapChangerCommand(
-    @TargetAggregateIdentifier var tapChangerId: UUID? = null,
+    @TargetAggregateIdentifier val tapChangerId: UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -11702,7 +11702,7 @@ data class CreateTapChangerCommand(
 )
 
 data class UpdateTapChangerCommand(
-    @TargetAggregateIdentifier var tapChangerId: UUID? = null,
+    @TargetAggregateIdentifier val tapChangerId: UUID? = null,
     val highStep: String,
     val lowStep: String,
     val ltcFlag: String,
@@ -11736,7 +11736,7 @@ data class DeleteTapChangerControlCommand(@TargetAggregateIdentifier  var tapCha
 
 // TapChangerTablePoint Commands
 data class CreateTapChangerTablePointCommand(
-    @TargetAggregateIdentifier var tapChangerTablePointId: UUID? = null,
+    @TargetAggregateIdentifier val tapChangerTablePointId: UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -11746,7 +11746,7 @@ data class CreateTapChangerTablePointCommand(
 )
 
 data class UpdateTapChangerTablePointCommand(
-    @TargetAggregateIdentifier var tapChangerTablePointId: UUID? = null,
+    @TargetAggregateIdentifier val tapChangerTablePointId: UUID? = null,
     val b: String,
     val g: String,
     val r: String,
@@ -11780,14 +11780,14 @@ data class DeleteTapScheduleCommand(@TargetAggregateIdentifier  var tapScheduleI
 
 // Temperature Commands
 data class CreateTemperatureCommand(
-    @TargetAggregateIdentifier var temperatureId: UUID? = null,
+    @TargetAggregateIdentifier val temperatureId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateTemperatureCommand(
-    @TargetAggregateIdentifier var temperatureId: UUID? = null,
+    @TargetAggregateIdentifier val temperatureId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -11818,12 +11818,12 @@ data class DeleteTerminalCommand(@TargetAggregateIdentifier  var terminalId: UUI
 
 // TextDiagramObject Commands
 data class CreateTextDiagramObjectCommand(
-    @TargetAggregateIdentifier var textDiagramObjectId: UUID? = null,
+    @TargetAggregateIdentifier val textDiagramObjectId: UUID? = null,
     val text: String
 )
 
 data class UpdateTextDiagramObjectCommand(
-    @TargetAggregateIdentifier var textDiagramObjectId: UUID? = null,
+    @TargetAggregateIdentifier val textDiagramObjectId: UUID? = null,
     val text: String
 )
 
@@ -11852,12 +11852,12 @@ data class DeleteThermalGeneratingUnitCommand(@TargetAggregateIdentifier  var th
 
 // TieFlow Commands
 data class CreateTieFlowCommand(
-    @TargetAggregateIdentifier var tieFlowId: UUID? = null,
+    @TargetAggregateIdentifier val tieFlowId: UUID? = null,
     val positiveFlowIn: String
 )
 
 data class UpdateTieFlowCommand(
-    @TargetAggregateIdentifier var tieFlowId: UUID? = null,
+    @TargetAggregateIdentifier val tieFlowId: UUID? = null,
     val positiveFlowIn: String
 )
 
@@ -11886,7 +11886,7 @@ data class DeleteTopologicalIslandCommand(@TargetAggregateIdentifier  var topolo
 
 // TopologicalNode Commands
 data class CreateTopologicalNodeCommand(
-    @TargetAggregateIdentifier var topologicalNodeId: UUID? = null,
+    @TargetAggregateIdentifier val topologicalNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -11897,7 +11897,7 @@ data class CreateTopologicalNodeCommand(
 )
 
 data class UpdateTopologicalNodeCommand(
-    @TargetAggregateIdentifier var topologicalNodeId: UUID? = null,
+    @TargetAggregateIdentifier val topologicalNodeId: UUID? = null,
     val boundaryPoint: String,
     val fromEndIsoCode: String,
     val fromEndName: String,
@@ -11916,7 +11916,7 @@ data class DeleteTopologicalNodeCommand(@TargetAggregateIdentifier  var topologi
 
 // TopologyBoundaryVersion Commands
 data class CreateTopologyBoundaryVersionCommand(
-    @TargetAggregateIdentifier var topologyBoundaryVersionId: UUID? = null,
+    @TargetAggregateIdentifier val topologyBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11930,7 +11930,7 @@ data class CreateTopologyBoundaryVersionCommand(
 )
 
 data class UpdateTopologyBoundaryVersionCommand(
-    @TargetAggregateIdentifier var topologyBoundaryVersionId: UUID? = null,
+    @TargetAggregateIdentifier val topologyBoundaryVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11952,7 +11952,7 @@ data class DeleteTopologyBoundaryVersionCommand(@TargetAggregateIdentifier  var 
 
 // TopologyVersion Commands
 data class CreateTopologyVersionCommand(
-    @TargetAggregateIdentifier var topologyVersionId: UUID? = null,
+    @TargetAggregateIdentifier val topologyVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11966,7 +11966,7 @@ data class CreateTopologyVersionCommand(
 )
 
 data class UpdateTopologyVersionCommand(
-    @TargetAggregateIdentifier var topologyVersionId: UUID? = null,
+    @TargetAggregateIdentifier val topologyVersionId: UUID? = null,
     val baseUML: String,
     val baseURI: String,
     val date: String,
@@ -11988,7 +11988,7 @@ data class DeleteTopologyVersionCommand(@TargetAggregateIdentifier  var topology
 
 // TransformerEnd Commands
 data class CreateTransformerEndCommand(
-    @TargetAggregateIdentifier var transformerEndId: UUID? = null,
+    @TargetAggregateIdentifier val transformerEndId: UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
@@ -11996,7 +11996,7 @@ data class CreateTransformerEndCommand(
 )
 
 data class UpdateTransformerEndCommand(
-    @TargetAggregateIdentifier var transformerEndId: UUID? = null,
+    @TargetAggregateIdentifier val transformerEndId: UUID? = null,
     val endNumber: String,
     val grounded: String,
     val rground: String,
@@ -12012,7 +12012,7 @@ data class DeleteTransformerEndCommand(@TargetAggregateIdentifier  var transform
 
 // TurbLCFB1 Commands
 data class CreateTurbLCFB1Command(
-    @TargetAggregateIdentifier var turbLCFB1Id: UUID? = null,
+    @TargetAggregateIdentifier val turbLCFB1Id: UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12028,7 +12028,7 @@ data class CreateTurbLCFB1Command(
 )
 
 data class UpdateTurbLCFB1Command(
-    @TargetAggregateIdentifier var turbLCFB1Id: UUID? = null,
+    @TargetAggregateIdentifier val turbLCFB1Id: UUID? = null,
     val db: String,
     val emax: String,
     val fb: String,
@@ -12068,12 +12068,12 @@ data class DeleteTurbineGovernorDynamicsCommand(@TargetAggregateIdentifier  var 
 
 // TurbineGovernorUserDefined Commands
 data class CreateTurbineGovernorUserDefinedCommand(
-    @TargetAggregateIdentifier var turbineGovernorUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineGovernorUserDefinedCommand(
-    @TargetAggregateIdentifier var turbineGovernorUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val turbineGovernorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -12102,12 +12102,12 @@ data class DeleteTurbineLoadControllerDynamicsCommand(@TargetAggregateIdentifier
 
 // TurbineLoadControllerUserDefined Commands
 data class CreateTurbineLoadControllerUserDefinedCommand(
-    @TargetAggregateIdentifier var turbineLoadControllerUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateTurbineLoadControllerUserDefinedCommand(
-    @TargetAggregateIdentifier var turbineLoadControllerUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val turbineLoadControllerUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -12120,7 +12120,7 @@ data class DeleteTurbineLoadControllerUserDefinedCommand(@TargetAggregateIdentif
 
 // UnderexcLim2Simplified Commands
 data class CreateUnderexcLim2SimplifiedCommand(
-    @TargetAggregateIdentifier var underexcLim2SimplifiedId: UUID? = null,
+    @TargetAggregateIdentifier val underexcLim2SimplifiedId: UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12131,7 +12131,7 @@ data class CreateUnderexcLim2SimplifiedCommand(
 )
 
 data class UpdateUnderexcLim2SimplifiedCommand(
-    @TargetAggregateIdentifier var underexcLim2SimplifiedId: UUID? = null,
+    @TargetAggregateIdentifier val underexcLim2SimplifiedId: UUID? = null,
     val kui: String,
     val p0: String,
     val p1: String,
@@ -12150,7 +12150,7 @@ data class DeleteUnderexcLim2SimplifiedCommand(@TargetAggregateIdentifier  var u
 
 // UnderexcLimIEEE1 Commands
 data class CreateUnderexcLimIEEE1Command(
-    @TargetAggregateIdentifier var underexcLimIEEE1Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE1Id: UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12169,7 +12169,7 @@ data class CreateUnderexcLimIEEE1Command(
 )
 
 data class UpdateUnderexcLimIEEE1Command(
-    @TargetAggregateIdentifier var underexcLimIEEE1Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE1Id: UUID? = null,
     val kuc: String,
     val kuf: String,
     val kui: String,
@@ -12196,7 +12196,7 @@ data class DeleteUnderexcLimIEEE1Command(@TargetAggregateIdentifier  var underex
 
 // UnderexcLimIEEE2 Commands
 data class CreateUnderexcLimIEEE2Command(
-    @TargetAggregateIdentifier var underexcLimIEEE2Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE2Id: UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12240,7 +12240,7 @@ data class CreateUnderexcLimIEEE2Command(
 )
 
 data class UpdateUnderexcLimIEEE2Command(
-    @TargetAggregateIdentifier var underexcLimIEEE2Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimIEEE2Id: UUID? = null,
     val k1: String,
     val k2: String,
     val kfb: String,
@@ -12292,7 +12292,7 @@ data class DeleteUnderexcLimIEEE2Command(@TargetAggregateIdentifier  var underex
 
 // UnderexcLimX1 Commands
 data class CreateUnderexcLimX1Command(
-    @TargetAggregateIdentifier var underexcLimX1Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX1Id: UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12302,7 +12302,7 @@ data class CreateUnderexcLimX1Command(
 )
 
 data class UpdateUnderexcLimX1Command(
-    @TargetAggregateIdentifier var underexcLimX1Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX1Id: UUID? = null,
     val k: String,
     val kf2: String,
     val km: String,
@@ -12320,7 +12320,7 @@ data class DeleteUnderexcLimX1Command(@TargetAggregateIdentifier  var underexcLi
 
 // UnderexcLimX2 Commands
 data class CreateUnderexcLimX2Command(
-    @TargetAggregateIdentifier var underexcLimX2Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX2Id: UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12331,7 +12331,7 @@ data class CreateUnderexcLimX2Command(
 )
 
 data class UpdateUnderexcLimX2Command(
-    @TargetAggregateIdentifier var underexcLimX2Id: UUID? = null,
+    @TargetAggregateIdentifier val underexcLimX2Id: UUID? = null,
     val kf2: String,
     val km: String,
     val melmax: String,
@@ -12366,12 +12366,12 @@ data class DeleteUnderexcitationLimiterDynamicsCommand(@TargetAggregateIdentifie
 
 // UnderexcitationLimiterUserDefined Commands
 data class CreateUnderexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier var underexcitationLimiterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateUnderexcitationLimiterUserDefinedCommand(
-    @TargetAggregateIdentifier var underexcitationLimiterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val underexcitationLimiterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -12400,7 +12400,7 @@ data class DeleteUnresolvednameCommand(@TargetAggregateIdentifier  var unresolve
 
 // VAdjIEEE Commands
 data class CreateVAdjIEEECommand(
-    @TargetAggregateIdentifier var vAdjIEEEId: UUID? = null,
+    @TargetAggregateIdentifier val vAdjIEEEId: UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12410,7 +12410,7 @@ data class CreateVAdjIEEECommand(
 )
 
 data class UpdateVAdjIEEECommand(
-    @TargetAggregateIdentifier var vAdjIEEEId: UUID? = null,
+    @TargetAggregateIdentifier val vAdjIEEEId: UUID? = null,
     val adjslew: String,
     val taoff: String,
     val taon: String,
@@ -12428,14 +12428,14 @@ data class DeleteVAdjIEEECommand(@TargetAggregateIdentifier  var vAdjIEEEId: UUI
 
 // VCompIEEEType1 Commands
 data class CreateVCompIEEEType1Command(
-    @TargetAggregateIdentifier var vCompIEEEType1Id: UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType1Id: UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
 )
 
 data class UpdateVCompIEEEType1Command(
-    @TargetAggregateIdentifier var vCompIEEEType1Id: UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType1Id: UUID? = null,
     val rc: String,
     val tr: String,
     val xc: String
@@ -12450,12 +12450,12 @@ data class DeleteVCompIEEEType1Command(@TargetAggregateIdentifier  var vCompIEEE
 
 // VCompIEEEType2 Commands
 data class CreateVCompIEEEType2Command(
-    @TargetAggregateIdentifier var vCompIEEEType2Id: UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType2Id: UUID? = null,
     val tr: String
 )
 
 data class UpdateVCompIEEEType2Command(
-    @TargetAggregateIdentifier var vCompIEEEType2Id: UUID? = null,
+    @TargetAggregateIdentifier val vCompIEEEType2Id: UUID? = null,
     val tr: String
 )
 
@@ -12484,12 +12484,12 @@ data class DeleteValueAliasSetCommand(@TargetAggregateIdentifier  var valueAlias
 
 // ValueToAlias Commands
 data class CreateValueToAliasCommand(
-    @TargetAggregateIdentifier var valueToAliasId: UUID? = null,
+    @TargetAggregateIdentifier val valueToAliasId: UUID? = null,
     val value: String
 )
 
 data class UpdateValueToAliasCommand(
-    @TargetAggregateIdentifier var valueToAliasId: UUID? = null,
+    @TargetAggregateIdentifier val valueToAliasId: UUID? = null,
     val value: String
 )
 
@@ -12502,12 +12502,12 @@ data class DeleteValueToAliasCommand(@TargetAggregateIdentifier  var valueToAlia
 
 // VisibilityLayer Commands
 data class CreateVisibilityLayerCommand(
-    @TargetAggregateIdentifier var visibilityLayerId: UUID? = null,
+    @TargetAggregateIdentifier val visibilityLayerId: UUID? = null,
     val drawingOrder: String
 )
 
 data class UpdateVisibilityLayerCommand(
-    @TargetAggregateIdentifier var visibilityLayerId: UUID? = null,
+    @TargetAggregateIdentifier val visibilityLayerId: UUID? = null,
     val drawingOrder: String
 )
 
@@ -12520,14 +12520,14 @@ data class DeleteVisibilityLayerCommand(@TargetAggregateIdentifier  var visibili
 
 // Voltage Commands
 data class CreateVoltageCommand(
-    @TargetAggregateIdentifier var voltageId: UUID? = null,
+    @TargetAggregateIdentifier val voltageId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
 )
 
 data class UpdateVoltageCommand(
-    @TargetAggregateIdentifier var voltageId: UUID? = null,
+    @TargetAggregateIdentifier val voltageId: UUID? = null,
     val multiplier: String,
     val unit: String,
     val value: String
@@ -12558,12 +12558,12 @@ data class DeleteVoltageAdjusterDynamicsCommand(@TargetAggregateIdentifier  var 
 
 // VoltageAdjusterUserDefined Commands
 data class CreateVoltageAdjusterUserDefinedCommand(
-    @TargetAggregateIdentifier var voltageAdjusterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageAdjusterUserDefinedCommand(
-    @TargetAggregateIdentifier var voltageAdjusterUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val voltageAdjusterUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -12592,12 +12592,12 @@ data class DeleteVoltageCompensatorDynamicsCommand(@TargetAggregateIdentifier  v
 
 // VoltageCompensatorUserDefined Commands
 data class CreateVoltageCompensatorUserDefinedCommand(
-    @TargetAggregateIdentifier var voltageCompensatorUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateVoltageCompensatorUserDefinedCommand(
-    @TargetAggregateIdentifier var voltageCompensatorUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val voltageCompensatorUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -12610,13 +12610,13 @@ data class DeleteVoltageCompensatorUserDefinedCommand(@TargetAggregateIdentifier
 
 // VoltageLevel Commands
 data class CreateVoltageLevelCommand(
-    @TargetAggregateIdentifier var voltageLevelId: UUID? = null,
+    @TargetAggregateIdentifier val voltageLevelId: UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
 
 data class UpdateVoltageLevelCommand(
-    @TargetAggregateIdentifier var voltageLevelId: UUID? = null,
+    @TargetAggregateIdentifier val voltageLevelId: UUID? = null,
     val highVoltageLimit: String,
     val lowVoltageLimit: String
 )
@@ -12630,12 +12630,12 @@ data class DeleteVoltageLevelCommand(@TargetAggregateIdentifier  var voltageLeve
 
 // VoltageLimit Commands
 data class CreateVoltageLimitCommand(
-    @TargetAggregateIdentifier var voltageLimitId: UUID? = null,
+    @TargetAggregateIdentifier val voltageLimitId: UUID? = null,
     val value: String
 )
 
 data class UpdateVoltageLimitCommand(
-    @TargetAggregateIdentifier var voltageLimitId: UUID? = null,
+    @TargetAggregateIdentifier val voltageLimitId: UUID? = null,
     val value: String
 )
 
@@ -12648,7 +12648,7 @@ data class DeleteVoltageLimitCommand(@TargetAggregateIdentifier  var voltageLimi
 
 // VoltagePerReactivePower Commands
 data class CreateVoltagePerReactivePowerCommand(
-    @TargetAggregateIdentifier var voltagePerReactivePowerId: UUID? = null,
+    @TargetAggregateIdentifier val voltagePerReactivePowerId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12657,7 +12657,7 @@ data class CreateVoltagePerReactivePowerCommand(
 )
 
 data class UpdateVoltagePerReactivePowerCommand(
-    @TargetAggregateIdentifier var voltagePerReactivePowerId: UUID? = null,
+    @TargetAggregateIdentifier val voltagePerReactivePowerId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12674,7 +12674,7 @@ data class DeleteVoltagePerReactivePowerCommand(@TargetAggregateIdentifier  var 
 
 // VolumeFlowRate Commands
 data class CreateVolumeFlowRateCommand(
-    @TargetAggregateIdentifier var volumeFlowRateId: UUID? = null,
+    @TargetAggregateIdentifier val volumeFlowRateId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12683,7 +12683,7 @@ data class CreateVolumeFlowRateCommand(
 )
 
 data class UpdateVolumeFlowRateCommand(
-    @TargetAggregateIdentifier var volumeFlowRateId: UUID? = null,
+    @TargetAggregateIdentifier val volumeFlowRateId: UUID? = null,
     val denominatorMultiplier: String,
     val denominatorUnit: String,
     val multiplier: String,
@@ -12716,13 +12716,13 @@ data class DeleteVsCapabilityCurveCommand(@TargetAggregateIdentifier  var vsCapa
 
 // VsConverter Commands
 data class CreateVsConverterCommand(
-    @TargetAggregateIdentifier var vsConverterId: UUID? = null,
+    @TargetAggregateIdentifier val vsConverterId: UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
 
 data class UpdateVsConverterCommand(
-    @TargetAggregateIdentifier var vsConverterId: UUID? = null,
+    @TargetAggregateIdentifier val vsConverterId: UUID? = null,
     val maxModulationIndex: String,
     val maxValveCurrent: String
 )
@@ -12752,7 +12752,7 @@ data class DeleteWindAeroConstIECCommand(@TargetAggregateIdentifier  var windAer
 
 // WindAeroLinearIEC Commands
 data class CreateWindAeroLinearIECCommand(
-    @TargetAggregateIdentifier var windAeroLinearIECId: UUID? = null,
+    @TargetAggregateIdentifier val windAeroLinearIECId: UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -12761,7 +12761,7 @@ data class CreateWindAeroLinearIECCommand(
 )
 
 data class UpdateWindAeroLinearIECCommand(
-    @TargetAggregateIdentifier var windAeroLinearIECId: UUID? = null,
+    @TargetAggregateIdentifier val windAeroLinearIECId: UUID? = null,
     val dpomega: String,
     val dptheta: String,
     val omegazero: String,
@@ -12778,7 +12778,7 @@ data class DeleteWindAeroLinearIECCommand(@TargetAggregateIdentifier  var windAe
 
 // WindContCurrLimIEC Commands
 data class CreateWindContCurrLimIECCommand(
-    @TargetAggregateIdentifier var windContCurrLimIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContCurrLimIECId: UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -12787,7 +12787,7 @@ data class CreateWindContCurrLimIECCommand(
 )
 
 data class UpdateWindContCurrLimIECCommand(
-    @TargetAggregateIdentifier var windContCurrLimIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContCurrLimIECId: UUID? = null,
     val imax: String,
     val imaxdip: String,
     val mdfslim: String,
@@ -12804,7 +12804,7 @@ data class DeleteWindContCurrLimIECCommand(@TargetAggregateIdentifier  var windC
 
 // WindContPType3IEC Commands
 data class CreateWindContPType3IECCommand(
-    @TargetAggregateIdentifier var windContPType3IECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType3IECId: UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -12829,7 +12829,7 @@ data class CreateWindContPType3IECCommand(
 )
 
 data class UpdateWindContPType3IECCommand(
-    @TargetAggregateIdentifier var windContPType3IECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType3IECId: UUID? = null,
     val dpmax: String,
     val dtrisemaxlvrt: String,
     val kdtd: String,
@@ -12862,14 +12862,14 @@ data class DeleteWindContPType3IECCommand(@TargetAggregateIdentifier  var windCo
 
 // WindContPType4aIEC Commands
 data class CreateWindContPType4aIECCommand(
-    @TargetAggregateIdentifier var windContPType4aIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType4aIECId: UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
 )
 
 data class UpdateWindContPType4aIECCommand(
-    @TargetAggregateIdentifier var windContPType4aIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType4aIECId: UUID? = null,
     val dpmax: String,
     val tpord: String,
     val tufilt: String
@@ -12884,7 +12884,7 @@ data class DeleteWindContPType4aIECCommand(@TargetAggregateIdentifier  var windC
 
 // WindContPType4bIEC Commands
 data class CreateWindContPType4bIECCommand(
-    @TargetAggregateIdentifier var windContPType4bIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType4bIECId: UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
@@ -12892,7 +12892,7 @@ data class CreateWindContPType4bIECCommand(
 )
 
 data class UpdateWindContPType4bIECCommand(
-    @TargetAggregateIdentifier var windContPType4bIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPType4bIECId: UUID? = null,
     val dpmax: String,
     val tpaero: String,
     val tpord: String,
@@ -12908,7 +12908,7 @@ data class DeleteWindContPType4bIECCommand(@TargetAggregateIdentifier  var windC
 
 // WindContPitchAngleIEC Commands
 data class CreateWindContPitchAngleIECCommand(
-    @TargetAggregateIdentifier var windContPitchAngleIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPitchAngleIECId: UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -12922,7 +12922,7 @@ data class CreateWindContPitchAngleIECCommand(
 )
 
 data class UpdateWindContPitchAngleIECCommand(
-    @TargetAggregateIdentifier var windContPitchAngleIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContPitchAngleIECId: UUID? = null,
     val dthetamax: String,
     val dthetamin: String,
     val kic: String,
@@ -12944,7 +12944,7 @@ data class DeleteWindContPitchAngleIECCommand(@TargetAggregateIdentifier  var wi
 
 // WindContQIEC Commands
 data class CreateWindContQIECCommand(
-    @TargetAggregateIdentifier var windContQIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContQIECId: UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -12974,7 +12974,7 @@ data class CreateWindContQIECCommand(
 )
 
 data class UpdateWindContQIECCommand(
-    @TargetAggregateIdentifier var windContQIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContQIECId: UUID? = null,
     val iqh1: String,
     val iqmax: String,
     val iqmin: String,
@@ -13012,7 +13012,7 @@ data class DeleteWindContQIECCommand(@TargetAggregateIdentifier  var windContQIE
 
 // WindContRotorRIEC Commands
 data class CreateWindContRotorRIECCommand(
-    @TargetAggregateIdentifier var windContRotorRIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContRotorRIECId: UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13024,7 +13024,7 @@ data class CreateWindContRotorRIECCommand(
 )
 
 data class UpdateWindContRotorRIECCommand(
-    @TargetAggregateIdentifier var windContRotorRIECId: UUID? = null,
+    @TargetAggregateIdentifier val windContRotorRIECId: UUID? = null,
     val kirr: String,
     val komegafilt: String,
     val kpfilt: String,
@@ -13044,7 +13044,7 @@ data class DeleteWindContRotorRIECCommand(@TargetAggregateIdentifier  var windCo
 
 // WindDynamicsLookupTable Commands
 data class CreateWindDynamicsLookupTableCommand(
-    @TargetAggregateIdentifier var windDynamicsLookupTableId: UUID? = null,
+    @TargetAggregateIdentifier val windDynamicsLookupTableId: UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
@@ -13052,7 +13052,7 @@ data class CreateWindDynamicsLookupTableCommand(
 )
 
 data class UpdateWindDynamicsLookupTableCommand(
-    @TargetAggregateIdentifier var windDynamicsLookupTableId: UUID? = null,
+    @TargetAggregateIdentifier val windDynamicsLookupTableId: UUID? = null,
     val input: String,
     val lookupTableFunctionType: String,
     val output: String,
@@ -13100,13 +13100,13 @@ data class DeleteWindGenTurbineType2IECCommand(@TargetAggregateIdentifier  var w
 
 // WindGenTurbineType3IEC Commands
 data class CreateWindGenTurbineType3IECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3IECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
 
 data class UpdateWindGenTurbineType3IECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3IECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String
 )
@@ -13120,14 +13120,14 @@ data class DeleteWindGenTurbineType3IECCommand(@TargetAggregateIdentifier  var w
 
 // WindGenTurbineType3aIEC Commands
 data class CreateWindGenTurbineType3aIECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3aIECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3aIECId: UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
 )
 
 data class UpdateWindGenTurbineType3aIECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3aIECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3aIECId: UUID? = null,
     val kpc: String,
     val tic: String,
     val xs: String
@@ -13142,7 +13142,7 @@ data class DeleteWindGenTurbineType3aIECCommand(@TargetAggregateIdentifier  var 
 
 // WindGenTurbineType3bIEC Commands
 data class CreateWindGenTurbineType3bIECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3bIECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3bIECId: UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13151,7 +13151,7 @@ data class CreateWindGenTurbineType3bIECCommand(
 )
 
 data class UpdateWindGenTurbineType3bIECCommand(
-    @TargetAggregateIdentifier var windGenTurbineType3bIECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenTurbineType3bIECId: UUID? = null,
     val fducw: String,
     val mwtcwp: String,
     val tg: String,
@@ -13168,7 +13168,7 @@ data class DeleteWindGenTurbineType3bIECCommand(@TargetAggregateIdentifier  var 
 
 // WindGenType4IEC Commands
 data class CreateWindGenType4IECCommand(
-    @TargetAggregateIdentifier var windGenType4IECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenType4IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
@@ -13176,7 +13176,7 @@ data class CreateWindGenType4IECCommand(
 )
 
 data class UpdateWindGenType4IECCommand(
-    @TargetAggregateIdentifier var windGenType4IECId: UUID? = null,
+    @TargetAggregateIdentifier val windGenType4IECId: UUID? = null,
     val dipmax: String,
     val diqmax: String,
     val diqmin: String,
@@ -13192,12 +13192,12 @@ data class DeleteWindGenType4IECCommand(@TargetAggregateIdentifier  var windGenT
 
 // WindGeneratingUnit Commands
 data class CreateWindGeneratingUnitCommand(
-    @TargetAggregateIdentifier var windGeneratingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val windGeneratingUnitId: UUID? = null,
     val windGenUnitType: String
 )
 
 data class UpdateWindGeneratingUnitCommand(
-    @TargetAggregateIdentifier var windGeneratingUnitId: UUID? = null,
+    @TargetAggregateIdentifier val windGeneratingUnitId: UUID? = null,
     val windGenUnitType: String
 )
 
@@ -13210,7 +13210,7 @@ data class DeleteWindGeneratingUnitCommand(@TargetAggregateIdentifier  var windG
 
 // WindMechIEC Commands
 data class CreateWindMechIECCommand(
-    @TargetAggregateIdentifier var windMechIECId: UUID? = null,
+    @TargetAggregateIdentifier val windMechIECId: UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
@@ -13218,7 +13218,7 @@ data class CreateWindMechIECCommand(
 )
 
 data class UpdateWindMechIECCommand(
-    @TargetAggregateIdentifier var windMechIECId: UUID? = null,
+    @TargetAggregateIdentifier val windMechIECId: UUID? = null,
     val cdrt: String,
     val hgen: String,
     val hwtr: String,
@@ -13234,7 +13234,7 @@ data class DeleteWindMechIECCommand(@TargetAggregateIdentifier  var windMechIECI
 
 // WindPitchContEmulIEC Commands
 data class CreateWindPitchContEmulIECCommand(
-    @TargetAggregateIdentifier var windPitchContEmulIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPitchContEmulIECId: UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13248,7 +13248,7 @@ data class CreateWindPitchContEmulIECCommand(
 )
 
 data class UpdateWindPitchContEmulIECCommand(
-    @TargetAggregateIdentifier var windPitchContEmulIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPitchContEmulIECId: UUID? = null,
     val kdroop: String,
     val kipce: String,
     val komegaaero: String,
@@ -13286,7 +13286,7 @@ data class DeleteWindPlantDynamicsCommand(@TargetAggregateIdentifier  var windPl
 
 // WindPlantFreqPcontrolIEC Commands
 data class CreateWindPlantFreqPcontrolIECCommand(
-    @TargetAggregateIdentifier var windPlantFreqPcontrolIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13300,7 +13300,7 @@ data class CreateWindPlantFreqPcontrolIECCommand(
 )
 
 data class UpdateWindPlantFreqPcontrolIECCommand(
-    @TargetAggregateIdentifier var windPlantFreqPcontrolIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantFreqPcontrolIECId: UUID? = null,
     val dprefmax: String,
     val dprefmin: String,
     val kiwpp: String,
@@ -13338,7 +13338,7 @@ data class DeleteWindPlantIECCommand(@TargetAggregateIdentifier  var windPlantIE
 
 // WindPlantReactiveControlIEC Commands
 data class CreateWindPlantReactiveControlIECCommand(
-    @TargetAggregateIdentifier var windPlantReactiveControlIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantReactiveControlIECId: UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13355,7 +13355,7 @@ data class CreateWindPlantReactiveControlIECCommand(
 )
 
 data class UpdateWindPlantReactiveControlIECCommand(
-    @TargetAggregateIdentifier var windPlantReactiveControlIECId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantReactiveControlIECId: UUID? = null,
     val kiwpx: String,
     val kpwpx: String,
     val kwpqu: String,
@@ -13380,12 +13380,12 @@ data class DeleteWindPlantReactiveControlIECCommand(@TargetAggregateIdentifier  
 
 // WindPlantUserDefined Commands
 data class CreateWindPlantUserDefinedCommand(
-    @TargetAggregateIdentifier var windPlantUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindPlantUserDefinedCommand(
-    @TargetAggregateIdentifier var windPlantUserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windPlantUserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -13398,7 +13398,7 @@ data class DeleteWindPlantUserDefinedCommand(@TargetAggregateIdentifier  var win
 
 // WindProtectionIEC Commands
 data class CreateWindProtectionIECCommand(
-    @TargetAggregateIdentifier var windProtectionIECId: UUID? = null,
+    @TargetAggregateIdentifier val windProtectionIECId: UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13410,7 +13410,7 @@ data class CreateWindProtectionIECCommand(
 )
 
 data class UpdateWindProtectionIECCommand(
-    @TargetAggregateIdentifier var windProtectionIECId: UUID? = null,
+    @TargetAggregateIdentifier val windProtectionIECId: UUID? = null,
     val fover: String,
     val funder: String,
     val tfover: String,
@@ -13526,12 +13526,12 @@ data class DeleteWindTurbineType4bIECCommand(@TargetAggregateIdentifier  var win
 
 // WindType1or2UserDefined Commands
 data class CreateWindType1or2UserDefinedCommand(
-    @TargetAggregateIdentifier var windType1or2UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windType1or2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType1or2UserDefinedCommand(
-    @TargetAggregateIdentifier var windType1or2UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windType1or2UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
@@ -13544,12 +13544,12 @@ data class DeleteWindType1or2UserDefinedCommand(@TargetAggregateIdentifier  var 
 
 // WindType3or4UserDefined Commands
 data class CreateWindType3or4UserDefinedCommand(
-    @TargetAggregateIdentifier var windType3or4UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windType3or4UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
 data class UpdateWindType3or4UserDefinedCommand(
-    @TargetAggregateIdentifier var windType3or4UserDefinedId: UUID? = null,
+    @TargetAggregateIdentifier val windType3or4UserDefinedId: UUID? = null,
     val proprietary: String
 )
 
